@@ -1,0 +1,66 @@
+{
+	"name": "my-expo-app",
+	"version": "1.0.0",
+	"scripts": {
+		"android": "expo start --android",
+		"ios": "expo start --ios",
+		"start": "expo start",
+		"prebuild": "expo prebuild",
+		"lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
+		"format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && biome check --write .",
+		"web": "expo start --web"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-svg-core": "^7.1.0",
+		"@awesome.me/kit-34e2017de2": "^1.0.3",
+		"@expo-google-fonts/nunito": "^0.4.2",
+		"@fortawesome/react-native-fontawesome": "^0.3.2",
+		"@gorhom/bottom-sheet": "^5.2.7",
+		"@react-native-async-storage/async-storage": "2.2.0",
+		"@tailwindcss/postcss": "^4.1.13",
+		"@tanstack/react-query": "^5.90.11",
+		"@tanstack/react-query-persist-client": "^5.90.13",
+		"axios": "^1.13.2",
+		"bignumber.js": "^9.3.1",
+		"clsx": "^2.1.1",
+		"dayjs": "^1.11.19",
+		"expo": "^54.0.0",
+		"expo-constants": "~18.0.10",
+		"expo-linking": "~8.0.9",
+		"expo-router": "~6.0.15",
+		"expo-splash-screen": "~31.0.11",
+		"expo-status-bar": "~3.0.8",
+		"nativewind": "preview",
+		"postcss": "^8.5.6",
+		"react": "19.1.0",
+		"react-dom": "19.1.0",
+		"react-native": "0.81.5",
+		"react-native-css": "latest",
+		"react-native-reanimated": "~4.1.1",
+		"react-native-safe-area-context": "~5.6.2",
+		"react-native-screens": "~4.16.0",
+		"react-native-toast-message": "^2.3.3",
+		"react-native-web": "^0.21.2",
+		"react-native-worklets": "0.5.1",
+		"zustand": "^5.0.9"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.20.0",
+		"@biomejs/biome": "2.3.8",
+		"@types/react": "~19.1.10",
+		"eslint": "^9.25.1",
+		"eslint-config-expo": "~10.0.0",
+		"eslint-config-prettier": "^10.1.2",
+		"prettier": "^3.2.5",
+		"prettier-plugin-tailwindcss": "^0.6.14",
+		"tailwindcss": "^4.1.13",
+		"typescript": "~5.9.2"
+	},
+	"main": "expo-router/entry",
+	"pnpm": {
+		"overrides": {
+			"lightningcss": "1.30.1"
+		}
+	},
+	"private": true
+}
