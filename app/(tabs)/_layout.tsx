@@ -1,18 +1,12 @@
-import {
-	faClock,
-	faCog,
-	faList,
-	faSwords,
-	faUsers,
-} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
-import { clsx } from 'clsx';
-import { router, Tabs } from 'expo-router';
-import type { ReactElement } from 'react';
-import { Pressable, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useColours } from '../../hooks/useColours';
+import {faClock, faCog, faList, faSwords, faUsers,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import type {BottomTabBarProps} from '@react-navigation/bottom-tabs';
+import {clsx} from 'clsx';
+import {router, Tabs} from 'expo-router';
+import type {ReactElement} from 'react';
+import {Pressable, View} from 'react-native';
+import Header from '../../components/Header';
+import {useColours} from '../../hooks/useColours';
 
 const tabRoutes = ['lists', 'index', 'feed', 'social', 'settings'];
 
@@ -37,7 +31,7 @@ function TabsBar(props: BottomTabBarProps) {
 	return (
 		<View
 			className={
-				'flex flex-row gap-11 items-center pb-2 justify-center relative border-gray-300 border-t-2'
+				'flex flex-row gap-11 items-center pb-2 justify-center relative border-gray-300 border-t-2 bg-bottom-bar-light dark:bg-bottom-bar-dark'
 			}
 		>
 			{props.state.routes
@@ -80,7 +74,7 @@ function TabsBar(props: BottomTabBarProps) {
 						);
 					}
 
-					const colour = active ? colours.secondary : colours.muted;
+					const colour = active ? colours.primary : colours.muted;
 
 					return (
 						<Pressable
@@ -98,7 +92,7 @@ function TabsBar(props: BottomTabBarProps) {
 
 							<View
 								className={clsx('h-0.5 rounded-full', {
-									'bg-cyan-500': active,
+									'bg-purple-500': active,
 								})}
 							/>
 						</Pressable>
@@ -109,28 +103,31 @@ function TabsBar(props: BottomTabBarProps) {
 }
 
 export default function TabLayout() {
-	const { top } = useSafeAreaInsets();
+	const colours = useColours();
 
 	return (
-		<Tabs
-			screenOptions={{
-				headerShown: false,
-				animation: 'shift',
-				sceneStyle: {
-					backgroundColor: 'transparent',
-					paddingLeft: 24,
-					paddingRight: 24,
-					paddingTop: top,
-				},
-			}}
-			tabBar={(props) => <TabsBar {...props} />}
-			initialRouteName={'index'}
-		>
-			<Tabs.Screen name="lists" />
-			<Tabs.Screen name="social" />
-			<Tabs.Screen name="index" />
-			<Tabs.Screen name="feed" />
-			<Tabs.Screen name="settings" />
-		</Tabs>
+		<>
+			<Header />
+
+			<Tabs
+				screenOptions={{
+					headerShown: false,
+					animation: 'shift',
+					sceneStyle: {
+						backgroundColor: colours.background,
+						paddingLeft: 24,
+						paddingRight: 24,
+					},
+				}}
+				tabBar={(props) => <TabsBar {...props} />}
+				initialRouteName={'index'}
+			>
+				<Tabs.Screen name="lists" />
+				<Tabs.Screen name="social" />
+				<Tabs.Screen name="index" />
+				<Tabs.Screen name="feed" />
+				<Tabs.Screen name="settings" />
+			</Tabs>
+		</>
 	);
 }

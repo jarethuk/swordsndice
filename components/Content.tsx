@@ -1,6 +1,6 @@
-import { clsx } from 'clsx';
-import type { PropsWithChildren } from 'react';
-import { Text } from 'react-native';
+import type {PropsWithChildren} from 'react';
+import {Text} from 'react-native';
+import {useColours} from '../hooks/useColours';
 
 interface Props extends PropsWithChildren {
 	variant?: 'accent' | 'positive' | 'negative' | 'white';
@@ -26,6 +26,7 @@ export const Content = ({
 	lineHeightOverride,
 	wrap,
 }: Props) => {
+	const colours = useColours();
 	let fontFamily: string;
 	let fontSize = 16;
 	let lineHeight = 1.2;
@@ -124,24 +125,37 @@ export const Content = ({
 			break;
 	}
 
+	let colour = colours.text;
+
+	switch (variant) {
+		case 'accent':
+			colour = colours.primary;
+			break;
+		case 'white':
+			colour = 'white';
+			break;
+		case 'positive':
+			colour = colours.positive;
+			break;
+		case 'negative':
+			colour = colours.negative;
+			break;
+	}
+
 	return (
 		<Text
-			style={{
-				fontFamily,
-				lineHeight: fontSize * (lineHeightOverride ?? lineHeight),
-				fontSize,
-				...(wrap ? { flexShrink: 1 } : {}),
-			}}
-			className={clsx(className, {
-				'text-right': right,
-				'text-center': center,
-				'text-text-light dark:text-text-dark': !variant,
-				'text-primary-light dark:text-primary-dark': variant === 'accent',
-				'text-white': variant === 'white',
-				'text-positive-light dark:text-positive-dark': variant === 'positive',
-				'text-negative-light dark:text-negative-dark': variant === 'negative',
-				'opacity-50': muted,
-			})}
+			style={[
+				{
+					fontFamily,
+					lineHeight: fontSize * (lineHeightOverride ?? lineHeight),
+					fontSize,
+					...(wrap ? { flexShrink: 1 } : {}),
+					...(right ? { textAlign: 'right' } : {}),
+					...(center ? { textAlign: 'center' } : {}),
+					...(muted ? { opacity: 0.5 } : {}),
+					color: colour,
+				},
+			]}
 		>
 			{children}
 		</Text>

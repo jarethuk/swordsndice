@@ -3,3 +3,19 @@
 @import "tailwindcss/utilities.css";
 
 @import "nativewind/theme";
+
+@theme {
+    --color-background-light: #FFFFFF;
+    --color-primary-light: #a855f7;
+    --color-secondary-light: #06b6d4;
+    --color-positive-light: #58CC02;
+    --color-negative-light: #FF4B4B;
+    --color-warning-light: #FFC800;
+    --color-info-light: #1CB0F6;
+    --color-text-light: #4B4B4B;
+    --color-muted-light: #6b7280;
+    --color-border-light: #E3E3E3;
+    --color-bottom-bar-light: #FFFFFF;
+    --color-panel-light: #f6f6f6;
+}
+

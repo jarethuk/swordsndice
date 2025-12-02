@@ -1,27 +1,27 @@
-import { Stack } from 'expo-router';
+import {Stack} from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 import '../global.css';
 import {
-	Nunito_500Medium,
-	Nunito_600SemiBold,
-	Nunito_700Bold,
-	Nunito_800ExtraBold,
-	Nunito_900Black,
-	useFonts,
+    Nunito_500Medium,
+    Nunito_600SemiBold,
+    Nunito_700Bold,
+    Nunito_800ExtraBold,
+    Nunito_900Black,
+    useFonts,
 } from '@expo-google-fonts/nunito';
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
-import { type Query, QueryClient } from '@tanstack/react-query';
-import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
-import { clsx } from 'clsx';
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Toast, { type ToastShowParams } from 'react-native-toast-message';
-import { Content } from '../components';
-import { createQueryPersister } from '../helpers/QueryPersister';
-import type { PersistableQuery } from '../types';
+import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
+import {type Query, QueryClient} from '@tanstack/react-query';
+import {PersistQueryClientProvider} from '@tanstack/react-query-persist-client';
+import {clsx} from 'clsx';
+import {StatusBar} from 'expo-status-bar';
+import {Text, View} from 'react-native';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import Toast, {type ToastShowParams} from 'react-native-toast-message';
+import {Content} from '../components';
+import {createQueryPersister} from '../helpers/QueryPersister';
+import type {PersistableQuery} from '../types';
 
 void SplashScreen.preventAutoHideAsync();
 
