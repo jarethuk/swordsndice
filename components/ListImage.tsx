@@ -1,23 +1,22 @@
 import {faSword} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {Image, View} from 'react-native';
-import type {List} from '../types/List';
 
 interface Props {
-	list: List;
+	image?: string | null;
 }
 
-export const ListImage = ({ list }: Props) => {
+export const ListImage = ({ image }: Props) => {
 	return (
 		<View
 			className={
 				'bg-panel-light dark:bg-panel-dark rounded-full flex items-center justify-center overflow-hidden h-[44px] w-[44px]'
 			}
 		>
-			{list.image ? (
+			{image ? (
 				<Image
 					source={{
-						uri: list.image,
+						uri: image,
 						height: 44,
 						width: 44,
 					}}

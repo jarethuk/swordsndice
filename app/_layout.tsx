@@ -21,6 +21,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Toast, {type ToastShowParams} from 'react-native-toast-message';
 import {Content} from '../components';
 import {createQueryPersister} from '../helpers/QueryPersister';
+import {useDatabase} from '../hooks/useDatabase';
 import type {PersistableQuery} from '../types';
 
 void SplashScreen.preventAutoHideAsync();
@@ -67,7 +68,9 @@ export default function RootLayout() {
 		DINRoundPro: require('../assets/fonts/dinroundpro_bold.otf'),
 	});
 
-	const loaded = fontsLoaded;
+	const { loaded: databaseLoaded } = useDatabase();
+
+	const loaded = fontsLoaded && databaseLoaded;
 	const user = 1;
 
 	useEffect(() => {

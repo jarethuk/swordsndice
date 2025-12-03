@@ -5,26 +5,26 @@ import {
     faShelvesEmpty,
 } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {useLiveQuery} from 'drizzle-orm/expo-sqlite';
 import {router} from 'expo-router';
 import {useState} from 'react';
 import {Animated, Pressable, RefreshControl, View} from 'react-native';
-import {ExampleLists} from '../../assets/temp/ExampleLists';
 import {Content} from '../../components';
 import GamesDropdown from '../../components/GamesDropdown';
 import {Input} from '../../components/Input';
 import {ListImage} from '../../components/ListImage';
+import {Database} from '../../db/Database';
+import {lists} from '../../db/schema';
 import {useColours} from '../../hooks/useColours';
-import {Games} from '../../types';
 import ScrollView = Animated.ScrollView;
 
 export default function Lists() {
-	const [game, setGame] = useState<string | undefined>(Games.All);
-	const [isCreatingList, setIsCreatingList] = useState(false);
+	const [game, setGame] = useState<string>('');
 	const [search, setSearch] = useState('');
 	const [isLoading, setIsLoading] = useState(false);
 	const refetch = () => setIsLoading(true);
 	const colours = useColours();
-	const lists = ExampleLists;
+	const { data } = useLiveQuery(Database.db.select().from(lists));
 
 	return (
 		<View className={'flex flex-col gap-4 h-full'}>
@@ -59,7 +59,9 @@ export default function Lists() {
 
 					<Pressable
 						className={'flex flex-row gap-3 items-center ml-auto'}
-						onPress={() => setIsCreatingList(true)}
+						onPress={() => {
+							router.navigate('/(tabs)/create-list');
+						}}
 					>
 						<FontAwesomeIcon icon={faPlus} size={16} color={colours.primary} />
 						<Content size={'xs'} type={'title'}>
@@ -68,7 +70,7 @@ export default function Lists() {
 					</Pressable>
 				</View>
 
-				{lists.length === 0 ? (
+				{data.length === 0 ? (
 					<View className={'h-96 flex items-center justify-center gap-6'}>
 						<FontAwesomeIcon
 							icon={faShelvesEmpty}
@@ -81,7 +83,7 @@ export default function Lists() {
 					</View>
 				) : (
 					<View className={'flex gap-6'}>
-						{lists.map((list) => (
+						{data.map((list) => (
 							<Pressable
 								key={`${list.id}`}
 								className={'flex flex-row w-full gap-4 items-center'}
@@ -89,7 +91,7 @@ export default function Lists() {
 									router.navigate(`/(tabs)/list?id=${list.id}`);
 								}}
 							>
-								<ListImage list={list} />
+								<ListImage image={list.image} />
 
 								<View className={'flex flex-col'}>
 									<Content type={'title'} size={'xs'}>

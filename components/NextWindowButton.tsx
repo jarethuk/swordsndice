@@ -12,6 +12,7 @@ interface Props {
 	value?: string;
 	iconStart?: ReactElement;
 	bottom?: ReactElement;
+	disabled?: boolean;
 }
 
 export const NextWindowButton = ({
@@ -20,15 +21,17 @@ export const NextWindowButton = ({
 	onPress,
 	label,
 	bottom,
+	disabled,
 }: Props) => {
 	const colours = useColours();
 
 	return (
 		<Pressable
-			onPress={onPress}
-			className={
-				bottom ? 'bg-primary-light dark:bg-primary-dark rounded-2xl' : ''
-			}
+			onPress={disabled ? undefined : onPress}
+			className={clsx({
+				'opacity-50': disabled,
+				'bg-primary-light dark:bg-primary-dark rounded-2xl': bottom,
+			})}
 		>
 			<View
 				className={

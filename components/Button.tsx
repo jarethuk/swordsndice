@@ -1,8 +1,8 @@
-import { clsx } from 'clsx';
-import type { ReactElement } from 'react';
-import { Pressable, View } from 'react-native';
-import { Content } from './Content';
-import { Loading } from './Loading';
+import {clsx} from 'clsx';
+import type {ReactElement} from 'react';
+import {Pressable, View} from 'react-native';
+import {Content} from './Content';
+import {Loading} from './Loading';
 
 interface Props {
 	content: string | ReactElement;
@@ -63,25 +63,19 @@ export const Button = ({
 			>
 				{loading ? (
 					<Loading size={23} white />
+				) : typeof content === 'string' ? (
+					<Content
+						type={'cta'}
+						size={'lg'}
+						className={'pt-1'}
+						variant={
+							variant === 'outline' || variant === 'light' ? undefined : 'white'
+						}
+					>
+						{content}
+					</Content>
 				) : (
-					<>
-						{typeof content === 'string' ? (
-							<Content
-								type={'cta'}
-								size={'lg'}
-								className={'pt-1'}
-								variant={
-									variant === 'outline' || variant === 'light'
-										? undefined
-										: 'white'
-								}
-							>
-								{content}
-							</Content>
-						) : (
-							content
-						)}
-					</>
+					content
 				)}
 			</View>
 		</Pressable>
