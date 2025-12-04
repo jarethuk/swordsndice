@@ -6,6 +6,7 @@ export interface ListMemberEquipment {
 }
 
 export interface ListMember {
+	id: string;
 	name: string;
 	points: number;
 	equipment: ListMemberEquipment[];

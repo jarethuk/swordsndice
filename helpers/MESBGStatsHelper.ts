@@ -1,4 +1,5 @@
 import {MESBGArmySlot} from '../types';
+import type {List, ListGroup, ListMember} from '../types/List';
 import type {MESBGProfileStats} from '../types/MESBGProfileStats';
 import type {Profile} from '../types/Profile';
 
@@ -45,4 +46,34 @@ export const maxWarbandForLeader = (slot: MESBGArmySlot): number => {
 		default:
 			return 6;
 	}
+};
+
+export const getMemberPointsTotal = (member: ListMember): number => {
+	let total = 0;
+	total += member.points;
+
+	for (const equipment of member.equipment) {
+		total += equipment.points;
+	}
+	return total;
+};
+
+export const getGroupPointsTotal = (group: ListGroup): number => {
+	let total = 0;
+	const members = [group.leader, ...group.members];
+
+	for (const member of members) {
+		total += getMemberPointsTotal(member);
+	}
+	return total;
+};
+
+export const getPointsTotal = (list: List): number => {
+	let total = 0;
+
+	for (const group of list.groups) {
+		total += getGroupPointsTotal(group);
+	}
+
+	return total;
 };

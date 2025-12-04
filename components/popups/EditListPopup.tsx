@@ -1,11 +1,14 @@
+import {router} from 'expo-router';
 import {useCallback, useState} from 'react';
 import {View} from 'react-native';
-import {updateDBList} from '../../db/DBLists';
+import {deleteDBList, updateDBList} from '../../db/DBLists';
 import type {List} from '../../types/List';
 import {Button} from '../Button';
 import {Content} from '../Content';
+import Divider from '../Divider';
 import {Input} from '../Input';
 import {Popup} from '../Popup';
+import AreYouSurePopup from './AreYouSurePopup';
 
 interface Props {
 	onDismiss: () => void;
@@ -16,6 +19,7 @@ export default function EditListPopup({ onDismiss, list }: Props) {
 	const [name, setName] = useState(list.name);
 	const [points, setPoints] = useState(list.points.toString());
 	const [isSaving, setIsSaving] = useState(false);
+	const [isDeleting, setIsDeleting] = useState(false);
 
 	const isValid = name && points && Number(points) > 0;
 
@@ -32,6 +36,23 @@ export default function EditListPopup({ onDismiss, list }: Props) {
 		setIsSaving(false);
 		onDismiss();
 	}, [list, name, points, isSaving, onDismiss]);
+
+	const deleteList = useCallback(async () => {
+		if (!list) return;
+		setIsDeleting(false);
+		await deleteDBList(list.id);
+		router.back();
+	}, [list]);
+
+	if (isDeleting) {
+		return (
+			<AreYouSurePopup
+				onDismiss={() => setIsDeleting(false)}
+				onConfirm={deleteList}
+				message={'Delete this list? This cannot be undone.'}
+			/>
+		);
+	}
 
 	return (
 		<Popup onDismiss={onDismiss}>
@@ -61,6 +82,14 @@ export default function EditListPopup({ onDismiss, list }: Props) {
 					disabled={!isValid}
 					loading={isSaving}
 					onPress={saveList}
+				/>
+
+				<Divider />
+
+				<Button
+					content={'Delete'}
+					variant={'negative'}
+					onPress={() => setIsDeleting(true)}
 				/>
 			</View>
 		</Popup>

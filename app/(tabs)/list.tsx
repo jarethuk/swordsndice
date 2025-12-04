@@ -1,4 +1,4 @@
-import {faChevronLeft, faEdit, faExclamationTriangle,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import {faChevronLeft, faCopy, faEdit, faExclamationTriangle,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {router, useLocalSearchParams} from 'expo-router';
 import {useCallback, useEffect, useMemo, useState} from 'react';
@@ -11,6 +11,7 @@ import AddWarbandPopup from '../../components/popups/AddWarbandPopup';
 import EditListPopup from '../../components/popups/EditListPopup';
 import {MESBGArmies} from '../../data/MESBGArmies';
 import {getDBList} from '../../db/DBLists';
+import {getPointsTotal} from '../../helpers/MESBGStatsHelper';
 import {useColours} from '../../hooks/useColours';
 import type {List} from '../../types/List';
 import ScrollView = Animated.ScrollView;
@@ -19,6 +20,7 @@ export default function ListPage() {
 	const colours = useColours();
 	const { id } = useLocalSearchParams();
 	const [list, setList] = useState<List | undefined | null>();
+	const canEdit = true;
 
 	const [isEditing, setIsEditing] = useState(false);
 	const [isAddingWarband, setIsAddingWarband] = useState(false);
@@ -41,6 +43,12 @@ export default function ListPage() {
 
 		return MESBGArmies.find((x) => x.name === list.army);
 	}, [list?.army]);
+
+	const pointsTotal = useMemo(() => {
+		if (!list) return;
+
+		return getPointsTotal(list);
+	}, [list]);
 
 	useEffect(() => {
 		if (!id || list?.id === id) return;
@@ -97,13 +105,19 @@ export default function ListPage() {
 						</Content>
 
 						<Content size={'md'} type={'subtitle'} center muted>
-							{list.army} - {list.points}pts
+							{list.army} - {pointsTotal}/{list.points}pts
 						</Content>
 					</View>
 
-					<Pressable onPress={() => setIsEditing(true)}>
-						<FontAwesomeIcon icon={faEdit} size={20} color={colours.muted} />
-					</Pressable>
+					{canEdit ? (
+						<Pressable onPress={() => setIsEditing(true)}>
+							<FontAwesomeIcon icon={faEdit} size={20} color={colours.muted} />
+						</Pressable>
+					) : (
+						<Pressable>
+							<FontAwesomeIcon icon={faCopy} size={20} color={colours.muted} />
+						</Pressable>
+					)}
 				</View>
 
 				<ScrollView
@@ -121,13 +135,17 @@ export default function ListPage() {
 							army={army}
 							key={index.toString()}
 							onDelete={refreshList}
+							canEdit={canEdit}
+							refresh={refreshList}
 						/>
 					))}
 
-					<Button
-						content={'Add Warband'}
-						onPress={() => setIsAddingWarband(true)}
-					/>
+					{canEdit && (
+						<Button
+							content={'Add Warband'}
+							onPress={() => setIsAddingWarband(true)}
+						/>
+					)}
 				</ScrollView>
 			</View>
 
