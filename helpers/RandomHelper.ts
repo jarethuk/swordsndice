@@ -1,4 +1,4 @@
-export const getRandomListId = () => {
+export const getRandomId = () => {
 	const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	let result = '';
 

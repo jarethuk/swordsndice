@@ -27,18 +27,16 @@ export const Button = ({
 }: Props) => {
 	return (
 		<Pressable
-			className={clsx(
-				'w-full rounded-2xl overflow-hidden active:pb-0 active:mt-1 pb-1',
-				{
-					'bg-primaryShadow-light dark:bg-primaryShadow-dark':
-						!disabled && (!variant || variant === 'primary'),
-					'bg-secondaryShadow-light dark:bg-secondaryShadow-dark':
-						variant === 'secondary',
-					'border-border-light dark:border-border-dark border-2 ':
-						variant === 'outline',
-					'bg-panelDrop-light dark:bg-panelDrop-dark': variant === 'light',
-				},
-			)}
+			className={clsx('w-full rounded-2xl overflow-hidden', {
+				'active:pb-0 active:mt-1 pb-1': variant !== 'outline',
+				'bg-primaryShadow-light dark:bg-primaryShadow-dark':
+					!disabled && (!variant || variant === 'primary'),
+				'bg-secondaryShadow-light dark:bg-secondaryShadow-dark':
+					variant === 'secondary',
+				'border-border-light dark:border-border-dark border-2 ':
+					variant === 'outline',
+				'bg-panelDrop-light dark:bg-panelDrop-dark': variant === 'light',
+			})}
 			onPress={() => {
 				if (!disabled) {
 					onPress?.();

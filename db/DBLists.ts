@@ -13,9 +13,14 @@ export const addDBList = (record: List) => {
 };
 
 export const updateDBList = (id: string, record: Partial<List>) => {
+	const dbRecord = {
+		...record,
+		...(record.groups && { groups: JSON.stringify(record.groups) }),
+	};
+
 	return Database.db
 		.update(lists)
-		.set(record as any)
+		.set(dbRecord as any)
 		.where(eq(lists.id, id));
 };
 

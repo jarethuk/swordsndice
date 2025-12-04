@@ -8,7 +8,7 @@ import {NextWindowButton} from '../../components/NextWindowButton';
 import SelectArmyPopup from '../../components/popups/SelectArmyPopup';
 import SelectGamePopup from '../../components/popups/SelectGamePopup';
 import {addDBList} from '../../db/DBLists';
-import {getRandomListId} from '../../helpers/RandomHelper';
+import {getRandomId} from '../../helpers/RandomHelper';
 import type {Games} from '../../types';
 import type {List} from '../../types/List';
 import ScrollView = Animated.ScrollView;
@@ -35,7 +35,7 @@ export default function CreateList() {
 		setIsCreating(true);
 
 		const list: List = {
-			id: getRandomListId(),
+			id: getRandomId(),
 			name,
 			army,
 			game,

@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { View } from 'react-native';
-import { Container } from './Container';
-import { Content } from './Content';
-import { Loading } from './Loading';
+import React, {useEffect, useState} from 'react';
+import {View} from 'react-native';
+import {Content} from './Content';
+import {Loading} from './Loading';
 
 const messages = [
 	'Polishing coins...',
@@ -30,18 +29,14 @@ export const LoadingScreen = () => {
 	}, [index]);
 
 	return (
-		<Container>
-			<View
-				className={
-					'flex flex-col grow justify-center items-center h-full gap-3'
-				}
-			>
-				<Loading />
+		<View
+			className={'flex flex-col grow justify-center items-center h-full gap-3'}
+		>
+			<Loading />
 
-				<Content type={'subtitle'} size={'lg'}>
-					{messages[index]}
-				</Content>
-			</View>
-		</Container>
+			<Content type={'subtitle'} size={'lg'}>
+				{messages[index]}
+			</Content>
+		</View>
 	);
 };
