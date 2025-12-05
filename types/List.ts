@@ -10,6 +10,7 @@ export interface ListMember {
 	name: string;
 	points: number;
 	equipment: ListMemberEquipment[];
+	amount: number;
 }
 
 export interface ListGroup {

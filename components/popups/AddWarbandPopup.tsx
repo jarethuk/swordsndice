@@ -13,6 +13,7 @@ import {Content} from '../Content';
 import HeroPoints from '../HeroPoints';
 import {Popup} from '../Popup';
 import {PopupRow} from '../PopupRow';
+import StatsRow from '../StatsRow';
 
 interface Props {
 	onDismiss: () => void;
@@ -71,6 +72,7 @@ export default function AddWarbandPopup({ onDismiss, list, onSelect }: Props) {
 			groups.push({
 				id: getRandomId(),
 				leader: {
+					id: getRandomId(),
 					name: leader.name,
 					points: leader.points,
 					equipment: [],
@@ -106,6 +108,7 @@ export default function AddWarbandPopup({ onDismiss, list, onSelect }: Props) {
 								title={leader.name}
 								onPress={() => addWarband(leader)}
 								bottom={<HeroPoints profile={leader} variant={'white'} />}
+								subtitle={<StatsRow profile={leader} />}
 							/>
 						))}
 					</View>

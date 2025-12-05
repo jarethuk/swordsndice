@@ -7,10 +7,12 @@ interface Props {
 }
 
 export default function EquipmentList({ member }: Props) {
+	if (member.equipment.length === 0) return;
+
 	return (
 		<View className={'flex flex-col gap-2 mt-2'}>
 			{member.equipment.map(({ name, points }) => (
-				<Content type={'subtitle'} size={'xs'} muted>
+				<Content type={'subtitle'} size={'xs'} muted key={name}>
 					- {name} ({points}pts)
 				</Content>
 			))}

@@ -8,15 +8,15 @@ import {Content} from './Content';
 
 interface Props {
 	onPress: () => void;
-	label: string;
-	value?: string;
+	label: ReactElement | string;
+	subtitle?: ReactElement | string;
 	iconStart?: ReactElement;
 	bottom?: ReactElement;
 	disabled?: boolean;
 }
 
 export const NextWindowButton = ({
-	value,
+	subtitle,
 	iconStart,
 	onPress,
 	label,
@@ -35,34 +35,29 @@ export const NextWindowButton = ({
 		>
 			<View
 				className={
-					'border-2 border-border-light dark:border-border-dark dark:border-panel-dark rounded-2xl h-[60px] w-full flex flex-row gap-4 items-center px-4 bg-background-light dark:bg-background-dark'
+					'border-2 border-border-light dark:border-border-dark dark:border-panel-dark rounded-2xl w-full flex flex-row gap-4 items-center px-4 py-2 bg-background-light dark:bg-background-dark'
 				}
 			>
 				{iconStart}
 
-				<View className={'relative h-16 w-full shrink group'}>
-					{label && (
-						<View
-							className={clsx('absolute left-0 w-full', {
-								'top-2': value,
-								'top-5': !value,
-							})}
-						>
-							<Content
-								type={'subtitle'}
-								size={value ? 'sm' : 'md'}
-								muted={!!value}
-							>
+				<View className={'relative w-full shrink group flex gap-4'}>
+					{label &&
+						(typeof label === 'string' ? (
+							<Content type={'subtitle'} size={'md'}>
 								{label}
 							</Content>
-						</View>
-					)}
+						) : (
+							label
+						))}
 
-					{value && (
-						<Content type={'subtitle'} size={'md'} className={'top-[26px]'}>
-							{value}
-						</Content>
-					)}
+					{subtitle &&
+						(typeof subtitle === 'string' ? (
+							<Content type={'subtitle'} size={'md'} className={'top-[26px]'}>
+								{subtitle}
+							</Content>
+						) : (
+							subtitle
+						))}
 				</View>
 
 				<FontAwesomeIcon icon={faChevronRight} size={16} color={colours.text} />

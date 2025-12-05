@@ -1,8 +1,11 @@
 import type {MESBGArmySlot} from './Enums';
 import type {MESBGProfileStats} from './MESBGProfileStats';
 
-export interface ArmyProfile {
+export interface BaseArmyProfile {
 	name: string;
-	slot: MESBGArmySlot;
 	fullStats?: MESBGProfileStats;
+}
+
+export interface ArmyProfile extends BaseArmyProfile {
+	slot: MESBGArmySlot;
 }

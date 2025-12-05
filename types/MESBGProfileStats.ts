@@ -1,7 +1,7 @@
 export interface MESBGProfileStats {
 	movement: number;
 	fightValue: number;
-	savingThrow: number;
+	shootValue: number;
 	strength: number;
 	defense: number;
 	attacks: number;

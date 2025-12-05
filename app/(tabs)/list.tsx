@@ -14,6 +14,7 @@ import {getDBList} from '../../db/DBLists';
 import {getPointsTotal} from '../../helpers/MESBGStatsHelper';
 import {useColours} from '../../hooks/useColours';
 import type {List} from '../../types/List';
+import Divider from '../../components/Divider';
 import ScrollView = Animated.ScrollView;
 
 export default function ListPage() {
@@ -124,10 +125,6 @@ export default function ListPage() {
 					contentContainerClassName={'flex flex-col gap-6 pb-12'}
 					showsVerticalScrollIndicator={false}
 				>
-					<Content size={'xs'} type={'title'}>
-						Warbands
-					</Content>
-
 					{list.groups.map((group, index) => (
 						<ListWarband
 							group={group}
@@ -137,8 +134,11 @@ export default function ListPage() {
 							onDelete={refreshList}
 							canEdit={canEdit}
 							refresh={refreshList}
+							index={index}
 						/>
 					))}
+
+					{list.groups.length > 0 && <Divider />}
 
 					{canEdit && (
 						<Button

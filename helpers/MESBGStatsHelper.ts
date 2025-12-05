@@ -22,7 +22,7 @@ export const getMESBGStats = (profile: Profile): MESBGProfileStats => {
 	return {
 		movement,
 		fightValue,
-		savingThrow,
+		shootValue: savingThrow,
 		strength,
 		defense,
 		attacks,
@@ -55,7 +55,8 @@ export const getMemberPointsTotal = (member: ListMember): number => {
 	for (const equipment of member.equipment) {
 		total += equipment.points;
 	}
-	return total;
+
+	return total * (member.amount ?? 1);
 };
 
 export const getGroupPointsTotal = (group: ListGroup): number => {
