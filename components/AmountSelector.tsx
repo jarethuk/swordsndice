@@ -15,8 +15,6 @@ export default function AmountSelector({ value, onChange, max }: Props) {
 	const canMinus = value > 1;
 	const canAdd = value < max;
 
-	console.log({ value });
-
 	const add = useCallback(() => onChange(value + 1), [value, onChange]);
 	const minus = useCallback(() => onChange(value - 1), [value, onChange]);
 

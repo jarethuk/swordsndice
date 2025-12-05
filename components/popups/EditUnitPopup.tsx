@@ -69,7 +69,6 @@ export default function EditUnitPopup({
 				<AmountSelector
 					value={amount}
 					onChange={(value) => {
-						console.log(value);
 						setAmount(value);
 					}}
 					max={3}

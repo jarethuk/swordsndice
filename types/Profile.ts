@@ -10,5 +10,5 @@ export interface Profile {
 	name: string;
 	points: number;
 	equipment: Equipment[];
-	stats: number[];
+	stats: string[];
 }

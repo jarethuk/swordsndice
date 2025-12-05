@@ -102,7 +102,6 @@ export default function AddUnitPopup({
 				<AmountSelector
 					value={amount}
 					onChange={(value) => {
-						console.log(value);
 						setAmount(value);
 					}}
 					max={availableUnits}

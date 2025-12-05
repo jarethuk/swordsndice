@@ -1,5 +1,5 @@
 import {View} from 'react-native';
-import {type BaseArmyProfile} from '../types/ArmyProfile';
+import type {BaseArmyProfile} from '../types/ArmyProfile';
 import {Content} from './Content';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 
 interface StatProps {
 	name: string;
-	value: number;
+	value: string;
 	isPlus?: boolean;
 }
 
