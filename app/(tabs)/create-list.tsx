@@ -1,4 +1,4 @@
-import {router} from 'expo-router';
+import {router, useFocusEffect} from 'expo-router';
 import {useCallback, useMemo, useState} from 'react';
 import {Animated} from 'react-native';
 import {Content} from '../../components';
@@ -22,6 +22,18 @@ export default function CreateList() {
 	const [selectingGame, setSelectingGame] = useState(false);
 	const [selectingArmy, setSelectingArmy] = useState(false);
 	const [isCreating, setIsCreating] = useState(false);
+
+	useFocusEffect(
+		useCallback(() => {
+			setName('');
+			setPoints('');
+			setGame(undefined);
+			setArmy(undefined);
+			setSelectingArmy(false);
+			setSelectingGame(false);
+			setIsCreating(false);
+		}, []),
+	);
 
 	const isValid = useMemo(() => {
 		const intPoints = parseInt(points, 10);

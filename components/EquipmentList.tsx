@@ -13,7 +13,7 @@ export default function EquipmentList({ member }: Props) {
 		<View className={'flex flex-col gap-2 mt-2'}>
 			{member.equipment.map(({ name, points }) => (
 				<Content type={'subtitle'} size={'xs'} muted key={name}>
-					- {name} ({points}pts)
+					{name} ({points}pts)
 				</Content>
 			))}
 		</View>

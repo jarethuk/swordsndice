@@ -1,0 +1,5804 @@
+[
+    {
+        "name": "Arathorn's Stand",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Arathorn, Chieftain of the Dunedain",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Halbarad",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ranger of the North",
+                "slot": "Independent Hero"
+            }
+        ]
+    },
+    {
+        "name": "Army of Carn Dum",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Aldrac, Warlord of Carn Dum",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Fraecht, Vassal of the Witch-king",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Carn Dum",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Angmar Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hill Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Angmar Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Carn Dum",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Orc Tracker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Angmar Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Army of Dale",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Brand, King of Dale",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Bard II, Prince of Dale",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Captain of Dale",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Knight of Dale",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Dale",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Windlance",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Army of Dunland",
+        "group": "Evil (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Thrydan Wolfsbane",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Frida Tallspear",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gorulf Ironskin",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dunlending Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Wild Man Oathmaker",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Crebain",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dunlending Horseman",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dunlending Huscarl",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dunlending Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Wild Man of Dunland",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Army of Edoras",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Helm Hammerhand, King of Rohan",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Frealaf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Haleth, Prince of Rohan",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Hama, Prince of Rohan",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Olwyn, Shieldmaiden of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hera, Daughter of Helm",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "King's Huntsman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Lief, Page of Helm",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Rohan",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Army of Erebor",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Dain Ironfoot, King Under the Mountain",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dwalin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Thorin III Stonehelm",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Dwarf King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gimli",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gloin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Iron Hills Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Nori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bifur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bofur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Iron Hills Goat Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Iron Hills Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Army of Gothmog",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Gothmog",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Goroth, Captain of the Morannon",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Guritz",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Zagdush, Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gothmog's Enforcer",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Morannon Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Mordor Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Morannon Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor War Catapult",
+                "slot": "Siege Engine"
+            },
+            {
+                "name": "Mordor Siege Bow",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Army of Gundabad",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Azog the Defiler",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Bolg, Spawn of Azog",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gundabad Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Goblin Mercenary Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gundabad Catapult Troll",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Troll Brute",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Gundabad Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Gundabad Ogre",
+                "slot": "Warrior"
+            },
+            {
+                "name": "War Bat",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Gundabad Berserker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Gundabad Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Goblin Mercenary",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Army of Lake-town",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Master of Lake-town",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Bard the Bowman",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Tauriel, Ranger of Mirkwood",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Braga, Captain of the Guard",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Fili the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Kili the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Oin the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bofur the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Lake-town Guard Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Alfrid the Councillor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bard's Family",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Lake-town Guard",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Army of Thror",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Thror, King Under the Mountain",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Thrain, Son of Thror",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Young Thorin Oakenshield",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Young Dwalin the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Dwarf King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Young Balin the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Grim Hammer Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Erebor Dwarf Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Grim Hammer Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Erebor Dwarf Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Army of the Great Eye",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Witch-king of Angmar",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Khamul the Easterling",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Betrayer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Dark Marshal",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Dwimmerlaik",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Knight of Umbar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Shadow Lord",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Tainted",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Undying",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gothmog",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Razgush, War Leader of the North",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mouth of Sauron",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Ringwraith",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Great Beast of Gorgoroth",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Troll Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Shagrat",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Goroth, Captain of the Morannon",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Black Numenorean Marshal",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of the Black Guard",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Muzgur, Orc Shaman",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Guritz",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Kardush the Firecaller",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gorbag",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Zagdush, Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gothmog's Enforcer",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Morannon Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Uruk-Hai Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Taskmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Shelob",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Black Guard Drummer",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Mordor Orc Drummer",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Mordor Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Bat Swarm",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Numenorean Knight",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Giant Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Hunting Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Guard of Barad-dur",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Numenorean Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Morgul Stalker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fell Warg",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Morannon Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Uruk-Hai",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Orc Tracker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor War Catapult",
+                "slot": "Siege Engine"
+            },
+            {
+                "name": "Mordor Siege Bow",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Army of the White Hand",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Saruman",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Thrydan Wolfsbane",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Dunlending Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Frida Tallspear",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gorulf Ironskin",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Vrasku",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Scout Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Wild Man Oathmaker",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Isengard Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Wild Man Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Isengard Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Grima",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Isengard Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Crebain",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Feral Uruk-Hai",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dunlending Horseman",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dunlending Huscarl",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Isengard Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Uruk-Hai Scout",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dunlending Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Isengard Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Wild Man of Dunland",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Arnor",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Arvedui, Last King of Arnor",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Aranarth",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Argadir",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Malbeth the Seer",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Arnor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ranger of the North",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Knight of Arnor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Ranger of Arnor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Arnor",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Assault Upon Helm's Deep",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Uruk-Hai Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Captain (General)",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Isengard Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Uruk-Hai Demolition Team",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Uruk-Hai Berserker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Uruk-Hai Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Isengard Assault Ballista",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Assault on Lothlorien",
+        "group": "Evil (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Druzhag the Beastcaller",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Muzgur, Orc Shaman",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Ashrak",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Wild Warg Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Moria Goblin Shaman",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Moria Goblin Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bat Swarm",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warg Marauder",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Giant Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Hunting Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Goblin Prowler",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Orc Tracker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Goblin Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Assault on Ravenhill",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Thorin Oakenshield, King Under the Mountain",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dwalin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas Greenleaf, Prince of Mirkwood",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Fili the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Kili the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Tauriel, Ranger of Mirkwood",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bilbo Baggins, Master Burglar",
+                "slot": "Hero of Fortitude"
+            }
+        ]
+    },
+    {
+        "name": "Atop the Walls",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Gandalf the White",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Hurin the Tall, Warden of the Keys",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Knight of the White Tower",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Beregond, Guard of the Citadel",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Irolas",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Peregrin Took",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Knight of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Citadel Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Gondor Battlecry Trebuchet",
+                "slot": "Siege Engine"
+            },
+            {
+                "name": "Gondor Avenger Bolt Thrower",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Azog's Hunters",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Azog the Defiler",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Bolg, Spawn of Azog",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Narzug, Hunter Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Yazneg, Hunter Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Fimbul, Hunter Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hunter Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hunter Orc Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fell Warg",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hunter Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Barad-dur",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Dark Lord Sauron",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "The Witch-king of Angmar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mordor Troll Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Black Numenorean Marshal",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ringwraith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Mordor Orc Drummer",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Mordor Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Numenorean Knight",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Numenorean Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Orc Tracker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor War Catapult",
+                "slot": "Siege Engine"
+            },
+            {
+                "name": "Mordor Siege Bow",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Battle of Bywater",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Meriadoc Brandybuck, Captain of the Shire",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Peregrin Took, Captain of the Shire",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Frodo of the Nine Fingers",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Samwise the Brave",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Farmer Maggot",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Baldo Tulpenny",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Holfoot Bracegirdle, Shirriff-Leader",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Will Whitfoot, Mayor of Michel Delving",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Farmer Tolman Cotton",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hamfast 'Gaffer' Gamgee",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Paladin Took, Thain of the Shire",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Robin Smallburrow, Hobbit Shirriff",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Fredegar 'Fatty' Bolger",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Folco Boffin",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Lobelia Sackville-Baggins",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Rosie Cotton",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Hobbit Archer",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hobbit Shirriff",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hobbit Militia",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Battle of Fornost",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Glorfindel, Lord of the West",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Earnur, Last King of Gondor",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Aranarth",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Cirdan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rivendell Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ranger of the North",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Ranger of the North",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Knight of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rivendell Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hobbit Archer",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Battle of Greenfields",
+        "group": "Good (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Bandobras Took",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Ranger of the North",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hobbit Archer",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hobbit Shirriff",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hobbit Militia",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Besiegers of the Hornburg",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Wulf",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "General Targg",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hill Tribes Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Shank & Wrot",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Crebain",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hill Tribesman",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Breaking of the Fellowship",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Aragorn, Strider",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gimli",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Boromir of Gondor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Haldir, Galadhrim Captain",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Frodo Baggins",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Samwise Gamgee",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Meriadoc Brandybuck",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Peregrin Took",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Lothlorien Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Buhrdur's Horde",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Buhrdur, Hill Troll Chieftain",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Wild Warg Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Angmar Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Angmar Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Hill Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Angmar Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Wild Warg",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Angmar Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Cirith Ungol",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Shagrat",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gorbag",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mordor Uruk-Hai Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Taskmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Shelob",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Mordor Orc Drummer",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Mordor Uruk-Hai",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Orc Tracker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Corsair Fleet",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Dalamyr, Fleetmaster of Umbar",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Delgamar, Gatemaster of Umbar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Corsair Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Corsair Captain (General)",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Corsair Bo'sun",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Corsair Crossbowman",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Corsair Reaver",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Corsair of Umbar",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Corsair Ballista",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Defenders of Erebor",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Dain Ironfoot, King Under the Mountain",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Brand, King of Dale",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dwalin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Thorin III Stonehelm",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Bard II, Prince of Dale",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gloin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Iron Hills Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Nori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bifur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bofur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Dale",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Iron Hills Goat Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Knight of Dale",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Iron Hills Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Dale",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Defenders of Helm's Deep",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Theoden",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Aragorn, Strider",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gimli",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Haldir, Galadhrim Captain",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Galadhrim Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gamling",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "King's Huntsman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Haleth, Son of Hama",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Aldor",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Galadhrim Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Rohan",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Defenders of the Hornburg",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Helm Hammerhand, Wraith of the Hornburg",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Hera, The Bride of Death",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Olwyn, Shieldmaiden of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Lief, Page of Helm",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Rohan",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Defenders of the Pelennor",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Gandalf the White",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Aragorn, Strider",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Prince Imrahil",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Theoden",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Eomer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gimli",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "King of the Dead",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Forlong the Fat",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Hurin the Tall, Warden of the Keys",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Elladan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Elrohir",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Knight of the White Tower",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Angbor the Fearless",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Deorwine, Chief of the King's Knights",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Halbarad",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Herald of the Dead",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ingold, Warden of The Rammas Echor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Beregond, Guard of the Citadel",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Dol Amroth",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Duinhir, Lord of the Blackroot Vale",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Irolas",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Elfhelm, Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Eowyn",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gamling",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Peregrin Took",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Ranger of the North",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Rider of the Dead",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Knight of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of the Dead",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Knight of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Man-at-arms of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Axeman of Lossarnach",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Blackroot Vale Archer",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Citadel Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Clansman of Lamedon",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Gondor Battlecry Trebuchet",
+                "slot": "Siege Engine"
+            },
+            {
+                "name": "Gondor Avenger Bolt Thrower",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Depths of Moria",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Balrog",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Moria Blackshield Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Moria Goblin Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Moria Blackshield Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Moria Goblin Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "The Watcher in the Water",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Cave Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Blackshield Drum",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Blackshield Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Goblin Prowler",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Goblin Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Desolator of the North",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Smaug",
+                "slot": "Hero of Legend"
+            }
+        ]
+    },
+    {
+        "name": "Dragons of the North",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Dragon",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dragon",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Cave Drake",
+                "slot": "Minor Hero"
+            }
+        ]
+    },
+    {
+        "name": "Erebor & Dale",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Thror, King Under the Mountain",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Girion, Lord of Dale",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Thrain, Son of Thror",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Young Thorin Oakenshield",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Young Dwalin the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Young Balin the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Grim Hammer Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Erebor Dwarf Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Dale",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Grim Hammer Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Knight of Dale",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Erebor Dwarf Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Dale",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Erebor Reclaimed",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Thorin Oakenshield, King Under the Mountain",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dain Ironfoot, Lord of the Iron Hills",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Dwalin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Fili the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Kili the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Balin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gloin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Iron Hills Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Nori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bifur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bofur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bombur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Oin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Iron Hills Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Expedition to the East",
+        "group": "Good (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Drar",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Murin",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Cirion, Lieutenant of Amon Barad",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Knight of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dwarf Ranger",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dwarf Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Ranger of Gondor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Fangorn",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Treebeard",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Beechbone",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Birchseed",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ent",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Far Harad",
+        "group": "Evil (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Mahud King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mahud Tribesmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Half Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mahud Raider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mahud Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Fell Beings of Mirkwood",
+        "group": "Evil (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Razgush, War Leader of the North",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Spider Queen",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mordor Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Taskmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Mordor Orc Drummer",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Bat Swarm",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Giant Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Hunting Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fell Warg",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Orc Tracker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Fields of Celebrant",
+        "group": "Good (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Eorl the Young",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "King of Men (Gondor)",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Son of Eorl",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Citadel Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Fords of Isen",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Theodred",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Grimbold of Grimslade",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Elfhelm, Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "King's Huntsman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Outrider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Rohan",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Garrison of Dale",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Girion, Lord of Dale",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Captain of Dale",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Knight of Dale",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Dale",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Windlance",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Garrison of Ithilien",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Faramir",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Madril",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Frodo Baggins",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Damrod",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Samwise Gamgee",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Anborn, Ranger of Ithilien",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Mablung, Ranger of Ithilien",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Smeagol",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Knight of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Osgiliath Veteran",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Ranger of Gondor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Goblin-town",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Goblin King",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Grinnah, Goblin Jailer",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "The Goblin Scribe",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Goblin Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gollum",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Goblin Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Grand Army of the South",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Mumak War Leader",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Suladan, The Serpent Lord",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dalamyr, Fleetmaster of Umbar",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Amdur, Lord of Blades",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Khamul the Easterling",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Betrayer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Golden King of Abrakhan",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Knight of Umbar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Khandish King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Delgamar, Gatemaster of Umbar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Haradrim King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mahud King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "War Mumak of Harad",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Kataphrakt Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hasharin",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Raza, Fang of the Serpent",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling War Priest",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Corsair Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Khandish Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mahud Tribesmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Corsair Bo'sun",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Taskmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Dragon Knight",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Khandish Charioteer",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Half Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "War Drake of Rhun",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mahud Raider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Easterling Kataphrakt",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Khandish Horseman",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Serpent Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dragon Cult Acolyte",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Haradrim Raider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Dragon Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Corsair Crossbowman",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Abrakhan Merchant Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Corsair Reaver",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Watcher of Karna",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Corsair of Umbar",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Easterling Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Khandish Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mahud Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Serpent Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Haradrim Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Halls of Thranduil",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Thranduil, King of the Woodland Realm",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Legolas Greenleaf, Prince of Mirkwood",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Tauriel, Ranger of Mirkwood",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Palace Guard Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mirkwood Elf Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mirkwood Ranger Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Wood Elf Sentinel",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Elf Knight",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Ranger",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Palace Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Elf Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Harad",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Mumak War Leader",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "The Betrayer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Golden King of Abrakhan",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Haradrim King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "War Mumak of Harad",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Taskmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Raider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Abrakhan Merchant Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Watcher of Karna",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Haradrim Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Host of the Dragon Emperor",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Dragon Emperor of Rhun",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Rutabi, General of the Dragon Legion",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Easterling Kataphrakt Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Brorgir the Conjurer",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling War Priest",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Dragon Knight",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "War Drake of Rhun",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Easterling Kataphrakt",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dragon Cult Acolyte",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Dragon Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Easterling Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Host of the Witch-king",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Witch-king of Angmar",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "The Dwimmerlaik",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Tainted",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Aldrac, Warlord of Carn Dum",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Shadow of Rhudaur",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Shade",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Fraecht, Vassal of the Witch-king",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Carn Dum",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Nazthak, Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Angmar Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Angmar Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Barrow-wight",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Werewolf",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Spectre",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Angmar Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Carn Dum",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Angmar Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Kingdom of Khazad-Dum",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Durin, King of Khazad-Dum",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dwarf King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mardin, The King's Ward",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "King's Champion",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dwarf Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dwarf Shieldbearer",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Vault Warden Team",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Iron Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Khazad Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dwarf Ranger",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dwarf Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dwarven Ballista",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Kingdom of Rohan",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Theoden",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Eomer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Theodred",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Erkenbrand, Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Deorwine, Chief of the King's Knights",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Grimbold of Grimslade",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Elfhelm, Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hama, Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gamling",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Eowyn",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "King's Huntsman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Outrider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Rohan",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Legions of Mordor",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Witch-king of Angmar",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Mumak War Leader",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Amdur, Lord of Blades",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Khamul the Easterling",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Betrayer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Dark Marshal",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Dwimmerlaik",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Golden King of Abrakhan",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Knight of Umbar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Shadow Lord",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Tainted",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Undying",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gothmog",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Suladan, The Serpent Lord",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Haradrim King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Ringwraith",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "War Mumak of Harad",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Great Beast of Gorgoroth",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Kataphrakt Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Goroth, Captain of the Morannon",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hasharin",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Raza, Fang of the Serpent",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Black Numenorean Marshal",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Guritz",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling War Priest",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Zagdush, Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gothmog's Enforcer",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Morannon Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Taskmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Dragon Knight",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Mordor Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Numenorean Knight",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Easterling Kataphrakt",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Haradrim Raider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Dragon Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Numenorean Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Abrakhan Merchant Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Watcher of Karna",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Easterling Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Morannon Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Haradrim Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor War Catapult",
+                "slot": "Siege Engine"
+            },
+            {
+                "name": "Mordor Siege Bow",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Lindon",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Gil-Galad",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Elrond",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Glorfindel, Lord of the West",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Erestor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Cirdan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rivendell Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rivendell Stormcaller",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Rivendell Knight",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rivendell Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Lothlorien",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Galadriel, Lady of Lothlorien",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Celeborn, Lord of Lothlorien",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Orophin, Galadhrim Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rumil, Warden of Caras Galadhon",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Galadhrim Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haldir, Galadhrim Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Lothlorien Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Lothlorien Stormcaller",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Wood Elf Sentinel",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Galadhrim Knight",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Guard of the Galadhrim Court",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Galadhrim Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Lothlorien Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Lurtz's Scouts",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Lurtz",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Ugluk",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mauhur",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Scout Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Drummer",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Uruk-Hai Scout",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Men of the West",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Aragorn, King Elessar",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Prince Imrahil",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gwaihir",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gandalf the White",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Eomer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gimli",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Elladan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Elrohir",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Beregond, Guard of the Citadel",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Dol Amroth",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Meriadoc Brandybuck",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Peregrin Took",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Great Eagle",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Knight of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Man-at-arms of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Rohan",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Minas Morgul",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Witch-king of Angmar",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Ringwraith",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Kardush the Firecaller",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Morannon Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Taskmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Mordor Orc Drummer",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Mordor Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Spectre",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Morgul Stalker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Morannon Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Orc Tracker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Minas Tirith",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Boromir, Captain of the White Tower",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Faramir",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Hurin the Tall, Warden of the Keys",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Denethor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Knight of the White Tower",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ingold, Warden of The Rammas Echor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Beregond, Guard of the Citadel",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Cirion, Lieutenant of Amon Barad",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Irolas",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Knight of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Guard of the Fountain Court",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Citadel Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Gondor Avenger Bolt Thrower",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Moria",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Dragon",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Durburz, Goblin-King of Moria",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Druzhag the Beastcaller",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ashrak",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Groblog",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Moria Blackshield Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Moria Goblin Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Cave Drake",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Moria Blackshield Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Moria Goblin Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "The Watcher in the Water",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Dweller in the Dark",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Cave Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Blackshield Drum",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Goblin Drum",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Bat Swarm",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warg Marauder",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Hunting Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fell Warg",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Blackshield Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Goblin Prowler",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Moria Goblin Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Muster of Isengard",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Saruman",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Vrasku",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Scout Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Uruk-Hai Drummer",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Grima",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Isengard Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Uruk-Hai Berserker",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Feral Uruk-Hai",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Uruk-Hai Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Uruk-Hai Scout",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Numenor",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Elendil",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Isildur",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Captain of Numenor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Warrior of Numenor",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Paths of the Druadan",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Theoden",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Eomer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Ghan-Buri-Ghan",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Deorwine, Chief of the King's Knights",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Elfhelm, Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gamling",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Eowyn",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Woses Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Outrider",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Pits of Dol Guldur",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Azog the Defiler",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "The Keeper of the Dungeons",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gundabad Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hunter Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Thrain the Broken",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Mirkwood Giant Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Hunting Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hunter Orc Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Gundabad Orc Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fell Warg",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hunter Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Radagast's Alliance",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Radagast the Brown",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Beorn",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gwaihir",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Great Eagle",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fledgeling Great Eagle",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Rangers of Mirkwood",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Legolas Greenleaf, Prince of Mirkwood",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Thorin Oakenshield",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Dwalin the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Tauriel, Ranger of Mirkwood",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Fili the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Kili the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Balin the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gloin the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mirkwood Ranger Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bilbo Baggins",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dori the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Nori the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Oin the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bifur the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bofur the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bombur the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ori the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mirkwood Ranger",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Ravagers of the Shire",
+        "group": "Evil (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Golfimbul, Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hill Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mordor Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Realms of Men",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "King of Men (Arnor)",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "King of Men (Dale)",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "King of Men (Gondor)",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "King of Men (Numenor)",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "King of Men (Rohan)",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Knight of the White Tower",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Numenor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Dol Amroth",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Arnor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Dale",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "King's Huntsman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Knight of Arnor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Knight of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Knight of Dale",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Knight of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Guard of the Fountain Court",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Man-at-arms of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Axeman of Lossarnach",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Numenor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Blackroot Vale Archer",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Citadel Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Clansman of Lamedon",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Ranger of Arnor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Ranger of Gondor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Outrider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Arnor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Dale",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Gondor Battlecry Trebuchet",
+                "slot": "Siege Engine"
+            },
+            {
+                "name": "Windlance",
+                "slot": "Siege Engine"
+            },
+            {
+                "name": "Gondor Avenger Bolt Thrower",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "Reclamation of Moria",
+        "group": "Good (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Balin the Dwarf, King of Moria",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dwarf King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "King's Champion",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Floi Stonehand",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dwarf Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Oin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dwarf Shieldbearer",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Iron Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Khazad Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dwarf Ranger",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dwarf Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Reclamation of Osgiliath",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Boromir, Captain of the White Tower",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Faramir",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Madril",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Knight of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Osgiliath Veteran",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Ranger of Gondor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Return of the King",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Aragorn, Strider",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gimli",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "King of the Dead",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Herald of the Dead",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rider of the Dead",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of the Dead",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Ride Out",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Theoden",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Aragorn, Strider",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gamling",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Riders of Eomer",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Eomer",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gandalf the White",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Erkenbrand, Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Riders of Theoden",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Theoden",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Eomer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Deorwine, Chief of the King's Knights",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Elfhelm, Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Eowyn",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gamling",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Rise of the Necromancer",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Sauron, The Necromancer",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Khamul the Easterling",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Abyssal Knight",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Abyssal Knight",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Dark Headsman",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Forsaken",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Keeper of the Dungeons",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Lingering Shadow",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Slayer of Men",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Slayer of Men",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "The Witch-king of Angmar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Hunter Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Castellan of Dol Guldur",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Mirkwood Giant Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Hunting Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hunter Orc Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fell Warg",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hunter Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Rivendell",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Elrond",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Glorfindel, Lord of the West",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Erestor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Elladan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Elrohir",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Arwen",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Lindir",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rivendell Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rivendell Stormcaller",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Bilbo Baggins, Ageing Hobbit",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Rivendell Knight",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rivendell Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Road to Helm's Deep",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Theoden",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Aragorn, Strider",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gimli",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Hama, Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gamling",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Royal Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohan Outrider",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Road to Rivendell",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Aragorn, Strider",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Arwen",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Gildor Inglorion",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Frodo Baggins",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Samwise Gamgee",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Barliman Butterbur",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Tom Bombadil",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Goldberry",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "The Gatekeeper of Bree",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Bill the Pony",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Meriadoc Brandybuck",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Peregrin Took",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Noldorin Exiles",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Shadows of Angmar",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Gulavhar, The Terror of Arnor",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "The Shadow of Rhudaur",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Wild Warg Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Shade",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Nazthak, Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Angmar Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Angmar Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Barrow-wight",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Werewolf",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Spectre",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Angmar Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Wild Warg",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Angmar Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Sharkey's Rogues",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Sharkey & Worm",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Sid Briarthorn",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Rowan Thistlewood",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bill Ferny",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Lotho Sackville-Baggins",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ted Sandyman",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ruffian",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ruffian",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hobbit Militia",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Survivors of Lake-town",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Bard the Bowman",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gandalf the Grey",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Lake-town Militia Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Percy, Lake-town Archer",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hilda-Bianca",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bilbo Baggins, Master Burglar",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Bard's Family",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Alfrid the Councillor",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Lake-town Militia",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Battle of Five Armies",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Gandalf the Grey",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dain Ironfoot, Lord of the Iron Hills",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Radagast the Brown",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Bard the Bowman",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Thorin Oakenshield, King Under the Mountain",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Thranduil, King of the Woodland Realm",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Beorn",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gwaihir",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Dwalin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas Greenleaf, Prince of Mirkwood",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Fili the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Kili the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Balin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gloin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Tauriel, Ranger of Mirkwood",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Iron Hills Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bilbo Baggins, Master Burglar",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mirkwood Elf Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Nori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bifur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bofur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bombur the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Oin the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Lake-town Militia Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ori the Dwarf, Champion of Erebor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Percy, Lake-town Archer",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hilda-Bianca",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bard's Family",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Alfrid the Councillor",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Great Eagle",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fledgeling Great Eagle",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Iron Hills Goat Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Elf Knight",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Iron Hills Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Elf Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Lake-town Militia",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Beornings",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Beorn",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Grimbeorn",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Beorning",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Black Gate",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Mordor Troll Chieftain (General)",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mouth of Sauron",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mordor Troll Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Morannon Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Taskmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ringwraith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mordor Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Mordor Troll",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Morannon Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Black Riders",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Witch-king of Angmar",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Ringwraith",
+                "slot": "Hero of Fortitude"
+            }
+        ]
+    },
+    {
+        "name": "The Eagles",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Gwaihir",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Great Eagle",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fledgeling Great Eagle",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Easterlings",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Amdur, Lord of Blades",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Khamul the Easterling",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Easterling Kataphrakt Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling War Priest",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Easterling Dragon Knight",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "War Drake of Rhun",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Easterling Kataphrakt",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Dragon Cult Acolyte",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Black Dragon Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Easterling Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Fellowship",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Gandalf the Grey",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Aragorn, Strider",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gimli",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Boromir of Gondor",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Frodo Baggins",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Samwise Gamgee",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bill the Pony",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Meriadoc Brandybuck",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Peregrin Took",
+                "slot": "Independent Hero"
+            }
+        ]
+    },
+    {
+        "name": "The Fiefdoms",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Prince Imrahil",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Forlong the Fat",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Angbor the Fearless",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Duinhir, Lord of the Blackroot Vale",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Captain of Dol Amroth",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Knight of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Man-at-arms of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Axeman of Lossarnach",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Blackroot Vale Archer",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Clansman of Lamedon",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Grey Company",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Aragorn, Strider",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gimli",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Legolas",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Elladan",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Elrohir",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Halbarad",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Ranger of the North",
+                "slot": "Independent Hero"
+            }
+        ]
+    },
+    {
+        "name": "The Grief of Eomer",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Prince Imrahil",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Eomer",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Hurin the Tall, Warden of the Keys",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Captain of Dol Amroth",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Rohan",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Knight of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rider of Rohan",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Knight of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Man-at-arms of Dol Amroth",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Minas Tirith",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Rohan",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Iron Hills",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Dain Ironfoot, Lord of the Iron Hills",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Dwarf King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Iron Hills Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Drar",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Murin",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Iron Hills Chariot",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Iron Hills Goat Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Iron Hills Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Iron Hills Ballista",
+                "slot": "Siege Engine"
+            }
+        ]
+    },
+    {
+        "name": "The Last Alliance",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Elendil",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gil-Galad",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Elrond",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Isildur",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Erestor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Captain of Numenor",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rivendell Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Rivendell Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Warrior of Numenor",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Serpent Horde",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Suladan, The Serpent Lord",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "The Betrayer",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Haradrim King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "War Mumak of Harad",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Raza, Fang of the Serpent",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Taskmaster",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Serpent Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Haradrim Raider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Serpent Guard",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Haradrim Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Shire",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Gandalf the Grey",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Frodo Baggins",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Farmer Maggot",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bilbo Baggins, Ageing Hobbit",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Samwise Gamgee",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Will Whitfoot, Mayor of Michel Delving",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Farmer Tolman Cotton",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hamfast 'Gaffer' Gamgee",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Paladin Took, Thain of the Shire",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Lotho Sackville-Baggins",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Folco Boffin",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Lobelia Sackville-Baggins",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Rosie Cotton",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Fredegar 'Fatty' Bolger",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Meriadoc Brandybuck",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Peregrin Took",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Hobbit Archer",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hobbit Shirriff",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hobbit Militia",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Spider Queen's Brood",
+        "group": "Evil (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Spider Queen",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Bat Swarm",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mirkwood Giant Spider",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Mirkwood Hunting Spider",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Fell Warg",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bat Swarm",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Giant Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Mirkwood Hunting Spider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fell Warg",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "The Three Trolls",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Bill the Troll",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Bert the Troll",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Tom the Troll",
+                "slot": "Hero of Fortitude"
+            }
+        ]
+    },
+    {
+        "name": "The White Council",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Elrond",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Saruman",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gandalf the Grey",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Radagast the Brown",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Galadriel, Lady of Light",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Thrain the Broken",
+                "slot": "Independent Hero"
+            }
+        ]
+    },
+    {
+        "name": "Thorin's Company",
+        "group": "Good",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Thorin Oakenshield",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "Gandalf the Grey",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gwaihir",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Radagast the Brown",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Dwalin the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Fili the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Kili the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Balin the Dwarf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Gloin the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bilbo Baggins",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Dori the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Nori the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Oin the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bifur the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bofur the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Bombur the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Ori the Dwarf",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Great Eagle",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Ugluk's Scouts",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Ugluk",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Mauhur",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Grishnakh",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Uruk-Hai Scout Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Snaga",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Isengard Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Isengard Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Uruk-Hai Drummer",
+                "slot": "Independent Hero"
+            },
+            {
+                "name": "Uruk-Hai Scout",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Isengard Orc Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Umbar",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Dalamyr, Fleetmaster of Umbar",
+                "slot": "Hero of Legend"
+            },
+            {
+                "name": "The Knight of Umbar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Delgamar, Gatemaster of Umbar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Hasharin",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Black Numenorean Marshal",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Corsair Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Corsair Bo'sun",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Haradrim Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Black Numenorean Warrior",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Corsair Reaver",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Corsair of Umbar",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Haradrim Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Usurpers of Edoras",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Wulf",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Freca",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "General Targg",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Lord Thorne of the Wold",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Hill Tribes Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Crebain",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Rohirrim Traitor",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Hill Tribesman",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Variags of Khand",
+        "group": "Evil (Legacy)",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Khandish King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Khandish King",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Khandish Chieftain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Khandish Charioteer",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Khandish Horseman",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Khandish Warrior",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Wolf Pack of Angmar",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Wild Warg Chieftain",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Wild Warg Chieftain (General)",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Werewolf",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Fell Warg",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Wild Warg",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Wolves of Isengard",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "Sharku",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Isengard Orc Captain",
+                "slot": "Hero of Fortitude"
+            },
+            {
+                "name": "Isengard Orc Shaman",
+                "slot": "Minor Hero"
+            },
+            {
+                "name": "Isengard Warg Rider",
+                "slot": "Warrior"
+            },
+            {
+                "name": "Isengard Warg",
+                "slot": "Warrior"
+            }
+        ]
+    },
+    {
+        "name": "Wraiths on Wings",
+        "group": "Evil",
+        "game": "MESBG",
+        "profiles": [
+            {
+                "name": "The Witch-king of Angmar",
+                "slot": "Hero of Valour"
+            },
+            {
+                "name": "Ringwraith",
+                "slot": "Hero of Fortitude"
+            }
+        ]
+    }
+]

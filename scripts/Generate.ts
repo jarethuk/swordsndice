@@ -10,6 +10,8 @@ interface GameData {
 		name: string;
 		points: number;
 	}[];
+	army_list: string;
+	army_type: string;
 }
 
 interface ProfileData {
@@ -26,6 +28,7 @@ interface ProfileData {
 
 const profileData = require('./profiles.json');
 const gameData = require('./mesbg.json');
+const armiesData = require('./armies.json');
 
 const getStats = (p: ProfileData, gameData: GameData) => {
 	const base = [p.Mv, p.Fv, p.Sv, p.S, p.D, p.A, p.W, p.C, p.I].map((x) =>
@@ -45,6 +48,7 @@ const getStats = (p: ProfileData, gameData: GameData) => {
 	console.log('Generating profiles...');
 
 	const profiles = [];
+	const armies = new Map();
 
 	for (const key of Object.keys(gameData)) {
 		const data: GameData = gameData[key];
@@ -58,11 +62,35 @@ const getStats = (p: ProfileData, gameData: GameData) => {
 			stats: getStats(profile, data),
 			equipment: data.options.map((x) => ({ name: x.name, points: x.points })),
 		});
+
+		if (!armies.has(data.army_list)) {
+			armies.set(data.army_list, {
+				name: data.army_list,
+				group: data.army_type,
+				game: 'MESBG',
+				profiles: [
+					{
+						name: data.name,
+						slot: data.unit_type,
+					},
+				],
+			});
+		} else {
+			armies.get(data.army_list).profiles.push({
+				name: data.name,
+				slot: data.unit_type,
+			});
+		}
 	}
 
 	fs.writeFileSync(
 		'data/MESBGProfiles.json',
 		JSON.stringify(profiles, undefined, 4),
+	);
+
+	fs.writeFileSync(
+		'data/MESBGArmies.json',
+		JSON.stringify(Array.from(armies.values()), undefined, 4),
 	);
 
 	console.log('Done');

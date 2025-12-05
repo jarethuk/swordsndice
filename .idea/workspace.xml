@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a631d3da-7443-4ed9-8551-e8539695ce40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/Generate.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/mesbg.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/profiles.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/armies.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/AmountSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AmountSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NextWindowButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextWindowButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/StatsRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/StatsRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/popups/AddUnitPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/popups/AddUnitPopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/popups/EditUnitPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/popups/EditUnitPopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MESBGProfiles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/MESBGProfiles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/MESBGProfileStats.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/MESBGProfileStats.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/Profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/EquipmentList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/EquipmentList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/SelectArmyPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/popups/SelectArmyPopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/MESBGArmies.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/MESBGArmies.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Generate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Generate.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +91,7 @@
       <option name="presentableId" value="Default" />
       <updated>1764616526815</updated>
       <workItem from="1764616528151" duration="2973000" />
-      <workItem from="1764681168769" duration="49050000" />
+      <workItem from="1764681168769" duration="50774000" />
     </task>
     <servers />
   </component>
