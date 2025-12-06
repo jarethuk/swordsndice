@@ -1,8 +1,8 @@
-import { BottomSheetTextInput } from '@gorhom/bottom-sheet';
-import { clsx } from 'clsx';
-import { type ReactElement, useRef, useState } from 'react';
-import { Pressable, TextInput, View } from 'react-native';
-import { Content } from './Content';
+import {BottomSheetTextInput} from '@gorhom/bottom-sheet';
+import {clsx} from 'clsx';
+import {type ReactElement, useRef, useState} from 'react';
+import {Pressable, TextInput, View} from 'react-native';
+import {Content} from './Content';
 
 interface Props {
 	value: string;
@@ -94,7 +94,7 @@ export const Input = ({
 						) : (
 							<TextInput
 								{...inputProps}
-								autoCapitalize={'none'}
+								autoCapitalize={'sentences'}
 								autoCorrect={false}
 							/>
 						)}

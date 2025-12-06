@@ -12,7 +12,7 @@ export default function Toggle({ className, value, onChange }: Props) {
 		<Pressable
 			onPress={onChange}
 			className={clsx('w-16 h-9 rounded-full p-1', className, {
-				'bg-gray-200': !value,
+				'bg-gray-300 dark:bg-panel-dark': !value,
 				'bg-purple-500': value,
 			})}
 		>

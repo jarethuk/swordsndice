@@ -21,6 +21,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Toast, {type ToastShowParams} from 'react-native-toast-message';
 import {Content} from '../components';
 import {createQueryPersister} from '../helpers/QueryPersister';
+import {useColours} from '../hooks/useColours';
 import {useDatabase} from '../hooks/useDatabase';
 import type {PersistableQuery} from '../types';
 
@@ -59,6 +60,7 @@ const CustomToast = ({ type, text1 }: ToastShowParams) => {
 };
 
 export default function RootLayout() {
+	const colours = useColours();
 	const [fontsLoaded] = useFonts({
 		Nunito_500Medium,
 		Nunito_600SemiBold,
@@ -104,8 +106,51 @@ export default function RootLayout() {
 						<Stack
 							screenOptions={{
 								headerShown: false,
+								contentStyle: { backgroundColor: colours.background },
 							}}
-						/>
+						>
+							<Stack.Screen
+								name="modals/list-add-unit"
+								options={{
+									presentation: 'modal',
+								}}
+							/>
+
+							<Stack.Screen
+								name="modals/list-add-warband"
+								options={{
+									presentation: 'modal',
+								}}
+							/>
+
+							<Stack.Screen
+								name="modals/list-edit"
+								options={{
+									presentation: 'modal',
+								}}
+							/>
+
+							<Stack.Screen
+								name="modals/list-edit-unit"
+								options={{
+									presentation: 'modal',
+								}}
+							/>
+
+							<Stack.Screen
+								name="modals/select-game"
+								options={{
+									presentation: 'modal',
+								}}
+							/>
+
+							<Stack.Screen
+								name="modals/select-army"
+								options={{
+									presentation: 'modal',
+								}}
+							/>
+						</Stack>
 					) : (
 						<Text>Test</Text>
 					)}

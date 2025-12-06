@@ -1,35 +1,32 @@
 import {faChevronLeft, faCopy, faEdit, faExclamationTriangle,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {router, useLocalSearchParams} from 'expo-router';
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useMemo} from 'react';
 import {Animated, Pressable, View} from 'react-native';
 import {Content} from '../../components';
 import {Button} from '../../components/Button';
+import Divider from '../../components/Divider';
 import ListWarband from '../../components/ListWarband';
 import {LoadingScreen} from '../../components/LoadingScreen';
-import AddWarbandPopup from '../../components/popups/AddWarbandPopup';
-import EditListPopup from '../../components/popups/EditListPopup';
 import {MESBGArmies} from '../../data/MESBGArmies';
 import {getDBList} from '../../db/DBLists';
 import {getPointsTotal} from '../../helpers/MESBGStatsHelper';
 import {useColours} from '../../hooks/useColours';
+import {useList, useListActions} from '../../states/useListStore';
 import type {List} from '../../types/List';
-import Divider from '../../components/Divider';
 import ScrollView = Animated.ScrollView;
 
 export default function ListPage() {
 	const colours = useColours();
 	const { id } = useLocalSearchParams();
-	const [list, setList] = useState<List | undefined | null>();
+	const list = useList();
+	const { setList } = useListActions();
 	const canEdit = true;
-
-	const [isEditing, setIsEditing] = useState(false);
-	const [isAddingWarband, setIsAddingWarband] = useState(false);
 
 	const refreshList = useCallback(async () => {
 		getDBList(id as string).then((record) => {
 			if (!record) {
-				setList(null);
+				setList(undefined);
 			} else {
 				setList({
 					...record,
@@ -83,94 +80,64 @@ export default function ListPage() {
 		return <LoadingScreen />;
 	}
 
-	//  TODO: Tap add warband and choose a leader
-	// Returns back to list page
-	// Tap to add units to warband
-	// Show points total for warband, unit count of max
-
 	return (
-		<>
-			<View className={'flex flex-col gap-6 h-full'}>
-				<View className={'flex flex-row gap-4 items-center'}>
-					<Pressable onPress={() => router.back()}>
-						<FontAwesomeIcon
-							icon={faChevronLeft}
-							size={20}
-							color={colours.muted}
-						/>
-					</Pressable>
+		<View className={'flex flex-col gap-6 h-full'}>
+			<View className={'flex flex-row gap-4 items-center'}>
+				<Pressable onPress={() => router.back()}>
+					<FontAwesomeIcon
+						icon={faChevronLeft}
+						size={20}
+						color={colours.muted}
+					/>
+				</Pressable>
 
-					<View className={'grow'}>
-						<Content size={'md'} type={'title'} center>
-							{list.name}
-						</Content>
+				<View className={'grow'}>
+					<Content size={'md'} type={'title'} center>
+						{list.name}
+					</Content>
 
-						<Content size={'md'} type={'subtitle'} center muted>
-							{list.army} - {pointsTotal}/{list.points}pts
-						</Content>
-					</View>
-
-					{canEdit ? (
-						<Pressable onPress={() => setIsEditing(true)}>
-							<FontAwesomeIcon icon={faEdit} size={20} color={colours.muted} />
-						</Pressable>
-					) : (
-						<Pressable>
-							<FontAwesomeIcon icon={faCopy} size={20} color={colours.muted} />
-						</Pressable>
-					)}
+					<Content size={'md'} type={'subtitle'} center muted>
+						{list.army} - {pointsTotal}/{list.points}pts
+					</Content>
 				</View>
 
-				<ScrollView
-					contentContainerClassName={'flex flex-col gap-6 pb-12'}
-					showsVerticalScrollIndicator={false}
-				>
-					{list.groups.map((group, index) => (
-						<ListWarband
-							group={group}
-							list={list}
-							army={army}
-							key={index.toString()}
-							onDelete={refreshList}
-							canEdit={canEdit}
-							refresh={refreshList}
-							index={index}
-						/>
-					))}
-
-					{list.groups.length > 0 && <Divider />}
-
-					{canEdit && (
-						<Button
-							content={'Add Warband'}
-							onPress={() => setIsAddingWarband(true)}
-						/>
-					)}
-				</ScrollView>
+				{canEdit ? (
+					<Pressable onPress={() => router.navigate('/modals/list-edit')}>
+						<FontAwesomeIcon icon={faEdit} size={20} color={colours.muted} />
+					</Pressable>
+				) : (
+					<Pressable>
+						<FontAwesomeIcon icon={faCopy} size={20} color={colours.muted} />
+					</Pressable>
+				)}
 			</View>
 
-			{isEditing && (
-				<EditListPopup
-					onDismiss={() => {
-						setIsEditing(false);
-						void refreshList();
-					}}
-					list={list as List}
-				/>
-			)}
+			<ScrollView
+				contentContainerClassName={'flex flex-col gap-6 pb-12'}
+				showsVerticalScrollIndicator={false}
+			>
+				{list.groups.map((group, index) => (
+					<ListWarband
+						group={group}
+						list={list}
+						army={army}
+						key={index.toString()}
+						onDelete={refreshList}
+						canEdit={canEdit}
+						refresh={refreshList}
+						index={index}
+					/>
+				))}
 
-			{isAddingWarband && (
-				<AddWarbandPopup
-					onDismiss={() => {
-						setIsAddingWarband(false);
-					}}
-					list={list as List}
-					onSelect={() => {
-						setIsAddingWarband(false);
-						void refreshList();
-					}}
-				/>
-			)}
-		</>
+				{list.groups.length > 0 && <Divider />}
+
+				{canEdit && (
+					<Button
+						content={'Add Warband'}
+						onPress={() => router.navigate('/modals/list-add-warband')}
+					/>
+				)}
+			</ScrollView>
+		</View>
 	);
 }

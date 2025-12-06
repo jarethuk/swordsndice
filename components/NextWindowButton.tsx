@@ -52,7 +52,7 @@ export const NextWindowButton = ({
 
 					{subtitle &&
 						(typeof subtitle === 'string' ? (
-							<Content type={'subtitle'} size={'md'} className={'top-[26px]'}>
+							<Content type={'subtitle'} size={'md'}>
 								{subtitle}
 							</Content>
 						) : (

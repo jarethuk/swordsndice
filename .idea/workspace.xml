@@ -5,13 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a631d3da-7443-4ed9-8551-e8539695ce40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/armies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/list-add-unit.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/list-add-warband.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/list-edit-unit.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/list-edit.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/select-army.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/select-game.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/states/useListStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/states/useNewListStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/_layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/EquipmentList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/EquipmentList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/popups/SelectArmyPopup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/popups/SelectArmyPopup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MESBGArmies.ts" beforeDir="false" afterPath="$PROJECT_DIR$/data/MESBGArmies.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Generate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Generate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/+not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/+not-found.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/adaptive-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/adaptive-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/splash.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/splash-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AmountSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AmountSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Content.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/EquipmentSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/EquipmentSelector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ListWarband.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ListWarband.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NextWindowButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextWindowButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/StatsRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/StatsRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Toggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Toggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/AddUnitPopup.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/AddWarbandPopup.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/AreYouSurePopup.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/EditListPopup.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/EditUnitPopup.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/SelectArmyPopup.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/popups/SelectGamePopup.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +57,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -51,7 +86,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Projects/swordsndice/components",
+    "last_opened_file_path": "C:/Projects/swordsndice/states",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,13 +99,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\swordsndice\states" />
+      <recent name="C:\Projects\swordsndice\app\modals" />
+      <recent name="C:\Projects\swordsndice" />
       <recent name="C:\Projects\swordsndice\components" />
       <recent name="C:\Projects\swordsndice\components\popups" />
-      <recent name="C:\Projects\swordsndice\app\(tabs)" />
-      <recent name="C:\Projects\swordsndice" />
-      <recent name="C:\Projects\swordsndice\db" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\swordsndice\app" />
       <recent name="C:\Projects\swordsndice\assets\temp" />
       <recent name="C:\Projects\swordsndice\app\(tabs)" />
       <recent name="C:\Projects\swordsndice" />
@@ -91,7 +127,7 @@
       <option name="presentableId" value="Default" />
       <updated>1764616526815</updated>
       <workItem from="1764616528151" duration="2973000" />
-      <workItem from="1764681168769" duration="50774000" />
+      <workItem from="1764681168769" duration="61645000" />
     </task>
     <servers />
   </component>

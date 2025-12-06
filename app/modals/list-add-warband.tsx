@@ -1,33 +1,32 @@
+import {router} from 'expo-router';
 import {useCallback, useMemo} from 'react';
-import {View} from 'react-native';
+import {Animated, View} from 'react-native';
+import {Content} from '../../components';
+import HeroPoints from '../../components/HeroPoints';
+import {NextWindowButton} from '../../components/NextWindowButton';
+import StatsRow from '../../components/StatsRow';
 import {MESBGArmies} from '../../data/MESBGArmies';
 import {MESBGProfiles} from '../../data/MESBGProfiles';
-import {updateDBList} from '../../db/DBLists';
 import {getMESBGStats} from '../../helpers/MESBGStatsHelper';
 import {getRandomId} from '../../helpers/RandomHelper';
+import {useList, useListActions} from '../../states/useListStore';
 import {MESBGArmySlot} from '../../types';
-import type {List} from '../../types/List';
 import type {MESBGProfileStats} from '../../types/MESBGProfileStats';
 import type {Profile} from '../../types/Profile';
-import {Content} from '../Content';
-import HeroPoints from '../HeroPoints';
-import {Popup} from '../Popup';
-import {PopupRow} from '../PopupRow';
-import StatsRow from '../StatsRow';
-
-interface Props {
-	onDismiss: () => void;
-	onSelect: () => void;
-	list: List;
-}
+import ScrollView = Animated.ScrollView;
 
 interface Leader extends Profile {
 	slot: MESBGArmySlot;
 	fullStats: MESBGProfileStats;
 }
 
-export default function AddWarbandPopup({ onDismiss, list, onSelect }: Props) {
+export default function AddWarbandPopup() {
+	const list = useList();
+	const { updateList } = useListActions();
+
 	const leaders: Leader[] = useMemo(() => {
+		if (!list) return [];
+
 		const army = MESBGArmies.find((x) => x.name === list.army);
 
 		if (!army) {
@@ -76,36 +75,37 @@ export default function AddWarbandPopup({ onDismiss, list, onSelect }: Props) {
 					name: leader.name,
 					points: leader.points,
 					equipment: [],
+					amount: 1,
 				},
 				members: [],
 			});
 
-			await updateDBList(list.id, {
+			await updateList({
 				groups,
 			});
 
-			onSelect();
+			router.dismiss();
 		},
-		[list, onSelect],
+		[list],
 	);
 
 	return (
-		<Popup onDismiss={onDismiss}>
-			<View className={'flex flex-col gap-6'}>
-				<Content size={'xs'} type={'title'} center>
-					Select a Leader
-				</Content>
+		<ScrollView contentContainerClassName={'flex flex-col gap-6 p-6'}>
+			<Content size={'sm'} type={'title'} center>
+				Select a Leader
+			</Content>
 
+			<View className={'flex gap-12'}>
 				{groups.map(({ name, leaders }) => (
-					<View key={name} className={'flex gap-4'}>
+					<View key={name} className={'flex gap-6'}>
 						<Content size={'md'} type={'subtitle'}>
 							{name}
 						</Content>
 
 						{leaders.map((leader) => (
-							<PopupRow
+							<NextWindowButton
 								key={leader.name}
-								title={leader.name}
+								label={leader.name}
 								onPress={() => addWarband(leader)}
 								bottom={<HeroPoints profile={leader} variant={'white'} />}
 								subtitle={<StatsRow profile={leader} />}
@@ -114,6 +114,6 @@ export default function AddWarbandPopup({ onDismiss, list, onSelect }: Props) {
 					</View>
 				))}
 			</View>
-		</Popup>
+		</ScrollView>
 	);
 }

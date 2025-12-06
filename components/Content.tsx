@@ -9,7 +9,6 @@ interface Props extends PropsWithChildren {
 	center?: boolean;
 	right?: boolean;
 	muted?: boolean;
-	className?: string;
 	lineHeightOverride?: number;
 	wrap?: boolean;
 }
@@ -21,7 +20,6 @@ export const Content = ({
 	children,
 	center,
 	right,
-	className,
 	muted,
 	lineHeightOverride,
 	wrap,

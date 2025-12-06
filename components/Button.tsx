@@ -65,7 +65,6 @@ export const Button = ({
 					<Content
 						type={'cta'}
 						size={'lg'}
-						className={'pt-1'}
 						variant={
 							variant === 'outline' || variant === 'light' ? undefined : 'white'
 						}

@@ -1,42 +1,33 @@
-import {router, useFocusEffect} from 'expo-router';
+import {router} from 'expo-router';
 import {useCallback, useMemo, useState} from 'react';
 import {Animated} from 'react-native';
 import {Content} from '../../components';
 import {Button} from '../../components/Button';
 import {Input} from '../../components/Input';
 import {NextWindowButton} from '../../components/NextWindowButton';
-import SelectArmyPopup from '../../components/popups/SelectArmyPopup';
-import SelectGamePopup from '../../components/popups/SelectGamePopup';
 import {addDBList} from '../../db/DBLists';
 import {getRandomId} from '../../helpers/RandomHelper';
-import type {Games} from '../../types';
+import {
+    useNewListActions,
+    useNewListArmy,
+    useNewListGame,
+    useNewListName,
+    useNewListPoints,
+} from '../../states/useNewListStore';
 import type {List} from '../../types/List';
 import ScrollView = Animated.ScrollView;
 
 export default function CreateList() {
-	const [name, setName] = useState('');
-	const [points, setPoints] = useState('');
-	const [game, setGame] = useState<Games | undefined>();
-	const [army, setArmy] = useState<string | undefined>();
+	const name = useNewListName();
+	const army = useNewListArmy();
+	const game = useNewListGame();
+	const points = useNewListPoints();
+	const { setName, setPoints, reset } = useNewListActions();
 
-	const [selectingGame, setSelectingGame] = useState(false);
-	const [selectingArmy, setSelectingArmy] = useState(false);
 	const [isCreating, setIsCreating] = useState(false);
 
-	useFocusEffect(
-		useCallback(() => {
-			setName('');
-			setPoints('');
-			setGame(undefined);
-			setArmy(undefined);
-			setSelectingArmy(false);
-			setSelectingGame(false);
-			setIsCreating(false);
-		}, []),
-	);
-
 	const isValid = useMemo(() => {
-		const intPoints = parseInt(points, 10);
+		const intPoints = parseInt(points ?? '', 10);
 
 		return game && army && name && points && intPoints > 0;
 	}, [game, army, name, points]);
@@ -58,69 +49,51 @@ export default function CreateList() {
 
 		await addDBList(list);
 		setIsCreating(false);
-		router.navigate(`(tabs)/list?id=${list.id}`);
+		reset();
+
+		router.navigate({
+			pathname: '/(tabs)/list',
+			params: { id: list.id },
+		});
 	}, [name, points, game, army, isCreating]);
 
 	return (
-		<>
-			<ScrollView contentContainerClassName={'flex gap-6'}>
-				<Content size={'sm'} type={'title'} center>
-					Create List
-				</Content>
+		<ScrollView contentContainerClassName={'flex gap-6'}>
+			<Content size={'sm'} type={'title'} center>
+				Create List
+			</Content>
 
-				<Input
-					placeholder={'Name'}
-					value={name}
-					onChange={setName}
-					type={'text'}
-				/>
+			<Input
+				placeholder={'Name'}
+				value={name ?? ''}
+				onChange={setName}
+				type={'text'}
+			/>
 
-				<NextWindowButton
-					onPress={() => setSelectingGame(true)}
-					label={game ?? 'Select Game'}
-				/>
+			<NextWindowButton
+				onPress={() => router.navigate('/modals/select-game')}
+				label={game ?? 'Select Game'}
+			/>
 
-				<NextWindowButton
-					onPress={() => setSelectingArmy(true)}
-					label={army ?? 'Select Army'}
-					disabled={!game}
-				/>
+			<NextWindowButton
+				onPress={() => router.navigate('/modals/select-army')}
+				label={army ?? 'Select Army'}
+				disabled={!game}
+			/>
 
-				<Input
-					placeholder={'Points'}
-					value={points}
-					onChange={setPoints}
-					type={'numeric'}
-				/>
+			<Input
+				placeholder={'Points'}
+				value={points ?? ''}
+				onChange={setPoints}
+				type={'numeric'}
+			/>
 
-				<Button
-					content={'Create List'}
-					disabled={!isValid}
-					loading={isCreating}
-					onPress={createList}
-				/>
-			</ScrollView>
-
-			{selectingGame && (
-				<SelectGamePopup
-					onDismiss={() => setSelectingGame(false)}
-					onSelect={(value) => {
-						setSelectingGame(false);
-						setGame(value);
-					}}
-				/>
-			)}
-
-			{selectingArmy && (
-				<SelectArmyPopup
-					game={game as Games}
-					onDismiss={() => setSelectingGame(false)}
-					onSelect={(value) => {
-						setSelectingArmy(false);
-						setArmy(value);
-					}}
-				/>
-			)}
-		</>
+			<Button
+				content={'Create List'}
+				disabled={!isValid}
+				loading={isCreating}
+				onPress={createList}
+			/>
+		</ScrollView>
 	);
 }

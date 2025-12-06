@@ -2,8 +2,8 @@
 	"name": "swordsndice",
 	"version": "1.0.0",
 	"scripts": {
-		"android": "expo start --android",
-		"ios": "expo start --ios",
+		"android": "expo run:android",
+		"ios": "expo run:ios",
 		"start": "expo start --clear",
 		"prebuild": "expo prebuild",
 		"lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
@@ -11,7 +11,12 @@
 		"web": "expo start --web",
 		"profiles": "ts-node ./scripts/ProfileEnter.ts",
 		"generate": "ts-node ./scripts/Generate.ts",
-		"db:generate": "npx drizzle-kit generate"
+		"db:generate": "npx drizzle-kit generate",
+		"build": "eas build --platform ios --non-interactive",
+		"build:dev": "eas build --platform ios --profile development",
+		"submit": "eas submit --platform ios",
+		"ship": "pnpm build && pnpm submit",
+		"ship:dev": "pnpm build:dev"
 	},
 	"dependencies": {
 		"@awesome.me/kit-34e2017de2": "^1.0.3",
@@ -30,8 +35,11 @@
 		"dayjs": "^1.11.19",
 		"drizzle-orm": "^0.44.4",
 		"expo": "^54.0.0",
+		"expo-camera": "~17.0.10",
 		"expo-constants": "~18.0.10",
+		"expo-dev-client": "~6.0.20",
 		"expo-image": "~3.0.10",
+		"expo-image-picker": "~17.0.9",
 		"expo-linking": "~8.0.9",
 		"expo-router": "~6.0.15",
 		"expo-splash-screen": "~31.0.11",

@@ -2,6 +2,7 @@ import {faMinus, faPlus,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {useCallback} from 'react';
 import {View} from 'react-native';
+import {useColours} from '../hooks/useColours';
 import {Button} from './Button';
 import {Content} from './Content';
 
@@ -12,6 +13,7 @@ interface Props {
 }
 
 export default function AmountSelector({ value, onChange, max }: Props) {
+	const colours = useColours();
 	const canMinus = value > 1;
 	const canAdd = value < max;
 
@@ -23,10 +25,10 @@ export default function AmountSelector({ value, onChange, max }: Props) {
 			<View className={'flex flex-row items-center gap-4'}>
 				<View>
 					<Button
-						content={<FontAwesomeIcon icon={faMinus} />}
+						content={<FontAwesomeIcon icon={faMinus} color={colours.text} />}
 						onPress={minus}
 						disabled={!canMinus}
-						variant={'outline'}
+						variant={'light'}
 					/>
 				</View>
 
@@ -38,10 +40,10 @@ export default function AmountSelector({ value, onChange, max }: Props) {
 
 				<View>
 					<Button
-						content={<FontAwesomeIcon icon={faPlus} />}
+						content={<FontAwesomeIcon icon={faPlus} color={colours.text} />}
 						onPress={add}
 						disabled={!canAdd}
-						variant={'outline'}
+						variant={'light'}
 					/>
 				</View>
 			</View>

@@ -31,7 +31,7 @@ function TabsBar(props: BottomTabBarProps) {
 	return (
 		<View
 			className={
-				'flex flex-row gap-11 items-center pb-2 justify-center relative border-gray-300 border-t-2 bg-bottom-bar-light dark:bg-bottom-bar-dark'
+				'flex flex-row gap-11 items-center pb-4 justify-center relative border-border-light dark:border-border-dark border-t-2 bg-bottom-bar-light dark:bg-bottom-bar-dark'
 			}
 		>
 			{props.state.routes
@@ -106,7 +106,11 @@ export default function TabLayout() {
 	const colours = useColours();
 
 	return (
-		<>
+		<View
+			className={
+				'flex flex-col h-full bg-background-light dark:bg-background-dark'
+			}
+		>
 			<Header />
 
 			<Tabs
@@ -128,6 +132,6 @@ export default function TabLayout() {
 				<Tabs.Screen name="feed" />
 				<Tabs.Screen name="settings" />
 			</Tabs>
-		</>
+		</View>
 	);
 }

@@ -1,6 +1,7 @@
 import {faCrown, faTrashAlt,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {useCallback, useMemo, useState} from 'react';
+import {router} from 'expo-router';
+import {useCallback, useMemo} from 'react';
 import {Pressable, View} from 'react-native';
 import {MESBGProfiles} from '../data/MESBGProfiles';
 import {updateDBList} from '../db/DBLists';
@@ -18,8 +19,6 @@ import {Button} from './Button';
 import {Content} from './Content';
 import EquipmentList from './EquipmentList';
 import HeroPoints from './HeroPoints';
-import AddUnitPopup from './popups/AddUnitPopup';
-import EditUnitPopup from './popups/EditUnitPopup';
 
 interface Props {
 	index: number;
@@ -45,10 +44,6 @@ export default function ListWarband({
 	refresh,
 }: Props) {
 	const colours = useColours();
-	const [selectingMemberEquipment, setSelectingMemberEquipment] = useState<
-		SelectedMember | undefined
-	>();
-	const [isAddingUnit, setIsAddingUnit] = useState(false);
 
 	const leader = useMemo(() => {
 		const armyProfile = army.profiles.find((x) => x.name === group.leader.name);
@@ -130,17 +125,22 @@ export default function ListWarband({
 			</View>
 
 			{/* Leader */}
-			<View className={'flex gap-1 border-2 border-gray-300 p-4 rounded-2xl'}>
-				<Pressable
-					className={'flex flex-row items-center gap-1'}
-					onPress={() =>
-						canEdit &&
-						setSelectingMemberEquipment({
-							isLeader: true,
-							...group.leader,
-						})
-					}
-				>
+			<Pressable
+				className={
+					'flex gap-1 border-2 border-border-light dark:border-border-dark p-4 rounded-2xl'
+				}
+				onPress={() =>
+					canEdit &&
+					router.navigate({
+						pathname: '/modals/list-edit-unit',
+						params: {
+							groupId: group.id,
+							memberId: group.leader.id,
+						},
+					})
+				}
+			>
+				<View className={'flex flex-row items-center gap-1'}>
 					<FontAwesomeIcon icon={faCrown} size={16} color={colours.primary} />
 
 					<Content size={'xs'} type={'title'}>
@@ -152,18 +152,31 @@ export default function ListWarband({
 							{getMemberPointsTotal(group.leader)}pts
 						</Content>
 					</View>
-				</Pressable>
+				</View>
 
 				<HeroPoints profile={leader} variant={'accent'} />
 
 				<EquipmentList member={group.leader} />
-			</View>
+			</Pressable>
 
 			{/* Members */}
 			{group.members.map((member) => (
-				<View
+				<Pressable
 					key={member.id}
-					className={'border-2 border-gray-300 p-4 rounded-2xl'}
+					className={
+						'border-2 border-border-light dark:border-border-dark p-4 rounded-2xl'
+					}
+					onPress={() =>
+						canEdit &&
+						router.navigate({
+							pathname: '/modals/list-edit-unit',
+							params: {
+								groupId: group.id,
+								memberId: member.id,
+								availableUnits: maxUnits - currentUnits,
+							},
+						})
+					}
 				>
 					<View className={'flex flex-row items-center'}>
 						<Content size={'xs'} type={'title'}>
@@ -191,42 +204,23 @@ export default function ListWarband({
 					</View>
 
 					<EquipmentList member={member} />
-				</View>
+				</Pressable>
 			))}
 
 			{canEdit && (
 				<Button
 					content={'Add Unit'}
 					variant={'outline'}
-					onPress={() => setIsAddingUnit(true)}
+					onPress={() =>
+						router.navigate({
+							pathname: '/modals/list-add-unit',
+							params: {
+								groupId: group.id,
+								availableUnits: maxUnits - currentUnits,
+							},
+						})
+					}
 					disabled={currentUnits === maxUnits}
-				/>
-			)}
-
-			{selectingMemberEquipment && (
-				<EditUnitPopup
-					onDismiss={() => setSelectingMemberEquipment(undefined)}
-					onConfirm={() => {
-						setSelectingMemberEquipment(undefined);
-						refresh();
-					}}
-					member={selectingMemberEquipment}
-					list={list}
-					isLeader={selectingMemberEquipment.isLeader}
-					groupId={group.id}
-				/>
-			)}
-
-			{isAddingUnit && (
-				<AddUnitPopup
-					onDismiss={() => setIsAddingUnit(false)}
-					onSelect={() => {
-						setIsAddingUnit(false);
-						refresh();
-					}}
-					list={list}
-					groupId={group.id}
-					availableUnits={maxUnits - currentUnits}
 				/>
 			)}
 		</View>

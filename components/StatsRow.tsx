@@ -31,7 +31,7 @@ export default function StatsRow({ profile }: Props) {
 	if (!profile.fullStats) return;
 
 	return (
-		<View className={'flex flex-row gap-6'}>
+		<View className={'flex flex-row gap-6 justify-evenly'}>
 			<Stat name={'Mv'} value={profile.fullStats.movement} />
 			<Stat name={'Fv'} value={profile.fullStats.fightValue} />
 			<Stat name={'Sv'} value={profile.fullStats.shootValue} isPlus />

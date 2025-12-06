@@ -39,10 +39,18 @@ export default function EquipmentSelector({
 	if (!profile) return;
 
 	return (
-		<>
+		<View
+			className={
+				'flex flex-col gap-4 border-2 border-border-light dark:border-border-dark p-4 rounded-2xl'
+			}
+		>
+			<Content size={'xs'} type={'title'}>
+				Equipment
+			</Content>
+
 			{profile?.equipment?.map((item) => (
 				<View key={item.name} className={'flex flex-row items-center gap-4'}>
-					<Content size={'md'} type={'subtitle'}>
+					<Content size={'md'} type={'subtitle'} wrap muted>
 						{item.name} ({item.points}pts)
 					</Content>
 
@@ -53,6 +61,6 @@ export default function EquipmentSelector({
 					/>
 				</View>
 			))}
-		</>
+		</View>
 	);
 }
