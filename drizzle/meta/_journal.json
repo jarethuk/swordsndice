@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1764792662388,
-      "tag": "0000_hard_spot",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1764794905924,
-      "tag": "0001_narrow_wilson_fisk",
+      "when": 1765227851055,
+      "tag": "0000_typical_phalanx",
       "breakpoints": true
     }
   ]

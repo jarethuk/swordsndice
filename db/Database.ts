@@ -1,13 +1,9 @@
-import { type ExpoSQLiteDatabase, drizzle } from 'drizzle-orm/expo-sqlite';
-import { migrate } from 'drizzle-orm/expo-sqlite/migrator';
-import {
-	type SQLiteDatabase,
-	deleteDatabaseAsync,
-	openDatabaseSync,
-} from 'expo-sqlite';
+import {drizzle, type ExpoSQLiteDatabase} from 'drizzle-orm/expo-sqlite';
+import {migrate} from 'drizzle-orm/expo-sqlite/migrator';
+import {deleteDatabaseAsync, openDatabaseSync, type SQLiteDatabase,} from 'expo-sqlite';
 import migrations from '../drizzle/migrations';
 
-const database = 'db.db';
+const database = 'db2.db';
 
 export class Database {
 	public static db: ExpoSQLiteDatabase;

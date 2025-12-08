@@ -15,6 +15,8 @@ import {
     useNewListPoints,
 } from '../../states/useNewListStore';
 import type {List} from '../../types/List';
+
+import {SelectGameDialogMode} from '../../types';
 import ScrollView = Animated.ScrollView;
 
 export default function CreateList() {
@@ -71,7 +73,12 @@ export default function CreateList() {
 			/>
 
 			<NextWindowButton
-				onPress={() => router.navigate('/modals/select-game')}
+				onPress={() =>
+					router.navigate({
+						pathname: '/modals/select-game',
+						params: { mode: SelectGameDialogMode.CreateList },
+					})
+				}
 				label={game ?? 'Select Game'}
 			/>
 

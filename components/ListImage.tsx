@@ -1,12 +1,14 @@
 import {faSword} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import type {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {Image, View} from 'react-native';
 
 interface Props {
 	image?: string | null;
+	placeHolderIcon?: IconDefinition;
 }
 
-export const ListImage = ({ image }: Props) => {
+export const ListImage = ({ image, placeHolderIcon }: Props) => {
 	return (
 		<View
 			className={
@@ -22,7 +24,7 @@ export const ListImage = ({ image }: Props) => {
 					}}
 				/>
 			) : (
-				<FontAwesomeIcon icon={faSword} size={44 - 24} />
+				<FontAwesomeIcon icon={placeHolderIcon ?? faSword} size={44 - 24} />
 			)}
 		</View>
 	);

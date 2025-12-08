@@ -19,3 +19,8 @@ export enum MESBGArmySlot {
 	Independent = 'Independent Hero',
 	Warrior = 'Warrior',
 }
+
+export enum SelectGameDialogMode {
+	CreateList = 'CreateList',
+	CreateGame = 'CreateGame',
+}

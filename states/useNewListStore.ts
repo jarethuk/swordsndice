@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import type {Games} from '../types';
+import {Games} from '../types';
 
 export interface NewListStore {
 	name?: string;
@@ -16,15 +16,16 @@ export interface NewListStore {
 }
 
 const useNewListStore = create<NewListStore>((set) => ({
+	game: Games.MESBG,
 	actions: {
 		setName: (name) => set({ name }),
-		setGame: (game) => set({ game }),
+		setGame: (game) => set({ game, army: undefined }),
 		setArmy: (army) => set({ army }),
 		setPoints: (points) => set({ points }),
 		reset: () =>
 			set({
 				name: undefined,
-				game: undefined,
+				game: Games.MESBG,
 				army: undefined,
 				points: undefined,
 			}),

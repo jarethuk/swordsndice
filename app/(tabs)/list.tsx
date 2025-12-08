@@ -13,14 +13,13 @@ import {getDBList} from '../../db/DBLists';
 import {getPointsTotal} from '../../helpers/MESBGStatsHelper';
 import {useColours} from '../../hooks/useColours';
 import {useList, useListActions} from '../../states/useListStore';
-import type {List} from '../../types/List';
 import ScrollView = Animated.ScrollView;
 
 export default function ListPage() {
 	const colours = useColours();
 	const { id } = useLocalSearchParams();
 	const list = useList();
-	const { setList } = useListActions();
+	const { setList, updateList } = useListActions();
 	const canEdit = true;
 
 	const refreshList = useCallback(async () => {
@@ -28,10 +27,7 @@ export default function ListPage() {
 			if (!record) {
 				setList(undefined);
 			} else {
-				setList({
-					...record,
-					groups: JSON.parse(record.groups),
-				} as List);
+				setList(record);
 			}
 		});
 	}, [id]);
@@ -53,6 +49,12 @@ export default function ListPage() {
 
 		void refreshList();
 	}, [id, list]);
+
+	useEffect(() => {
+		if (list?.actualPoints !== pointsTotal) {
+			void updateList({ actualPoints: pointsTotal });
+		}
+	}, [list, pointsTotal]);
 
 	if (list === null) {
 		return (

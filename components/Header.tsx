@@ -3,11 +3,13 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {Image, Pressable, View} from 'react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useColours} from '../hooks/useColours';
+import {useUser} from '../states/useUserStore';
 import {Content} from './Content';
 
 export default function Header() {
 	const { top } = useSafeAreaInsets();
 	const colours = useColours();
+	const user = useUser();
 
 	return (
 		<View style={{ paddingTop: top, backgroundColor: colours.background }}>
@@ -20,7 +22,7 @@ export default function Header() {
 						/>
 
 						<Content size={'xs'} type={'title'}>
-							@jarethuk
+							@{user?.username}
 						</Content>
 					</View>
 				</Pressable>

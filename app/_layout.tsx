@@ -150,6 +150,20 @@ export default function RootLayout() {
 									presentation: 'modal',
 								}}
 							/>
+
+							<Stack.Screen
+								name="modals/select-list"
+								options={{
+									presentation: 'modal',
+								}}
+							/>
+
+							<Stack.Screen
+								name="modals/game-edit"
+								options={{
+									presentation: 'modal',
+								}}
+							/>
 						</Stack>
 					) : (
 						<Text>Test</Text>

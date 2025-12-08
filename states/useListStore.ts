@@ -22,12 +22,7 @@ const useListStore = create<ListStore>((set, get) => ({
 				const dbList = await getDBList(list.id);
 
 				if (dbList) {
-					set({
-						list: {
-							...dbList,
-							groups: JSON.parse(dbList.groups),
-						} as List,
-					});
+					set({ list: dbList });
 				}
 			}
 		},

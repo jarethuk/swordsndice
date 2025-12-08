@@ -35,15 +35,15 @@ export const NextWindowButton = ({
 		>
 			<View
 				className={
-					'border-2 border-border-light dark:border-border-dark dark:border-panel-dark rounded-2xl min-h-[60px] w-full flex flex-row gap-4 items-center px-4 py-2 bg-background-light dark:bg-background-dark'
+					'border-2 border-border-light dark:border-border-dark rounded-2xl min-h-[60px] w-full flex flex-row gap-4 items-center px-4 py-4 bg-background-light dark:bg-background-dark'
 				}
 			>
 				{iconStart}
 
-				<View className={'relative w-full shrink group flex gap-4'}>
+				<View className={'relative w-full shrink group flex'}>
 					{label &&
 						(typeof label === 'string' ? (
-							<Content type={'subtitle'} size={'md'}>
+							<Content type={'title'} size={'xs'}>
 								{label}
 							</Content>
 						) : (
@@ -52,7 +52,7 @@ export const NextWindowButton = ({
 
 					{subtitle &&
 						(typeof subtitle === 'string' ? (
-							<Content type={'subtitle'} size={'md'}>
+							<Content type={'subtitle'} size={'md'} muted>
 								{subtitle}
 							</Content>
 						) : (

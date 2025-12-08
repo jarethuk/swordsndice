@@ -5,22 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a631d3da-7443-4ed9-8551-e8539695ce40" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/game.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/game-edit.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/select-list.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ListRow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/DBGames.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/states/useGameStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/states/useNewGameStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/states/useUserStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/Friend.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/Game.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/Group.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/User.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.npmrc" beforeDir="false" afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modals/list-add-unit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/list-add-unit.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modals/list-add-warband.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/list-add-warband.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modals/list-edit-unit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/list-edit-unit.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/EquipmentSelector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/EquipmentSelector.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ListWarband.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ListWarband.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/StatsRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/StatsRow.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/MESBGProfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/MESBGProfiles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helpers/MESBGStatsHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/MESBGStatsHelper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/Generate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/Generate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/feed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/lists.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/lists.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/social.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/social.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modals/select-game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/select-game.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ListImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ListImage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/NextWindowButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextWindowButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/DBLists.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/DBLists.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/Database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/Database.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/0000_hard_spot.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/0001_narrow_wilson_fisk.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/meta/0000_snapshot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/meta/0001_snapshot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/meta/_journal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/migrations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/states/useListStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/states/useListStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/states/useNewListStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/states/useNewListStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Enums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/Enums.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/List.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/List.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Profile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/Profile.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +52,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -75,9 +96,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projects\swordsndice\states" />
       <recent name="C:\Projects\swordsndice\app\modals" />
+      <recent name="C:\Projects\swordsndice\app\(tabs)" />
+      <recent name="C:\Projects\swordsndice\types" />
       <recent name="C:\Projects\swordsndice" />
-      <recent name="C:\Projects\swordsndice\components" />
-      <recent name="C:\Projects\swordsndice\components\popups" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\swordsndice\app" />
@@ -101,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1764616526815</updated>
       <workItem from="1764616528151" duration="2973000" />
-      <workItem from="1764681168769" duration="72920000" />
+      <workItem from="1764681168769" duration="87174000" />
     </task>
     <servers />
   </component>

@@ -30,5 +30,6 @@ export interface List {
 	image?: string;
 	description?: string;
 	points: number;
+	actualPoints?: number;
 	groups: ListGroup[];
 }

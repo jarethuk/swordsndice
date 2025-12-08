@@ -1,9 +1,4 @@
-import {
-    faChevronRight,
-    faMagnifyingGlass,
-    faPlus,
-    faShelvesEmpty,
-} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import {faMagnifyingGlass, faPlus, faShelvesEmpty, faSword,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {useLiveQuery} from 'drizzle-orm/expo-sqlite';
 import {router} from 'expo-router';
@@ -12,10 +7,12 @@ import {Animated, Pressable, RefreshControl, View} from 'react-native';
 import {Content} from '../../components';
 import GamesDropdown from '../../components/GamesDropdown';
 import {Input} from '../../components/Input';
-import {ListImage} from '../../components/ListImage';
+import ListRow from '../../components/ListRow';
 import {Database} from '../../db/Database';
 import {lists} from '../../db/schema';
 import {useColours} from '../../hooks/useColours';
+
+import {eq} from 'drizzle-orm';
 import ScrollView = Animated.ScrollView;
 
 export default function Lists() {
@@ -24,7 +21,9 @@ export default function Lists() {
 	const [isLoading, setIsLoading] = useState(false);
 	const refetch = () => setIsLoading(true);
 	const colours = useColours();
-	const { data } = useLiveQuery(Database.db.select().from(lists));
+	const { data } = useLiveQuery(
+		Database.db.select().from(lists).where(eq(lists.isDeleted, false)),
+	);
 
 	return (
 		<View className={'flex flex-col gap-4 h-full'}>
@@ -84,39 +83,22 @@ export default function Lists() {
 				) : (
 					<View className={'flex gap-6'}>
 						{data.map((list) => (
-							<Pressable
+							<ListRow
 								key={`${list.id}`}
-								className={'flex flex-row w-full gap-4 items-center'}
-								onPress={() => {
-									router.navigate(`/(tabs)/list?id=${list.id}`);
-								}}
-							>
-								<ListImage image={list.image} />
-
-								<View className={'flex flex-col'}>
-									<Content type={'title'} size={'xs'}>
-										{list.name}
-									</Content>
-
-									{list.army && (
-										<Content type={'subtitle'} size={'md'} muted>
-											{list.army}
-										</Content>
-									)}
-								</View>
-
-								<View className={'flex flex-col ml-auto'}>
-									<Content type={'title'} size={'xs'}>
-										{list.points}pts
-									</Content>
-								</View>
-
-								<FontAwesomeIcon
-									icon={faChevronRight}
-									size={16}
-									color={colours.text}
-								/>
-							</Pressable>
+								title={list.name}
+								image={list.image}
+								right={`${list.points}pts`}
+								subtitle={list.army}
+								onPress={() =>
+									router.navigate({
+										pathname: `/(tabs)/list`,
+										params: {
+											id: list.id,
+										},
+									})
+								}
+								placeHolderIcon={faSword}
+							/>
 						))}
 					</View>
 				)}
