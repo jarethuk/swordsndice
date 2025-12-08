@@ -5,43 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a631d3da-7443-4ed9-8551-e8539695ce40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/game.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modals/game-edit.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modals/select-list.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/ListRow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db/DBGames.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/states/useGameStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/states/useNewGameStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/states/useUserStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/Friend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/Game.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/Group.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/User.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/DBFriends.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/DBGroups.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/useDebounce.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/feed.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/list.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/lists.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/lists.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/social.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/social.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modals/select-game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/select-game.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ListImage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ListImage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/NextWindowButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/NextWindowButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/DBLists.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/DBLists.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/Database.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/Database.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/drizzle/0000_hard_spot.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/drizzle/0001_narrow_wilson_fisk.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/drizzle/meta/0000_snapshot.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/drizzle/meta/0001_snapshot.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/drizzle/meta/_journal.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/drizzle/migrations.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/states/useListStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/states/useListStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/states/useNewListStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/states/useNewListStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Enums.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/Enums.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/List.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/List.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Friend.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/Friend.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Group.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/Group.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +51,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Projects/swordsndice/states",
+    "last_opened_file_path": "C:/Projects/swordsndice/hooks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,11 +64,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\swordsndice\hooks" />
+      <recent name="C:\Projects\swordsndice\db" />
       <recent name="C:\Projects\swordsndice\states" />
       <recent name="C:\Projects\swordsndice\app\modals" />
       <recent name="C:\Projects\swordsndice\app\(tabs)" />
-      <recent name="C:\Projects\swordsndice\types" />
-      <recent name="C:\Projects\swordsndice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\swordsndice\app" />
@@ -122,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1764616526815</updated>
       <workItem from="1764616528151" duration="2973000" />
-      <workItem from="1764681168769" duration="87174000" />
+      <workItem from="1764681168769" duration="88659000" />
     </task>
     <servers />
   </component>

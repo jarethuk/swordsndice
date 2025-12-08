@@ -6,10 +6,11 @@ export interface GroupMember {
 
 export interface Group {
 	id: string;
+	createdAt: Date;
 	name: string;
 	image?: string;
 	description?: string;
-	isPublic?: boolean;
+	isPublic: boolean;
 	admins: string[];
 	members: GroupMember[];
 }
