@@ -10,9 +10,10 @@ interface StatProps {
 	name: string;
 	value: string;
 	isPlus?: boolean;
+	isInches?: boolean;
 }
 
-const Stat = ({ name, value, isPlus }: StatProps) => {
+const Stat = ({ name, value, isPlus, isInches }: StatProps) => {
 	return (
 		<View className={'flex flex-col items-center'}>
 			<Content size={'sm'} type={'subtitle'}>
@@ -22,6 +23,7 @@ const Stat = ({ name, value, isPlus }: StatProps) => {
 			<Content size={'sm'} type={'subtitle'} muted>
 				{isPlus && '+'}
 				{value}
+				{isInches && '"'}
 			</Content>
 		</View>
 	);
@@ -32,7 +34,7 @@ export default function StatsRow({ profile }: Props) {
 
 	return (
 		<View className={'flex flex-row gap-6 justify-evenly'}>
-			<Stat name={'Mv'} value={profile.fullStats.movement} />
+			<Stat name={'Mv'} value={profile.fullStats.movement} isInches />
 			<Stat name={'Fv'} value={profile.fullStats.fightValue} />
 			<Stat name={'Sv'} value={profile.fullStats.shootValue} isPlus />
 			<Stat name={'S'} value={profile.fullStats.strength} />

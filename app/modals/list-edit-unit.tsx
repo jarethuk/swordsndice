@@ -1,16 +1,18 @@
 import {router, useLocalSearchParams} from 'expo-router';
 import {useCallback, useMemo, useState} from 'react';
-import {View} from 'react-native';
+import {Animated, View} from 'react-native';
 import {Content} from '../../components';
 import AmountSelector from '../../components/AmountSelector';
 import {Button} from '../../components/Button';
 import EquipmentSelector from '../../components/EquipmentSelector';
+import {Input} from '../../components/Input';
 import StatsRow from '../../components/StatsRow';
 import {MESBGProfiles} from '../../data/MESBGProfiles';
 import {getMESBGStats} from '../../helpers/MESBGStatsHelper';
 import {useList, useListActions} from '../../states/useListStore';
 import type {ListMember, ListMemberEquipment} from '../../types/List';
 import type {MESBGProfileStats} from '../../types/MESBGProfileStats';
+import ScrollView = Animated.ScrollView;
 
 interface MemberWithStats extends ListMember {
 	fullStats: MESBGProfileStats;
@@ -21,9 +23,10 @@ export default function EditUnitPopup() {
 	const { updateList } = useListActions();
 	const { groupId, memberId, availableUnits } = useLocalSearchParams();
 
-	const { member, isLeader } = useMemo((): {
+	const { member, isLeader, isUnique } = useMemo((): {
 		member?: MemberWithStats;
 		isLeader?: boolean;
+		isUnique?: boolean;
 	} => {
 		const group = list?.groups.find((x) => x.id === groupId);
 
@@ -43,6 +46,7 @@ export default function EditUnitPopup() {
 					fullStats: getMESBGStats(profile),
 				},
 				isLeader: true,
+				isUnique: profile.unique,
 			};
 		}
 
@@ -53,7 +57,7 @@ export default function EditUnitPopup() {
 			return {};
 		}
 
-		const profile = MESBGProfiles.find((x) => x.name === group.leader.name);
+		const profile = MESBGProfiles.find((x) => x.name === member.name);
 
 		if (!profile) return {};
 
@@ -63,9 +67,11 @@ export default function EditUnitPopup() {
 				fullStats: getMESBGStats(profile),
 			},
 			isLeader: false,
+			isUnique: profile.unique,
 		};
 	}, [list, groupId, memberId]);
 
+	const [notes, setNotes] = useState<string>(member?.notes ?? '');
 	const [amount, setAmount] = useState(member?.amount ?? 1);
 	const [equipment, setEquipment] = useState<ListMemberEquipment[]>(
 		member?.equipment ?? [],
@@ -82,6 +88,7 @@ export default function EditUnitPopup() {
 
 		if (isLeader) {
 			group.leader.equipment = equipment;
+			group.leader.notes = notes;
 		} else {
 			const groupMember = group.members.find((x) => x.id === member.id);
 
@@ -89,6 +96,7 @@ export default function EditUnitPopup() {
 
 			groupMember.equipment = equipment;
 			groupMember.amount = amount;
+			groupMember.notes = notes;
 		}
 
 		await updateList({
@@ -96,12 +104,32 @@ export default function EditUnitPopup() {
 		});
 
 		router.dismiss();
-	}, [list, groupId, equipment, isLeader, amount]);
+	}, [list, groupId, equipment, isLeader, amount, notes]);
+
+	const removeMember = useCallback(async () => {
+		if (!list) return;
+
+		const listGroup = list.groups.find((x) => x.id === groupId);
+
+		if (!listGroup) return;
+
+		const index = listGroup.members.findIndex((x) => x.id === memberId);
+		listGroup.members.splice(index, 1);
+
+		await updateList({
+			groups: list.groups,
+		});
+
+		router.dismiss();
+	}, [groupId, list, memberId]);
 
 	if (!member) return null;
 
 	return (
-		<View className={'flex flex-col gap-6 p-6 pb-12 h-full'}>
+		<ScrollView
+			contentContainerClassName={'flex flex-col gap-6 p-6 pb-12 h-full'}
+			keyboardDismissMode={'interactive'}
+		>
 			<Content size={'sm'} type={'title'} center>
 				{member.name}
 			</Content>
@@ -125,7 +153,7 @@ export default function EditUnitPopup() {
 					setEquipment={setEquipment}
 				/>
 
-				{!isLeader && (
+				{!isUnique && (
 					<View
 						className={
 							'flex gap-4 border-2 border-border-light dark:border-border-dark p-4 rounded-2xl'
@@ -144,9 +172,25 @@ export default function EditUnitPopup() {
 						/>
 					</View>
 				)}
+
+				<Input
+					value={notes}
+					onChange={setNotes}
+					type={'text'}
+					label={'Notes'}
+					multiline
+				/>
+
+				{!isLeader && (
+					<Button
+						content={'Remove Unit'}
+						onPress={removeMember}
+						variant={'outline'}
+					/>
+				)}
 			</View>
 
 			<Button content={'Save'} onPress={onSave} />
-		</View>
+		</ScrollView>
 	);
 }

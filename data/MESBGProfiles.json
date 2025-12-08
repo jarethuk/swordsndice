@@ -17,7 +17,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Halbarad",
@@ -37,7 +38,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ranger of the North",
@@ -86,7 +88,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Fraecht, Vassal of the Witch-king",
@@ -106,7 +109,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Carn Dum",
@@ -298,7 +302,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bard II, Prince of Dale",
@@ -318,7 +323,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Dale",
@@ -438,7 +444,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Frida Tallspear",
@@ -458,7 +465,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gorulf Ironskin",
@@ -478,7 +486,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dunlending Chieftain",
@@ -518,7 +527,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Crebain",
@@ -670,7 +680,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Frealaf",
@@ -695,7 +706,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Haleth, Prince of Rohan",
@@ -724,7 +736,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Hama, Prince of Rohan",
@@ -749,7 +762,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Olwyn, Shieldmaiden of Rohan",
@@ -774,7 +788,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Hera, Daughter of Helm",
@@ -799,7 +814,8 @@
                 "name": "Ashere",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -877,7 +893,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Rider of Rohan",
@@ -991,7 +1008,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwalin the Dwarf, Champion of Erebor",
@@ -1011,7 +1029,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Thorin III Stonehelm",
@@ -1031,7 +1050,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwarf King",
@@ -1071,7 +1091,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gloin the Dwarf, Champion of Erebor",
@@ -1091,7 +1112,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Iron Hills Captain",
@@ -1136,7 +1158,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Nori the Dwarf, Champion of Erebor",
@@ -1156,7 +1179,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bifur the Dwarf, Champion of Erebor",
@@ -1176,7 +1200,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bofur the Dwarf, Champion of Erebor",
@@ -1196,7 +1221,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Iron Hills Goat Rider",
@@ -1285,7 +1311,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Goroth, Captain of the Morannon",
@@ -1305,7 +1332,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Guritz",
@@ -1325,7 +1353,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Zagdush, Orc Captain",
@@ -1345,7 +1374,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gothmog's Enforcer",
@@ -1365,7 +1395,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Morannon Orc Captain",
@@ -1558,7 +1589,8 @@
                 "name": "Heavy armour",
                 "points": 10
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Bolg, Spawn of Azog",
@@ -1587,7 +1619,8 @@
                 "name": "Orc bow",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gundabad Orc Captain",
@@ -1816,7 +1849,8 @@
             "4",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bard the Bowman",
@@ -1841,7 +1875,8 @@
                 "name": "Windlance",
                 "points": 50
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Tauriel, Ranger of Mirkwood",
@@ -1866,7 +1901,8 @@
                 "name": "Elf bow",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Braga, Captain of the Guard",
@@ -1886,7 +1922,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Fili the Dwarf",
@@ -1906,7 +1943,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Kili the Dwarf",
@@ -1926,7 +1964,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Oin the Dwarf",
@@ -1946,7 +1985,8 @@
             "5",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bofur the Dwarf",
@@ -1966,7 +2006,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Lake-town Guard Captain",
@@ -2006,7 +2047,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bard's Family",
@@ -2026,7 +2068,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Lake-town Guard",
@@ -2072,7 +2115,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Thrain, Son of Thror",
@@ -2092,7 +2136,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Young Thorin Oakenshield",
@@ -2112,7 +2157,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Young Dwalin the Dwarf",
@@ -2132,7 +2178,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwarf King",
@@ -2172,7 +2219,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Grim Hammer Captain",
@@ -2313,7 +2361,8 @@
                 "name": "Two-handed weapon",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Khamul the Easterling",
@@ -2338,7 +2387,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Betrayer",
@@ -2363,7 +2413,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Dark Marshal",
@@ -2388,7 +2439,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Dwimmerlaik",
@@ -2413,7 +2465,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Knight of Umbar",
@@ -2438,7 +2491,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Shadow Lord",
@@ -2463,7 +2517,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Tainted",
@@ -2488,7 +2543,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Undying",
@@ -2513,7 +2569,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gothmog",
@@ -2542,7 +2599,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Razgush, War Leader of the North",
@@ -2562,7 +2620,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mouth of Sauron",
@@ -2587,7 +2646,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Ringwraith",
@@ -2688,7 +2748,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Goroth, Captain of the Morannon",
@@ -2708,7 +2769,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Black Numenorean Marshal",
@@ -2777,7 +2839,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Guritz",
@@ -2797,7 +2860,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Kardush the Firecaller",
@@ -2817,7 +2881,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gorbag",
@@ -2837,7 +2902,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Zagdush, Orc Captain",
@@ -2857,7 +2923,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gothmog's Enforcer",
@@ -2877,7 +2944,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Morannon Orc Captain",
@@ -3016,7 +3084,8 @@
             "6",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Black Guard Drummer",
@@ -3452,7 +3521,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Thrydan Wolfsbane",
@@ -3477,7 +3547,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Dunlending Chieftain",
@@ -3517,7 +3588,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gorulf Ironskin",
@@ -3537,7 +3609,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Vrasku",
@@ -3557,7 +3630,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Uruk-Hai Scout Captain",
@@ -3597,7 +3671,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Isengard Orc Captain",
@@ -3716,7 +3791,8 @@
             "0",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Isengard Troll",
@@ -4008,7 +4084,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Aranarth",
@@ -4028,7 +4105,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Argadir",
@@ -4048,7 +4126,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Malbeth the Seer",
@@ -4068,7 +4147,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Arnor",
@@ -4226,7 +4306,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Uruk-Hai Shaman",
@@ -4385,7 +4466,8 @@
             "5",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Muzgur, Orc Shaman",
@@ -4405,7 +4487,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ashrak",
@@ -4425,7 +4508,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Wild Warg Chieftain",
@@ -4759,7 +4843,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwalin the Dwarf, Champion of Erebor",
@@ -4779,7 +4864,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Legolas Greenleaf, Prince of Mirkwood",
@@ -4804,7 +4890,8 @@
                 "name": "Orcrist",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Fili the Dwarf, Champion of Erebor",
@@ -4824,7 +4911,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Kili the Dwarf, Champion of Erebor",
@@ -4844,7 +4932,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Tauriel, Ranger of Mirkwood",
@@ -4864,7 +4953,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bilbo Baggins, Master Burglar",
@@ -4884,7 +4974,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gandalf the White",
@@ -4913,7 +5004,8 @@
                 "name": "Shadowfax",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Hurin the Tall, Warden of the Keys",
@@ -4938,7 +5030,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Knight of the White Tower",
@@ -4978,7 +5071,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Irolas",
@@ -4998,7 +5092,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Minas Tirith",
@@ -5043,7 +5138,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Knight of Minas Tirith",
@@ -5204,7 +5300,8 @@
                 "name": "The White Warg",
                 "points": 50
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Bolg, Spawn of Azog",
@@ -5233,7 +5330,8 @@
                 "name": "Orc bow",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Narzug, Hunter Orc Captain",
@@ -5253,7 +5351,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Yazneg, Hunter Orc Captain",
@@ -5278,7 +5377,8 @@
                 "name": "Fell Warg and lance",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Fimbul, Hunter Orc Captain",
@@ -5303,7 +5403,8 @@
                 "name": "Fell Warg",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Hunter Orc Captain",
@@ -5425,7 +5526,8 @@
             "6",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Witch-king of Angmar",
@@ -5458,7 +5560,8 @@
                 "name": "Morgul Blade",
                 "points": 10
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Mordor Troll Chieftain",
@@ -5842,7 +5945,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Peregrin Took, Captain of the Shire",
@@ -5867,7 +5971,8 @@
                 "name": "Elven cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Frodo of the Nine Fingers",
@@ -5892,7 +5997,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Samwise the Brave",
@@ -5917,7 +6023,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Farmer Maggot",
@@ -5937,7 +6044,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Baldo Tulpenny",
@@ -5957,7 +6065,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Holfoot Bracegirdle, Shirriff-Leader",
@@ -5977,7 +6086,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Will Whitfoot, Mayor of Michel Delving",
@@ -5997,7 +6107,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Farmer Tolman Cotton",
@@ -6017,7 +6128,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hamfast 'Gaffer' Gamgee",
@@ -6037,7 +6149,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Paladin Took, Thain of the Shire",
@@ -6057,7 +6170,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Robin Smallburrow, Hobbit Shirriff",
@@ -6077,7 +6191,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Fredegar 'Fatty' Bolger",
@@ -6097,7 +6212,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Folco Boffin",
@@ -6117,7 +6233,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Lobelia Sackville-Baggins",
@@ -6137,7 +6254,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Rosie Cotton",
@@ -6157,7 +6275,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hobbit Archer",
@@ -6247,7 +6366,8 @@
                 "name": "Asfaloth",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Earnur, Last King of Gondor",
@@ -6272,7 +6392,8 @@
                 "name": "Armoured horse and lance",
                 "points": 30
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Aranarth",
@@ -6292,7 +6413,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Cirdan",
@@ -6312,7 +6434,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Rivendell Captain",
@@ -6551,7 +6674,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ranger of the North",
@@ -6661,7 +6785,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "General Targg",
@@ -6686,7 +6811,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Hill Tribes Chieftain",
@@ -6735,7 +6861,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Crebain",
@@ -6823,7 +6950,8 @@
                 "name": "Elven cloak",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gimli",
@@ -6848,7 +6976,8 @@
                 "name": "Elven cloak",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Legolas",
@@ -6873,7 +7002,8 @@
                 "name": "Elven cloak",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Boromir of Gondor",
@@ -6902,7 +7032,8 @@
                 "name": "Elven cloak",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Haldir, Galadhrim Captain",
@@ -6931,7 +7062,8 @@
                 "name": "Elven cloak",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Frodo Baggins",
@@ -6964,7 +7096,8 @@
                 "name": "Elven cloak",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Samwise Gamgee",
@@ -6989,7 +7122,8 @@
                 "name": "Elven cloak",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Meriadoc Brandybuck",
@@ -7014,7 +7148,8 @@
                 "name": "Elven cloak",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Peregrin Took",
@@ -7039,7 +7174,8 @@
                 "name": "Elven cloak",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Lothlorien Warrior",
@@ -7093,7 +7229,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Wild Warg Chieftain",
@@ -7279,7 +7416,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gorbag",
@@ -7299,7 +7437,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mordor Uruk-Hai Captain",
@@ -7409,7 +7548,8 @@
             "6",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mordor Orc Drummer",
@@ -7526,7 +7666,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Delgamar, Gatemaster of Umbar",
@@ -7546,7 +7687,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Corsair Captain",
@@ -7596,7 +7738,8 @@
                 "name": "Exchange two-handed weapon for crossbow",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Corsair Bo'sun",
@@ -7725,7 +7868,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Brand, King of Dale",
@@ -7745,7 +7889,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwalin the Dwarf, Champion of Erebor",
@@ -7765,7 +7910,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Thorin III Stonehelm",
@@ -7785,7 +7931,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bard II, Prince of Dale",
@@ -7805,7 +7952,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gloin the Dwarf, Champion of Erebor",
@@ -7825,7 +7973,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Iron Hills Captain",
@@ -7870,7 +8019,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Nori the Dwarf, Champion of Erebor",
@@ -7890,7 +8040,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bifur the Dwarf, Champion of Erebor",
@@ -7910,7 +8061,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bofur the Dwarf, Champion of Erebor",
@@ -7930,7 +8082,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Dale",
@@ -8094,7 +8247,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Aragorn, Strider",
@@ -8119,7 +8273,8 @@
                 "name": "Armour",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gimli",
@@ -8144,7 +8299,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Legolas",
@@ -8173,7 +8329,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Haldir, Galadhrim Captain",
@@ -8206,7 +8363,8 @@
                 "name": "Elven cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Galadhrim Captain",
@@ -8256,7 +8414,8 @@
                 "name": "Royal Standard of Rohan",
                 "points": 40
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -8325,7 +8484,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Aldor",
@@ -8345,7 +8505,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Rohan Royal Guard",
@@ -8467,7 +8628,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hera, The Bride of Death",
@@ -8492,7 +8654,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Olwyn, Shieldmaiden of Rohan",
@@ -8517,7 +8680,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -8575,7 +8739,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Rider of Rohan",
@@ -8668,7 +8833,8 @@
                 "name": "Shadowfax",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Aragorn, Strider",
@@ -8697,7 +8863,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Prince Imrahil",
@@ -8722,7 +8889,8 @@
                 "name": "Armoured horse and lance",
                 "points": 30
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Theoden",
@@ -8755,7 +8923,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Eomer",
@@ -8788,7 +8957,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gimli",
@@ -8813,7 +8983,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "King of the Dead",
@@ -8833,7 +9004,8 @@
             "6",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Legolas",
@@ -8862,7 +9034,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Forlong the Fat",
@@ -8882,7 +9055,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hurin the Tall, Warden of the Keys",
@@ -8907,7 +9081,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Elladan",
@@ -8927,7 +9102,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Elrohir",
@@ -8947,7 +9123,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Knight of the White Tower",
@@ -8987,7 +9164,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Deorwine, Chief of the King's Knights",
@@ -9012,7 +9190,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Halbarad",
@@ -9037,7 +9216,8 @@
                 "name": "Banner of Arwen Evenstar",
                 "points": 40
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Herald of the Dead",
@@ -9077,7 +9257,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Beregond, Guard of the Citadel",
@@ -9097,7 +9278,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Dol Amroth",
@@ -9142,7 +9324,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Irolas",
@@ -9162,7 +9345,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Minas Tirith",
@@ -9207,7 +9391,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Eowyn",
@@ -9248,7 +9433,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gamling",
@@ -9277,7 +9463,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -9335,7 +9522,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Ranger of the North",
@@ -9742,7 +9930,8 @@
             "10",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Moria Blackshield Captain",
@@ -9847,7 +10036,8 @@
             "5",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Cave Troll",
@@ -9979,7 +10169,8 @@
             "6",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dragon",
@@ -10061,7 +10252,8 @@
                 "name": "Wyrm Magic",
                 "points": 50
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Cave Drake",
@@ -10101,7 +10293,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Girion, Lord of Dale",
@@ -10121,7 +10314,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Thrain, Son of Thror",
@@ -10141,7 +10335,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Young Thorin Oakenshield",
@@ -10161,7 +10356,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Young Dwalin the Dwarf",
@@ -10181,7 +10377,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Young Balin the Dwarf",
@@ -10201,7 +10398,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Grim Hammer Captain",
@@ -10393,7 +10591,8 @@
                 "name": "Orcrist",
                 "points": 10
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Dain Ironfoot, Lord of the Iron Hills",
@@ -10413,7 +10612,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwalin the Dwarf, Champion of Erebor",
@@ -10433,7 +10633,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Fili the Dwarf, Champion of Erebor",
@@ -10453,7 +10654,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Kili the Dwarf, Champion of Erebor",
@@ -10473,7 +10675,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Balin the Dwarf, Champion of Erebor",
@@ -10493,7 +10696,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gloin the Dwarf, Champion of Erebor",
@@ -10513,7 +10717,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Iron Hills Captain",
@@ -10558,7 +10763,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Nori the Dwarf, Champion of Erebor",
@@ -10578,7 +10784,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bifur the Dwarf, Champion of Erebor",
@@ -10598,7 +10805,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bofur the Dwarf, Champion of Erebor",
@@ -10623,7 +10831,8 @@
                 "name": "Troll Brute",
                 "points": 100
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Bombur the Dwarf, Champion of Erebor",
@@ -10643,7 +10852,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Oin the Dwarf, Champion of Erebor",
@@ -10663,7 +10873,8 @@
             "5",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ori the Dwarf, Champion of Erebor",
@@ -10683,7 +10894,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Iron Hills Warrior",
@@ -10741,7 +10953,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Murin",
@@ -10761,7 +10974,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Cirion, Lieutenant of Amon Barad",
@@ -10781,7 +10995,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Minas Tirith",
@@ -10992,7 +11207,8 @@
                 "name": "Elven Cloak (Pippin)",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Beechbone",
@@ -11012,7 +11228,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Birchseed",
@@ -11032,7 +11249,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ent",
@@ -11222,7 +11440,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Spider Queen",
@@ -11242,7 +11461,8 @@
             "3",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mordor Orc Captain",
@@ -11499,7 +11719,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "King of Men (Gondor)",
@@ -11536,7 +11757,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Minas Tirith",
@@ -11725,7 +11947,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Grimbold of Grimslade",
@@ -11770,7 +11993,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -11968,7 +12192,8 @@
                 "name": "Windlance",
                 "points": 50
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Dale",
@@ -12083,7 +12308,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Minas Tirith",
@@ -12123,7 +12349,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Frodo Baggins",
@@ -12156,7 +12383,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Damrod",
@@ -12176,7 +12404,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Samwise Gamgee",
@@ -12201,7 +12430,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Anborn, Ranger of Ithilien",
@@ -12221,7 +12451,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mablung, Ranger of Ithilien",
@@ -12241,7 +12472,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Smeagol",
@@ -12261,7 +12493,8 @@
             "0",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Knight of Minas Tirith",
@@ -12401,7 +12634,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Grinnah, Goblin Jailer",
@@ -12421,7 +12655,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Goblin Scribe",
@@ -12441,7 +12676,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Goblin Captain",
@@ -12481,7 +12717,8 @@
             "0",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Goblin Warrior",
@@ -12523,7 +12760,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Suladan, The Serpent Lord",
@@ -12548,7 +12786,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Dalamyr, Fleetmaster of Umbar",
@@ -12568,7 +12807,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Amdur, Lord of Blades",
@@ -12593,7 +12833,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Khamul the Easterling",
@@ -12618,7 +12859,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Betrayer",
@@ -12643,7 +12885,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Golden King of Abrakhan",
@@ -12663,7 +12906,8 @@
             "6",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Knight of Umbar",
@@ -12688,7 +12932,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Khandish King",
@@ -12733,7 +12978,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Haradrim King",
@@ -12892,7 +13138,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Easterling Captain",
@@ -13612,7 +13859,8 @@
                 "name": "Heavy armour",
                 "points": 10
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Legolas Greenleaf, Prince of Mirkwood",
@@ -13645,7 +13893,8 @@
                 "name": "Elven cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Tauriel, Ranger of Mirkwood",
@@ -13670,7 +13919,8 @@
                 "name": "Elf bow",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Palace Guard Captain",
@@ -13866,7 +14116,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Betrayer",
@@ -13891,7 +14142,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Golden King of Abrakhan",
@@ -13911,7 +14163,8 @@
             "6",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Haradrim King",
@@ -14161,7 +14414,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Rutabi, General of the Dragon Legion",
@@ -14181,7 +14435,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Easterling Kataphrakt Captain",
@@ -14221,7 +14476,8 @@
             "5",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Easterling Captain",
@@ -14444,7 +14700,8 @@
                 "name": "Morgul Blade",
                 "points": 10
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Dwimmerlaik",
@@ -14469,7 +14726,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Tainted",
@@ -14494,7 +14752,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Aldrac, Warlord of Carn Dum",
@@ -14514,7 +14773,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Shadow of Rhudaur",
@@ -14534,7 +14794,8 @@
             "5",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Shade",
@@ -14574,7 +14835,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Carn Dum",
@@ -14614,7 +14876,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Angmar Orc Captain",
@@ -14826,7 +15089,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwarf King",
@@ -14866,7 +15130,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "King's Champion",
@@ -15107,7 +15372,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Eomer",
@@ -15144,7 +15410,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Theodred",
@@ -15173,7 +15440,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Erkenbrand, Captain of Rohan",
@@ -15218,7 +15486,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Grimbold of Grimslade",
@@ -15263,7 +15532,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Hama, Captain of Rohan",
@@ -15283,7 +15553,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gamling",
@@ -15312,7 +15583,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -15382,7 +15654,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "King's Huntsman",
@@ -15567,7 +15840,8 @@
                 "name": "Two-handed weapon",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Mumak War Leader",
@@ -15587,7 +15861,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Amdur, Lord of Blades",
@@ -15612,7 +15887,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Khamul the Easterling",
@@ -15637,7 +15913,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Betrayer",
@@ -15662,7 +15939,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Dark Marshal",
@@ -15687,7 +15965,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Dwimmerlaik",
@@ -15712,7 +15991,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Golden King of Abrakhan",
@@ -15732,7 +16012,8 @@
             "6",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Knight of Umbar",
@@ -15757,7 +16038,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Shadow Lord",
@@ -15782,7 +16064,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Tainted",
@@ -15807,7 +16090,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Undying",
@@ -15832,7 +16116,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gothmog",
@@ -15861,7 +16146,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Suladan, The Serpent Lord",
@@ -15886,7 +16172,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Haradrim King",
@@ -16053,7 +16340,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hasharin",
@@ -16093,7 +16381,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Black Numenorean Marshal",
@@ -16142,7 +16431,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Easterling Captain",
@@ -16207,7 +16497,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gothmog's Enforcer",
@@ -16227,7 +16518,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Morannon Orc Captain",
@@ -16721,7 +17013,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Elrond",
@@ -16746,7 +17039,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Glorfindel, Lord of the West",
@@ -16775,7 +17069,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Erestor",
@@ -16795,7 +17090,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Cirdan",
@@ -16815,7 +17111,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Rivendell Captain",
@@ -16953,7 +17250,8 @@
                 "name": "Mirror of Galadriel",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Celeborn, Lord of Lothlorien",
@@ -16973,7 +17271,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Orophin, Galadhrim Captain",
@@ -16993,7 +17292,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Rumil, Warden of Caras Galadhon",
@@ -17013,7 +17313,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Galadhrim Captain",
@@ -17071,7 +17372,8 @@
                 "name": "Elven cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Lothlorien Captain",
@@ -17285,7 +17587,8 @@
                 "name": "Shield",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Ugluk",
@@ -17305,7 +17608,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mauhur",
@@ -17325,7 +17629,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Uruk-Hai Scout Captain",
@@ -17420,7 +17725,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Prince Imrahil",
@@ -17440,7 +17746,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gwaihir",
@@ -17460,7 +17767,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gandalf the White",
@@ -17489,7 +17797,8 @@
                 "name": "Shadowfax",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Eomer",
@@ -17526,7 +17835,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gimli",
@@ -17551,7 +17861,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Legolas",
@@ -17584,7 +17895,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Elladan",
@@ -17604,7 +17916,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Elrohir",
@@ -17624,7 +17937,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Beregond, Guard of the Citadel",
@@ -17644,7 +17958,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Dol Amroth",
@@ -17742,7 +18057,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Peregrin Took",
@@ -17767,7 +18083,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Great Eagle",
@@ -17952,7 +18269,8 @@
                 "name": "Two-handed weapon",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Ringwraith",
@@ -18009,7 +18327,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Morannon Orc Captain",
@@ -18297,7 +18616,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Faramir",
@@ -18330,7 +18650,8 @@
                 "name": "Exchange armour and bow for heavy armour",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Hurin the Tall, Warden of the Keys",
@@ -18355,7 +18676,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Denethor",
@@ -18375,7 +18697,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Knight of the White Tower",
@@ -18415,7 +18738,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Beregond, Guard of the Citadel",
@@ -18435,7 +18759,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Cirion, Lieutenant of Amon Barad",
@@ -18455,7 +18780,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Irolas",
@@ -18475,7 +18801,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Minas Tirith",
@@ -18684,7 +19011,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Druzhag the Beastcaller",
@@ -18704,7 +19032,8 @@
             "5",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ashrak",
@@ -18724,7 +19053,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Groblog",
@@ -18744,7 +19074,8 @@
             "1",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Moria Blackshield Captain",
@@ -18869,7 +19200,8 @@
             "5",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dweller in the Dark",
@@ -19113,7 +19445,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Vrasku",
@@ -19133,7 +19466,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Uruk-Hai Captain",
@@ -19238,7 +19572,8 @@
             "0",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Isengard Troll",
@@ -19382,7 +19717,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Isildur",
@@ -19411,7 +19747,8 @@
                 "name": "The One Ring",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Numenor",
@@ -19494,7 +19831,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Eomer",
@@ -19527,7 +19865,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Ghan-Buri-Ghan",
@@ -19547,7 +19886,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Deorwine, Chief of the King's Knights",
@@ -19572,7 +19912,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Elfhelm, Captain of Rohan",
@@ -19597,7 +19938,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gamling",
@@ -19626,7 +19968,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -19700,7 +20043,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Rider of Rohan",
@@ -19816,7 +20160,8 @@
                 "name": "The White Warg",
                 "points": 50
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Keeper of the Dungeons",
@@ -19836,7 +20181,8 @@
             "3",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gundabad Orc Captain",
@@ -19909,7 +20255,8 @@
             "0",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mirkwood Giant Spider",
@@ -20071,7 +20418,8 @@
                 "name": "Exchange Staff for Great Eagle",
                 "points": 55
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Beorn",
@@ -20091,7 +20439,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gwaihir",
@@ -20111,7 +20460,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Great Eagle",
@@ -20170,7 +20520,8 @@
                 "name": "Elven cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Thorin Oakenshield",
@@ -20199,7 +20550,8 @@
                 "name": "The Oakenshield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Dwalin the Dwarf",
@@ -20219,7 +20571,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Tauriel, Ranger of Mirkwood",
@@ -20244,7 +20597,8 @@
                 "name": "Elf bow",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Fili the Dwarf",
@@ -20264,7 +20618,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Kili the Dwarf",
@@ -20284,7 +20639,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Balin the Dwarf",
@@ -20304,7 +20660,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gloin the Dwarf",
@@ -20324,7 +20681,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mirkwood Ranger Captain",
@@ -20373,7 +20731,8 @@
                 "name": "The One Ring",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Dori the Dwarf",
@@ -20393,7 +20752,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Nori the Dwarf",
@@ -20413,7 +20773,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Oin the Dwarf",
@@ -20433,7 +20794,8 @@
             "5",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bifur the Dwarf",
@@ -20453,7 +20815,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bofur the Dwarf",
@@ -20473,7 +20836,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bombur the Dwarf",
@@ -20493,7 +20857,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ori the Dwarf",
@@ -20513,7 +20878,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mirkwood Ranger",
@@ -20580,7 +20946,8 @@
                 "name": "Warg",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Mordor Orc Captain",
@@ -21659,7 +22026,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwarf King",
@@ -21719,7 +22087,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwarf Captain",
@@ -21759,7 +22128,8 @@
             "5",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ori the Dwarf, Champion of Erebor",
@@ -21779,7 +22149,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwarf Shieldbearer",
@@ -21934,7 +22305,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Faramir",
@@ -21954,7 +22326,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Minas Tirith",
@@ -21994,7 +22367,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Knight of Minas Tirith",
@@ -22143,7 +22517,8 @@
                 "name": "Anduril, Flame of the West",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gimli",
@@ -22168,7 +22543,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "King of the Dead",
@@ -22188,7 +22564,8 @@
             "6",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Legolas",
@@ -22217,7 +22594,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Herald of the Dead",
@@ -22321,7 +22699,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Aragorn, Strider",
@@ -22350,7 +22729,8 @@
                 "name": "Armour",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Legolas",
@@ -22379,7 +22759,8 @@
                 "name": "Armour",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gamling",
@@ -22408,7 +22789,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -22526,7 +22908,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gandalf the White",
@@ -22551,7 +22934,8 @@
                 "name": "Shadowfax",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Erkenbrand, Captain of Rohan",
@@ -22667,7 +23051,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Eomer",
@@ -22700,7 +23085,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Deorwine, Chief of the King's Knights",
@@ -22725,7 +23111,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Elfhelm, Captain of Rohan",
@@ -22750,7 +23137,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Eowyn",
@@ -22791,7 +23179,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gamling",
@@ -22820,7 +23209,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -22925,7 +23315,8 @@
             "25",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Khamul the Easterling",
@@ -22945,7 +23336,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Abyssal Knight",
@@ -22965,7 +23357,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Abyssal Knight",
@@ -22985,7 +23378,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Dark Headsman",
@@ -23005,7 +23399,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Forsaken",
@@ -23025,7 +23420,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Keeper of the Dungeons",
@@ -23045,7 +23441,8 @@
             "3",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Lingering Shadow",
@@ -23065,7 +23462,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Slayer of Men",
@@ -23085,7 +23483,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Slayer of Men",
@@ -23105,7 +23504,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Witch-king of Angmar",
@@ -23125,7 +23525,8 @@
             "1",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hunter Orc Captain",
@@ -23306,7 +23707,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Glorfindel, Lord of the West",
@@ -23335,7 +23737,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Erestor",
@@ -23355,7 +23758,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Elladan",
@@ -23380,7 +23784,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Elrohir",
@@ -23405,7 +23810,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Arwen",
@@ -23434,7 +23840,8 @@
                 "name": "Hadhafang",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Lindir",
@@ -23454,7 +23861,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Rivendell Captain",
@@ -23536,7 +23944,8 @@
                 "name": "The One Ring",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Rivendell Knight",
@@ -23621,7 +24030,8 @@
                 "name": "Snowmane",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Aragorn, Strider",
@@ -23654,7 +24064,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gimli",
@@ -23679,7 +24090,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Legolas",
@@ -23708,7 +24120,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Hama, Captain of Rohan",
@@ -23728,7 +24141,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gamling",
@@ -23753,7 +24167,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Rohan",
@@ -23885,7 +24300,8 @@
                 "name": "Bow",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Arwen",
@@ -23914,7 +24330,8 @@
                 "name": "Hadhafang",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gildor Inglorion",
@@ -23934,7 +24351,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Frodo Baggins",
@@ -23963,7 +24381,8 @@
                 "name": "Sting",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Samwise Gamgee",
@@ -23983,7 +24402,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Barliman Butterbur",
@@ -24003,7 +24423,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Tom Bombadil",
@@ -24023,7 +24444,8 @@
             "12",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Goldberry",
@@ -24043,7 +24465,8 @@
             "8",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Gatekeeper of Bree",
@@ -24063,7 +24486,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bill the Pony",
@@ -24083,7 +24507,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Meriadoc Brandybuck",
@@ -24103,7 +24528,8 @@
             "0",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Peregrin Took",
@@ -24123,7 +24549,8 @@
             "0",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Noldorin Exiles",
@@ -24177,7 +24604,8 @@
             "3",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Shadow of Rhudaur",
@@ -24197,7 +24625,8 @@
             "5",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Wild Warg Chieftain",
@@ -24257,7 +24686,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Angmar Orc Captain",
@@ -24460,7 +24890,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Sid Briarthorn",
@@ -24480,7 +24911,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Rowan Thistlewood",
@@ -24500,7 +24932,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bill Ferny",
@@ -24520,7 +24953,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Lotho Sackville-Baggins",
@@ -24540,7 +24974,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ted Sandyman",
@@ -24560,7 +24995,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ruffian",
@@ -24654,7 +25090,8 @@
                 "name": "Armour and horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gandalf the Grey",
@@ -24679,7 +25116,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Lake-town Militia Captain",
@@ -24719,7 +25157,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hilda-Bianca",
@@ -24739,7 +25178,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bilbo Baggins, Master Burglar",
@@ -24759,7 +25199,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bard's Family",
@@ -24779,7 +25220,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Alfrid the Councillor",
@@ -24799,7 +25241,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Lake-town Militia",
@@ -24854,7 +25297,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Dain Ironfoot, Lord of the Iron Hills",
@@ -24879,7 +25323,8 @@
                 "name": "War Boar",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Radagast the Brown",
@@ -24904,7 +25349,8 @@
                 "name": "Exchange Staff for Great Eagle",
                 "points": 55
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Bard the Bowman",
@@ -24929,7 +25375,8 @@
                 "name": "Exchange great bow for armour and horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Thorin Oakenshield, King Under the Mountain",
@@ -24954,7 +25401,8 @@
                 "name": "Orcrist",
                 "points": 10
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Thranduil, King of the Woodland Realm",
@@ -24983,7 +25431,8 @@
                 "name": "Heavy armour",
                 "points": 10
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Beorn",
@@ -25003,7 +25452,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gwaihir",
@@ -25023,7 +25473,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dwalin the Dwarf, Champion of Erebor",
@@ -25043,7 +25494,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Legolas Greenleaf, Prince of Mirkwood",
@@ -25076,7 +25528,8 @@
                 "name": "Elven cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Fili the Dwarf, Champion of Erebor",
@@ -25096,7 +25549,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Kili the Dwarf, Champion of Erebor",
@@ -25116,7 +25570,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Balin the Dwarf, Champion of Erebor",
@@ -25136,7 +25591,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gloin the Dwarf, Champion of Erebor",
@@ -25156,7 +25612,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Tauriel, Ranger of Mirkwood",
@@ -25181,7 +25638,8 @@
                 "name": "Elf bow",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Iron Hills Captain",
@@ -25226,7 +25684,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Dori the Dwarf, Champion of Erebor",
@@ -25246,7 +25705,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mirkwood Elf Captain",
@@ -25286,7 +25746,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bifur the Dwarf, Champion of Erebor",
@@ -25306,7 +25767,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bofur the Dwarf, Champion of Erebor",
@@ -25331,7 +25793,8 @@
                 "name": "Troll Brute",
                 "points": 100
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Bombur the Dwarf, Champion of Erebor",
@@ -25351,7 +25814,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Oin the Dwarf, Champion of Erebor",
@@ -25371,7 +25835,8 @@
             "5",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Lake-town Militia Captain",
@@ -25411,7 +25876,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Percy, Lake-town Archer",
@@ -25431,7 +25897,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hilda-Bianca",
@@ -25451,7 +25918,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bard's Family",
@@ -25471,7 +25939,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Alfrid the Councillor",
@@ -25491,7 +25960,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Great Eagle",
@@ -25682,7 +26152,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Grimbeorn",
@@ -25702,7 +26173,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Beorning",
@@ -25744,7 +26216,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mouth of Sauron",
@@ -25769,7 +26242,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Mordor Troll Chieftain",
@@ -25985,7 +26459,8 @@
                 "name": "Morgul Blade",
                 "points": 10
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Ringwraith",
@@ -26038,7 +26513,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Great Eagle",
@@ -26097,7 +26573,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Khamul the Easterling",
@@ -26122,7 +26599,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Easterling Kataphrakt Captain",
@@ -26352,7 +26830,8 @@
             "6",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Aragorn, Strider",
@@ -26377,7 +26856,8 @@
                 "name": "Bow",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gimli",
@@ -26397,7 +26877,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Legolas",
@@ -26417,7 +26898,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Boromir of Gondor",
@@ -26446,7 +26928,8 @@
                 "name": "Shield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Frodo Baggins",
@@ -26475,7 +26958,8 @@
                 "name": "Sting",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Samwise Gamgee",
@@ -26495,7 +26979,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bill the Pony",
@@ -26515,7 +27000,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Meriadoc Brandybuck",
@@ -26535,7 +27021,8 @@
             "0",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Peregrin Took",
@@ -26555,7 +27042,8 @@
             "0",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Prince Imrahil",
@@ -26580,7 +27068,8 @@
                 "name": "Armoured horse and lance",
                 "points": 30
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Forlong the Fat",
@@ -26600,7 +27089,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Angbor the Fearless",
@@ -26620,7 +27110,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Duinhir, Lord of the Blackroot Vale",
@@ -26640,7 +27131,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Dol Amroth",
@@ -26817,7 +27309,8 @@
                 "name": "Anduril, Flame of the West",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gimli",
@@ -26842,7 +27335,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Legolas",
@@ -26871,7 +27365,8 @@
                 "name": "Elven Cloak",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Elladan",
@@ -26891,7 +27386,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Elrohir",
@@ -26911,7 +27407,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Halbarad",
@@ -26936,7 +27433,8 @@
                 "name": "Banner of Arwen Evenstar",
                 "points": 40
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Ranger of the North",
@@ -26990,7 +27488,8 @@
                 "name": "Armoured horse and lance",
                 "points": 30
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Eomer",
@@ -27023,7 +27522,8 @@
                 "name": "Throwing spears",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Hurin the Tall, Warden of the Keys",
@@ -27048,7 +27548,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Captain of Dol Amroth",
@@ -27330,7 +27831,8 @@
                 "name": "War Boar",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Dwarf King",
@@ -27399,7 +27901,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Murin",
@@ -27419,7 +27922,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Iron Hills Chariot",
@@ -27536,7 +28040,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gil-Galad",
@@ -27556,7 +28061,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Elrond",
@@ -27581,7 +28087,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Isildur",
@@ -27610,7 +28117,8 @@
                 "name": "The One Ring",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Erestor",
@@ -27630,7 +28138,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Captain of Numenor",
@@ -27772,7 +28281,8 @@
                 "name": "Armoured horse",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "The Betrayer",
@@ -27797,7 +28307,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Haradrim King",
@@ -27891,7 +28402,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Haradrim Chieftain",
@@ -28063,7 +28575,8 @@
                 "name": "Gandalf's Cart",
                 "points": 25
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Frodo Baggins",
@@ -28083,7 +28596,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Farmer Maggot",
@@ -28103,7 +28617,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bilbo Baggins, Ageing Hobbit",
@@ -28136,7 +28651,8 @@
                 "name": "The One Ring",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Samwise Gamgee",
@@ -28156,7 +28672,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Will Whitfoot, Mayor of Michel Delving",
@@ -28176,7 +28693,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Farmer Tolman Cotton",
@@ -28196,7 +28714,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hamfast 'Gaffer' Gamgee",
@@ -28216,7 +28735,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Paladin Took, Thain of the Shire",
@@ -28236,7 +28756,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Lotho Sackville-Baggins",
@@ -28256,7 +28777,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Folco Boffin",
@@ -28276,7 +28798,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Lobelia Sackville-Baggins",
@@ -28296,7 +28819,8 @@
             "4",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Rosie Cotton",
@@ -28316,7 +28840,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Fredegar 'Fatty' Bolger",
@@ -28336,7 +28861,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Meriadoc Brandybuck",
@@ -28356,7 +28882,8 @@
             "0",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Peregrin Took",
@@ -28376,7 +28903,8 @@
             "0",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hobbit Archer",
@@ -28456,7 +28984,8 @@
             "3",
             "0"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bat Swarm",
@@ -28612,7 +29141,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bert the Troll",
@@ -28632,7 +29162,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Tom the Troll",
@@ -28652,7 +29183,8 @@
             "3",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Elrond",
@@ -28672,7 +29204,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Saruman",
@@ -28692,7 +29225,8 @@
             "6",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gandalf the Grey",
@@ -28712,7 +29246,8 @@
             "6",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Radagast the Brown",
@@ -28737,7 +29272,8 @@
                 "name": "Radagast's Sleigh",
                 "points": 35
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Galadriel, Lady of Light",
@@ -28757,7 +29293,8 @@
             "6",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Thrain the Broken",
@@ -28777,7 +29314,8 @@
             "0",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Thorin Oakenshield",
@@ -28806,7 +29344,8 @@
                 "name": "The Oakenshield",
                 "points": 5
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Gandalf the Grey",
@@ -28826,7 +29365,8 @@
             "6",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gwaihir",
@@ -28846,7 +29386,8 @@
             "3",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Radagast the Brown",
@@ -28871,7 +29412,8 @@
                 "name": "Radagast's Sleigh",
                 "points": 35
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Dwalin the Dwarf",
@@ -28891,7 +29433,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Fili the Dwarf",
@@ -28911,7 +29454,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Kili the Dwarf",
@@ -28931,7 +29475,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Balin the Dwarf",
@@ -28951,7 +29496,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Gloin the Dwarf",
@@ -28971,7 +29517,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bilbo Baggins",
@@ -29000,7 +29547,8 @@
                 "name": "The One Ring",
                 "points": 0
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Dori the Dwarf",
@@ -29020,7 +29568,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Nori the Dwarf",
@@ -29040,7 +29589,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Oin the Dwarf",
@@ -29060,7 +29610,8 @@
             "5",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bifur the Dwarf",
@@ -29080,7 +29631,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bofur the Dwarf",
@@ -29100,7 +29652,8 @@
             "1",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Bombur the Dwarf",
@@ -29120,7 +29673,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Ori the Dwarf",
@@ -29140,7 +29694,8 @@
             "2",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Great Eagle",
@@ -29177,7 +29732,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Mauhur",
@@ -29197,7 +29753,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Grishnakh",
@@ -29217,7 +29774,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Uruk-Hai Scout Captain",
@@ -29257,7 +29815,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Isengard Orc Captain",
@@ -29405,7 +29964,8 @@
             "2",
             "3"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "The Knight of Umbar",
@@ -29430,7 +29990,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Delgamar, Gatemaster of Umbar",
@@ -29450,7 +30011,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hasharin",
@@ -29688,7 +30250,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Freca",
@@ -29708,7 +30271,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "General Targg",
@@ -29733,7 +30297,8 @@
                 "name": "Horse",
                 "points": 20
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Lord Thorne of the Wold",
@@ -29753,7 +30318,8 @@
             "2",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Hill Tribes Chieftain",
@@ -29929,7 +30495,8 @@
                 "name": "Khandish Chariot",
                 "points": 35
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Khandish Chieftain",
@@ -30055,7 +30622,8 @@
             "3",
             "2"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Werewolf",
@@ -30126,7 +30694,8 @@
             "1",
             "1"
         ],
-        "equipment": []
+        "equipment": [],
+        "unique": true
     },
     {
         "name": "Isengard Orc Captain",
@@ -30268,7 +30837,8 @@
                 "name": "Morgul Blade",
                 "points": 10
             }
-        ]
+        ],
+        "unique": true
     },
     {
         "name": "Ringwraith",

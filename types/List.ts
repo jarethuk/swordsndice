@@ -1,4 +1,4 @@
-import type {Games} from './Enums';
+import type {Games, MESBGArmySlot} from './Enums';
 
 export interface ListMemberEquipment {
 	name: string;
@@ -11,6 +11,8 @@ export interface ListMember {
 	points: number;
 	equipment: ListMemberEquipment[];
 	amount: number;
+	slot: MESBGArmySlot;
+	notes?: string;
 }
 
 export interface ListGroup {

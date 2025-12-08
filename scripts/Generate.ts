@@ -12,6 +12,7 @@ interface GameData {
 	}[];
 	army_list: string;
 	army_type: string;
+	unique: boolean;
 }
 
 interface ProfileData {
@@ -28,7 +29,6 @@ interface ProfileData {
 
 const profileData = require('./profiles.json');
 const gameData = require('./mesbg.json');
-const armiesData = require('./armies.json');
 
 const getStats = (p: ProfileData, gameData: GameData) => {
 	const base = [p.Mv, p.Fv, p.Sv, p.S, p.D, p.A, p.W, p.C, p.I].map((x) =>
@@ -61,6 +61,7 @@ const getStats = (p: ProfileData, gameData: GameData) => {
 			game: 'MESBG',
 			stats: getStats(profile, data),
 			equipment: data.options.map((x) => ({ name: x.name, points: x.points })),
+			unique: data.unique,
 		});
 
 		if (!armies.has(data.army_list)) {

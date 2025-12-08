@@ -1,3 +1,4 @@
+import {MESBGProfiles} from '../data/MESBGProfiles';
 import {MESBGArmySlot} from '../types';
 import type {List, ListGroup, ListMember} from '../types/List';
 import type {MESBGProfileStats} from '../types/MESBGProfileStats';
@@ -77,4 +78,28 @@ export const getPointsTotal = (list: List): number => {
 	}
 
 	return total;
+};
+
+export const getListUniqueLeaders = (list: List): string[] => {
+	const leaders = new Set<string>();
+
+	for (const group of list.groups) {
+		const leaderProfile = MESBGProfiles.find(
+			(x) => x.name === group.leader.name,
+		);
+
+		if (leaderProfile?.unique) {
+			leaders.add(group.leader.name);
+		}
+
+		for (const member of group.members) {
+			const memberProfile = MESBGProfiles.find((x) => x.name === member.name);
+
+			if (memberProfile?.unique) {
+				leaders.add(member.name);
+			}
+		}
+	}
+
+	return [...leaders];
 };

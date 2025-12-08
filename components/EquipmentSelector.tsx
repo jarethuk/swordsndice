@@ -61,6 +61,12 @@ export default function EquipmentSelector({
 					/>
 				</View>
 			))}
+
+			{!profile?.equipment?.length && (
+				<Content size={'md'} type={'subtitle'} wrap muted>
+					No equipment available
+				</Content>
+			)}
 		</View>
 	);
 }

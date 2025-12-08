@@ -14,7 +14,7 @@ import {
 import {useColours} from '../hooks/useColours';
 import {MESBGArmySlot} from '../types';
 import type {Army} from '../types/Army';
-import type {List, ListGroup, ListMember} from '../types/List';
+import type {List, ListGroup} from '../types/List';
 import {Button} from './Button';
 import {Content} from './Content';
 import EquipmentList from './EquipmentList';
@@ -28,10 +28,6 @@ interface Props {
 	onDelete: () => void;
 	refresh: () => void;
 	canEdit?: boolean;
-}
-
-interface SelectedMember extends ListMember {
-	isLeader: boolean;
 }
 
 export default function ListWarband({
@@ -62,7 +58,9 @@ export default function ListWarband({
 	}, [army, group]);
 
 	const currentUnits = useMemo(() => {
-		return group.members.reduce((acc, x) => acc + x.amount, 0);
+		return group.members
+			.filter((x) => x.slot === MESBGArmySlot.Warrior)
+			.reduce((acc, x) => acc + x.amount, 0);
 	}, [army, group]);
 
 	const deleteWarband = useCallback(async () => {
@@ -75,24 +73,6 @@ export default function ListWarband({
 
 		onDelete();
 	}, [list, group]);
-
-	const removeMember = useCallback(
-		async (memberId: string) => {
-			const listGroup = list.groups.find((x) => x.id === group.id);
-
-			if (!listGroup) return;
-
-			const index = listGroup.members.findIndex((x) => x.id === memberId);
-			listGroup.members.splice(index, 1);
-
-			await updateDBList(list.id, {
-				groups: list.groups,
-			});
-
-			refresh();
-		},
-		[group, list],
-	);
 
 	const groupPoints = useMemo(() => {
 		return getGroupPointsTotal(group);
@@ -187,19 +167,6 @@ export default function ListWarband({
 							<Content size={'xs'} type={'title'} muted>
 								{getMemberPointsTotal(member)}pts
 							</Content>
-
-							{canEdit && (
-								<Pressable
-									className={'ml-auto'}
-									onPress={() => removeMember(member.id)}
-								>
-									<FontAwesomeIcon
-										icon={faTrashAlt}
-										color={colours.negative}
-										size={16}
-									/>
-								</Pressable>
-							)}
 						</View>
 					</View>
 

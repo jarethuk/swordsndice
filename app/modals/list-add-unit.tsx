@@ -1,21 +1,27 @@
+import {faMagnifyingGlass} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {router, useLocalSearchParams} from 'expo-router';
 import {useCallback, useMemo, useState} from 'react';
-import {View} from 'react-native';
+import {Animated, View} from 'react-native';
 import {Content} from '../../components';
 import AmountSelector from '../../components/AmountSelector';
 import {Button} from '../../components/Button';
 import EquipmentSelector from '../../components/EquipmentSelector';
+import HeroPoints from '../../components/HeroPoints';
+import {Input} from '../../components/Input';
 import {NextWindowButton} from '../../components/NextWindowButton';
 import StatsRow from '../../components/StatsRow';
 import {MESBGArmies} from '../../data/MESBGArmies';
 import {MESBGProfiles} from '../../data/MESBGProfiles';
-import {getMESBGStats} from '../../helpers/MESBGStatsHelper';
+import {getListUniqueLeaders, getMESBGStats,} from '../../helpers/MESBGStatsHelper';
 import {getRandomId} from '../../helpers/RandomHelper';
+import {useColours} from '../../hooks/useColours';
 import {useList, useListActions} from '../../states/useListStore';
 import {MESBGArmySlot} from '../../types';
 import type {ListMemberEquipment} from '../../types/List';
 import type {MESBGProfileStats} from '../../types/MESBGProfileStats';
 import type {Profile} from '../../types/Profile';
+import ScrollView = Animated.ScrollView;
 
 interface ProfileWithStats extends Profile {
 	slot: MESBGArmySlot;
@@ -23,15 +29,17 @@ interface ProfileWithStats extends Profile {
 }
 
 export default function AddUnitPopup() {
+	const colours = useColours();
 	const { groupId, availableUnits } = useLocalSearchParams();
 	const list = useList();
 	const { updateList } = useListActions();
+	const [search, setSearch] = useState('');
 
 	const [amount, setAmount] = useState(1);
 	const [selected, setSelected] = useState<ProfileWithStats | undefined>();
 	const [equipment, setEquipment] = useState<ListMemberEquipment[]>([]);
 
-	const warriors: ProfileWithStats[] = useMemo(() => {
+	const units: ProfileWithStats[] = useMemo(() => {
 		if (!list) return [];
 		const army = MESBGArmies.find((x) => x.name === list.army);
 
@@ -42,8 +50,6 @@ export default function AddUnitPopup() {
 		const units: ProfileWithStats[] = [];
 
 		for (const profile of army.profiles) {
-			if (profile.slot !== MESBGArmySlot.Warrior) continue;
-
 			const unit = MESBGProfiles.find((x) => x.name === profile.name);
 			if (!unit) continue;
 
@@ -54,29 +60,51 @@ export default function AddUnitPopup() {
 			});
 		}
 
-		return units;
+		const existingLeaders = getListUniqueLeaders(list);
+		return units.filter((x) => !existingLeaders.includes(x.name));
 	}, [list]);
 
-	const onSave = useCallback(async () => {
-		if (!list) return;
+	const filteredUnits = useMemo(() => {
+		return units.filter((unit) =>
+			unit.name.toLowerCase().includes(search.toLowerCase()),
+		);
+	}, [units, search]);
 
-		const group = list.groups.find((x) => x.id === groupId);
+	const groups = useMemo(() => {
+		const slots = new Set(filteredUnits.map(({ slot }) => slot));
 
-		if (!group || !selected) return;
+		return Array.from(slots).map((slot) => ({
+			name: slot,
+			units: filteredUnits
+				.filter((x) => x.slot === slot)
+				.sort((a, b) => a.name.localeCompare(b.name)),
+		}));
+	}, [filteredUnits]);
 
-		group.members.push({
-			...selected,
-			id: getRandomId(),
-			equipment,
-			amount,
-		});
+	const onSave = useCallback(
+		async (unit?: ProfileWithStats) => {
+			if (!list) return;
 
-		await updateList({
-			groups: list.groups,
-		});
+			const group = list.groups.find((x) => x.id === groupId);
+			const selectedUnit = unit ?? selected;
 
-		router.dismiss();
-	}, [list, groupId, selected, equipment, amount]);
+			if (!group || !selectedUnit) return;
+
+			group.members.push({
+				...selectedUnit,
+				id: getRandomId(),
+				equipment,
+				amount,
+			});
+
+			await updateList({
+				groups: list.groups,
+			});
+
+			router.dismiss();
+		},
+		[list, groupId, selected, equipment, amount],
+	);
 
 	let content = null;
 
@@ -106,23 +134,25 @@ export default function AddUnitPopup() {
 						setEquipment={setEquipment}
 					/>
 
-					<View
-						className={
-							'flex gap-4 border-2 border-border-light dark:border-border-dark p-4 rounded-2xl'
-						}
-					>
-						<Content size={'xs'} type={'title'}>
-							Unit Size
-						</Content>
+					{selected.slot === MESBGArmySlot.Warrior && (
+						<View
+							className={
+								'flex gap-4 border-2 border-border-light dark:border-border-dark p-4 rounded-2xl'
+							}
+						>
+							<Content size={'xs'} type={'title'}>
+								Unit Size
+							</Content>
 
-						<AmountSelector
-							value={amount}
-							onChange={(value) => {
-								setAmount(value);
-							}}
-							max={Number(availableUnits ?? 0)}
-						/>
-					</View>
+							<AmountSelector
+								value={amount}
+								onChange={(value) => {
+									setAmount(value);
+								}}
+								max={Number(availableUnits ?? 0)}
+							/>
+						</View>
+					)}
 				</View>
 
 				<Button content={'Save'} onPress={onSave} />
@@ -130,24 +160,53 @@ export default function AddUnitPopup() {
 		);
 	} else {
 		content = (
-			<View className={'flex flex-col gap-6 p-6'}>
+			<ScrollView contentContainerClassName={'flex flex-col gap-6 p-6 pb-12'}>
 				<Content size={'sm'} type={'title'} center>
 					Add a Unit
 				</Content>
 
-				<Content size={'md'} type={'subtitle'}>
-					Warriors
-				</Content>
+				<Input
+					placeholder={'Find list'}
+					value={search}
+					onChange={setSearch}
+					type={'search'}
+					iconStart={
+						<FontAwesomeIcon
+							icon={faMagnifyingGlass}
+							size={16}
+							color={colours.primary}
+						/>
+					}
+				/>
 
-				{warriors.map((unit) => (
-					<NextWindowButton
-						key={unit.name}
-						label={unit.name}
-						onPress={() => setSelected(unit)}
-						subtitle={<StatsRow profile={unit} />}
-					/>
+				{groups.map(({ name, units }) => (
+					<View key={name} className={'flex gap-6'}>
+						<Content size={'md'} type={'subtitle'}>
+							{name}
+						</Content>
+
+						{units.map((unit) => (
+							<NextWindowButton
+								key={unit.name}
+								label={`${unit.name} (${unit.points}pts)`}
+								onPress={() => {
+									setSelected(unit);
+
+									if (!unit?.equipment?.length) {
+										void onSave(unit);
+									}
+								}}
+								bottom={
+									unit.slot !== MESBGArmySlot.Warrior ? (
+										<HeroPoints profile={unit} variant={'white'} />
+									) : undefined
+								}
+								subtitle={<StatsRow profile={unit} />}
+							/>
+						))}
+					</View>
 				))}
-			</View>
+			</ScrollView>
 		);
 	}
 

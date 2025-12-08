@@ -16,6 +16,7 @@ interface Props {
 	error?: string;
 	bottom?: ReactElement;
 	secret?: boolean;
+	multiline?: boolean;
 }
 
 export const Input = ({
@@ -30,6 +31,7 @@ export const Input = ({
 	error,
 	secret,
 	bottom,
+	multiline,
 }: Props) => {
 	const [hasFocus, setHasFocus] = useState(false);
 	const moveLabel = hasFocus || !!value;
@@ -41,8 +43,9 @@ export const Input = ({
 			'w-full shrink text-text-light dark:text-text-dark placeholder:text-[#8A8397] text-[16px] focus:outline-none',
 			{
 				'h-0 overflow-hidden': label && !moveLabel,
-				// 'top-[22px]': label && !moveLabel,
-				'h-[60px]': !label,
+				'top-[22px]': label && !moveLabel,
+				'h-[60px]': !label && !multiline,
+				'h-[100px]': multiline,
 			},
 		),
 		value: value,
@@ -53,6 +56,7 @@ export const Input = ({
 		placeholder,
 		style: { fontFamily: 'DINRoundPro' },
 		secureTextEntry: secret,
+		multiline,
 	};
 
 	return (
@@ -67,9 +71,13 @@ export const Input = ({
 				}
 			>
 				<View
-					className={
-						'border-2 border-border-light dark:border-border-dark rounded-2xl w-full flex flex-row gap-4 items-center px-4 bg-background-light dark:bg-background-dark h-[60px]'
-					}
+					className={clsx(
+						'border-2 border-border-light dark:border-border-dark rounded-2xl w-full flex flex-row gap-4 items-center px-4 bg-background-light dark:bg-background-dark',
+						{
+							'h-[60px]': !multiline,
+							'h-[160px]': multiline,
+						},
+					)}
 				>
 					{iconStart}
 
@@ -96,6 +104,7 @@ export const Input = ({
 								{...inputProps}
 								autoCapitalize={'sentences'}
 								autoCorrect={false}
+								numberOfLines={multiline ? 5 : 1}
 							/>
 						)}
 					</View>

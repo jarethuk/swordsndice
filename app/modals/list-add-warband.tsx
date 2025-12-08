@@ -7,7 +7,7 @@ import {NextWindowButton} from '../../components/NextWindowButton';
 import StatsRow from '../../components/StatsRow';
 import {MESBGArmies} from '../../data/MESBGArmies';
 import {MESBGProfiles} from '../../data/MESBGProfiles';
-import {getMESBGStats} from '../../helpers/MESBGStatsHelper';
+import {getListUniqueLeaders, getMESBGStats,} from '../../helpers/MESBGStatsHelper';
 import {getRandomId} from '../../helpers/RandomHelper';
 import {useList, useListActions} from '../../states/useListStore';
 import {MESBGArmySlot} from '../../types';
@@ -48,7 +48,8 @@ export default function AddWarbandPopup() {
 			});
 		}
 
-		return leaders;
+		const existingLeaders = getListUniqueLeaders(list);
+		return leaders.filter((x) => !existingLeaders.includes(x.name));
 	}, [list]);
 
 	const groups = useMemo(() => {
@@ -105,7 +106,7 @@ export default function AddWarbandPopup() {
 						{leaders.map((leader) => (
 							<NextWindowButton
 								key={leader.name}
-								label={leader.name}
+								label={`${leader.name} (${leader.points}pts)`}
 								onPress={() => addWarband(leader)}
 								bottom={<HeroPoints profile={leader} variant={'white'} />}
 								subtitle={<StatsRow profile={leader} />}
