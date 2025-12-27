@@ -2,6 +2,7 @@ export interface GroupMember {
 	id: string;
 	username: string;
 	image?: string;
+	isAdmin?: boolean;
 }
 
 export interface Group {
@@ -11,6 +12,5 @@ export interface Group {
 	image?: string;
 	description?: string;
 	isPublic: boolean;
-	admins: string[];
 	members: GroupMember[];
 }

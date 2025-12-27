@@ -7,7 +7,7 @@ export default {
 		version: '0.0.1',
 		orientation: 'portrait',
 		icon: './assets/icon.png',
-		scheme: 'swordsndice',
+		scheme: IS_DEV ? 'swordsndice-dev' : 'swordsndice',
 		userInterfaceStyle: 'automatic',
 		newArchEnabled: true,
 		ios: {
@@ -16,6 +16,7 @@ export default {
 				usesNonExemptEncryption: false,
 			},
 			bundleIdentifier: IS_DEV ? 'com.swordsndice.dev' : 'com.swordsndice',
+			associatedDomains: IS_DEV ? [] : ['applinks:api.swordsndice.com'],
 		},
 		android: {
 			adaptiveIcon: {

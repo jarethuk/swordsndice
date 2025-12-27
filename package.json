@@ -13,7 +13,7 @@
 		"generate": "ts-node ./scripts/Generate.ts",
 		"db:generate": "npx drizzle-kit generate",
 		"build": "eas build --platform ios --non-interactive",
-		"build:dev": "eas build --platform ios --profile development",
+		"build:dev": "eas build --platform ios --profile development --non-interactive",
 		"submit": "eas submit --platform ios",
 		"ship": "pnpm build && pnpm submit",
 		"ship:dev": "pnpm build:dev"

@@ -1,0 +1,11 @@
+import { useMutation } from '@tanstack/react-query';
+import type { AxiosError } from 'axios';
+import type { BasicResponse } from '../../types/api/responses/BasicResponse';
+import { API } from '../API';
+
+export function useAPIDeclineGame(id: string) {
+  return useMutation<BasicResponse, AxiosError>({
+    mutationKey: ['decline-game'],
+    mutationFn: () => API.patch<BasicResponse>(`/api/games/${id}/invite/decline`, {}),
+  });
+}
