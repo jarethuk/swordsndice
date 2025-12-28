@@ -12,8 +12,8 @@ importers:
   .:
     dependencies:
       '@awesome.me/kit-34e2017de2':
-        specifier: ^1.0.3
-        version: 1.0.3
+        specifier: ^1.0.4
+        version: 1.0.4
       '@expo-google-fonts/nunito':
         specifier: ^0.4.2
         version: 0.4.2
@@ -44,6 +44,9 @@ importers:
       babel-plugin-inline-import:
         specifier: ^3.0.0
         version: 3.0.0
+      bad-words:
+        specifier: 3.0.4
+        version: 3.0.4
       bignumber.js:
         specifier: ^9.3.1
         version: 9.3.1
@@ -144,6 +147,9 @@ importers:
       '@biomejs/biome':
         specifier: 2.3.8
         version: 2.3.8
+      '@types/bad-words':
+        specifier: 3.0.3
+        version: 3.0.3
       '@types/react':
         specifier: ~19.1.10
         version: 19.1.17
@@ -186,8 +192,8 @@ packages:
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
     engines: {node: '>=10'}
 
-  '@awesome.me/kit-34e2017de2@1.0.3':
-    resolution: {integrity: sha512-3gKS/I+Pb5VXJnwrfMXpS5uGufZNNs5uEMcOYM40xTgHSMCyrqhf8RJmH5p8m/LIDQGIboM0pt49dUYbY+NYVA==}
+  '@awesome.me/kit-34e2017de2@1.0.4':
+    resolution: {integrity: sha512-EaZrdhhhYXcu7DGng/00krRJ8kn3YyBiqa188yiH+Y0nKFek/PSnM8KCapHui/hGpOwnGG1sBqtdWnow83z6Ag==}
     engines: {node: '>=16'}
 
   '@babel/code-frame@7.10.4':
@@ -1821,6 +1827,9 @@ packages:
   '@types/babel__traverse@7.28.0':
     resolution: {integrity: sha512-8PvcXf70gTDZBgt9ptxJ8elBeBjcLOAcOtoO/mPJjtji1+CdGbHgm77om1GrsPxsiE+uXIpNSK64UYaIwQXd4Q==}
 
+  '@types/bad-words@3.0.3':
+    resolution: {integrity: sha512-jYdpTxDOJ+EENnsCwt8cOZhV/+4+qcwhks1igrOSg4zwwA17rsPqLsZpTo1l+OwViNu+5SPus0v5g7iGx+ofzA==}
+
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
@@ -2231,6 +2240,13 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
       '@babel/core': ^7.0.0
+
+  bad-words@3.0.4:
+    resolution: {integrity: sha512-v/Q9uRPH4+yzDVLL4vR1+S9KoFgOEUl5s4axd6NIAq8SV2mradgi4E8lma/Y0cw1ltVdvyegCQQKffCPRCp8fg==}
+    engines: {node: '>=8.0.0'}
+
+  badwords-list@1.0.0:
+    resolution: {integrity: sha512-oWhaSG67e+HQj3OGHQt2ucP+vAPm1wTbdp2aDHeuh4xlGXBdWwzZ//pfu6swf5gZ8iX0b7JgmSo8BhgybbqszA==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -5199,7 +5215,7 @@ snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@awesome.me/kit-34e2017de2@1.0.3':
+  '@awesome.me/kit-34e2017de2@1.0.4':
     dependencies:
       '@fortawesome/fontawesome-common-types': 7.1.0
 
@@ -7037,6 +7053,8 @@ snapshots:
     dependencies:
       '@babel/types': 7.28.5
 
+  '@types/bad-words@3.0.3': {}
+
   '@types/estree@1.0.8': {}
 
   '@types/graceful-fs@4.1.9':
@@ -7537,6 +7555,12 @@ snapshots:
       '@babel/core': 7.28.5
       babel-plugin-jest-hoist: 29.6.3
       babel-preset-current-node-syntax: 1.2.0(@babel/core@7.28.5)
+
+  bad-words@3.0.4:
+    dependencies:
+      badwords-list: 1.0.0
+
+  badwords-list@1.0.0: {}
 
   balanced-match@1.0.2: {}
 

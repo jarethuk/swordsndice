@@ -1,21 +1,17 @@
-import {create} from 'zustand';
-import type {User} from '../types/User';
+import { create } from 'zustand';
+import type { UserResponse } from '../types/api/responses/UserResponse';
 
 export interface UserStore {
-	user?: User;
-	actions: {
-		setUser: (user?: User) => void;
-	};
+  user?: UserResponse;
+  actions: {
+    setUser: (user?: UserResponse) => void;
+  };
 }
 
 const useUserStore = create<UserStore>((set) => ({
-	user: {
-		id: '1',
-		username: 'jarethuk',
-	},
-	actions: {
-		setUser: (user?: User) => set({ user }),
-	},
+  actions: {
+    setUser: (user?: UserResponse) => set({ user }),
+  },
 }));
 
 export const useUser = () => useUserStore((x) => x.user);

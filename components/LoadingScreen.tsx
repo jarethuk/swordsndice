@@ -1,42 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import {View} from 'react-native';
-import {Content} from './Content';
-import {Loading} from './Loading';
+import { View } from 'react-native';
+import { Content } from './Content';
+import { Loading } from './Loading';
 
-const messages = [
-	'Polishing coins...',
-	'Digging the trenches...',
-	'Please HODL, your call is important to us...',
-	'Decrypting sense of humour...',
-	'Ignoring all the red...',
-	'When lambo?',
-];
+interface Props {
+  message: string;
+}
 
-export const LoadingScreen = () => {
-	const [index, setIndex] = useState(
-		Math.floor(Math.random() * messages.length),
-	);
+export const LoadingScreen = ({ message }: Props) => {
+  return (
+    <View className={'flex h-full grow flex-col items-center justify-center gap-3'}>
+      <Loading />
 
-	useEffect(() => {
-		const timeout = setTimeout(() => {
-			if (index === messages.length - 1) {
-				setIndex(0);
-			} else {
-				setIndex(index + 1);
-			}
-		}, 5_000);
-		return () => clearTimeout(timeout);
-	}, [index]);
-
-	return (
-		<View
-			className={'flex flex-col grow justify-center items-center h-full gap-3'}
-		>
-			<Loading />
-
-			<Content type={'subtitle'} size={'lg'}>
-				{messages[index]}
-			</Content>
-		</View>
-	);
+      <Content type={'subtitle'} size={'lg'}>
+        {message}
+      </Content>
+    </View>
+  );
 };

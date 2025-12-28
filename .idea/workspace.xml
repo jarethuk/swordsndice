@@ -5,83 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a631d3da-7443-4ed9-8551-e8539695ce40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/swordsndice.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/API.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/auth/useAPILogin.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/auth/useAPIMe.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/friends/useAPIAddFriend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/friends/useAPIFriends.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/friends/useAPIRemoveFriend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIAcceptGameInvite.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIAddGame.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPICancelGameInvite.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIDeclineGame.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIDeleteGame.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIDeleteGameList.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIGame.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIGameInvites.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIGames.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIInviteToGame.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIJoinGame.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPILeaveGame.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIUpdateGame.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/games/useAPIUpdateGameList.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPICancelGroupInvite.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPICreateGroup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPICreateGroupInvite.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPIDeclineGroupInvite.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPIDeleteGroup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPIFindGroup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPIGroup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPIGroupInvites.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPIGroups.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPIJoinGroup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPILeaveGroup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPIUpdateGroup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/groups/useAPIUpdateGroupMember.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/list/useAPICreateList.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/list/useAPIDeleteList.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/list/useAPIList.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/list/useAPILists.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/list/useAPIUpdateList.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/user/useAPIUpdateUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/+html.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/Time.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hooks/usePersistedQuery.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/ListBody.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/CancelInviteToGroupRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/CreateGameRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/CreateGroupRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/InviteToGroupRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/InviteUserToGameRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/JoinGameRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/LoginRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/SetGameListRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/UpdateGameRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/UpdateGroupMemberRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/UpdateGroupRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/requests/UpdateUserRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/BasicResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/GameInviteResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/GameListResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/GameResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/GroupResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/GroupSearchResult.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/IdResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/PublicUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/UserGroup.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/UserGroupInvite.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/api/responses/UserResponse.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/auth/useAPILogout.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/logo-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/LoginForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UsernameForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/auth/useAPIMe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/auth/useAPIMe.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/user/useAPIUpdateUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/user/useAPIUpdateUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Divider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Divider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LoadingScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoadingScreen.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/Group.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/Group.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/states/useUserStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/states/useUserStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/User.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +33,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -121,33 +62,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Projects/swordsndice/api/user",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Projects\\swordsndice\\node_modules\\prettier",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "C:\\Projects\\swordsndice\\node_modules\\typescript\\lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Projects/swordsndice/api/auth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Projects\\swordsndice\\node_modules\\prettier&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Projects\\swordsndice\\node_modules\\typescript\\lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\swordsndice\api\auth" />
       <recent name="C:\Projects\swordsndice\api\user" />
       <recent name="C:\Projects\swordsndice\api\list" />
       <recent name="C:\Projects\swordsndice\api\groups" />
       <recent name="C:\Projects\swordsndice\api\games" />
-      <recent name="C:\Projects\swordsndice\hooks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\swordsndice\types\api\requests" />
@@ -178,7 +119,8 @@
       <workItem from="1766315318499" duration="595000" />
       <workItem from="1766337176503" duration="2447000" />
       <workItem from="1766850803993" duration="47000" />
-      <workItem from="1766850867591" duration="3288000" />
+      <workItem from="1766850867591" duration="9829000" />
+      <workItem from="1766922281334" duration="5821000" />
     </task>
     <servers />
   </component>
