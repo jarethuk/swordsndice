@@ -18,6 +18,6 @@ export interface GameResponse {
   description?: string | null;
   isStarted: boolean;
   isComplete: boolean;
-  members?: GameResponseMember[];
+  members: GameResponseMember[];
   invites?: PublicUser[];
 }

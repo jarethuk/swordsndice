@@ -54,7 +54,6 @@ export default {
 					cameraPermission: 'Allow access your camera to scan QR codes',
 				},
 			],
-			'expo-sqlite',
 			[
 				'expo-image-picker',
 				{

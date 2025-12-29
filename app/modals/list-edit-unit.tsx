@@ -1,21 +1,21 @@
-import {router, useLocalSearchParams} from 'expo-router';
-import {useCallback, useMemo, useState} from 'react';
-import {Animated, View} from 'react-native';
-import {Content} from '../../components';
+import { router, useLocalSearchParams } from 'expo-router';
+import { useCallback, useMemo, useState } from 'react';
+import { Animated, View } from 'react-native';
+import { Content } from '../../components';
 import AmountSelector from '../../components/AmountSelector';
-import {Button} from '../../components/Button';
+import { Button } from '../../components/Button';
 import EquipmentSelector from '../../components/EquipmentSelector';
-import {Input} from '../../components/Input';
+import { Input } from '../../components/Input';
 import StatsRow from '../../components/StatsRow';
-import {MESBGProfiles} from '../../data/MESBGProfiles';
-import {getMESBGStats} from '../../helpers/MESBGStatsHelper';
-import {useList, useListActions} from '../../states/useListStore';
-import type {ListMember, ListMemberEquipment} from '../../types/List';
-import type {MESBGProfileStats} from '../../types/MESBGProfileStats';
+import { MESBGProfiles } from '../../data/MESBGProfiles';
+import { getMESBGStats } from '../../helpers/MESBGStatsHelper';
+import { useList, useListActions } from '../../states/useListStore';
+import type { ListMember, ListMemberEquipment } from '../../types/api/ListBody';
+import type { MESBGProfileStats } from '../../types/MESBGProfileStats';
 import ScrollView = Animated.ScrollView;
 
 interface MemberWithStats extends ListMember {
-	fullStats: MESBGProfileStats;
+  fullStats: MESBGProfileStats;
 }
 
 export default function EditUnitPopup() {
@@ -104,7 +104,7 @@ export default function EditUnitPopup() {
 		});
 
 		router.dismiss();
-	}, [list, groupId, equipment, isLeader, amount, notes]);
+	}, [list, member, isLeader, updateList, groupId, equipment, notes, amount]);
 
 	const removeMember = useCallback(async () => {
 		if (!list) return;
@@ -121,7 +121,7 @@ export default function EditUnitPopup() {
 		});
 
 		router.dismiss();
-	}, [groupId, list, memberId]);
+	}, [groupId, list, memberId, updateList]);
 
 	if (!member) return null;
 

@@ -1,25 +1,25 @@
-import {faSword} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import {router} from 'expo-router';
-import {useCallback, useMemo, useState} from 'react';
-import {Animated, View} from 'react-native';
-import {Content} from '../../components';
-import {Button} from '../../components/Button';
+import { faSword } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { router } from 'expo-router';
+import { useCallback, useMemo, useState } from 'react';
+import { Animated, View } from 'react-native';
+import { useAPIAddGame } from '../../api/games/useAPIAddGame';
+import { Content } from '../../components';
+import { Button } from '../../components/Button';
 import Divider from '../../components/Divider';
-import {Input} from '../../components/Input';
-import {ListImage} from '../../components/ListImage';
-import {NextWindowButton} from '../../components/NextWindowButton';
-import {TabInput} from '../../components/TabInput';
-import {addDBGame} from '../../db/DBGames';
-import {getRandomId} from '../../helpers/RandomHelper';
-import {useNewGameActions, useNewGameGame, useNewGameList, useNewGamePoints,} from '../../states/useNewGameStore';
-import {useUser} from '../../states/useUserStore';
-import {SelectGameDialogMode} from '../../types';
-import type {Game} from '../../types/Game';
+import { Input } from '../../components/Input';
+import { ListImage } from '../../components/ListImage';
+import { NextWindowButton } from '../../components/NextWindowButton';
+import { TabInput } from '../../components/TabInput';
+import { getRandomId } from '../../helpers/RandomHelper';
+import { useNewGameActions, useNewGameGame, useNewGameList, useNewGamePoints, } from '../../states/useNewGameStore';
+import { useUser } from '../../states/useUserStore';
+import { SelectGameDialogMode } from '../../types';
+import type { CreateGameRequest } from '../../types/api/requests/CreateGameRequest';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-	Create = 'Create',
-	Join = 'Join',
+  Create = 'Create',
+  Join = 'Join',
 }
 
 const StartGameTab = () => {
@@ -29,6 +29,7 @@ const StartGameTab = () => {
 	const [isCreating, setIsCreating] = useState(false);
 	const user = useUser();
 	const { setPoints, reset } = useNewGameActions();
+	const { mutateAsync } = useAPIAddGame();
 
 	const isValid = useMemo(() => {
 		return game && points && Number(points) > 0;
@@ -39,17 +40,10 @@ const StartGameTab = () => {
 
 		setIsCreating(true);
 
-		let newGame: Game;
+		let newGame: CreateGameRequest;
 
 		const baseGame = {
-			id: getRandomId(),
 			inviteCode: getRandomId(),
-			createdAt: new Date(),
-			members: [
-				{
-					username: user?.username,
-				},
-			],
 		};
 
 		if (list) {
@@ -58,8 +52,6 @@ const StartGameTab = () => {
 				game: list.game,
 				points: list.points,
 			};
-
-			newGame.members[0].list = list;
 		} else {
 			if (!game || !points) return;
 
@@ -70,17 +62,17 @@ const StartGameTab = () => {
 			};
 		}
 
-		await addDBGame(newGame);
+		const { id } = await mutateAsync(newGame);
 		reset();
 		setIsCreating(false);
 
 		router.navigate({
 			pathname: '/(tabs)/game',
 			params: {
-				id: newGame.id,
+				id,
 			},
 		});
-	}, [list, game, points, isCreating, setIsCreating, user]);
+	}, [isCreating, user, list, mutateAsync, reset, game, points]);
 
 	return (
 		<View className={'flex flex-col gap-6'}>

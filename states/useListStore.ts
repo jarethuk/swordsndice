@@ -1,32 +1,30 @@
-import {create} from 'zustand';
-import {getDBList, updateDBList} from '../db/DBLists';
-import type {List} from '../types/List';
+import { create } from 'zustand';
+import { apiUpdateList } from '../api/list/useAPIUpdateList';
+import type { ListBody } from '../types/api/ListBody';
 
 export interface ListStore {
-	list?: List;
-	actions: {
-		setList: (list?: List) => void;
-		updateList: (update: Partial<List>) => Promise<void>;
-	};
+  list?: ListBody;
+  actions: {
+    setList: (list?: ListBody) => void;
+    updateList: (update: Partial<ListBody>) => Promise<void>;
+  };
 }
 
 const useListStore = create<ListStore>((set, get) => ({
-	actions: {
-		setList: (list) => set({ list }),
-		updateList: async (update: Partial<List>) => {
-			const { list } = get();
+  actions: {
+    setList: (list) => set({ list }),
+    updateList: async (update: Partial<ListBody>) => {
+      const { list } = get();
 
-			if (list) {
-				await updateDBList(list.id, update);
+      if (list) {
+        const newList = { ...list, ...update };
 
-				const dbList = await getDBList(list.id);
+        await apiUpdateList(list.id as string, newList);
 
-				if (dbList) {
-					set({ list: dbList });
-				}
-			}
-		},
-	},
+        set({ list: newList });
+      }
+    },
+  },
 }));
 
 export const useList = () => useListStore((x) => x.list);

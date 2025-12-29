@@ -1,16 +1,18 @@
-import {router} from 'expo-router';
-import {useCallback, useState} from 'react';
-import {Animated, View} from 'react-native';
-import {Content} from '../../components';
-import {Button} from '../../components/Button';
-import {Input} from '../../components/Input';
-import {deleteDBGame} from '../../db/DBGames';
-import {useGame, useGameActions} from '../../states/useGameStore';
+import { router } from 'expo-router';
+import { useCallback, useState } from 'react';
+import { Animated, View } from 'react-native';
+import { Content } from '../../components';
+import { Button } from '../../components/Button';
+import { Input } from '../../components/Input';
+import { useGame, useGameActions } from '../../states/useGameStore';
+
+import { useAPIDeleteGame } from '../../api/games/useAPIDeleteGame';
 import ScrollView = Animated.ScrollView;
 
 export default function EditGamePopup() {
 	const game = useGame();
 	const { updateGame } = useGameActions();
+	const { mutateAsync: apiDeleteGame } = useAPIDeleteGame();
 
 	const [points, setPoints] = useState(game?.points.toString() ?? '');
 	const [description, setDescription] = useState(game?.description ?? '');
@@ -31,12 +33,12 @@ export default function EditGamePopup() {
 
 		setIsSaving(false);
 		router.dismiss();
-	}, [game, description, points, isSaving]);
+	}, [isSaving, game, updateGame, description, points]);
 
 	const deleteGame = useCallback(async () => {
 		if (!game) return;
 
-		await deleteDBGame(game.id);
+		await apiDeleteGame(game.id);
 		router.navigate('/(tabs)');
 	}, [game]);
 

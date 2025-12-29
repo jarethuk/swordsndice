@@ -7,6 +7,7 @@ import { Alert } from './Alert';
 import { Button } from './Button';
 import { Content } from './Content';
 import { Input } from './Input';
+import { ErrorMessage } from './ErrorMessage';
 import ScrollView = Animated.ScrollView;
 
 const badWords = new BadWords();
@@ -31,7 +32,7 @@ export const UsernameForm = () => {
 	const isTooShort = sanitisedUsername.length < 4;
 	const isValid = !isProfaneUsername && !isTooShort;
 
-	const { mutate, isPending, isSuccess } = useAPIUpdateUser();
+	const { mutate, isPending, isSuccess, error } = useAPIUpdateUser();
 
 	useEffect(() => {
 		if (isSuccess && user) {
@@ -91,6 +92,8 @@ export const UsernameForm = () => {
 					</Content>
 				)}
 			</View>
+
+			<ErrorMessage error={error} />
 
 			<Button
 				content={'Continue'}

@@ -1,36 +1,23 @@
-import {faMagnifyingGlass, faUser, faUsers,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {asc} from 'drizzle-orm';
-import {useLiveQuery} from 'drizzle-orm/expo-sqlite';
-import {useMemo, useState} from 'react';
-import {Animated, RefreshControl, View} from 'react-native';
-import {Content} from '../../components';
-import {Input} from '../../components/Input';
+import { faMagnifyingGlass, faUser, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { useState } from 'react';
+import { Animated, RefreshControl, View } from 'react-native';
+import { useAPIFindFriend } from '../../api/friends/useAPIFindFriend';
+import { useAPIFriends } from '../../api/friends/useAPIFriends';
+import { useAPIFindGroup } from '../../api/groups/useAPIFindGroup';
+import { useAPIGroups } from '../../api/groups/useAPIGroups';
+import { Content } from '../../components';
+import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
-import {TabInput} from '../../components/TabInput';
-import {Database} from '../../db/Database';
-import {friends, groups} from '../../db/schema';
-import {useColours} from '../../hooks/useColours';
-
-import {useDebounce} from '../../hooks/useDebounce';
+import { LoadingScreen } from '../../components/LoadingScreen';
+import { TabInput } from '../../components/TabInput';
+import { useColours } from '../../hooks/useColours';
+import { useDebounce } from '../../hooks/useDebounce';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-	Friends = 'friends',
-	Groups = 'groups',
-}
-
-interface SearchResults {
-	users: {
-		id: string;
-		username: string;
-		image?: string;
-	}[];
-	groups: {
-		id: string;
-		name: string;
-		image?: string;
-	}[];
+  Friends = 'friends',
+  Groups = 'groups',
 }
 
 export default function Social() {
@@ -41,41 +28,18 @@ export default function Social() {
 	const [tab, setTab] = useState<string>(Tabs.Friends);
 
 	const { debouncedValue } = useDebounce(search, 300);
+	const { data: searchFriends } = useAPIFindFriend(debouncedValue);
+	const { data: searchGroups } = useAPIFindGroup(debouncedValue);
 
-	const { data: dbFriends } = useLiveQuery(
-		Database.db.select().from(friends).orderBy(asc(friends.username)),
-	);
+	const { data: friends } = useAPIFriends();
+	const { data: groups } = useAPIGroups();
 
-	const { data: dbGroups } = useLiveQuery(
-		Database.db.select().from(groups).orderBy(asc(groups.name)),
-	);
-
-	const searchResults: SearchResults = useMemo(() => {
-		return {
-			users: [
-				{
-					id: '1',
-					username: 'Joshua',
-					image: 'https://avatars.githubusercontent.com/u/10055292?v=4',
-				},
-				{
-					id: '2',
-					username: 'Tim',
-					image: 'https://avatars.githubusercontent.com/u/10055292?v=4',
-				},
-			],
-			groups: [
-				{
-					id: '1',
-					name: 'Group 1',
-					image: 'https://avatars.githubusercontent.com/u/10055292?v=4',
-				},
-			],
-		};
-	}, [debouncedValue]);
+	if (!friends || !groups) {
+		return <LoadingScreen message={'Loading friends & groups...'} />;
+	}
 
 	return (
-		<View className={'flex flex-col gap-6 h-full'}>
+		<View className={'flex h-full flex-col gap-6'}>
 			<Input
 				placeholder={'Find friends & groups'}
 				value={search}
@@ -90,7 +54,7 @@ export default function Social() {
 				}
 			/>
 
-			{!searchResults ? (
+			{!debouncedValue ? (
 				<>
 					<TabInput
 						tabs={[
@@ -120,8 +84,8 @@ export default function Social() {
 						contentContainerClassName={'pb-12 flex gap-6 h-full'}
 					>
 						{tab === Tabs.Friends &&
-							(dbFriends.length > 0 ? (
-								dbFriends.map((friend) => (
+							(friends.length > 0 ? (
+								friends.map((friend) => (
 									<ListRow
 										key={friend.username}
 										title={friend.username}
@@ -130,7 +94,7 @@ export default function Social() {
 									/>
 								))
 							) : (
-								<View className={'h-full flex items-center justify-center'}>
+								<View className={'flex h-full items-center justify-center'}>
 									<Content size={'md'} type={'body'} center>
 										Find friends using their username by searching above
 									</Content>
@@ -138,8 +102,8 @@ export default function Social() {
 							))}
 
 						{tab === Tabs.Groups &&
-							(dbGroups.length > 0 ? (
-								dbGroups.map((group) => (
+							(groups.length > 0 ? (
+								groups.map((group) => (
 									<ListRow
 										key={group.name}
 										title={group.name}
@@ -148,7 +112,7 @@ export default function Social() {
 									/>
 								))
 							) : (
-								<View className={'h-full flex items-center justify-center'}>
+								<View className={'flex h-full items-center justify-center'}>
 									<Content size={'md'} type={'body'} center>
 										Find groups using their name by searching above
 									</Content>
@@ -169,21 +133,21 @@ export default function Social() {
 					showsVerticalScrollIndicator={false}
 					contentContainerClassName={'pb-12 flex gap-12 h-full'}
 				>
-					{!searchResults.users && !searchResults.groups && (
-						<View className={'h-full flex items-center justify-center'}>
+					{!searchFriends && !searchGroups && (
+						<View className={'flex h-full items-center justify-center'}>
 							<Content size={'md'} type={'body'} center>
 								No users or groups found
 							</Content>
 						</View>
 					)}
 
-					{searchResults.users && (
+					{!!searchFriends?.length && (
 						<View className={'flex gap-6'}>
 							<Content type={'title'} size={'xs'}>
 								Users
 							</Content>
 
-							{searchResults.users.map((user) => (
+							{searchFriends.map((user) => (
 								<ListRow
 									key={user.id}
 									title={user.username}
@@ -194,13 +158,13 @@ export default function Social() {
 						</View>
 					)}
 
-					{searchResults.groups && (
+					{!!searchGroups?.length && (
 						<View className={'flex gap-6'}>
 							<Content type={'title'} size={'xs'}>
 								Groups
 							</Content>
 
-							{searchResults.groups.map((group) => (
+							{searchGroups.map((group) => (
 								<ListRow
 									key={group.id}
 									title={group.name}

@@ -1,18 +1,18 @@
-import {router} from 'expo-router';
-import {useCallback, useMemo} from 'react';
-import {Animated, View} from 'react-native';
-import {Content} from '../../components';
+import { router } from 'expo-router';
+import { useCallback, useMemo } from 'react';
+import { Animated, View } from 'react-native';
+import { Content } from '../../components';
 import HeroPoints from '../../components/HeroPoints';
-import {NextWindowButton} from '../../components/NextWindowButton';
+import { NextWindowButton } from '../../components/NextWindowButton';
 import StatsRow from '../../components/StatsRow';
-import {MESBGArmies} from '../../data/MESBGArmies';
-import {MESBGProfiles} from '../../data/MESBGProfiles';
-import {getListUniqueLeaders, getMESBGStats,} from '../../helpers/MESBGStatsHelper';
-import {getRandomId} from '../../helpers/RandomHelper';
-import {useList, useListActions} from '../../states/useListStore';
-import {MESBGArmySlot} from '../../types';
-import type {MESBGProfileStats} from '../../types/MESBGProfileStats';
-import type {Profile} from '../../types/Profile';
+import { MESBGArmies } from '../../data/MESBGArmies';
+import { MESBGProfiles } from '../../data/MESBGProfiles';
+import { getListUniqueLeaders, getMESBGStats, } from '../../helpers/MESBGStatsHelper';
+import { getRandomId } from '../../helpers/RandomHelper';
+import { useList, useListActions } from '../../states/useListStore';
+import { MESBGArmySlot } from '../../types';
+import type { MESBGProfileStats } from '../../types/MESBGProfileStats';
+import type { Profile } from '../../types/Profile';
 import ScrollView = Animated.ScrollView;
 
 interface Leader extends Profile {
@@ -64,7 +64,7 @@ export default function AddWarbandPopup() {
 	}, [leaders]);
 
 	const addWarband = useCallback(
-		async (leader: Profile) => {
+		async (leader: Profile, slot: MESBGArmySlot) => {
 			if (!list) return;
 
 			const groups = list.groups ?? [];
@@ -77,6 +77,7 @@ export default function AddWarbandPopup() {
 					points: leader.points,
 					equipment: [],
 					amount: 1,
+					slot,
 				},
 				members: [],
 			});
@@ -87,7 +88,7 @@ export default function AddWarbandPopup() {
 
 			router.dismiss();
 		},
-		[list],
+		[list, updateList],
 	);
 
 	return (
@@ -107,7 +108,7 @@ export default function AddWarbandPopup() {
 							<NextWindowButton
 								key={leader.name}
 								label={`${leader.name} (${leader.points}pts)`}
-								onPress={() => addWarband(leader)}
+								onPress={() => addWarband(leader, name)}
 								bottom={<HeroPoints profile={leader} variant={'white'} />}
 								subtitle={<StatsRow profile={leader} />}
 							/>

@@ -26,7 +26,6 @@ import { LoginForm } from '../components/LoginForm';
 import { UsernameForm } from '../components/UsernameForm';
 import { createQueryPersister } from '../helpers/QueryPersister';
 import { useColours } from '../hooks/useColours';
-import { useDatabase } from '../hooks/useDatabase';
 import { useUser, useUserActions } from '../states/useUserStore';
 import type { PersistableQuery } from '../types';
 
@@ -182,8 +181,7 @@ export default function RootLayout() {
     DINRoundPro: require('../assets/fonts/dinroundpro_bold.otf'),
   });
 
-  const { loaded: databaseLoaded } = useDatabase();
-  const loaded = fontsLoaded && databaseLoaded;
+  const loaded = fontsLoaded;
 
   useEffect(() => {
     if (loaded) {

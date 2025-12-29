@@ -1,31 +1,31 @@
-import {faMagnifyingGlass} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {router, useLocalSearchParams} from 'expo-router';
-import {useCallback, useMemo, useState} from 'react';
-import {Animated, View} from 'react-native';
-import {Content} from '../../components';
+import { faMagnifyingGlass } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { router, useLocalSearchParams } from 'expo-router';
+import { useCallback, useMemo, useState } from 'react';
+import { Animated, View } from 'react-native';
+import { Content } from '../../components';
 import AmountSelector from '../../components/AmountSelector';
-import {Button} from '../../components/Button';
+import { Button } from '../../components/Button';
 import EquipmentSelector from '../../components/EquipmentSelector';
 import HeroPoints from '../../components/HeroPoints';
-import {Input} from '../../components/Input';
-import {NextWindowButton} from '../../components/NextWindowButton';
+import { Input } from '../../components/Input';
+import { NextWindowButton } from '../../components/NextWindowButton';
 import StatsRow from '../../components/StatsRow';
-import {MESBGArmies} from '../../data/MESBGArmies';
-import {MESBGProfiles} from '../../data/MESBGProfiles';
-import {getListUniqueLeaders, getMESBGStats,} from '../../helpers/MESBGStatsHelper';
-import {getRandomId} from '../../helpers/RandomHelper';
-import {useColours} from '../../hooks/useColours';
-import {useList, useListActions} from '../../states/useListStore';
-import {MESBGArmySlot} from '../../types';
-import type {ListMemberEquipment} from '../../types/List';
-import type {MESBGProfileStats} from '../../types/MESBGProfileStats';
-import type {Profile} from '../../types/Profile';
+import { MESBGArmies } from '../../data/MESBGArmies';
+import { MESBGProfiles } from '../../data/MESBGProfiles';
+import { getListUniqueLeaders, getMESBGStats, } from '../../helpers/MESBGStatsHelper';
+import { getRandomId } from '../../helpers/RandomHelper';
+import { useColours } from '../../hooks/useColours';
+import { useList, useListActions } from '../../states/useListStore';
+import { MESBGArmySlot } from '../../types';
+import type { ListMemberEquipment } from '../../types/api/ListBody';
+import type { MESBGProfileStats } from '../../types/MESBGProfileStats';
+import type { Profile } from '../../types/Profile';
 import ScrollView = Animated.ScrollView;
 
 interface ProfileWithStats extends Profile {
-	slot: MESBGArmySlot;
-	fullStats: MESBGProfileStats;
+  slot: MESBGArmySlot;
+  fullStats: MESBGProfileStats;
 }
 
 export default function AddUnitPopup() {

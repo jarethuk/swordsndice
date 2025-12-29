@@ -5,24 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a631d3da-7443-4ed9-8551-e8539695ce40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/auth/useAPILogout.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/Icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/logo-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/LoginForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/UsernameForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/friends/useAPIFindFriend.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ErrorMessage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/auth/useAPIMe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/auth/useAPIMe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user/useAPIUpdateUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/user/useAPIUpdateUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/games/useAPIAddGame.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIAddGame.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/games/useAPIUpdateGame.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIUpdateGame.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/groups/useAPIFindGroup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/groups/useAPIFindGroup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/list/useAPICreateList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/list/useAPICreateList.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/list/useAPIDeleteList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/list/useAPIDeleteList.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/list/useAPIUpdateList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/list/useAPIUpdateList.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/create-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/feed.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/game.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/lists.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/lists.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/social.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/social.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Divider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Divider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/LoadingScreen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LoadingScreen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modals/game-edit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/game-edit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modals/list-add-unit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/list-add-unit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modals/list-add-warband.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/list-add-warband.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modals/list-edit-unit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/list-edit-unit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modals/list-edit.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/list-edit.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/modals/select-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/modals/select-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ListWarband.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ListWarband.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UsernameForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UsernameForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/DBFriends.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/DBGames.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/DBGroups.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/DBLists.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/Database.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/0000_typical_phalanx.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/meta/0000_snapshot.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/meta/_journal.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/drizzle/migrations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/MESBGStatsHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/MESBGStatsHelper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hooks/useDatabase.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/states/useUserStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/states/useUserStore.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/User.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/states/useGameStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/states/useGameStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/states/useListStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/states/useListStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/states/useNewGameStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/states/useNewGameStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Friend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Game.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Group.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/List.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/api/responses/GameResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/api/responses/GameResponse.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,33 +93,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Projects/swordsndice/api/auth&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Projects\\swordsndice\\node_modules\\prettier&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Projects\\swordsndice\\node_modules\\typescript\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Projects/swordsndice/api/friends",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Projects\\swordsndice\\node_modules\\prettier",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "C:\\Projects\\swordsndice\\node_modules\\typescript\\lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\swordsndice\api\friends" />
+      <recent name="C:\Projects\swordsndice\components" />
       <recent name="C:\Projects\swordsndice\api\auth" />
       <recent name="C:\Projects\swordsndice\api\user" />
       <recent name="C:\Projects\swordsndice\api\list" />
-      <recent name="C:\Projects\swordsndice\api\groups" />
-      <recent name="C:\Projects\swordsndice\api\games" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\swordsndice\types\api\requests" />
@@ -120,7 +151,9 @@
       <workItem from="1766337176503" duration="2447000" />
       <workItem from="1766850803993" duration="47000" />
       <workItem from="1766850867591" duration="9829000" />
-      <workItem from="1766922281334" duration="5821000" />
+      <workItem from="1766922281334" duration="9090000" />
+      <workItem from="1767042483391" duration="47000" />
+      <workItem from="1767042588884" duration="3013000" />
     </task>
     <servers />
   </component>

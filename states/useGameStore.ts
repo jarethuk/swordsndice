@@ -1,32 +1,34 @@
-import {create} from 'zustand';
-import {getDBGame, updateDBGame} from '../db/DBGames';
-import type {Game} from '../types/Game';
+import { create } from 'zustand';
+import { apiUpdateGame } from '../api/games/useAPIUpdateGame';
+import type { UpdateGameRequest } from '../types/api/requests/UpdateGameRequest';
+import type { GameResponse } from '../types/api/responses/GameResponse';
 
 export interface GameStore {
-	game?: Game | null;
-	actions: {
-		setGame: (game?: Game | null) => void;
-		updateGame: (update: Partial<Game>) => Promise<void>;
-	};
+  game?: GameResponse | null;
+  actions: {
+    setGame: (game?: GameResponse | null) => void;
+    updateGame: (update: UpdateGameRequest) => Promise<void>;
+  };
 }
 
 const useGameStore = create<GameStore>((set, get) => ({
-	actions: {
-		setGame: (game) => set({ game }),
-		updateGame: async (update: Partial<Game>) => {
-			const { game } = get();
+  actions: {
+    setGame: (game) => set({ game }),
+    updateGame: async (update: UpdateGameRequest) => {
+      const { game } = get();
 
-			if (game) {
-				await updateDBGame(game.id, update);
+      if (game) {
+        await apiUpdateGame(game.id, update);
 
-				const dbGame = await getDBGame(game.id);
-
-				if (dbGame) {
-					set({ game: dbGame });
-				}
-			}
-		},
-	},
+        set({
+          game: {
+            ...game,
+            ...update,
+          },
+        });
+      }
+    },
+  },
 }));
 
 export const useGame = () => useGameStore((x) => x.game);
