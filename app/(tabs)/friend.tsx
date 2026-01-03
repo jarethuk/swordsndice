@@ -1,5 +1,6 @@
 import { faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { useQueryClient } from '@tanstack/react-query';
 import { Image } from 'expo-image';
 import { useLocalSearchParams } from 'expo-router';
 import { useCallback } from 'react';
@@ -15,6 +16,7 @@ import ScrollView = Animated.ScrollView;
 export default function FriendPage() {
   const { username } = useLocalSearchParams();
   const { data, refetch } = useAPIGetUser(username as string);
+  const client = useQueryClient();
 
   const { mutateAsync: addFriendAsync } = useAPIAddFriend();
   const { mutateAsync: removeFriendAsync } = useAPIRemoveFriend();
@@ -27,7 +29,11 @@ export default function FriendPage() {
     });
 
     await refetch();
-  }, [addFriendAsync, data, refetch]);
+
+    await client.invalidateQueries({
+      queryKey: ['friends'],
+    });
+  }, [addFriendAsync, client, data, refetch]);
 
   const removeFriend = useCallback(async () => {
     if (!data) return;
@@ -37,7 +43,11 @@ export default function FriendPage() {
     });
 
     await refetch();
-  }, [removeFriendAsync, data, refetch]);
+
+    await client.invalidateQueries({
+      queryKey: ['friends'],
+    });
+  }, [data, removeFriendAsync, refetch, client]);
 
   if (!data) {
     return <LoadingScreen message={'Loading profile...'} />;

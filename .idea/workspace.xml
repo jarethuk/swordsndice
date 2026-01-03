@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a631d3da-7443-4ed9-8551-e8539695ce40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modals/invite-to-game.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/modals/set-game-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/games/useAPIAcceptGameInvite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIAcceptGameInvite.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/games/useAPIDeclineGame.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIDeclineGame.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/games/useAPIGameInvites.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIGameInvites.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/games/useAPIUpdateGameList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIUpdateGameList.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/feed.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/game.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/social.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/social.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/friend.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/friend.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ListRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ListRow.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +109,7 @@
       <workItem from="1766922281334" duration="9090000" />
       <workItem from="1767042483391" duration="47000" />
       <workItem from="1767042588884" duration="9521000" />
-      <workItem from="1767468940918" duration="5816000" />
+      <workItem from="1767468940918" duration="6047000" />
     </task>
     <servers />
   </component>

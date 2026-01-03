@@ -14,7 +14,6 @@ export default function Header() {
   const user = useUser();
 
   const { data: gameInvites } = useAPIGameInvites();
-
   const count = gameInvites?.length ?? 0;
 
   return (
