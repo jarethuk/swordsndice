@@ -1,5 +1,6 @@
 import { faMagnifyingGlass, faUser, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { router, useFocusEffect } from 'expo-router';
 import { useState } from 'react';
 import { Animated, RefreshControl, View } from 'react-native';
 import { useAPIFindFriend } from '../../api/friends/useAPIFindFriend';
@@ -16,8 +17,8 @@ import { useDebounce } from '../../hooks/useDebounce';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-  Friends = 'friends',
-  Groups = 'groups',
+	Friends = 'friends',
+	Groups = 'groups',
 }
 
 export default function Social() {
@@ -33,6 +34,10 @@ export default function Social() {
 
 	const { data: friends } = useAPIFriends();
 	const { data: groups } = useAPIGroups();
+
+	useFocusEffect(() => {
+		setSearch('');
+	});
 
 	if (!friends || !groups) {
 		return <LoadingScreen message={'Loading friends & groups...'} />;
@@ -91,6 +96,14 @@ export default function Social() {
 										title={friend.username}
 										image={friend.image}
 										placeHolderIcon={faUser}
+										onPress={() =>
+											router.navigate({
+												pathname: '/(tabs)/friend',
+												params: {
+													username: friend.username,
+												},
+											})
+										}
 									/>
 								))
 							) : (
@@ -153,6 +166,14 @@ export default function Social() {
 									title={user.username}
 									image={user.image}
 									placeHolderIcon={faUsers}
+									onPress={() =>
+										router.navigate({
+											pathname: '/(tabs)/friend',
+											params: {
+												username: user.username,
+											},
+										})
+									}
 								/>
 							))}
 						</View>

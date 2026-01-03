@@ -14,8 +14,8 @@ import type { GameResponse } from '../../types/api/responses/GameResponse';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-	Feed = 'feed',
-	MyGames = 'my-games',
+  Feed = 'feed',
+  MyGames = 'my-games',
 }
 
 interface DateGroup {
