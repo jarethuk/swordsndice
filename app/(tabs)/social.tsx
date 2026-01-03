@@ -1,7 +1,7 @@
 import { faMagnifyingGlass, faUser, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useFocusEffect } from 'expo-router';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { Animated, RefreshControl, View } from 'react-native';
 import { useAPIFindFriend } from '../../api/friends/useAPIFindFriend';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
@@ -17,23 +17,36 @@ import { useDebounce } from '../../hooks/useDebounce';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-	Friends = 'friends',
-	Groups = 'groups',
+  Friends = 'friends',
+  Groups = 'groups',
 }
 
 export default function Social() {
 	const colours = useColours();
 	const [search, setSearch] = useState('');
-	const [isLoading, setIsLoading] = useState(false);
-	const refetch = () => setIsLoading(true);
 	const [tab, setTab] = useState<string>(Tabs.Friends);
 
 	const { debouncedValue } = useDebounce(search, 300);
 	const { data: searchFriends } = useAPIFindFriend(debouncedValue);
 	const { data: searchGroups } = useAPIFindGroup(debouncedValue);
 
-	const { data: friends } = useAPIFriends();
-	const { data: groups } = useAPIGroups();
+	const {
+		data: friends,
+		refetch: refreshFriends,
+		isLoading: friendsLoading,
+	} = useAPIFriends();
+	const {
+		data: groups,
+		refetch: refreshGroups,
+		isLoading: groupsLoading,
+	} = useAPIGroups();
+
+	const isLoading = friendsLoading || groupsLoading;
+
+	const refetch = useCallback(() => {
+		void refreshFriends();
+		void refreshGroups();
+	}, [refreshFriends, refreshGroups]);
 
 	useFocusEffect(() => {
 		setSearch('');

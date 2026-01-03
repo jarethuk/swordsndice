@@ -66,15 +66,6 @@ const MyGamesTab = () => {
 		return <LoadingScreen message={'Loading games...'} />;
 	}
 
-	if (data.length === 0)
-		return (
-			<View className={'flex h-full items-center justify-center'}>
-				<Content size={'md'} type={'body'} center>
-					You haven&apos;t created any games yet.
-				</Content>
-			</View>
-		);
-
 	return (
 		<ScrollView
 			contentContainerClassName={'flex flex-col gap-12 h-full pb-12'}
@@ -128,6 +119,14 @@ const MyGamesTab = () => {
 					))}
 				</View>
 			))}
+
+			{groups.length === 0 && (
+				<View className={'flex h-full items-center justify-center'}>
+					<Content size={'md'} type={'body'} center>
+						You haven&apos;t created any games yet.
+					</Content>
+				</View>
+			)}
 		</ScrollView>
 	);
 };

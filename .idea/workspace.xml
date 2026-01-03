@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a631d3da-7443-4ed9-8551-e8539695ce40" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/user/useAPIGetUser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/(tabs)/friend.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(tabs)/notifications.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/invite-to-game.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/modals/set-game-list.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/games/useAPIAcceptGameInvite.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIAcceptGameInvite.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/games/useAPIDeclineGame.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIDeclineGame.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/games/useAPIGameInvites.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIGameInvites.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/games/useAPIUpdateGameList.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/games/useAPIUpdateGameList.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/feed.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/feed.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(tabs)/lists.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/lists.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/game.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(tabs)/social.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(tabs)/social.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/ProfileEnter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/api/responses/PublicUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/api/responses/PublicUser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/_layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/_layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ListRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ListRow.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +67,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Projects/swordsndice/api/user",
+    "last_opened_file_path": "C:/Projects/swordsndice/app/(tabs)",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,11 +81,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Projects\swordsndice\api\user" />
       <recent name="C:\Projects\swordsndice\app\(tabs)" />
+      <recent name="C:\Projects\swordsndice\app\modals" />
+      <recent name="C:\Projects\swordsndice\api\user" />
       <recent name="C:\Projects\swordsndice\api\friends" />
       <recent name="C:\Projects\swordsndice\components" />
-      <recent name="C:\Projects\swordsndice\api\auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects\swordsndice\types\api\requests" />
@@ -112,7 +119,8 @@
       <workItem from="1766850867591" duration="9829000" />
       <workItem from="1766922281334" duration="9090000" />
       <workItem from="1767042483391" duration="47000" />
-      <workItem from="1767042588884" duration="8590000" />
+      <workItem from="1767042588884" duration="9521000" />
+      <workItem from="1767468940918" duration="5816000" />
     </task>
     <servers />
   </component>

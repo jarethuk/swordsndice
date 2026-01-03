@@ -167,6 +167,20 @@ const Layout = () => {
           presentation: 'modal',
         }}
       />
+
+      <Stack.Screen
+        name="modals/invite-to-game"
+        options={{
+          presentation: 'modal',
+        }}
+      />
+
+      <Stack.Screen
+        name="modals/set-game-list"
+        options={{
+          presentation: 'modal',
+        }}
+      />
     </Stack>
   );
 };

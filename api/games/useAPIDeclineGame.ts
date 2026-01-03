@@ -3,9 +3,9 @@ import type { AxiosError } from 'axios';
 import type { BasicResponse } from '../../types/api/responses/BasicResponse';
 import { API } from '../API';
 
-export function useAPIDeclineGame(id: string) {
-  return useMutation<BasicResponse, AxiosError>({
+export function useAPIDeclineGame() {
+  return useMutation<BasicResponse, AxiosError, string>({
     mutationKey: ['decline-game'],
-    mutationFn: () => API.patch<BasicResponse>(`/api/games/${id}/invite/decline`, {}),
+    mutationFn: (id: string) => API.patch<BasicResponse>(`/api/games/${id}/invite/decline`, {}),
   });
 }

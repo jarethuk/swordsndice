@@ -15,6 +15,8 @@ import { useNewGameActions, useNewGameGame, useNewGameList, useNewGamePoints, } 
 import { useUser } from '../../states/useUserStore';
 import { SelectGameDialogMode } from '../../types';
 import type { CreateGameRequest } from '../../types/api/requests/CreateGameRequest';
+
+import { useAPIUpdateGameList } from '../../api/games/useAPIUpdateGameList';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
@@ -29,7 +31,8 @@ const StartGameTab = () => {
 	const [isCreating, setIsCreating] = useState(false);
 	const user = useUser();
 	const { setPoints, reset } = useNewGameActions();
-	const { mutateAsync } = useAPIAddGame();
+	const { mutateAsync: apiCreateGame } = useAPIAddGame();
+	const { mutateAsync: apiSetGameList } = useAPIUpdateGameList();
 
 	const isValid = useMemo(() => {
 		return game && points && Number(points) > 0;
@@ -62,7 +65,15 @@ const StartGameTab = () => {
 			};
 		}
 
-		const { id } = await mutateAsync(newGame);
+		const { id } = await apiCreateGame(newGame);
+
+		if (list) {
+			await apiSetGameList({
+				id,
+				list,
+			});
+		}
+
 		reset();
 		setIsCreating(false);
 
@@ -72,7 +83,16 @@ const StartGameTab = () => {
 				id,
 			},
 		});
-	}, [isCreating, user, list, mutateAsync, reset, game, points]);
+	}, [
+		isCreating,
+		user,
+		list,
+		apiCreateGame,
+		reset,
+		game,
+		points,
+		apiSetGameList,
+	]);
 
 	return (
 		<View className={'flex flex-col gap-6'}>
