@@ -4,6 +4,7 @@ import { router } from 'expo-router';
 import { Image, Pressable, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAPIGameInvites } from '../api/games/useAPIGameInvites';
+import { useAPIGroupInvites } from '../api/groups/useAPIGroupInvites';
 import { useColours } from '../hooks/useColours';
 import { useUser } from '../states/useUserStore';
 import { Content } from './Content';
@@ -14,7 +15,8 @@ export default function Header() {
   const user = useUser();
 
   const { data: gameInvites } = useAPIGameInvites();
-  const count = gameInvites?.length ?? 0;
+  const { data: groupInvites } = useAPIGroupInvites();
+  const count = (gameInvites?.length ?? 0) + (groupInvites?.length ?? 0);
 
   return (
     <View style={{ paddingTop: top, backgroundColor: colours.background }}>

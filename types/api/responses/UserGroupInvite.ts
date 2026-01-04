@@ -1,14 +1,11 @@
-export interface CreatedBy {
-	username: string;
-	image?: string;
-}
+/* istanbul ignore file */
+import type { PublicUser } from './PublicUser';
 
 export interface UserGroupInvite {
 	id: string;
 	name: string;
-	description?: string;
-	image?: string;
-	isPublic: boolean;
-	membersCanInvite: boolean;
-	createdBy: CreatedBy;
+	description?: string | null;
+	image?: string | null;
+	createdBy: PublicUser;
+	createdAt: Date;
 }

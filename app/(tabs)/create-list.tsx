@@ -62,7 +62,7 @@ export default function CreateList() {
         queryKey: ['lists'],
       });
 
-      router.navigate({
+      router.push({
         pathname: '/(tabs)/list',
         params: { id },
       });

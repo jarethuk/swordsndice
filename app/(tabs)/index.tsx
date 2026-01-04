@@ -3,20 +3,18 @@ import { router } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { Animated, View } from 'react-native';
 import { useAPIAddGame } from '../../api/games/useAPIAddGame';
+import { useAPIUpdateGameList } from '../../api/games/useAPIUpdateGameList';
 import { Content } from '../../components';
 import { Button } from '../../components/Button';
 import Divider from '../../components/Divider';
 import { Input } from '../../components/Input';
 import { ListImage } from '../../components/ListImage';
 import { NextWindowButton } from '../../components/NextWindowButton';
-import { TabInput } from '../../components/TabInput';
 import { getRandomId } from '../../helpers/RandomHelper';
 import { useNewGameActions, useNewGameGame, useNewGameList, useNewGamePoints, } from '../../states/useNewGameStore';
 import { useUser } from '../../states/useUserStore';
 import { SelectGameDialogMode } from '../../types';
 import type { CreateGameRequest } from '../../types/api/requests/CreateGameRequest';
-
-import { useAPIUpdateGameList } from '../../api/games/useAPIUpdateGameList';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
@@ -77,7 +75,7 @@ const StartGameTab = () => {
 		reset();
 		setIsCreating(false);
 
-		router.navigate({
+		router.push({
 			pathname: '/(tabs)/game',
 			params: {
 				id,
@@ -175,7 +173,7 @@ const JoinGameTab = () => {
 };
 
 export default function Index() {
-	const [tab, setTab] = useState<string>(Tabs.Create);
+	// const [tab, setTab] = useState<string>(Tabs.Create);
 
 	return (
 		<ScrollView
@@ -184,24 +182,29 @@ export default function Index() {
 			showsVerticalScrollIndicator={false}
 			contentInsetAdjustmentBehavior={'automatic'}
 		>
-			<TabInput
-				selected={tab}
-				tabs={[
-					{
-						title: 'Create Game',
-						value: Tabs.Create,
-					},
-					{
-						title: 'Join Game',
-						value: Tabs.Join,
-					},
-				]}
-				onChange={setTab}
-			/>
+			<Content size={'md'} type={'title'} center>
+				Start Game
+			</Content>
+			{/*<TabInput*/}
+			{/*	selected={tab}*/}
+			{/*	tabs={[*/}
+			{/*		{*/}
+			{/*			title: 'Create Game',*/}
+			{/*			value: Tabs.Create,*/}
+			{/*		},*/}
+			{/*		{*/}
+			{/*			title: 'Join Game',*/}
+			{/*			value: Tabs.Join,*/}
+			{/*		},*/}
+			{/*	]}*/}
+			{/*	onChange={setTab}*/}
+			{/*/>*/}
 
-			{tab === Tabs.Create && <StartGameTab />}
+			{/*{tab === Tabs.Create && <StartGameTab />}*/}
 
-			{tab === Tabs.Join && <JoinGameTab />}
+			{/*{tab === Tabs.Join && <JoinGameTab />}*/}
+
+			<StartGameTab />
 		</ScrollView>
 	);
 }

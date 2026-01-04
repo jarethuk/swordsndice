@@ -8,6 +8,7 @@ import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIFindGroup } from '../../api/groups/useAPIFindGroup';
 import { useAPIGroups } from '../../api/groups/useAPIGroups';
 import { Content } from '../../components';
+import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { LoadingScreen } from '../../components/LoadingScreen';
@@ -110,7 +111,7 @@ export default function Social() {
 										image={friend.image}
 										placeHolderIcon={faUser}
 										onPress={() =>
-											router.navigate({
+											router.push({
 												pathname: '/(tabs)/friend',
 												params: {
 													username: friend.username,
@@ -131,17 +132,33 @@ export default function Social() {
 							(groups.length > 0 ? (
 								groups.map((group) => (
 									<ListRow
-										key={group.name}
+										key={group.id}
 										title={group.name}
 										image={group.image}
 										placeHolderIcon={faUsers}
+										onPress={() =>
+											router.push({
+												pathname: '/(tabs)/group',
+												params: {
+													id: group.id,
+												},
+											})
+										}
 									/>
 								))
 							) : (
-								<View className={'flex h-full items-center justify-center'}>
+								<View
+									className={'flex h-full items-center justify-center gap-6'}
+								>
 									<Content size={'md'} type={'body'} center>
-										Find groups using their name by searching above
+										Find groups using their name by searching above or create
+										your own
 									</Content>
+
+									<Button
+										content={'Create Group'}
+										onPress={() => router.navigate('/modals/create-group')}
+									/>
 								</View>
 							))}
 					</ScrollView>
@@ -180,7 +197,7 @@ export default function Social() {
 									image={user.image}
 									placeHolderIcon={faUsers}
 									onPress={() =>
-										router.navigate({
+										router.push({
 											pathname: '/(tabs)/friend',
 											params: {
 												username: user.username,

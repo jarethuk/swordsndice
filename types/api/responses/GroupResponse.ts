@@ -2,6 +2,7 @@ export interface GroupResponseMember {
 	id: string;
 	username?: string | null;
 	image?: string | null;
+	isAdmin?: boolean;
 }
 
 export interface GroupResponse {

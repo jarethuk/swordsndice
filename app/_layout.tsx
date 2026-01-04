@@ -181,6 +181,20 @@ const Layout = () => {
           presentation: 'modal',
         }}
       />
+
+      <Stack.Screen
+        name="modals/create-group"
+        options={{
+          presentation: 'modal',
+        }}
+      />
+
+      <Stack.Screen
+        name="modals/edit-group"
+        options={{
+          presentation: 'modal',
+        }}
+      />
     </Stack>
   );
 };

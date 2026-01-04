@@ -90,7 +90,7 @@ const MyGamesTab = () => {
 								'border-border-light dark:border-border-dark flex w-full flex-row items-center gap-4 rounded-2xl border-2 p-4'
 							}
 							onPress={() =>
-								router.navigate({
+								router.push({
 									pathname: '/(tabs)/game',
 									params: {
 										id: item.id,

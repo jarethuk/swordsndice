@@ -1,4 +1,4 @@
 export interface UpdateGroupMemberRequest {
-	id: string;
+	id?: string;
 	isAdmin?: boolean;
 }

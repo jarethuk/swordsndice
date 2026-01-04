@@ -31,8 +31,8 @@ export default function ListRow({
     <Pressable className={'flex w-full flex-row items-center gap-4'} onPress={onPress}>
       <ListImage image={image} placeHolderIcon={placeHolderIcon} />
 
-      <View className={'flex'}>
-        <Content type={'title'} size={'xs'}>
+      <View className={'flex shrink'}>
+        <Content type={'title'} size={'xs'} wrap>
           {title}
         </Content>
 

@@ -1,12 +1,12 @@
 import { FIVE_MINUTES } from '../../constants/Time';
 import { usePersistedQuery } from '../../hooks/usePersistedQuery';
-import type { UserGroup } from '../../types/api/responses/UserGroup';
+import type { UserGroupInvite } from '../../types/api/responses/UserGroupInvite';
 import { API } from '../API';
 
 export function useAPIGroupInvites() {
-  return usePersistedQuery<UserGroup[]>({
+  return usePersistedQuery<UserGroupInvite[]>({
     queryKey: ['group-invites'],
-    queryFn: () => API.get<UserGroup[]>('/api/groups/invites'),
+    queryFn: () => API.get<UserGroupInvite[]>('/api/groups/invites'),
     staleTime: FIVE_MINUTES,
   });
 }

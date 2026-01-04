@@ -43,9 +43,9 @@ export const LoginForm = () => {
 
   return (
     <ScrollView
-      contentContainerClassName={'p-4 flex gap-12 h-full bg-background-dark'}
+      contentContainerClassName={'p-6 flex gap-6 bg-background-dark'}
       automaticallyAdjustKeyboardInsets={true}>
-      <View className={'my-12 flex items-center justify-center gap-4'}>
+      <View className={'mt-12 flex items-center gap-6'}>
         <Image
           source={require('../assets/logo.png')}
           style={{ width: 100, height: 150, alignSelf: 'center' }}
@@ -67,7 +67,7 @@ export const LoginForm = () => {
           <Button content={'Continue'} loading={isLoggingIn} onPress={login} />
         </View>
       ) : (
-        <View className={'flex gap-12'}>
+        <View className={'flex gap-8'}>
           <View className={'flex gap-6'}>
             <Content type={'subtitle'} size={'md'} center>
               Enter your email address to get started

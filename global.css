@@ -4,6 +4,10 @@
 
 @import "nativewind/theme";
 
+body {
+    background: #15082F;
+}
+
 @theme {
     /* Light */
     --color-background-light: #FFFFFF;

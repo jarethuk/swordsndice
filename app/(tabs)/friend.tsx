@@ -1,16 +1,15 @@
 import { faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { useQueryClient } from '@tanstack/react-query';
-import { Image } from 'expo-image';
 import { useLocalSearchParams } from 'expo-router';
 import { useCallback } from 'react';
-import { Animated, View } from 'react-native';
+import { Animated } from 'react-native';
 import { useAPIAddFriend } from '../../api/friends/useAPIAddFriend';
 import { useAPIRemoveFriend } from '../../api/friends/useAPIRemoveFriend';
 import { useAPIGetUser } from '../../api/user/useAPIGetUser';
-import { Content } from '../../components';
 import { Button } from '../../components/Button';
 import { LoadingScreen } from '../../components/LoadingScreen';
+
+import { PageTitleWithImage } from '../../components/PageTitleWithImage';
 import ScrollView = Animated.ScrollView;
 
 export default function FriendPage() {
@@ -55,26 +54,7 @@ export default function FriendPage() {
 
   return (
     <ScrollView contentContainerClassName={'flex flex-col gap-6'}>
-      <View className={'mt-6 mb-3 flex w-full flex-col items-center gap-4'}>
-        <View
-          className={
-            'bg-panel-light dark:bg-panel-dark flex h-40 w-40 items-center justify-center overflow-hidden rounded-full'
-          }>
-          {data.image ? (
-            <Image source={data.image} style={{ height: 160, width: 160 }} />
-          ) : (
-            <View className={'flex flex-col items-center gap-4'}>
-              <FontAwesomeIcon icon={faUser} size={36} />
-            </View>
-          )}
-        </View>
-
-        <View className={'items-center'}>
-          <Content type={'display'} size={'sm'} center>
-            {data.username}
-          </Content>
-        </View>
-      </View>
+      <PageTitleWithImage title={data.username} placeholderIcon={faUser} image={data.image} />
 
       {data.isFriend ? (
         <Button content={'Remove Friend'} onPress={removeFriend} />

@@ -7,6 +7,7 @@ import { API } from '../API';
 export function useAPIUpdateGroupMember(id: string) {
   return useMutation<BasicResponse, AxiosError, UpdateGroupMemberRequest>({
     mutationKey: ['update-group-member', id],
-    mutationFn: (request) => API.patch<BasicResponse>(`/api/groups/${id}/member`, request),
+    mutationFn: (request) =>
+      API.patch<BasicResponse>(`/api/groups/${id}/member/${request.id}`, request),
   });
 }

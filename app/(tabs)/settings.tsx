@@ -1,5 +1,6 @@
+import { useQueryClient } from '@tanstack/react-query';
 import { useColorScheme } from 'nativewind';
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import { Animated, View } from 'react-native';
 import { useAPILogout } from '../../api/auth/useAPILogout';
 import { Content } from '../../components';
@@ -12,11 +13,20 @@ export default function Settings() {
   const { setColorScheme, colorScheme } = useColorScheme();
   const { refetch, isLoading: isLoggingOut } = useAPILogout();
   const { setUser } = useUserActions();
+  const client = useQueryClient();
+
+  const [isClearingCache, setIsClearingCache] = useState(false);
 
   const logout = useCallback(async () => {
     await refetch();
     setUser(undefined);
   }, [refetch, setUser]);
+
+  const clearCache = useCallback(async () => {
+    setIsClearingCache(true);
+    await client.invalidateQueries();
+    setIsClearingCache(false);
+  }, [client]);
 
   return (
     <ScrollView contentContainerClassName={'flex flex-col gap-6'}>
@@ -37,6 +47,8 @@ export default function Settings() {
           }}
         />
       </View>
+
+      <Button content={'Clear Cache'} onPress={clearCache} loading={isClearingCache} />
 
       <Button content={'Logout'} onPress={logout} loading={isLoggingOut} />
     </ScrollView>
