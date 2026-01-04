@@ -142,6 +142,7 @@ export default function GamePage() {
               subtitle={'Invited'}
               placeHolderIcon={faUser}
               onPress={() => setSelectedInvite(member)}
+              image={member.image}
             />
           ))}
 

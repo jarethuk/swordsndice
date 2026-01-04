@@ -10,12 +10,13 @@ import { ListImage } from '../../components/ListImage';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { TabInput } from '../../components/TabInput';
 import { useColours } from '../../hooks/useColours';
+import type { GameListResponse } from '../../types/api/responses/GameListResponse';
 import type { GameResponse } from '../../types/api/responses/GameResponse';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-  Feed = 'feed',
-  MyGames = 'my-games',
+	Feed = 'feed',
+	MyGames = 'my-games',
 }
 
 interface DateGroup {
@@ -27,13 +28,14 @@ const FeedTab = () => {
 	return <></>;
 };
 
-const getGameTitle = (game: GameResponse): string => {
+const getGameTitle = (game: GameListResponse): string => {
+	console.log(game);
 	if (game.members && game.members.length > 0) {
-		if (game.members.every((x) => x.list)) {
-			return game.members.map((x) => x.list?.army).join(' vs ');
+		if (game.members.every((x) => x.army)) {
+			return game.members.map((x) => x.army).join(' vs ');
 		}
 
-		return game.members.map((x) => x.user?.username).join(' vs ');
+		return game.members.map((x) => x.username).join(' vs ');
 	}
 
 	return `${game.game} (${game.points} points)`;

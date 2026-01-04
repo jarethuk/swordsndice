@@ -127,7 +127,7 @@ export default function EditUnitPopup() {
 
 	return (
 		<ScrollView
-			contentContainerClassName={'flex flex-col gap-6 p-6 pb-12 h-full'}
+			contentContainerClassName={'flex flex-col gap-6 p-6 pb-12'}
 			keyboardDismissMode={'interactive'}
 		>
 			<Content size={'sm'} type={'title'} center>

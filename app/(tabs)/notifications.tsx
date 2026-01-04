@@ -20,9 +20,9 @@ import type { UserGroupInvite } from '../../types/api/responses/UserGroupInvite'
 import ScrollView = Animated.ScrollView;
 
 interface NotificationItem {
-	type: 'group-invite' | 'game-invite';
-	createdAt: Date;
-	data: GameInviteResponse | UserGroupInvite;
+  type: 'group-invite' | 'game-invite';
+  createdAt: Date;
+  data: GameInviteResponse | UserGroupInvite;
 }
 
 interface DateGroup {
