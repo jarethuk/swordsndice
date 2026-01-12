@@ -1,8 +1,8 @@
-import {BottomSheetTextInput} from '@gorhom/bottom-sheet';
-import {clsx} from 'clsx';
-import {type ReactElement, useRef, useState} from 'react';
-import {Pressable, TextInput, View} from 'react-native';
-import {Content} from './Content';
+import { BottomSheetTextInput } from '@gorhom/bottom-sheet';
+import { clsx } from 'clsx';
+import { type ReactElement, useMemo, useRef, useState } from 'react';
+import { Pressable, TextInput, View } from 'react-native';
+import { Content } from './Content';
 
 interface Props {
 	value: string;
@@ -17,6 +17,8 @@ interface Props {
 	bottom?: ReactElement;
 	secret?: boolean;
 	multiline?: boolean;
+	themeOverride?: 'light' | 'dark';
+	onBlur?: () => void;
 }
 
 export const Input = ({
@@ -32,35 +34,52 @@ export const Input = ({
 	secret,
 	bottom,
 	multiline,
+	themeOverride,
+	onBlur,
 }: Props) => {
 	const [hasFocus, setHasFocus] = useState(false);
 	const moveLabel = hasFocus || !!value;
 	const ref = useRef<any>(null);
 
+	const overrideTextColour = themeOverride ? `text-text-${themeOverride}` : '';
+
 	const inputProps = {
 		ref,
 		className: clsx(
-			'w-full shrink text-text-light dark:text-text-dark placeholder:text-[#8A8397] text-[16px] focus:outline-none',
+			'w-full shrink placeholder:text-[#8A8397] text-[16px] focus:outline-none',
+			overrideTextColour,
 			{
 				'h-0 overflow-hidden': label && !moveLabel,
 				'top-[22px]': label && !moveLabel,
 				'h-[60px]': !label && !multiline,
 				'h-[100px]': multiline,
+				'text-text-light dark:text-text-dark': !themeOverride,
 			},
 		),
 		value: value,
 		onChangeText: onChange,
 		inputMode: type,
 		onFocus: () => setHasFocus(true),
-		onBlur: () => setHasFocus(false),
+		onBlur: () => {
+			setHasFocus(false);
+			onBlur?.();
+		},
 		placeholder,
 		style: { fontFamily: 'DINRoundPro' },
 		secureTextEntry: secret,
 		multiline,
 	};
 
+	const colourClasses = useMemo(() => {
+		if (themeOverride) {
+			return `border-border-${themeOverride} bg-background-${themeOverride}`;
+		}
+
+		return 'border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark';
+	}, [themeOverride]);
+
 	return (
-		<View className={'flex flex-col w-full gap-2'}>
+		<View className={'flex w-full flex-col gap-2'}>
 			<Pressable
 				onPress={() => {
 					setHasFocus(true);
@@ -72,7 +91,8 @@ export const Input = ({
 			>
 				<View
 					className={clsx(
-						'border-2 border-border-light dark:border-border-dark rounded-2xl w-full flex flex-row gap-4 items-center px-4 bg-background-light dark:bg-background-dark',
+						'flex w-full flex-row items-center gap-4 rounded-2xl border-2 px-4',
+						colourClasses,
 						{
 							'h-[60px]': !multiline,
 							'h-[160px]': multiline,
@@ -82,7 +102,7 @@ export const Input = ({
 					{iconStart}
 
 					<View
-						className={clsx('w-full shrink group flex flex-col', {
+						className={clsx('group flex w-full shrink flex-col', {
 							'gap-1': moveLabel,
 						})}
 					>
@@ -112,7 +132,7 @@ export const Input = ({
 					{iconEnd}
 				</View>
 
-				{bottom && <View className={'pt-1 pb-2 px-5'}>{bottom}</View>}
+				{bottom && <View className={'px-5 pt-1 pb-2'}>{bottom}</View>}
 			</Pressable>
 
 			{error && (

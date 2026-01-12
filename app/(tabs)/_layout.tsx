@@ -1,12 +1,12 @@
-import {faClock, faCog, faList, faSwords, faUsers,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import type {BottomTabBarProps} from '@react-navigation/bottom-tabs';
-import {clsx} from 'clsx';
-import {router, Tabs} from 'expo-router';
-import type {ReactElement} from 'react';
-import {Pressable, View} from 'react-native';
+import { faClock, faCog, faList, faSwords, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
+import { clsx } from 'clsx';
+import { router, Tabs } from 'expo-router';
+import type { ReactElement } from 'react';
+import { Pressable, View } from 'react-native';
 import Header from '../../components/Header';
-import {useColours} from '../../hooks/useColours';
+import { useColours } from '../../hooks/useColours';
 
 const tabRoutes = ['lists', 'index', 'feed', 'social', 'settings'];
 
@@ -31,7 +31,7 @@ function TabsBar(props: BottomTabBarProps) {
 	return (
 		<View
 			className={
-				'flex flex-row gap-11 items-center pb-4 justify-center relative border-border-light dark:border-border-dark border-t-2 bg-bottom-bar-light dark:bg-bottom-bar-dark'
+				'border-border-light dark:border-border-dark bg-bottom-bar-light dark:bg-bottom-bar-dark relative flex flex-row items-center justify-center gap-8 border-t-2 pb-4'
 			}
 		>
 			{props.state.routes
@@ -41,25 +41,26 @@ function TabsBar(props: BottomTabBarProps) {
 
 					if (route.name === 'index') {
 						return (
-							<View className={'w-20 relative'} key={'index'}>
+							<View className={'relative h-20 w-24'} key={'index'}>
 								<View
 									key={i.toString()}
-									style={{ top: -20 }}
-									className={'bg-white rounded-full p-1 absolute'}
+									className={
+										'bg-background-light dark:bg-background-dark absolute rounded-full p-1 -top-5'
+									}
 								>
 									<Pressable
 										onPress={() => router.navigate('/')}
 										className={
-											'rounded-full active:pb-0 active:mt-1 pb-1 bg-purple-600'
+											'rounded-full bg-purple-600 pb-1 active:mt-1 active:pb-0'
 										}
 									>
 										<View
 											className={
-												'h-20 w-20 rounded-full overflow-hidden bg-purple-500'
+												'h-20 w-20 overflow-hidden rounded-full bg-purple-500'
 											}
 										>
 											<View
-												className={'flex items-center justify-center h-full'}
+												className={'flex h-full items-center justify-center'}
 											>
 												<FontAwesomeIcon
 													icon={faSwords}
@@ -108,7 +109,7 @@ export default function TabLayout() {
 	return (
 		<View
 			className={
-				'flex flex-col h-full bg-background-light dark:bg-background-dark'
+				'bg-background-light dark:bg-background-dark flex h-full flex-col'
 			}
 		>
 			<Header />
