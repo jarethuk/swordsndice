@@ -3,4 +3,5 @@ export interface PublicUser {
 	username: string;
 	image?: string | null;
 	isFriend?: boolean;
+	description?: string | null;
 }

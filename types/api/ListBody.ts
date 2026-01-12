@@ -11,6 +11,7 @@ export interface ListMember {
 	amount: number;
 	slot: string;
 	notes?: string;
+	remainingStats?: number[];
 }
 
 export interface ListGroup {

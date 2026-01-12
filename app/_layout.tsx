@@ -195,6 +195,13 @@ const Layout = () => {
           presentation: 'modal',
         }}
       />
+
+      <Stack.Screen
+        name="modals/invite-to-group"
+        options={{
+          presentation: 'modal',
+        }}
+      />
     </Stack>
   );
 };

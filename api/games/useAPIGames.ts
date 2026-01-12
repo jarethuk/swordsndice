@@ -1,12 +1,12 @@
 import { ONE_DAY } from '../../constants/Time';
 import { usePersistedQuery } from '../../hooks/usePersistedQuery';
-import type { GameResponse } from '../../types/api/responses/GameResponse';
+import type { GameListResponse } from '../../types/api/responses/GameListResponse';
 import { API } from '../API';
 
 export function useAPIGames() {
-  return usePersistedQuery<GameResponse[]>({
+  return usePersistedQuery<GameListResponse[]>({
     queryKey: ['games'],
-    queryFn: () => API.get<GameResponse[]>('/api/games'),
+    queryFn: () => API.get<GameListResponse[]>('/api/games'),
     staleTime: ONE_DAY,
   });
 }

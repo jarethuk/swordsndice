@@ -1,7 +1,7 @@
 import { MESBGProfiles } from '../data/MESBGProfiles';
 import { MESBGArmySlot } from '../types';
 import type { ListBody, ListGroup, ListMember } from '../types/api/ListBody';
-import type { MESBGProfileStats } from '../types/MESBGProfileStats';
+import type { MESBGProfileStats, RemainingMESBGProfileStats } from '../types/MESBGProfileStats';
 import type { Profile } from '../types/Profile';
 
 export const getMESBGStats = (profile: Profile): MESBGProfileStats => {
@@ -34,6 +34,24 @@ export const getMESBGStats = (profile: Profile): MESBGProfileStats => {
     will,
     fate,
   };
+};
+
+export const getRemainingMESBGStats = (
+  stats: MESBGProfileStats,
+  member: ListMember
+): RemainingMESBGProfileStats => {
+  const [might, will, fate, wounds] = member.remainingStats ?? [
+    Number(stats.might),
+    Number(stats.will),
+    Number(stats.fate),
+    Number(stats.wounds),
+  ];
+
+  return { might, will, fate, wounds };
+};
+
+export const toRemainingMESBGStatsFlat = (stats: RemainingMESBGProfileStats): number[] => {
+  return [stats.might, stats.will, stats.fate, stats.wounds];
 };
 
 export const maxWarbandForLeader = (slot: MESBGArmySlot): number => {

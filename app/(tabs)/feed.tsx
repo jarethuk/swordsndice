@@ -11,17 +11,16 @@ import { LoadingScreen } from '../../components/LoadingScreen';
 import { TabInput } from '../../components/TabInput';
 import { useColours } from '../../hooks/useColours';
 import type { GameListResponse } from '../../types/api/responses/GameListResponse';
-import type { GameResponse } from '../../types/api/responses/GameResponse';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-	Feed = 'feed',
-	MyGames = 'my-games',
+  Feed = 'feed',
+  MyGames = 'my-games',
 }
 
 interface DateGroup {
 	date: string;
-	items: GameResponse[];
+	items: GameListResponse[];
 }
 
 const FeedTab = () => {
@@ -29,7 +28,6 @@ const FeedTab = () => {
 };
 
 const getGameTitle = (game: GameListResponse): string => {
-	console.log(game);
 	if (game.members && game.members.length > 0) {
 		if (game.members.every((x) => x.army)) {
 			return game.members.map((x) => x.army).join(' vs ');
@@ -48,7 +46,7 @@ const MyGamesTab = () => {
 	const groups: DateGroup[] = useMemo(() => {
 		if (!data?.length) return [];
 
-		const groups = data.reduce((acc: DateGroup[], game: GameResponse) => {
+		return data.reduce((acc: DateGroup[], game: GameListResponse) => {
 			const date = dayjs(game.createdAt).format('DD MMM YYYY');
 			const group = acc.find((x) => x.date === date);
 
@@ -60,8 +58,6 @@ const MyGamesTab = () => {
 
 			return acc;
 		}, []);
-
-		return groups;
 	}, [data]);
 
 	if (!data) {

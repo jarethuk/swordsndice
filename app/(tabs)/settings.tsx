@@ -19,8 +19,9 @@ export default function Settings() {
 
   const logout = useCallback(async () => {
     await refetch();
+    await client.invalidateQueries();
     setUser(undefined);
-  }, [refetch, setUser]);
+  }, [client, refetch, setUser]);
 
   const clearCache = useCallback(async () => {
     setIsClearingCache(true);

@@ -1,4 +1,4 @@
-import { faSword, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faShelvesEmpty, faSword, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { useQueryClient } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 import { router } from 'expo-router';
@@ -17,6 +17,8 @@ import { Popup } from '../../components/Popup';
 import { useColours } from '../../hooks/useColours';
 import type { GameInviteResponse } from '../../types/api/responses/GameInviteResponse';
 import type { UserGroupInvite } from '../../types/api/responses/UserGroupInvite';
+
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import ScrollView = Animated.ScrollView;
 
 interface NotificationItem {
@@ -71,6 +73,7 @@ const GameInviteRow = ({ game, refresh }: GameInviteProps) => {
 		<>
 			<ListRow
 				title={`Game invite from ${game.invitedBy.username}`}
+				subtitle={`${game.game} (${game.points}pts)`}
 				placeHolderIcon={faSword}
 				onPress={() => setSelected(true)}
 			/>
@@ -280,6 +283,19 @@ export default function Notifications() {
 					</View>
 				</View>
 			))}
+
+			{groups.length === 0 && (
+				<View className={'flex h-96 items-center justify-center gap-6'}>
+					<FontAwesomeIcon
+						icon={faShelvesEmpty}
+						color={colours.primary}
+						size={32}
+					/>
+					<Content size={'lg'} type={'subtitle'}>
+						No notifications yet!
+					</Content>
+				</View>
+			)}
 		</ScrollView>
 	);
 }

@@ -12,3 +12,10 @@ export interface MESBGProfileStats {
 	will: string;
 	fate: string;
 }
+
+export interface RemainingMESBGProfileStats {
+	wounds: number;
+	might: number;
+	will: number;
+	fate: number;
+}

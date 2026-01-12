@@ -4,6 +4,7 @@ import type { PublicUser } from './PublicUser.ts';
 export interface GameResponseMember {
   user?: PublicUser;
   list?: ListBody | null;
+  points: number;
 }
 
 export interface GameResponse {
