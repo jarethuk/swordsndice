@@ -1,6 +1,7 @@
 export interface UserResponse {
-	readonly id: string;
-	readonly email: string;
-	readonly username?: string | null;
-	readonly image?: string | null;
+	id: string;
+	email: string;
+	username?: string | null;
+	image?: string | null;
+	description?: string | null;
 }

@@ -1,4 +1,5 @@
-import { faShelvesEmpty, faSword, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faFaceThinking, faSword, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { useQueryClient } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 import { router } from 'expo-router';
@@ -17,8 +18,6 @@ import { Popup } from '../../components/Popup';
 import { useColours } from '../../hooks/useColours';
 import type { GameInviteResponse } from '../../types/api/responses/GameInviteResponse';
 import type { UserGroupInvite } from '../../types/api/responses/UserGroupInvite';
-
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import ScrollView = Animated.ScrollView;
 
 interface NotificationItem {
@@ -287,7 +286,7 @@ export default function Notifications() {
 			{groups.length === 0 && (
 				<View className={'flex h-96 items-center justify-center gap-6'}>
 					<FontAwesomeIcon
-						icon={faShelvesEmpty}
+						icon={faFaceThinking}
 						color={colours.primary}
 						size={32}
 					/>

@@ -1,4 +1,4 @@
-import { faMagnifyingGlass, faPlus, faShelvesEmpty, faSword, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faFaceThinking, faMagnifyingGlass, faPlus, faSword, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
@@ -68,7 +68,7 @@ export default function Lists() {
 
         {lists.length === 0 ? (
           <View className={'flex h-96 items-center justify-center gap-6'}>
-            <FontAwesomeIcon icon={faShelvesEmpty} color={colours.primary} size={32} />
+            <FontAwesomeIcon icon={faFaceThinking} color={colours.primary} size={32} />
             <Content size={'lg'} type={'subtitle'}>
               {search ? 'No lists found' : 'Create your first list to get started'}
             </Content>
