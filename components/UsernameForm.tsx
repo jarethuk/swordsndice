@@ -84,7 +84,7 @@ export const UsernameForm = () => {
         </Content>
 
         {username.toLowerCase() !== sanitisedUsername && (
-          <Alert type={'info'} message={`Actual username will be: ${sanitisedUsername}`} />
+          <Alert type={'info'} message={`Actual username will be: @${sanitisedUsername}`} />
         )}
 
         {isProfaneUsername && (

@@ -2,16 +2,15 @@ import { faMagnifyingGlass, faUser } from '@awesome.me/kit-34e2017de2/icons/duot
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Animated, View } from 'react-native';
+import { View } from 'react-native';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIGroup } from '../../api/groups/useAPIGroup';
 import { useAPIInviteToGroup } from '../../api/groups/useAPIInviteToGroup';
 import { Content } from '../../components';
+import { Dialog } from '../../components/Dialog';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { useColours } from '../../hooks/useColours';
-
-import { Dialog } from '../../components/Dialog';
 
 export default function InviteToGroup() {
   const { id } = useLocalSearchParams();
@@ -63,7 +62,7 @@ export default function InviteToGroup() {
       {friends.map(({ username, image, id }) => (
         <ListRow
           key={username}
-          title={username}
+          title={`@${username}`}
           placeHolderIcon={faUser}
           image={image}
           onPress={() => inviteMember(id)}

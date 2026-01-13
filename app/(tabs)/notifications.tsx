@@ -35,7 +35,7 @@ interface GroupInviteProps {
 const GameInviteRow = ({ game }: GameInviteProps) => {
   return (
     <ListRow
-      title={`Game invite from ${game.invitedBy.username}`}
+      title={`Game invite from @${game.invitedBy.username}`}
       subtitle={`${game.game} (${game.points}pts)`}
       placeHolderIcon={faSword}
       onPress={() =>
@@ -51,7 +51,7 @@ const GameInviteRow = ({ game }: GameInviteProps) => {
 const GroupInviteRow = ({ group }: GroupInviteProps) => {
   return (
     <ListRow
-      title={`Invite to join group ${group.name} by ${group.createdBy.username}`}
+      title={`Invite to join group ${group.name} by @${group.createdBy.username}`}
       placeHolderIcon={faUsers}
       image={group.image}
       onPress={() =>
@@ -64,7 +64,7 @@ const GroupInviteRow = ({ group }: GroupInviteProps) => {
   );
 };
 
-const getItemRender = (item: NotificationItem, refresh: () => Promise<void>) => {
+const getItemRender = (item: NotificationItem) => {
   switch (item.type) {
     case 'game-invite':
       return <GameInviteRow game={item.data as GameInviteResponse} key={item.data.id} />;
@@ -147,9 +147,7 @@ export default function Notifications() {
             {date}
           </Content>
 
-          <View className={'flex flex-col gap-8'}>
-            {items.map((item) => getItemRender(item, refresh))}
-          </View>
+          <View className={'flex flex-col gap-8'}>{items.map((item) => getItemRender(item))}</View>
         </View>
       ))}
 

@@ -34,7 +34,7 @@ export function GamePlay({ game, id }: Props) {
     return game.members
       .filter((member) => member.user?.id !== user?.id)
       .map((member) => ({
-        title: member.user?.username ?? '',
+        title: `@${member.user?.username}`,
         value: member.user?.id ?? '',
       }));
   }, [game.members, user?.id]);

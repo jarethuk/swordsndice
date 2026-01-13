@@ -112,7 +112,7 @@ export default function Social() {
 								friends.map((friend) => (
 									<ListRow
 										key={friend.username}
-										title={friend.username}
+										title={`@${friend.username}`}
 										image={friend.image}
 										placeHolderIcon={faUser}
 										onPress={() =>
@@ -187,7 +187,7 @@ export default function Social() {
 							{searchFriends.map((user) => (
 								<ListRow
 									key={user.id}
-									title={user.username}
+									title={`@${user.username}`}
 									image={user.image}
 									placeHolderIcon={faUsers}
 									onPress={() =>

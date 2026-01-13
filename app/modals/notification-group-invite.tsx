@@ -56,7 +56,7 @@ export default function NotificationGameInvite() {
 
   return (
     <Dialog
-      title={`Group invite from ${group.createdBy.username}`}
+      title={`Group invite from @${group.createdBy.username}`}
       subtitle={`You have received an invite to join the ${group.name} group`}>
       <View className={'flex flex-col items-center gap-4 md:flex-row'}>
         <View className={'grow'}>

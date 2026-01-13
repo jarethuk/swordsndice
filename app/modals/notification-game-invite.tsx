@@ -56,7 +56,7 @@ export default function NotificationGameInvite() {
 
   return (
     <Dialog
-      title={`Game invite from ${invite.invitedBy.username}`}
+      title={`Game invite from @${invite.invitedBy.username}`}
       subtitle={`You have received an invite to join a ${invite.game} game of ${invite.points}pts`}>
       <View className={'flex flex-col items-center gap-4 md:flex-row'}>
         <View className={'grow'}>

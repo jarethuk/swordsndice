@@ -37,7 +37,7 @@ const getGameTitle = (game: GameListResponse): string => {
       return game.members.map((x) => x.army).join(' vs ');
     }
 
-    return game.members.map((x) => x.username).join(' vs ');
+    return game.members.map((x) => `@${x.username}`).join(' vs ');
   }
 
   return `${game.game} (${game.points} points)`;

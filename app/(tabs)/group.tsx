@@ -1,32 +1,19 @@
 import { faUser, faUsers } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
-import { useCallback, useMemo, useState } from 'react';
-import { View } from 'react-native';
-import { useAPICancelGroupInvite } from '../../api/groups/useAPICancelGroupInvite';
+import { useCallback, useMemo } from 'react';
 import { useAPIGroup } from '../../api/groups/useAPIGroup';
-import { useAPIRemoveMemberFromGroup } from '../../api/groups/useAPIRemoveMemberFromGroup';
-import { useAPIUpdateGroupMember } from '../../api/groups/useAPIUpdateGroupMember';
 import { Content } from '../../components';
 import { Button } from '../../components/Button';
 import ListRow from '../../components/ListRow';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
 import { PageTitleWithImage } from '../../components/PageTitleWithImage';
-import { Popup } from '../../components/Popup';
 import { useUser } from '../../states/useUserStore';
-import type { UpdateGroupMemberRequest } from '../../types/api/requests/UpdateGroupMemberRequest';
-import type { GroupResponseMember } from '../../types/api/responses/GroupResponse';
 
 export default function GroupPage() {
   const { id } = useLocalSearchParams();
   const user = useUser();
   const { data, refetch, isLoading } = useAPIGroup(id as string);
-  const [selectedMember, setSelectedMember] = useState<GroupResponseMember | undefined>();
-  const [selectedInvite, setSelectedInvite] = useState<GroupResponseMember | undefined>();
-
-  const { mutateAsync: apiCancelInvite } = useAPICancelGroupInvite(id as string);
-  const { mutateAsync: apiRemoveMember } = useAPIRemoveMemberFromGroup(id as string);
-  const { mutateAsync: apiUpdateMember } = useAPIUpdateGroupMember(id as string);
 
   const isAdmin = useMemo(() => {
     return data?.members.find((x) => x.username === user?.username)?.isAdmin ?? false;
@@ -36,41 +23,6 @@ export default function GroupPage() {
     useCallback(() => {
       void refetch();
     }, [refetch])
-  );
-
-  const cancelInvite = useCallback(async () => {
-    if (!selectedInvite) return;
-
-    await apiCancelInvite({
-      friendId: selectedInvite.id,
-    });
-
-    setSelectedInvite(undefined);
-    await refetch();
-  }, [apiCancelInvite, refetch, selectedInvite]);
-
-  const removeMember = useCallback(async () => {
-    if (!selectedMember) return;
-
-    await apiRemoveMember(selectedMember.id);
-
-    setSelectedMember(undefined);
-    await refetch();
-  }, [apiRemoveMember, refetch, selectedMember]);
-
-  const updateMember = useCallback(
-    async (request: UpdateGroupMemberRequest) => {
-      if (!selectedMember) return;
-
-      await apiUpdateMember({
-        ...request,
-        id: selectedMember.id,
-      });
-
-      setSelectedMember(undefined);
-      await refetch();
-    },
-    [apiUpdateMember, refetch, selectedMember]
   );
 
   if (!data) {
@@ -108,12 +60,15 @@ export default function GroupPage() {
       {data.members.map((member) => (
         <ListRow
           key={member.username}
-          title={`${member.username ?? ''} ${member.isAdmin ? '(Admin)' : ''}`}
+          title={`@${member.username ?? ''} ${member.isAdmin ? '(Admin)' : ''}`}
           image={member.image}
           placeHolderIcon={faUser}
           onPress={() =>
             isAdmin
-              ? setSelectedMember(member)
+              ? router.navigate({
+                  pathname: '/modals/group-member',
+                  params: { id: member.id, groupId: data.id },
+                })
               : router.push({
                   pathname: '/(tabs)/friend',
                   params: { username: member.username },
@@ -128,15 +83,18 @@ export default function GroupPage() {
             Invited ({data.invites.length})
           </Content>
 
-          {data.invites.map((user) => (
+          {data.invites.map(({ user }) => (
             <ListRow
               key={user.username}
-              title={user.username ?? ''}
+              title={`@${user.username}`}
               image={user.image}
               placeHolderIcon={faUser}
               onPress={() =>
                 isAdmin
-                  ? setSelectedInvite(user)
+                  ? router.navigate({
+                      pathname: '/modals/group-invite',
+                      params: { id: user.id, groupId: data.id },
+                    })
                   : router.push({
                       pathname: '/(tabs)/friend',
                       params: { username: user.username },
@@ -156,76 +114,6 @@ export default function GroupPage() {
           })
         }
       />
-
-      {selectedMember && (
-        <Popup onDismiss={() => setSelectedMember(undefined)}>
-          <View className={'flex gap-6'}>
-            <Content size={'sm'} type={'title'} center>
-              {selectedMember.username}
-            </Content>
-
-            <Button
-              content={'View Profile'}
-              onPress={() => {
-                setSelectedMember(undefined);
-
-                router.push({
-                  pathname: '/(tabs)/friend',
-                  params: { username: selectedMember.username },
-                });
-              }}
-            />
-
-            <Button content={'Remove Member'} variant={'negative'} onPress={removeMember} />
-
-            {selectedMember.isAdmin ? (
-              <Button
-                content={'Remove Admin'}
-                variant={'negative'}
-                onPress={() =>
-                  updateMember({
-                    isAdmin: false,
-                  })
-                }
-              />
-            ) : (
-              <Button
-                content={'Make Admin'}
-                variant={'negative'}
-                onPress={() =>
-                  updateMember({
-                    isAdmin: true,
-                  })
-                }
-              />
-            )}
-          </View>
-        </Popup>
-      )}
-
-      {selectedInvite && (
-        <Popup onDismiss={() => setSelectedMember(undefined)}>
-          <View className={'flex gap-6'}>
-            <Content size={'sm'} type={'title'} center>
-              {selectedInvite.username}
-            </Content>
-
-            <Button
-              content={'View Profile'}
-              onPress={() => {
-                setSelectedMember(undefined);
-
-                router.push({
-                  pathname: '/(tabs)/friend',
-                  params: { username: selectedInvite.username },
-                });
-              }}
-            />
-
-            <Button content={'Cancel Invite'} variant={'negative'} onPress={cancelInvite} />
-          </View>
-        </Popup>
-      )}
     </Page>
   );
 }

@@ -215,6 +215,27 @@ const Layout = () => {
           presentation,
         }}
       />
+
+      <Stack.Screen
+        name="modals/group-invite"
+        options={{
+          presentation,
+        }}
+      />
+
+      <Stack.Screen
+        name="modals/group-member"
+        options={{
+          presentation,
+        }}
+      />
+
+      <Stack.Screen
+        name="modals/game-invite"
+        options={{
+          presentation,
+        }}
+      />
     </Stack>
   );
 };

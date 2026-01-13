@@ -1,8 +1,15 @@
+import type { PublicUser } from './PublicUser';
+
 export interface GroupResponseMember {
 	id: string;
 	username?: string | null;
 	image?: string | null;
 	isAdmin?: boolean;
+}
+
+export interface GroupInviteResponse {
+	user: PublicUser;
+	createdBy: PublicUser;
 }
 
 export interface GroupResponse {
@@ -13,6 +20,6 @@ export interface GroupResponse {
 	isPublic: boolean;
 	membersCanInvite: boolean;
 	members: GroupResponseMember[];
-	invites: GroupResponseMember[];
+	invites: GroupInviteResponse[];
 	createdBy: GroupResponseMember;
 }

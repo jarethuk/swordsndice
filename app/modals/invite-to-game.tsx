@@ -61,7 +61,7 @@ export default function InviteToGame() {
       {friends.map(({ username, image, id }) => (
         <ListRow
           key={username}
-          title={username}
+          title={`@${username}`}
           placeHolderIcon={faUser}
           image={image}
           onPress={() => addMember(id)}
