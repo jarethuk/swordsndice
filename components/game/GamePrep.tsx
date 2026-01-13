@@ -1,4 +1,10 @@
-import { faChevronLeft, faEdit, faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import {
+  faChevronLeft,
+  faEdit,
+  faTimes,
+  faUser,
+  faWarning,
+} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
@@ -57,9 +63,18 @@ export function GamePrep({ game, id, refresh }: Props) {
     void refresh();
   }, [apiCancelInvite, refresh, selectedInvite]);
 
-  const canStartGame = useMemo(() => {
-    return game.members.every((x) => x.list) && game.invites?.length === 0;
+  const isWaitingOnLists = useMemo(() => {
+    return !game.members.every((x) => x.list);
   }, [game]);
+
+  const isWaitingOnInvites = useMemo(() => {
+    return game.invites?.length !== 0;
+  }, [game]);
+
+  const canStartGame = useMemo(() => {
+    return !isWaitingOnLists && !isWaitingOnInvites;
+  }, [isWaitingOnInvites, isWaitingOnLists]);
+
   const anyListAboveGamePoints = useMemo(() => {
     return game.members.some((member) => member.list && member.list.actualPoints > game.points);
   }, [game]);
@@ -148,22 +163,39 @@ export function GamePrep({ game, id, refresh }: Props) {
         <View className={'flex gap-4'}>
           <Button content={'Start Game'} disabled={!canStartGame} onPress={startGame} />
 
-          {!game.members.every((x) => x.list) && (
-            <Content size={'sm'} type={'body'} center>
-              Waiting on list selection
-            </Content>
-          )}
+          {(isWaitingOnLists || isWaitingOnInvites || anyListAboveGamePoints) && (
+            <View
+              className={
+                'border-border-light dark:border-border-dark flex gap-4 rounded-2xl border-2 p-4'
+              }>
+              {isWaitingOnLists && (
+                <View className={'flex flex-row items-center gap-2'}>
+                  <FontAwesomeIcon icon={faTimes} color={colours.negative} size={16} />
 
-          {game.invites?.length !== 0 && (
-            <Content size={'sm'} type={'body'} center>
-              Waiting on invites
-            </Content>
-          )}
+                  <Content size={'sm'} type={'body'}>
+                    Waiting on list selection
+                  </Content>
+                </View>
+              )}
 
-          {anyListAboveGamePoints && (
-            <Content size={'sm'} type={'body'} center>
-              One or more lists exceed the game points limit
-            </Content>
+              {isWaitingOnInvites && (
+                <View className={'flex flex-row items-center gap-2'}>
+                  <FontAwesomeIcon icon={faTimes} color={colours.negative} size={16} />
+                  <Content size={'sm'} type={'body'}>
+                    Waiting on invites
+                  </Content>
+                </View>
+              )}
+
+              {anyListAboveGamePoints && (
+                <View className={'flex flex-row items-center gap-2'}>
+                  <FontAwesomeIcon icon={faWarning} color={colours.warning} size={16} />
+                  <Content size={'sm'} type={'body'}>
+                    One or more lists exceed the game points limit
+                  </Content>
+                </View>
+              )}
+            </View>
           )}
         </View>
       </View>

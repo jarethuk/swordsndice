@@ -10,6 +10,7 @@ import { Container } from '../../components/Container';
 import { ListImage } from '../../components/ListImage';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
+import { PageTitle } from '../../components/PageTitle';
 import { TabInput } from '../../components/TabInput';
 import { useColours } from '../../hooks/useColours';
 import type { GameListResponse } from '../../types/api/responses/GameListResponse';
@@ -24,9 +25,11 @@ interface DateGroup {
   items: GameListResponse[];
 }
 
-const FeedTab = () => {
-  return <></>;
-};
+interface MyGamesTabProps {
+  data: GameListResponse[];
+  isLoading: boolean;
+  refetch: () => void;
+}
 
 const getGameTitle = (game: GameListResponse): string => {
   if (game.members && game.members.length > 0) {
@@ -40,9 +43,8 @@ const getGameTitle = (game: GameListResponse): string => {
   return `${game.game} (${game.points} points)`;
 };
 
-const MyGamesTab = () => {
+const MyGamesTab = ({ data, isLoading, refetch }: MyGamesTabProps) => {
   const colours = useColours();
-  const { data, refetch, isLoading } = useAPIGames();
 
   const groups: DateGroup[] = useMemo(() => {
     if (!data?.length) return [];
@@ -118,9 +120,14 @@ const MyGamesTab = () => {
 
 export default function Feed() {
   const [tab, setTab] = useState<string>(Tabs.MyGames);
+  const { data, refetch, isLoading } = useAPIGames();
+
+  if (!data) return <LoadingScreen message={'Loading activity...'} />;
 
   return (
     <Container>
+      <PageTitle title={'Recent Activity'} refetch={refetch} />
+
       <TabInput
         selected={tab}
         tabs={[
@@ -136,7 +143,7 @@ export default function Feed() {
         onChange={setTab}
       />
 
-      {tab === Tabs.MyGames && <MyGamesTab />}
+      {tab === Tabs.MyGames && <MyGamesTab data={data} isLoading={isLoading} refetch={refetch} />}
     </Container>
   );
 }

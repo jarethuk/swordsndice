@@ -16,6 +16,7 @@ import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
+import { PageTitle } from '../../components/PageTitle';
 import { useColours } from '../../hooks/useColours';
 
 export default function Lists() {
@@ -42,6 +43,8 @@ export default function Lists() {
 
   return (
     <Container>
+      <PageTitle title={'Lists'} refetch={refetch} />
+
       <Input
         placeholder={'Find list'}
         value={search}

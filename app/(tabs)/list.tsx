@@ -13,6 +13,8 @@ import { MESBGArmies } from '../../data/MESBGArmies';
 import { getPointsTotal } from '../../helpers/MESBGStatsHelper';
 import { useColours } from '../../hooks/useColours';
 import { useList, useListActions } from '../../states/useListStore';
+
+import { Container } from '../../components/Container';
 import ScrollView = Animated.ScrollView;
 
 export default function ListPage() {
@@ -74,7 +76,7 @@ export default function ListPage() {
   }
 
   return (
-    <View className={'flex h-full flex-col gap-6'}>
+    <Container>
       <View className={'flex flex-row items-center gap-4'}>
         <Pressable onPress={() => router.back()}>
           <FontAwesomeIcon icon={faChevronLeft} size={20} color={colours.muted} />
@@ -124,6 +126,6 @@ export default function ListPage() {
           />
         )}
       </ScrollView>
-    </View>
+    </Container>
   );
 }

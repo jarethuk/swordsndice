@@ -85,10 +85,6 @@ const StartGameTab = () => {
 
   return (
     <View className={'flex flex-col gap-6'}>
-      <Content size={'md'} type={'body'} center>
-        Select a list to automatically setup a game or manually create a new one.
-      </Content>
-
       <NextWindowButton
         onPress={() => router.navigate('/modals/select-list')}
         label={list?.name ?? 'Select List'}
@@ -128,10 +124,9 @@ const StartGameTab = () => {
 
 export default function Index() {
   return (
-    <Page>
-      <Content size={'md'} type={'title'} center>
-        Start Game
-      </Content>
+    <Page
+      title={'Start Game'}
+      subtitle={'Select a list to automatically setup a game or manually create a new one.'}>
       <StartGameTab />
     </Page>
   );

@@ -1,15 +1,15 @@
 import type { PropsWithChildren } from 'react';
+import { View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { Content } from './Content';
-
-import { View } from 'react-native';
 import ScrollView = Animated.ScrollView;
 
 interface Props extends PropsWithChildren {
   title: string;
+  subtitle?: string;
 }
 
-export const Dialog = ({ title, children }: Props) => {
+export const Dialog = ({ title, children, subtitle }: Props) => {
 	return (
 		<ScrollView
 			contentContainerClassName={'flex h-full w-full gap-6 p-6 md:p-8'}
@@ -17,9 +17,17 @@ export const Dialog = ({ title, children }: Props) => {
 			showsVerticalScrollIndicator={false}
 			contentInsetAdjustmentBehavior={'automatic'}
 		>
-			<Content size={'sm'} type={'title'} center>
-				{title}
-			</Content>
+			<View className={'flex gap-2'}>
+				<Content size={'sm'} type={'title'} center>
+					{title}
+				</Content>
+
+				{!!subtitle && (
+					<Content size={'sm'} type={'body'} center>
+						{subtitle}
+					</Content>
+				)}
+			</View>
 
 			<View className={'flex gap-8'}>{children}</View>
 		</ScrollView>

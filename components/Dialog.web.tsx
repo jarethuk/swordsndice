@@ -2,14 +2,18 @@ import { router } from 'expo-router';
 import type { PropsWithChildren } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, SlideInDown } from 'react-native-reanimated';
+import { useColours } from '../hooks/useColours';
 import { Content } from './Content';
 import ScrollView = Animated.ScrollView;
 
 interface Props extends PropsWithChildren {
   title: string;
+  subtitle?: string;
 }
 
-export const Dialog = ({ title, children }: Props) => {
+export const Dialog = ({ title, children, subtitle }: Props) => {
+	const colours = useColours();
+
 	return (
 		<Animated.View
 			entering={FadeIn}
@@ -23,7 +27,7 @@ export const Dialog = ({ title, children }: Props) => {
 			<Animated.View
 				entering={SlideInDown}
 				className={
-					'max-w-lg max-h-lg bg-background-light dark:bg-background-dark rounded-2xl shadow-lg flex flex-col items-center justify-center overflow-hidden'
+					'max-w-lg w-full max-h-lg bg-background-light dark:bg-background-dark rounded-2xl shadow-lg'
 				}
 			>
 				<ScrollView
@@ -32,9 +36,17 @@ export const Dialog = ({ title, children }: Props) => {
 					showsVerticalScrollIndicator={false}
 					contentInsetAdjustmentBehavior={'automatic'}
 				>
-					<Content size={'sm'} type={'title'} center>
-						{title}
-					</Content>
+					<View className={'flex gap-2'}>
+						<Content size={'sm'} type={'title'} center>
+							{title}
+						</Content>
+
+						{!!subtitle && (
+							<Content size={'md'} type={'body'} center>
+								{subtitle}
+							</Content>
+						)}
+					</View>
 
 					<View className={'flex gap-8'}>{children}</View>
 				</ScrollView>

@@ -2,7 +2,6 @@ import { faMagnifyingGlass, faUser } from '@awesome.me/kit-34e2017de2/icons/duot
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { View } from 'react-native';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIGame } from '../../api/games/useAPIGame';
 import { useAPIInviteToGame } from '../../api/games/useAPIInviteToGame';
@@ -70,11 +69,9 @@ export default function InviteToGame() {
       ))}
 
       {friends.length === 0 && (
-        <View className={'flex h-full items-center justify-center'}>
-          <Content size={'md'} type={'body'} center>
-            All friends are either invited or members
-          </Content>
-        </View>
+        <Content size={'md'} type={'body'} center>
+          All friends are either invited or members
+        </Content>
       )}
     </Dialog>
   );

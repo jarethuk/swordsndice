@@ -12,7 +12,7 @@ import { Page } from '../../components/Page';
 import { useColours } from '../../hooks/useColours';
 import { useGame, useGameActions } from '../../states/useGameStore';
 
-export function GamePage() {
+export default function GamePage() {
   const colours = useColours();
   const { id } = useLocalSearchParams();
   const game = useGame();

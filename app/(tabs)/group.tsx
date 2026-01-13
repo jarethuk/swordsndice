@@ -1,7 +1,7 @@
 import { faUser, faUsers } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Animated, View } from 'react-native';
+import { View } from 'react-native';
 import { useAPICancelGroupInvite } from '../../api/groups/useAPICancelGroupInvite';
 import { useAPIGroup } from '../../api/groups/useAPIGroup';
 import { useAPIRemoveMemberFromGroup } from '../../api/groups/useAPIRemoveMemberFromGroup';
@@ -10,17 +10,14 @@ import { Content } from '../../components';
 import { Button } from '../../components/Button';
 import ListRow from '../../components/ListRow';
 import { LoadingScreen } from '../../components/LoadingScreen';
+import { Page } from '../../components/Page';
 import { PageTitleWithImage } from '../../components/PageTitleWithImage';
 import { Popup } from '../../components/Popup';
-import { useColours } from '../../hooks/useColours';
 import { useUser } from '../../states/useUserStore';
 import type { UpdateGroupMemberRequest } from '../../types/api/requests/UpdateGroupMemberRequest';
 import type { GroupResponseMember } from '../../types/api/responses/GroupResponse';
 
-import { Page } from '../../components/Page';
-
 export default function GroupPage() {
-  const colours = useColours();
   const { id } = useLocalSearchParams();
   const user = useUser();
   const { data, refetch, isLoading } = useAPIGroup(id as string);

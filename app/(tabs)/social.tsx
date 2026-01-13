@@ -1,8 +1,4 @@
-import {
-	faMagnifyingGlass,
-	faUser,
-	faUsers,
-} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faMagnifyingGlass, faUser, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
@@ -18,15 +14,15 @@ import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
+import { PageTitle } from '../../components/PageTitle';
 import { TabInput } from '../../components/TabInput';
 import { useColours } from '../../hooks/useColours';
 import { useDebounce } from '../../hooks/useDebounce';
-
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-	Friends = 'friends',
-	Groups = 'groups',
+  Friends = 'friends',
+  Groups = 'groups',
 }
 
 export default function Social() {
@@ -66,6 +62,8 @@ export default function Social() {
 
 	return (
 		<Container>
+			<PageTitle title={'Friends & Groups'} refetch={refetch} />
+
 			<Input
 				placeholder={'Find friends & groups'}
 				value={search}

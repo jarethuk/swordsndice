@@ -10,7 +10,7 @@ import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { clsx } from 'clsx';
 import { router, Tabs } from 'expo-router';
 import type { ReactElement } from 'react';
-import { Pressable, View } from 'react-native';
+import { Platform, Pressable, View } from 'react-native';
 import Header from '../../components/Header';
 import { useColours } from '../../hooks/useColours';
 
@@ -33,12 +33,16 @@ function getIcon(route: string, colour: string): ReactElement {
 
 function TabsBar(props: BottomTabBarProps) {
   const colours = useColours();
+  const isWeb = Platform.OS === 'web';
 
   return (
     <View
-      className={
-        'border-border-light dark:border-border-dark bg-bottom-bar-light dark:bg-bottom-bar-dark relative flex flex-row items-center justify-center gap-8 border-t-2 pb-4'
-      }>
+      className={clsx(
+        'border-border-light dark:border-border-dark bg-bottom-bar-light dark:bg-bottom-bar-dark relative flex flex-row items-center justify-center gap-8 border-t-2',
+        {
+          'pb-4': !isWeb,
+        }
+      )}>
       {props.state.routes
         .filter((x) => tabRoutes.includes(x.name ?? ''))
         .map((route, i) => {

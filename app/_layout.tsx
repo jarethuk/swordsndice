@@ -1,6 +1,6 @@
-import { router, Stack, useFocusEffect, usePathname } from 'expo-router';
+import { Stack, usePathname } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useCallback, useEffect } from 'react';
+import { useEffect } from 'react';
 import '../global.css';
 import {
   Nunito_500Medium,
@@ -74,17 +74,6 @@ const Layout = () => {
       setUser(apiUser);
     }
   }, [apiUser, userLoading, setUser, user]);
-
-  const checkForStuckModalRoute = useCallback(() => {
-    if (pathname.startsWith('/modals')) {
-      console.log('Modal route detected, redirecting to root...');
-      router.replace('/');
-    }
-  }, [pathname]);
-
-  useFocusEffect(() => {
-    checkForStuckModalRoute();
-  });
 
   if (userLoading) {
     return (
@@ -208,6 +197,20 @@ const Layout = () => {
 
       <Stack.Screen
         name="modals/invite-to-group"
+        options={{
+          presentation,
+        }}
+      />
+
+      <Stack.Screen
+        name="modals/notification-game-invite"
+        options={{
+          presentation,
+        }}
+      />
+
+      <Stack.Screen
+        name="modals/notification-group-invite"
         options={{
           presentation,
         }}

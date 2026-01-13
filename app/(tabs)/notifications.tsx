@@ -1,21 +1,14 @@
 import { faFaceThinking, faSword, faUsers } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { useQueryClient } from '@tanstack/react-query';
 import dayjs from 'dayjs';
-import { router } from 'expo-router';
-import { useCallback, useMemo, useState } from 'react';
+import { router, useFocusEffect } from 'expo-router';
+import { useCallback, useMemo } from 'react';
 import { View } from 'react-native';
-import { useAPIAcceptGameInvite } from '../../api/games/useAPIAcceptGameInvite';
-import { useAPIDeclineGame } from '../../api/games/useAPIDeclineGame';
 import { useAPIGameInvites } from '../../api/games/useAPIGameInvites';
-import { useAPIDeclineGroupInvite } from '../../api/groups/useAPIDeclineGroupInvite';
 import { useAPIGroupInvites } from '../../api/groups/useAPIGroupInvites';
-import { useAPIJoinGroup } from '../../api/groups/useAPIJoinGroup';
 import { Content } from '../../components';
-import { Button } from '../../components/Button';
 import ListRow from '../../components/ListRow';
 import { Page } from '../../components/Page';
-import { Popup } from '../../components/Popup';
 import { useColours } from '../../hooks/useColours';
 import type { GameInviteResponse } from '../../types/api/responses/GameInviteResponse';
 import type { UserGroupInvite } from '../../types/api/responses/UserGroupInvite';
@@ -33,145 +26,51 @@ interface DateGroup {
 
 interface GameInviteProps {
   game: GameInviteResponse;
-  refresh: () => Promise<void>;
 }
 
 interface GroupInviteProps {
   group: UserGroupInvite;
-  refresh: () => Promise<void>;
 }
 
-const GameInviteRow = ({ game, refresh }: GameInviteProps) => {
-  const [selected, setSelected] = useState(false);
-  const client = useQueryClient();
-
-  const { mutateAsync: apiAccept } = useAPIAcceptGameInvite();
-  const { mutateAsync: apIDecline } = useAPIDeclineGame();
-
-  const accept = useCallback(async () => {
-    setSelected(false);
-
-    await apiAccept(game.id);
-
-    await client.invalidateQueries({
-      queryKey: ['games'],
-    });
-
-    void refresh();
-
-    router.push({ pathname: '/(tabs)/game', params: { id: game.id } });
-  }, [apiAccept, client, game.id, refresh]);
-
-  const decline = useCallback(async () => {
-    setSelected(false);
-    await apIDecline(game.id);
-    await refresh();
-  }, [apIDecline, game.id, refresh]);
-
+const GameInviteRow = ({ game }: GameInviteProps) => {
   return (
-    <>
-      <ListRow
-        title={`Game invite from ${game.invitedBy.username}`}
-        subtitle={`${game.game} (${game.points}pts)`}
-        placeHolderIcon={faSword}
-        onPress={() => setSelected(true)}
-      />
-
-      {selected && (
-        <Popup onDismiss={() => setSelected(false)}>
-          <View className={'flex flex-col gap-8'}>
-            <View className={'flex flex-col gap-4'}>
-              <Content size={'sm'} type={'title'} center>
-                Accept game invite from {game.invitedBy.username}?
-              </Content>
-
-              <Content size={'sm'} type={'subtitle'} center>
-                {game.game} ({game.points}pts)
-              </Content>
-            </View>
-
-            <View className={'flex flex-col gap-4'}>
-              <Button content={'Accept'} onPress={accept} variant={'primary'} />
-              <Button content={'Decline'} onPress={decline} variant={'outline'} />
-            </View>
-          </View>
-        </Popup>
-      )}
-    </>
+    <ListRow
+      title={`Game invite from ${game.invitedBy.username}`}
+      subtitle={`${game.game} (${game.points}pts)`}
+      placeHolderIcon={faSword}
+      onPress={() =>
+        router.push({
+          pathname: '/modals/notification-game-invite',
+          params: { id: game.id },
+        })
+      }
+    />
   );
 };
 
-const GroupInviteRow = ({ group, refresh }: GroupInviteProps) => {
-  const [selected, setSelected] = useState(false);
-  const client = useQueryClient();
-
-  const { mutateAsync: apiAccept } = useAPIJoinGroup(group.id);
-  const { mutateAsync: apIDecline } = useAPIDeclineGroupInvite(group.id);
-
-  const accept = useCallback(async () => {
-    setSelected(false);
-
-    await apiAccept();
-
-    await client.invalidateQueries({
-      queryKey: ['groups'],
-    });
-
-    void refresh();
-
-    router.push({ pathname: '/(tabs)/group', params: { id: group.id } });
-  }, [apiAccept, client, group.id, refresh]);
-
-  const decline = useCallback(async () => {
-    setSelected(false);
-    await apIDecline();
-    await refresh();
-  }, [apIDecline, refresh]);
-
+const GroupInviteRow = ({ group }: GroupInviteProps) => {
   return (
-    <>
-      <ListRow
-        title={`Invite to join group ${group.name} by ${group.createdBy.username}`}
-        placeHolderIcon={faUsers}
-        image={group.image}
-        onPress={() => setSelected(true)}
-      />
-
-      {selected && (
-        <Popup onDismiss={() => setSelected(false)}>
-          <View className={'flex flex-col gap-8'}>
-            <View className={'flex flex-col gap-4'}>
-              <Content size={'sm'} type={'title'} center>
-                Accept invite to {group.name}?
-              </Content>
-            </View>
-
-            <View className={'flex flex-col gap-4'}>
-              <Button content={'Accept'} onPress={accept} variant={'primary'} />
-              <Button content={'Decline'} onPress={decline} variant={'outline'} />
-            </View>
-          </View>
-        </Popup>
-      )}
-    </>
+    <ListRow
+      title={`Invite to join group ${group.name} by ${group.createdBy.username}`}
+      placeHolderIcon={faUsers}
+      image={group.image}
+      onPress={() =>
+        router.push({
+          pathname: '/modals/notification-group-invite',
+          params: { id: group.id },
+        })
+      }
+    />
   );
 };
 
 const getItemRender = (item: NotificationItem, refresh: () => Promise<void>) => {
   switch (item.type) {
     case 'game-invite':
-      return (
-        <GameInviteRow
-          game={item.data as GameInviteResponse}
-          key={item.data.id}
-          refresh={refresh}
-        />
-      );
+      return <GameInviteRow game={item.data as GameInviteResponse} key={item.data.id} />;
 
     case 'group-invite':
-      return (
-        <GroupInviteRow group={item.data as UserGroupInvite} key={item.data.id} refresh={refresh} />
-      );
+      return <GroupInviteRow group={item.data as UserGroupInvite} key={item.data.id} />;
   }
 };
 
@@ -194,6 +93,8 @@ export default function Notifications() {
   const refresh = useCallback(async () => {
     await Promise.all([gameInvitesRefetch(), groupInvitesRefetch()]);
   }, [gameInvitesRefetch, groupInvitesRefetch]);
+
+  useFocusEffect(() => refresh);
 
   const items: NotificationItem[] = useMemo(() => {
     if (!gameInvites || !groupInvites) return [];
@@ -235,17 +136,11 @@ export default function Notifications() {
   }, [items]);
 
   return (
-    <Page isLoading={isLoading} refetch={refresh}>
-      <View className={'flex gap-4'}>
-        <Content size={'md'} type={'title'} center>
-          Notifications
-        </Content>
-
-        <Content size={'md'} type={'body'} center>
-          Game &amp; group invites will appear here as well as any other notifications.
-        </Content>
-      </View>
-
+    <Page
+      isLoading={isLoading}
+      refetch={refresh}
+      title={'Notifications'}
+      subtitle={'Game & group invites will appear here as well as any other notifications.'}>
       {groups.map(({ date, items }) => (
         <View key={date} className={'flex flex-col gap-6'}>
           <Content size={'md'} type={'subtitle'}>

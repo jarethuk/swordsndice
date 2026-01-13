@@ -1,13 +1,13 @@
 import { useQueryClient } from '@tanstack/react-query';
 import { useColorScheme } from 'nativewind';
 import { useCallback, useState } from 'react';
-import { Animated, View } from 'react-native';
+import { View } from 'react-native';
 import { useAPILogout } from '../../api/auth/useAPILogout';
 import { Content } from '../../components';
 import { Button } from '../../components/Button';
+import { Page } from '../../components/Page';
 import Toggle from '../../components/Toggle';
 import { useUserActions } from '../../states/useUserStore';
-import { Page } from '../../components/Page';
 
 export default function Settings() {
   const { setColorScheme, colorScheme } = useColorScheme();
@@ -30,11 +30,7 @@ export default function Settings() {
   }, [client]);
 
   return (
-    <Page>
-      <Content size={'md'} type={'title'} center>
-        Settings
-      </Content>
-
+    <Page title={'Settings'}>
       <View className={'flex flex-row items-center'}>
         <Content size={'md'} type={'subtitle'}>
           Light mode
