@@ -1,16 +1,16 @@
-import { faMagnifyingGlass, faSword, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faMagnifyingGlass, faSword } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { Animated } from 'react-native';
 import { useAPIUpdateGameList } from '../../api/games/useAPIUpdateGameList';
 import { useAPILists } from '../../api/list/useAPILists';
-import { Content } from '../../components';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { useColours } from '../../hooks/useColours';
 import type { ListBody } from '../../types/api/ListBody';
-import ScrollView = Animated.ScrollView;
+
+import { Dialog } from '../../components/Dialog';
 
 export default function SetGameList() {
   const { id } = useLocalSearchParams();
@@ -41,11 +41,7 @@ export default function SetGameList() {
   }, [search, data]);
 
   return (
-    <ScrollView contentContainerClassName={'flex flex-col gap-6 p-6'}>
-      <Content size={'sm'} type={'title'} center>
-        Select List
-      </Content>
-
+    <Dialog title={'Select List'}>
       <Input
         placeholder={'Search'}
         value={search}
@@ -65,6 +61,6 @@ export default function SetGameList() {
           placeHolderIcon={faSword}
         />
       ))}
-    </ScrollView>
+    </Dialog>
   );
 }

@@ -62,6 +62,7 @@ export const CodeEnterInput: React.FC<Props> = ({ length, onComplete }) => {
           onChangeText={(text) => handleChange(text, index)}
           onKeyPress={(e) => handleKeyPress(e, index)}
           selectTextOnFocus
+          textContentType={'oneTimeCode'}
         />
       ))}
     </View>

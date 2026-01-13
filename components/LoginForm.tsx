@@ -55,7 +55,7 @@ export const LoginForm = () => {
   );
 
   return (
-    <View className={'bg-background-dark flex gap-6 p-6'}>
+    <View className={'flex gap-6 p-6'}>
       <View className={'mt-12 flex items-center gap-6'}>
         <Image
           source={require('../assets/logo.png')}
@@ -68,14 +68,21 @@ export const LoginForm = () => {
       </View>
 
       {emailSent ? (
-        <View className={'flex flex-col gap-6'}>
+        <View className={'flex flex-col gap-12'}>
           <Content type={'subtitle'} size={'md'} center themeOverride={'dark'}>
-            Enter the code sent to your email address
+            Enter the code sent to {email}
           </Content>
 
           <CodeEnterInput onComplete={(code) => login(code)} length={6} />
 
           <ErrorMessage error={error} />
+
+          <Button
+            content={'Back'}
+            onPress={() => setEmailSent(false)}
+            variant={'outline'}
+            themeOverride={'dark'}
+          />
         </View>
       ) : (
         <View className={'flex gap-8'}>
@@ -87,9 +94,10 @@ export const LoginForm = () => {
             <Input
               value={email}
               onChange={setEmail}
-              type={'text'}
+              type={'email'}
               label={'Email'}
               themeOverride={'dark'}
+              textContentType={'emailAddress'}
             />
 
             <ErrorMessage error={error} />

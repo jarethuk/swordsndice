@@ -7,7 +7,7 @@ import { Content } from '../../components';
 import { Button } from '../../components/Button';
 import Toggle from '../../components/Toggle';
 import { useUserActions } from '../../states/useUserStore';
-import ScrollView = Animated.ScrollView;
+import { Page } from '../../components/Page';
 
 export default function Settings() {
   const { setColorScheme, colorScheme } = useColorScheme();
@@ -30,7 +30,7 @@ export default function Settings() {
   }, [client]);
 
   return (
-    <ScrollView contentContainerClassName={'flex flex-col gap-6'}>
+    <Page>
       <Content size={'md'} type={'title'} center>
         Settings
       </Content>
@@ -52,6 +52,6 @@ export default function Settings() {
       <Button content={'Clear Cache'} onPress={clearCache} loading={isClearingCache} />
 
       <Button content={'Logout'} onPress={logout} loading={isLoggingOut} />
-    </ScrollView>
+    </Page>
   );
 }

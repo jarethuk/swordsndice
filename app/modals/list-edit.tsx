@@ -6,7 +6,8 @@ import { Content } from '../../components';
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
 import { useList, useListActions } from '../../states/useListStore';
-import ScrollView = Animated.ScrollView;
+
+import { Dialog } from '../../components/Dialog';
 
 export default function EditListPopup() {
   const list = useList();
@@ -40,9 +41,7 @@ export default function EditListPopup() {
   }, [apiDeleteList, list?.id]);
 
   return (
-    <ScrollView
-      contentContainerClassName={'flex h-full flex-col gap-6 p-6'}
-      keyboardDismissMode={'interactive'}>
+    <Dialog title={'Edit List'}>
       <Content size={'sm'} type={'title'} center>
         Edit List
       </Content>
@@ -62,6 +61,6 @@ export default function EditListPopup() {
       </View>
 
       <Button content={'Save'} disabled={!isValid} loading={isSaving} onPress={saveList} />
-    </ScrollView>
+    </Dialog>
   );
 }

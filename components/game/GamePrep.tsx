@@ -118,9 +118,7 @@ export function GamePrep({ game, id, refresh }: Props) {
                 </View>
               }
               placeHolderIcon={faUser}
-              onPress={() =>
-                member.user?.username === user?.username ? setList() : console.log('not your game')
-              }
+              onPress={() => (member.user?.username === user?.username ? setList() : undefined)}
             />
           ))}
 

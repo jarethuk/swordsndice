@@ -1,16 +1,16 @@
-import { faMagnifyingGlass, faUser, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faMagnifyingGlass, faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Animated, View } from 'react-native';
+import { View } from 'react-native';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIGame } from '../../api/games/useAPIGame';
 import { useAPIInviteToGame } from '../../api/games/useAPIInviteToGame';
 import { Content } from '../../components';
+import { Dialog } from '../../components/Dialog';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { useColours } from '../../hooks/useColours';
-import ScrollView = Animated.ScrollView;
 
 export default function InviteToGame() {
   const { id } = useLocalSearchParams();
@@ -50,11 +50,7 @@ export default function InviteToGame() {
   );
 
   return (
-    <ScrollView contentContainerClassName={'flex flex-col gap-6 p-6'}>
-      <Content size={'sm'} type={'title'} center>
-        Select Friend
-      </Content>
-
+    <Dialog title={'Select Friend'}>
       <Input
         placeholder={'Search'}
         value={search}
@@ -80,6 +76,6 @@ export default function InviteToGame() {
           </Content>
         </View>
       )}
-    </ScrollView>
+    </Dialog>
   );
 }

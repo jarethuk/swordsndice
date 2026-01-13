@@ -1,13 +1,12 @@
 import { router } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Animated, View } from 'react-native';
+import { View } from 'react-native';
 import { useAPICreateGroup } from '../../api/groups/useAPICreateGroup';
 import { Content } from '../../components';
 import { Button } from '../../components/Button';
+import { Dialog } from '../../components/Dialog';
 import { Input } from '../../components/Input';
-
 import Toggle from '../../components/Toggle';
-import ScrollView = Animated.ScrollView;
 
 export default function CreateGroupPopup() {
   const [name, setName] = useState('');
@@ -41,15 +40,7 @@ export default function CreateGroupPopup() {
   }, [description, isPublic, isValid, membersCanInvite, mutateAsync, name]);
 
   return (
-    <ScrollView
-      contentContainerClassName={'flex flex-col gap-6 p-6 h-full'}
-      keyboardShouldPersistTaps={'handled'}
-      showsVerticalScrollIndicator={false}
-      contentInsetAdjustmentBehavior={'automatic'}>
-      <Content size={'sm'} type={'title'} center>
-        Create Group
-      </Content>
-
+    <Dialog title={'Create Group'}>
       <Input placeholder={'Name'} value={name} onChange={setName} type={'text'} label={'Name'} />
 
       <Input
@@ -90,6 +81,6 @@ export default function CreateGroupPopup() {
       </Content>
 
       <Button content={'Save'} disabled={!isValid} loading={isPending} onPress={save} />
-    </ScrollView>
+    </Dialog>
   );
 }

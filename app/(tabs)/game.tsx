@@ -2,17 +2,17 @@ import { faExclamationTriangle } from '@awesome.me/kit-34e2017de2/icons/duotone/
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { useFocusEffect, useLocalSearchParams } from 'expo-router';
 import React, { useCallback, useEffect } from 'react';
-import { Animated, RefreshControl, View } from 'react-native';
+import { View } from 'react-native';
 import { useAPIGame } from '../../api/games/useAPIGame';
 import { Content } from '../../components';
 import { GamePlay } from '../../components/game/GamePlay';
 import { GamePrep } from '../../components/game/GamePrep';
 import { LoadingScreen } from '../../components/LoadingScreen';
+import { Page } from '../../components/Page';
 import { useColours } from '../../hooks/useColours';
 import { useGame, useGameActions } from '../../states/useGameStore';
-import ScrollView = Animated.ScrollView;
 
-export default function GamePage() {
+export function GamePage() {
   const colours = useColours();
   const { id } = useLocalSearchParams();
   const game = useGame();
@@ -59,19 +59,12 @@ export default function GamePage() {
   }
 
   return (
-    <ScrollView
-      contentContainerClassName={'flex gap-6 pb-12'}
-      keyboardShouldPersistTaps={'handled'}
-      showsVerticalScrollIndicator={false}
-      contentInsetAdjustmentBehavior={'automatic'}
-      refreshControl={
-        <RefreshControl refreshing={isLoading} onRefresh={refetch} colors={[colours.primary]} />
-      }>
+    <Page isLoading={isLoading} refetch={refetch}>
       {!game.isStarted && <GamePrep game={game} id={id as string} refresh={refetch} />}
 
       {game.isStarted && !game.isComplete && (
         <GamePlay game={game} id={id as string} refresh={refetch} />
       )}
-    </ScrollView>
+    </Page>
   );
 }

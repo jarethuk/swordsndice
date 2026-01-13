@@ -1,46 +1,43 @@
-import {router, useLocalSearchParams} from 'expo-router';
-import {useCallback} from 'react';
-import {View} from 'react-native';
-import {Content} from '../../components';
-import {NextWindowButton} from '../../components/NextWindowButton';
-import {useNewGameActions} from '../../states/useNewGameStore';
-import {useNewListActions} from '../../states/useNewListStore';
-import {type Games, GamesList, SelectGameDialogMode} from '../../types';
+import { faSword } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { router, useLocalSearchParams } from 'expo-router';
+import { useCallback } from 'react';
+import { Dialog } from '../../components/Dialog';
+import ListRow from '../../components/ListRow';
+import { useNewGameActions } from '../../states/useNewGameStore';
+import { useNewListActions } from '../../states/useNewListStore';
+import { type Games, GamesList, SelectGameDialogMode } from '../../types';
 
 export default function SelectGame() {
-	const { mode } = useLocalSearchParams();
-	const { setGame: setNewListGame } = useNewListActions();
-	const { setGame: setNewGameGame } = useNewGameActions();
+  const { mode } = useLocalSearchParams();
+  const { setGame: setNewListGame } = useNewListActions();
+  const { setGame: setNewGameGame } = useNewGameActions();
 
-	const onSelect = useCallback(
-		(game: Games) => {
-			switch (mode) {
-				case SelectGameDialogMode.CreateGame:
-					setNewGameGame(game);
-					break;
-				case SelectGameDialogMode.CreateList:
-					setNewListGame(game);
-					break;
-			}
+  const onSelect = useCallback(
+    (game: Games) => {
+      switch (mode) {
+        case SelectGameDialogMode.CreateGame:
+          setNewGameGame(game);
+          break;
+        case SelectGameDialogMode.CreateList:
+          setNewListGame(game);
+          break;
+      }
 
-			router.dismiss();
-		},
-		[mode],
-	);
+      router.dismiss();
+    },
+    [mode, setNewGameGame, setNewListGame]
+  );
 
-	return (
-		<View className={'flex flex-col gap-6 p-6'}>
-			<Content size={'sm'} type={'title'} center>
-				Select Game
-			</Content>
-
-			{GamesList.map(({ title, value }) => (
-				<NextWindowButton
-					key={value}
-					label={title}
-					onPress={() => onSelect(value)}
-				/>
-			))}
-		</View>
-	);
+  return (
+    <Dialog title={'Select Game'}>
+      {GamesList.map(({ title, value }) => (
+        <ListRow
+          key={value}
+          title={title}
+          onPress={() => onSelect(value)}
+          placeHolderIcon={faSword}
+        />
+      ))}
+    </Dialog>
+  );
 }

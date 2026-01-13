@@ -1,16 +1,22 @@
-import { faFaceThinking, faMagnifyingGlass, faPlus, faSword, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import {
+  faFaceThinking,
+  faMagnifyingGlass,
+  faPlus,
+  faSword,
+} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { Animated, Pressable, RefreshControl, View } from 'react-native';
+import { Pressable, View } from 'react-native';
 import { useAPILists } from '../../api/list/useAPILists';
 import { Content } from '../../components';
+import { Container } from '../../components/Container';
 import GamesDropdown from '../../components/GamesDropdown';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { LoadingScreen } from '../../components/LoadingScreen';
+import { Page } from '../../components/Page';
 import { useColours } from '../../hooks/useColours';
-import ScrollView = Animated.ScrollView;
 
 export default function Lists() {
   const [game, setGame] = useState<string>('');
@@ -35,7 +41,7 @@ export default function Lists() {
   }
 
   return (
-    <View className={'flex h-full flex-col gap-4'}>
+    <Container>
       <Input
         placeholder={'Find list'}
         value={search}
@@ -44,13 +50,7 @@ export default function Lists() {
         iconStart={<FontAwesomeIcon icon={faMagnifyingGlass} size={16} color={colours.primary} />}
       />
 
-      <ScrollView
-        className={'w-full shrink pt-2'}
-        refreshControl={
-          <RefreshControl refreshing={isLoading} onRefresh={refetch} colors={[colours.primary]} />
-        }
-        showsVerticalScrollIndicator={false}
-        contentContainerClassName={'pb-12 flex gap-6'}>
+      <Page isLoading={isLoading} refetch={refetch}>
         <View className={'flex w-full flex-row'}>
           <GamesDropdown selected={game} onChange={setGame} />
 
@@ -95,7 +95,7 @@ export default function Lists() {
             ))}
           </View>
         )}
-      </ScrollView>
-    </View>
+      </Page>
+    </Container>
   );
 }

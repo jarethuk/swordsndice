@@ -8,7 +8,7 @@ interface Props {
   value: string;
   onChange: (value: string) => void;
   label?: string;
-  type: 'text' | 'numeric' | 'search' | 'decimal';
+  type: 'text' | 'numeric' | 'search' | 'decimal' | 'email';
   iconStart?: ReactElement;
   iconEnd?: ReactElement;
   isBottomSheet?: boolean;
@@ -19,6 +19,7 @@ interface Props {
   multiline?: boolean;
   themeOverride?: 'light' | 'dark';
   onBlur?: () => void;
+  textContentType?: 'none' | 'emailAddress' | 'oneTimeCode';
 }
 
 export const Input = ({
@@ -36,6 +37,7 @@ export const Input = ({
   multiline,
   themeOverride,
   onBlur,
+  textContentType,
 }: Props) => {
   const [hasFocus, setHasFocus] = useState(false);
   const moveLabel = hasFocus || !!value;
@@ -59,6 +61,7 @@ export const Input = ({
     value: value,
     onChangeText: onChange,
     inputMode: type,
+    textContentType,
     onFocus: () => setHasFocus(true),
     onBlur: () => {
       setHasFocus(false);

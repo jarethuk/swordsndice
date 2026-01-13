@@ -2,7 +2,7 @@ import { faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { useQueryClient } from '@tanstack/react-query';
 import { useLocalSearchParams } from 'expo-router';
 import { useCallback } from 'react';
-import { Animated, RefreshControl } from 'react-native';
+import { Animated } from 'react-native';
 import { useAPIAddFriend } from '../../api/friends/useAPIAddFriend';
 import { useAPIRemoveFriend } from '../../api/friends/useAPIRemoveFriend';
 import { useAPIGetUser } from '../../api/user/useAPIGetUser';
@@ -12,7 +12,8 @@ import { LoadingScreen } from '../../components/LoadingScreen';
 import { PageTitleWithImage } from '../../components/PageTitleWithImage';
 
 import { useColours } from '../../hooks/useColours';
-import ScrollView = Animated.ScrollView;
+
+import { Page } from '../../components/Page';
 
 export default function FriendPage() {
   const colours = useColours();
@@ -56,11 +57,7 @@ export default function FriendPage() {
   }
 
   return (
-    <ScrollView
-      contentContainerClassName={'flex flex-col gap-6'}
-      refreshControl={
-        <RefreshControl refreshing={isLoading} onRefresh={refetch} colors={[colours.primary]} />
-      }>
+    <Page isLoading={isLoading} refetch={refetch}>
       <PageTitleWithImage
         title={data.username}
         placeholderIcon={faUser}
@@ -73,6 +70,6 @@ export default function FriendPage() {
       ) : (
         <Button content={'Add Friend'} onPress={addFriend} />
       )}
-    </ScrollView>
+    </Page>
   );
 }

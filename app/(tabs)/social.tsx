@@ -1,4 +1,8 @@
-import { faMagnifyingGlass, faUser, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import {
+	faMagnifyingGlass,
+	faUser,
+	faUsers,
+} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
@@ -9,17 +13,20 @@ import { useAPIFindGroup } from '../../api/groups/useAPIFindGroup';
 import { useAPIGroups } from '../../api/groups/useAPIGroups';
 import { Content } from '../../components';
 import { Button } from '../../components/Button';
+import { Container } from '../../components/Container';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { LoadingScreen } from '../../components/LoadingScreen';
+import { Page } from '../../components/Page';
 import { TabInput } from '../../components/TabInput';
 import { useColours } from '../../hooks/useColours';
 import { useDebounce } from '../../hooks/useDebounce';
+
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-  Friends = 'friends',
-  Groups = 'groups',
+	Friends = 'friends',
+	Groups = 'groups',
 }
 
 export default function Social() {
@@ -58,7 +65,7 @@ export default function Social() {
 	}
 
 	return (
-		<View className={'flex h-full flex-col gap-6'}>
+		<Container>
 			<Input
 				placeholder={'Find friends & groups'}
 				value={search}
@@ -164,18 +171,7 @@ export default function Social() {
 					</ScrollView>
 				</>
 			) : (
-				<ScrollView
-					className={'w-full shrink pt-2'}
-					refreshControl={
-						<RefreshControl
-							refreshing={isLoading}
-							onRefresh={refetch}
-							colors={[colours.primary]}
-						/>
-					}
-					showsVerticalScrollIndicator={false}
-					contentContainerClassName={'pb-12 flex gap-12 h-full'}
-				>
+				<Page isLoading={isLoading} refetch={refetch}>
 					{!searchFriends && !searchGroups && (
 						<View className={'flex h-full items-center justify-center'}>
 							<Content size={'md'} type={'body'} center>
@@ -225,8 +221,8 @@ export default function Social() {
 							))}
 						</View>
 					)}
-				</ScrollView>
+				</Page>
 			)}
-		</View>
+		</Container>
 	);
 }

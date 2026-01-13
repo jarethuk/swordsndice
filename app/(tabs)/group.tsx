@@ -1,7 +1,7 @@
-import { faUser, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faUser, faUsers } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Animated, RefreshControl, View } from 'react-native';
+import { Animated, View } from 'react-native';
 import { useAPICancelGroupInvite } from '../../api/groups/useAPICancelGroupInvite';
 import { useAPIGroup } from '../../api/groups/useAPIGroup';
 import { useAPIRemoveMemberFromGroup } from '../../api/groups/useAPIRemoveMemberFromGroup';
@@ -16,7 +16,8 @@ import { useColours } from '../../hooks/useColours';
 import { useUser } from '../../states/useUserStore';
 import type { UpdateGroupMemberRequest } from '../../types/api/requests/UpdateGroupMemberRequest';
 import type { GroupResponseMember } from '../../types/api/responses/GroupResponse';
-import ScrollView = Animated.ScrollView;
+
+import { Page } from '../../components/Page';
 
 export default function GroupPage() {
   const colours = useColours();
@@ -84,11 +85,7 @@ export default function GroupPage() {
   }
 
   return (
-    <ScrollView
-      contentContainerClassName={'flex flex-col gap-6'}
-      refreshControl={
-        <RefreshControl refreshing={isLoading} onRefresh={refetch} colors={[colours.primary]} />
-      }>
+    <Page isLoading={isLoading} refetch={refetch}>
       <PageTitleWithImage
         title={data.name}
         image={data.image}
@@ -232,6 +229,6 @@ export default function GroupPage() {
           </View>
         </Popup>
       )}
-    </ScrollView>
+    </Page>
   );
 }

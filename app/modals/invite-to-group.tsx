@@ -1,4 +1,4 @@
-import { faMagnifyingGlass, faUser, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faMagnifyingGlass, faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
@@ -10,7 +10,8 @@ import { Content } from '../../components';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { useColours } from '../../hooks/useColours';
-import ScrollView = Animated.ScrollView;
+
+import { Dialog } from '../../components/Dialog';
 
 export default function InviteToGroup() {
   const { id } = useLocalSearchParams();
@@ -50,11 +51,7 @@ export default function InviteToGroup() {
   );
 
   return (
-    <ScrollView contentContainerClassName={'flex flex-col gap-6 p-6'}>
-      <Content size={'sm'} type={'title'} center>
-        Select Friend
-      </Content>
-
+    <Dialog title={'Select Friend'}>
       <Input
         placeholder={'Search'}
         value={search}
@@ -80,6 +77,6 @@ export default function InviteToGroup() {
           </Content>
         </View>
       )}
-    </ScrollView>
+    </Dialog>
   );
 }

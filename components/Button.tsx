@@ -66,11 +66,24 @@ export const Button = ({ content, variant, onPress, loading, disabled, themeOver
       case 'negative':
         return `bg-negative-light dark:bg-negative-dark`;
       case 'outline':
+        return '';
       case 'light':
         return `bg-background-light dark:bg-background-dark`;
       default:
         return `bg-primary-light dark:bg-primary-dark`;
     }
+  }, [themeOverride, variant]);
+
+  const textColour = useMemo(() => {
+    if (variant === 'outline' && themeOverride === 'dark') {
+      return 'white';
+    }
+
+    if (variant === 'outline' || variant === 'light') {
+      return undefined;
+    }
+
+    return 'white';
   }, [themeOverride, variant]);
 
   return (
@@ -94,11 +107,7 @@ export const Button = ({ content, variant, onPress, loading, disabled, themeOver
         {loading ? (
           <Loading size={23} white />
         ) : typeof content === 'string' ? (
-          <Content
-            type={'cta'}
-            size={'lg'}
-            variant={variant === 'outline' || variant === 'light' ? undefined : 'white'}
-            themeOverride={themeOverride}>
+          <Content type={'cta'} size={'lg'} variant={textColour} themeOverride={themeOverride}>
             {content}
           </Content>
         ) : (

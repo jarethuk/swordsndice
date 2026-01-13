@@ -1,16 +1,14 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Animated, View } from 'react-native';
-import { Content } from '../../components';
-import { Button } from '../../components/Button';
-import { Input } from '../../components/Input';
-
-import Toggle from '../../components/Toggle';
-
+import { View } from 'react-native';
 import { useAPIGroup } from '../../api/groups/useAPIGroup';
 import { useAPIUpdateGroup } from '../../api/groups/useAPIUpdateGroup';
+import { Content } from '../../components';
+import { Button } from '../../components/Button';
+import { Dialog } from '../../components/Dialog';
+import { Input } from '../../components/Input';
 import { LoadingScreen } from '../../components/LoadingScreen';
-import ScrollView = Animated.ScrollView;
+import Toggle from '../../components/Toggle';
 
 export default function EditGroupPopup() {
   const { id } = useLocalSearchParams();
@@ -60,15 +58,7 @@ export default function EditGroupPopup() {
   if (isLoading) return <LoadingScreen message={'Loading group...'} />;
 
   return (
-    <ScrollView
-      contentContainerClassName={'flex flex-col gap-6 p-6 h-full'}
-      keyboardShouldPersistTaps={'handled'}
-      showsVerticalScrollIndicator={false}
-      contentInsetAdjustmentBehavior={'automatic'}>
-      <Content size={'sm'} type={'title'} center>
-        Update Group
-      </Content>
-
+    <Dialog title={'Update Group'}>
       <Input placeholder={'Name'} value={name} onChange={setName} type={'text'} label={'Name'} />
 
       <Input
@@ -109,6 +99,6 @@ export default function EditGroupPopup() {
       </Content>
 
       <Button content={'Save'} disabled={!isValid} loading={isPending} onPress={save} />
-    </ScrollView>
+    </Dialog>
   );
 }
