@@ -1,11 +1,10 @@
 import { faChevronDown } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { clsx } from 'clsx';
 import React, { type ReactElement, useState } from 'react';
 import { Pressable, View } from 'react-native';
-import { useColours } from '../hooks/useColours';
 import { Container } from './Container';
 import { Content } from './Content';
+import { FAIcon } from './FAIcon';
 import { Popup } from './Popup';
 import { PopupRow } from './PopupRow';
 
@@ -26,7 +25,6 @@ interface Props {
 
 export const DropDown = ({ onChange, selected, options, className, icon, title }: Props) => {
   const [isSelecting, setIsSelecting] = useState(false);
-  const colours = useColours();
 
   return (
     <View className={clsx('relative', className)}>
@@ -40,7 +38,7 @@ export const DropDown = ({ onChange, selected, options, className, icon, title }
           </Content>
         </View>
 
-        <FontAwesomeIcon icon={faChevronDown} size={16} color={colours.text} />
+        <FAIcon icon={faChevronDown} />
       </Pressable>
 
       {isSelecting && (

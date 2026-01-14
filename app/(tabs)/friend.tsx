@@ -9,10 +9,8 @@ import { Button } from '../../components/Button';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
 import { PageTitleWithImage } from '../../components/PageTitleWithImage';
-import { useColours } from '../../hooks/useColours';
 
 export default function FriendPage() {
-  const colours = useColours();
   const { username } = useLocalSearchParams();
   const { data, refetch, isLoading } = useAPIGetUser(username as string);
   const client = useQueryClient();

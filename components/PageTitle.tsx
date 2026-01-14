@@ -1,8 +1,7 @@
 import { faRefresh } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { Pressable, View } from 'react-native';
-import { useColours } from '../hooks/useColours';
 import { Content } from './Content';
+import { FAIcon } from './FAIcon';
 
 interface Props {
   refetch?: () => void;
@@ -11,8 +10,6 @@ interface Props {
 }
 
 export const PageTitle = ({ refetch, title, subtitle }: Props) => {
-  const colours = useColours();
-
   if (!title) return;
 
   return (
@@ -29,7 +26,7 @@ export const PageTitle = ({ refetch, title, subtitle }: Props) => {
         <View className={'w-4'}>
           {refetch && (
             <Pressable onPress={refetch}>
-              <FontAwesomeIcon icon={faRefresh} size={16} color={colours.text} />
+              <FAIcon icon={faRefresh} />
             </Pressable>
           )}
         </View>

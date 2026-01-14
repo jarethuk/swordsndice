@@ -1,5 +1,4 @@
 import { faApple, faGoogle } from '@awesome.me/kit-34e2017de2/icons/classic/brands';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { Image } from 'expo-image';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
@@ -11,6 +10,7 @@ import { CodeEnterInput } from './CodeEnterInput';
 import { Content } from './Content';
 import Divider from './Divider';
 import { ErrorMessage } from './ErrorMessage';
+import { FAIcon } from './FAIcon';
 import { Input } from './Input';
 
 export const LoginForm = () => {
@@ -118,7 +118,7 @@ export const LoginForm = () => {
               themeOverride={'dark'}
               content={
                 <View className={'flex flex-row items-center gap-4'}>
-                  <FontAwesomeIcon icon={faApple} color={'white'} size={24} />
+                  <FAIcon icon={faApple} colour={'white'} size={24} />
 
                   <Content type={'cta'} size={'lg'} themeOverride={'dark'}>
                     Login with Apple
@@ -132,7 +132,7 @@ export const LoginForm = () => {
               themeOverride={'dark'}
               content={
                 <View className={'flex flex-row items-center gap-4'}>
-                  <FontAwesomeIcon icon={faGoogle} color={'white'} size={24} />
+                  <FAIcon icon={faGoogle} colour={'white'} size={24} />
 
                   <Content type={'cta'} size={'lg'} themeOverride={'dark'}>
                     Login with Google

@@ -5,16 +5,15 @@ import {
   faUser,
   faWarning,
 } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router } from 'expo-router';
 import { useCallback, useMemo } from 'react';
 import { Pressable, View } from 'react-native';
 import { useAPIUpdateGame } from '../../api/games/useAPIUpdateGame';
-import { useColours } from '../../hooks/useColours';
 import { useUser } from '../../states/useUserStore';
 import type { GameResponse } from '../../types/api/responses/GameResponse';
 import { Button } from '../Button';
 import { Content } from '../Content';
+import { FAIcon } from '../FAIcon';
 import ListRow from '../ListRow';
 
 interface Props {
@@ -24,7 +23,6 @@ interface Props {
 }
 
 export function GamePrep({ game, id, refresh }: Props) {
-  const colours = useColours();
   const user = useUser();
 
   const { mutateAsync: apiUpdateGame } = useAPIUpdateGame(id as string);
@@ -75,7 +73,7 @@ export function GamePrep({ game, id, refresh }: Props) {
     <View className={'flex grow gap-12'}>
       <View className={'flex flex-row items-center gap-6'}>
         <Pressable onPress={() => router.back()}>
-          <FontAwesomeIcon icon={faChevronLeft} size={20} color={colours.muted} />
+          <FAIcon icon={faChevronLeft} size={20} colour="muted" />
         </Pressable>
 
         <View className={'grow'}>
@@ -85,7 +83,7 @@ export function GamePrep({ game, id, refresh }: Props) {
         </View>
 
         <Pressable onPress={() => router.navigate('/modals/game-edit')}>
-          <FontAwesomeIcon icon={faEdit} size={20} color={colours.muted} />
+          <FAIcon icon={faEdit} size={20} colour="muted" />
         </Pressable>
       </View>
 
@@ -158,7 +156,7 @@ export function GamePrep({ game, id, refresh }: Props) {
             }>
             {isWaitingOnLists && (
               <View className={'flex flex-row items-center gap-2'}>
-                <FontAwesomeIcon icon={faTimes} color={colours.negative} size={16} />
+                <FAIcon icon={faTimes} colour="negative" />
 
                 <Content size={'sm'} type={'body'}>
                   Waiting on list selection
@@ -168,7 +166,7 @@ export function GamePrep({ game, id, refresh }: Props) {
 
             {isWaitingOnInvites && (
               <View className={'flex flex-row items-center gap-2'}>
-                <FontAwesomeIcon icon={faTimes} color={colours.negative} size={16} />
+                <FAIcon icon={faTimes} colour="negative" />
                 <Content size={'sm'} type={'body'}>
                   Waiting on invites
                 </Content>
@@ -177,7 +175,7 @@ export function GamePrep({ game, id, refresh }: Props) {
 
             {anyListAboveGamePoints && (
               <View className={'flex flex-row items-center gap-2'}>
-                <FontAwesomeIcon icon={faWarning} color={colours.warning} size={16} />
+                <FAIcon icon={faWarning} colour="warning" />
                 <Content size={'sm'} type={'body'}>
                   One or more lists exceed the game points limit
                 </Content>

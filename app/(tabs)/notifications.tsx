@@ -1,15 +1,13 @@
 import { faFaceThinking, faSword, faUsers } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import dayjs from 'dayjs';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useMemo } from 'react';
 import { View } from 'react-native';
 import { useAPIGameInvites } from '../../api/games/useAPIGameInvites';
 import { useAPIGroupInvites } from '../../api/groups/useAPIGroupInvites';
-import { Content } from '../../components';
+import { Content, FAIcon } from '../../components';
 import ListRow from '../../components/ListRow';
 import { Page } from '../../components/Page';
-import { useColours } from '../../hooks/useColours';
 import type { GameInviteResponse } from '../../types/api/responses/GameInviteResponse';
 import type { UserGroupInvite } from '../../types/api/responses/UserGroupInvite';
 
@@ -75,7 +73,6 @@ const getItemRender = (item: NotificationItem) => {
 };
 
 export default function Notifications() {
-  const colours = useColours();
   const {
     data: gameInvites,
     refetch: gameInvitesRefetch,
@@ -153,7 +150,7 @@ export default function Notifications() {
 
       {groups.length === 0 && (
         <View className={'flex h-96 items-center justify-center gap-6'}>
-          <FontAwesomeIcon icon={faFaceThinking} color={colours.primary} size={32} />
+          <FAIcon icon={faFaceThinking} colour="primary" size={32} />
           <Content size={'lg'} type={'subtitle'}>
             No notifications yet!
           </Content>

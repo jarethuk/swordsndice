@@ -1,19 +1,16 @@
 import { faMagnifyingGlass, faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIGame } from '../../api/games/useAPIGame';
 import { useAPIInviteToGame } from '../../api/games/useAPIInviteToGame';
-import { Content } from '../../components';
+import { Content, FAIcon } from '../../components';
 import { Dialog } from '../../components/Dialog';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
-import { useColours } from '../../hooks/useColours';
 
 export default function InviteToGame() {
   const { id } = useLocalSearchParams();
-  const colours = useColours();
   const [search, setSearch] = useState('');
   const { data } = useAPIFriends();
   const { data: game } = useAPIGame(id as string);
@@ -55,7 +52,7 @@ export default function InviteToGame() {
         value={search}
         onChange={setSearch}
         type={'search'}
-        iconStart={<FontAwesomeIcon icon={faMagnifyingGlass} size={16} color={colours.primary} />}
+        iconStart={<FAIcon icon={faMagnifyingGlass} colour="primary" />}
       />
 
       {friends.map(({ username, image, id }) => (

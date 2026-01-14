@@ -1,5 +1,4 @@
 import { faChevronRight, faSwords } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import dayjs from 'dayjs';
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
@@ -7,12 +6,12 @@ import { Pressable, View } from 'react-native';
 import { useAPIGames } from '../../api/games/useAPIGames';
 import { Content } from '../../components';
 import { Container } from '../../components/Container';
+import { FAIcon } from '../../components/FAIcon';
 import { ListImage } from '../../components/ListImage';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
 import { PageTitle } from '../../components/PageTitle';
 import { TabInput } from '../../components/TabInput';
-import { useColours } from '../../hooks/useColours';
 import type { GameListResponse } from '../../types/api/responses/GameListResponse';
 
 enum Tabs {
@@ -44,8 +43,6 @@ const getGameTitle = (game: GameListResponse): string => {
 };
 
 const MyGamesTab = ({ data, isLoading, refetch }: MyGamesTabProps) => {
-  const colours = useColours();
-
   const groups: DateGroup[] = useMemo(() => {
     if (!data?.length) return [];
 
@@ -101,7 +98,7 @@ const MyGamesTab = ({ data, isLoading, refetch }: MyGamesTabProps) => {
                 </Content>
               </View>
 
-              <FontAwesomeIcon icon={faChevronRight} size={16} color={colours.text} />
+              <FAIcon icon={faChevronRight} />
             </Pressable>
           ))}
         </View>

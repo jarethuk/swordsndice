@@ -1,13 +1,12 @@
 import { faChevronLeft } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import { Pressable, View } from 'react-native';
-import { useColours } from '../../hooks/useColours';
 import { useUser } from '../../states/useUserStore';
 import type { GameResponse } from '../../types/api/responses/GameResponse';
 import { Content } from '../Content';
 import { DropDown, type DropDownOption } from '../DropDown';
+import { FAIcon } from '../FAIcon';
 import { LoadingScreen } from '../LoadingScreen';
 import { TabInput } from '../TabInput';
 import { GamePlayHeroes } from './GamePlayHeroes';
@@ -25,7 +24,6 @@ const Tabs = {
 };
 
 export function GamePlay({ game, id }: Props) {
-  const colours = useColours();
   const user = useUser();
   const [tab, setTab] = useState<string>('my-list');
   const [otherListMemberId, setOtherListMemberId] = useState<string | undefined>(undefined);
@@ -54,7 +52,7 @@ export function GamePlay({ game, id }: Props) {
       <View className={'flex gap-2'}>
         <View className={'flex flex-row items-center gap-4'}>
           <Pressable onPress={() => router.back()}>
-            <FontAwesomeIcon icon={faChevronLeft} size={20} color={colours.muted} />
+            <FAIcon icon={faChevronLeft} size={20} colour="muted" />
           </Pressable>
 
           <View className={'grow'}>

@@ -1,21 +1,18 @@
 import { faMagnifyingGlass } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { View } from 'react-native';
-import { Content } from '../../components';
+import { Content, FAIcon } from '../../components';
 import { Dialog } from '../../components/Dialog';
 import { Input } from '../../components/Input';
 import { NextWindowButton } from '../../components/NextWindowButton';
 import { Armies } from '../../data/Armies';
-import { useColours } from '../../hooks/useColours';
 import { useNewListActions, useNewListGame } from '../../states/useNewListStore';
 
 export default function SelectArmy() {
   const game = useNewListGame();
   const { setArmy } = useNewListActions();
 
-  const colours = useColours();
   const [search, setSearch] = useState('');
 
   const armies = useMemo(() => {
@@ -38,7 +35,7 @@ export default function SelectArmy() {
         value={search}
         onChange={setSearch}
         type={'search'}
-        iconStart={<FontAwesomeIcon icon={faMagnifyingGlass} size={16} color={colours.primary} />}
+        iconStart={<FAIcon icon={faMagnifyingGlass} colour="primary" />}
       />
 
       {groups.map(({ name, armies }) => (

@@ -1,7 +1,6 @@
 import { clsx } from 'clsx';
 import type { PropsWithChildren } from 'react';
 import { Animated, RefreshControl, View } from 'react-native';
-import { useColours } from '../hooks/useColours';
 import { Container } from './Container';
 
 import { PageTitle } from './PageTitle';
@@ -23,8 +22,6 @@ export const Page = ({
 	title,
 	subtitle,
 }: Props) => {
-	const colours = useColours();
-
 	return (
 		<View
 			className={clsx('w-full h-full', {
@@ -42,7 +39,6 @@ export const Page = ({
 							<RefreshControl
 								refreshing={!!isLoading}
 								onRefresh={refetch}
-								colors={[colours.primary]}
 							/>
 						) : undefined
 					}

@@ -1,59 +1,53 @@
-import type {IconDefinition} from '@fortawesome/fontawesome-svg-core';
-import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {clsx} from 'clsx';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { clsx } from 'clsx';
 import React from 'react';
-import {Pressable, View} from 'react-native';
-import {useColours} from '../hooks/useColours';
-import {Content} from './Content';
+import { Pressable, View } from 'react-native';
+import { Content } from './Content';
+import { FAIcon } from './FAIcon';
 
 interface Props {
-	selected: string;
-	tabs: {
-		title: string;
-		value: string;
-		icon?: IconDefinition;
-	}[];
-	onChange: (selected: string) => void;
+  selected: string;
+  tabs: {
+    title: string;
+    value: string;
+    icon?: IconDefinition;
+  }[];
+  onChange: (selected: string) => void;
 }
 
 export const TabInput = ({ tabs, selected, onChange }: Props) => {
-	const colours = useColours();
+  return (
+    <View
+      className={
+        'bg-panel-light dark:bg-panel-dark flex flex-row justify-evenly gap-4 rounded-2xl p-2'
+      }>
+      {tabs.map(({ value, title, icon }) => (
+        <Pressable
+          className={clsx(
+            'flex grow flex-row items-center justify-center gap-2 rounded-xl px-4 py-2',
+            {
+              'bg-primary-light dark:bg-primary-dark': selected === value,
+            }
+          )}
+          key={value}
+          onPress={() => onChange(value)}>
+          {icon && (
+            <FAIcon
+              icon={icon}
+              size={14}
+              colour={selected === value ? 'white' : 'text'}
+            />
+          )}
 
-	return (
-		<View
-			className={
-				'p-2 bg-panel-light dark:bg-panel-dark rounded-2xl flex flex-row gap-4 justify-evenly'
-			}
-		>
-			{tabs.map(({ value, title, icon }) => (
-				<Pressable
-					className={clsx(
-						'px-4 py-2 rounded-xl grow flex flex-row gap-2 items-center justify-center',
-						{
-							'bg-primary-light dark:bg-primary-dark': selected === value,
-						},
-					)}
-					key={value}
-					onPress={() => onChange(value)}
-				>
-					{icon && (
-						<FontAwesomeIcon
-							icon={icon}
-							size={14}
-							color={selected === value ? 'white' : colours.text}
-						/>
-					)}
-
-					<Content
-						type={'subtitle'}
-						size={'md'}
-						center
-						variant={selected === value ? 'white' : undefined}
-					>
-						{title}
-					</Content>
-				</Pressable>
-			))}
-		</View>
-	);
+          <Content
+            type={'subtitle'}
+            size={'md'}
+            center
+            variant={selected === value ? 'white' : undefined}>
+            {title}
+          </Content>
+        </Pressable>
+      ))}
+    </View>
+  );
 };

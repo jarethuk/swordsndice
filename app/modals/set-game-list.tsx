@@ -1,20 +1,17 @@
 import { faMagnifyingGlass, faSword } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
-import { Animated } from 'react-native';
 import { useAPIUpdateGameList } from '../../api/games/useAPIUpdateGameList';
 import { useAPILists } from '../../api/list/useAPILists';
+import { FAIcon } from '../../components/FAIcon';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
-import { useColours } from '../../hooks/useColours';
 import type { ListBody } from '../../types/api/ListBody';
 
 import { Dialog } from '../../components/Dialog';
 
 export default function SetGameList() {
   const { id } = useLocalSearchParams();
-  const colours = useColours();
   const [search, setSearch] = useState('');
   const { data } = useAPILists();
 
@@ -47,7 +44,7 @@ export default function SetGameList() {
         value={search}
         onChange={setSearch}
         type={'search'}
-        iconStart={<FontAwesomeIcon icon={faMagnifyingGlass} size={16} color={colours.primary} />}
+        iconStart={<FAIcon icon={faMagnifyingGlass} colour="primary" />}
       />
 
       {lists.map((list) => (

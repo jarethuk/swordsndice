@@ -1,13 +1,12 @@
 import { faMinus, faPlus, faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { useCallback, useEffect, useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { useAPIUpdateGameMember } from '../../api/games/useAPIUpdateGameMember';
-import { useColours } from '../../hooks/useColours';
 import { useDebounce } from '../../hooks/useDebounce';
 import type { GameResponseMember } from '../../types/api/responses/GameResponse';
 import type { UserResponse } from '../../types/api/responses/UserResponse';
 import { Content } from '../Content';
+import { FAIcon } from '../FAIcon';
 import { ListImage } from '../ListImage';
 
 interface Props {
@@ -17,7 +16,6 @@ interface Props {
 }
 
 export const GamePlayPoints = ({ member, user, gameId }: Props) => {
-  const colours = useColours();
   const [points, setPoints] = useState(member.points);
   const { debouncedValue, setDebouncedValue } = useDebounce(points, 2000);
   const [pendingUpdate, setPendingUpdate] = useState(false);
@@ -67,7 +65,7 @@ export const GamePlayPoints = ({ member, user, gameId }: Props) => {
         <Pressable
           className={'items-center justify-center p-4'}
           onPress={() => onPointsChange(points - 1)}>
-          <FontAwesomeIcon icon={faMinus} size={16} color={colours.text} />
+          <FAIcon icon={faMinus} />
         </Pressable>
 
         <View className={'w-6'}>
@@ -79,7 +77,7 @@ export const GamePlayPoints = ({ member, user, gameId }: Props) => {
         <Pressable
           className={'items-center justify-center p-4'}
           onPress={() => onPointsChange(points + 1)}>
-          <FontAwesomeIcon icon={faPlus} size={16} color={colours.text} />
+          <FAIcon icon={faPlus} />
         </Pressable>
       </View>
     </View>

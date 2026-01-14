@@ -1,10 +1,9 @@
 import { faUpload } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { Image } from 'expo-image';
 import { useCallback, useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { useAPIUpdateUser } from '../../api/user/useAPIUpdateUser';
-import { Content } from '../../components';
+import { Content, FAIcon } from '../../components';
 import { Alert } from '../../components/Alert';
 import { Button } from '../../components/Button';
 import { ErrorMessage } from '../../components/ErrorMessage';
@@ -60,7 +59,7 @@ export default function Profile() {
             <Image source={user.image} style={{ height: 160, width: 160 }} />
           ) : (
             <View className={'flex flex-col items-center gap-4'}>
-              <FontAwesomeIcon icon={faUpload} size={36} />
+              <FAIcon icon={faUpload} size={36} />
             </View>
           )}
         </View>

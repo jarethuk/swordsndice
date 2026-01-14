@@ -1,9 +1,8 @@
 import { faMagnifyingGlass } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { View } from 'react-native';
-import { Content } from '../../components';
+import { Content, FAIcon } from '../../components';
 import AmountSelector from '../../components/AmountSelector';
 import { Button } from '../../components/Button';
 import { Dialog } from '../../components/Dialog';
@@ -16,7 +15,6 @@ import { MESBGArmies } from '../../data/MESBGArmies';
 import { MESBGProfiles } from '../../data/MESBGProfiles';
 import { getListUniqueLeaders, getMESBGStats } from '../../helpers/MESBGStatsHelper';
 import { getRandomId } from '../../helpers/RandomHelper';
-import { useColours } from '../../hooks/useColours';
 import { useList, useListActions } from '../../states/useListStore';
 import { MESBGArmySlot } from '../../types';
 import type { ListMemberEquipment } from '../../types/api/ListBody';
@@ -29,7 +27,6 @@ interface ProfileWithStats extends Profile {
 }
 
 export default function AddUnitPopup() {
-  const colours = useColours();
   const { groupId, availableUnits } = useLocalSearchParams();
   const list = useList();
   const { updateList } = useListActions();
@@ -158,7 +155,7 @@ export default function AddUnitPopup() {
           value={search}
           onChange={setSearch}
           type={'search'}
-          iconStart={<FontAwesomeIcon icon={faMagnifyingGlass} size={16} color={colours.primary} />}
+          iconStart={<FAIcon icon={faMagnifyingGlass} colour="primary" />}
         />
 
         {groups.map(({ name, units }) => (

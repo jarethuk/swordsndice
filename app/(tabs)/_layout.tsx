@@ -5,34 +5,32 @@ import {
   faSwords,
   faUsers,
 } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import { clsx } from 'clsx';
 import { router, Tabs } from 'expo-router';
 import type { ReactElement } from 'react';
 import { Platform, Pressable, View } from 'react-native';
+import { FAIcon } from '../../components/FAIcon';
 import Header from '../../components/Header';
-import { useColours } from '../../hooks/useColours';
 
 const tabRoutes = ['lists', 'index', 'feed', 'social', 'settings'];
 
-function getIcon(route: string, colour: string): ReactElement {
+function getIcon(route: string, colour: 'primary' | 'muted'): ReactElement {
   switch (route) {
     case 'lists':
-      return <FontAwesomeIcon icon={faList} size={26} color={colour} />;
+      return <FAIcon icon={faList} size={26} colour={colour} />;
     case 'feed':
-      return <FontAwesomeIcon icon={faClock} size={26} color={colour} />;
+      return <FAIcon icon={faClock} size={26} colour={colour} />;
     case 'social':
-      return <FontAwesomeIcon icon={faUsers} size={26} color={colour} />;
+      return <FAIcon icon={faUsers} size={26} colour={colour} />;
     case 'settings':
-      return <FontAwesomeIcon icon={faCog} size={26} color={colour} />;
+      return <FAIcon icon={faCog} size={26} colour={colour} />;
     default:
-      return <FontAwesomeIcon icon={faCog} size={26} color={colour} />;
+      return <FAIcon icon={faCog} size={26} colour={colour} />;
   }
 }
 
 function TabsBar(props: BottomTabBarProps) {
-  const colours = useColours();
   const isWeb = Platform.OS === 'web';
 
   return (
@@ -61,7 +59,7 @@ function TabsBar(props: BottomTabBarProps) {
                     className={'rounded-full bg-purple-600 pb-1 active:mt-1 active:pb-0'}>
                     <View className={'h-20 w-20 overflow-hidden rounded-full bg-purple-500'}>
                       <View className={'flex h-full items-center justify-center'}>
-                        <FontAwesomeIcon icon={faSwords} size={32} color="white" />
+                        <FAIcon icon={faSwords} size={32} colour="white" />
                       </View>
                     </View>
                   </Pressable>
@@ -70,7 +68,7 @@ function TabsBar(props: BottomTabBarProps) {
             );
           }
 
-          const colour = active ? colours.primary : colours.muted;
+          const colour: 'primary' | 'muted' = active ? 'primary' : 'muted';
 
           return (
             <Pressable
@@ -96,8 +94,6 @@ function TabsBar(props: BottomTabBarProps) {
 }
 
 export default function TabLayout() {
-  const colours = useColours();
-
   return (
     <View className={'bg-background-light dark:bg-background-dark flex h-full w-full'}>
       <Header />
@@ -107,7 +103,7 @@ export default function TabLayout() {
           headerShown: false,
           animation: 'shift',
           sceneStyle: {
-            backgroundColor: colours.background,
+            backgroundColor: 'transparent',
             paddingLeft: 24,
             paddingRight: 24,
           },

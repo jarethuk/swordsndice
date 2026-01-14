@@ -1,5 +1,4 @@
 import { faChevronLeft, faCopy, faEdit, faExclamationTriangle, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useMemo } from 'react';
 import { Animated, Pressable, View } from 'react-native';
@@ -7,18 +6,17 @@ import { useAPIList } from '../../api/list/useAPIList';
 import { Content } from '../../components';
 import { Button } from '../../components/Button';
 import Divider from '../../components/Divider';
+import { FAIcon } from '../../components/FAIcon';
 import ListWarband from '../../components/ListWarband';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { MESBGArmies } from '../../data/MESBGArmies';
 import { getPointsTotal } from '../../helpers/MESBGStatsHelper';
-import { useColours } from '../../hooks/useColours';
 import { useList, useListActions } from '../../states/useListStore';
 
 import { Container } from '../../components/Container';
 import ScrollView = Animated.ScrollView;
 
 export default function ListPage() {
-  const colours = useColours();
   const { id } = useLocalSearchParams();
   const list = useList();
   const { setList, updateList } = useListActions();
@@ -58,7 +56,7 @@ export default function ListPage() {
   if (list === null) {
     return (
       <View className={'m-auto flex w-1/2 flex-1 items-center justify-center gap-4'}>
-        <FontAwesomeIcon icon={faExclamationTriangle} size={26} color={colours.warning} />
+        <FAIcon icon={faExclamationTriangle} size={26} colour="warning" />
 
         <Content size={'sm'} type={'title'} center>
           List not found
@@ -79,7 +77,7 @@ export default function ListPage() {
     <Container>
       <View className={'flex flex-row items-center gap-4'}>
         <Pressable onPress={() => router.back()}>
-          <FontAwesomeIcon icon={faChevronLeft} size={20} color={colours.muted} />
+          <FAIcon icon={faChevronLeft} size={20} colour="muted" />
         </Pressable>
 
         <View className={'grow'}>
@@ -94,11 +92,11 @@ export default function ListPage() {
 
         {canEdit ? (
           <Pressable onPress={() => router.navigate('/modals/list-edit')}>
-            <FontAwesomeIcon icon={faEdit} size={20} color={colours.muted} />
+            <FAIcon icon={faEdit} size={20} colour="muted" />
           </Pressable>
         ) : (
           <Pressable>
-            <FontAwesomeIcon icon={faCopy} size={20} color={colours.muted} />
+            <FAIcon icon={faCopy} size={20} colour="muted" />
           </Pressable>
         )}
       </View>

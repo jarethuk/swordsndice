@@ -1,5 +1,4 @@
 import { faBell } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router } from 'expo-router';
 import { Image, Pressable, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -8,6 +7,7 @@ import { useAPIGroupInvites } from '../api/groups/useAPIGroupInvites';
 import { useColours } from '../hooks/useColours';
 import { useUser } from '../states/useUserStore';
 import { Content } from './Content';
+import { FAIcon } from './FAIcon';
 
 export default function Header() {
   const { top } = useSafeAreaInsets();
@@ -53,10 +53,10 @@ export default function Header() {
             </Content>
           )}
 
-          <FontAwesomeIcon
+          <FAIcon
             icon={faBell}
             size={20}
-            color={count > 0 ? colours.negative : colours.muted}
+            colour={count > 0 ? 'negative' : 'muted'}
           />
         </Pressable>
       </View>

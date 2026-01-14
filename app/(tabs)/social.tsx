@@ -1,5 +1,4 @@
 import { faMagnifyingGlass, faUser, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Animated, RefreshControl, View } from 'react-native';
@@ -7,7 +6,7 @@ import { useAPIFindFriend } from '../../api/friends/useAPIFindFriend';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIFindGroup } from '../../api/groups/useAPIFindGroup';
 import { useAPIGroups } from '../../api/groups/useAPIGroups';
-import { Content } from '../../components';
+import { Content, FAIcon } from '../../components';
 import { Button } from '../../components/Button';
 import { Container } from '../../components/Container';
 import { Input } from '../../components/Input';
@@ -16,7 +15,6 @@ import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
 import { PageTitle } from '../../components/PageTitle';
 import { TabInput } from '../../components/TabInput';
-import { useColours } from '../../hooks/useColours';
 import { useDebounce } from '../../hooks/useDebounce';
 import ScrollView = Animated.ScrollView;
 
@@ -26,7 +24,6 @@ enum Tabs {
 }
 
 export default function Social() {
-	const colours = useColours();
 	const [search, setSearch] = useState('');
 	const [tab, setTab] = useState<string>(Tabs.Friends);
 
@@ -70,10 +67,9 @@ export default function Social() {
 				onChange={setSearch}
 				type={'search'}
 				iconStart={
-					<FontAwesomeIcon
+					<FAIcon
 						icon={faMagnifyingGlass}
-						size={16}
-						color={colours.primary}
+						colour="primary"
 					/>
 				}
 			/>
@@ -101,7 +97,6 @@ export default function Social() {
 							<RefreshControl
 								refreshing={isLoading}
 								onRefresh={refetch}
-								colors={[colours.primary]}
 							/>
 						}
 						showsVerticalScrollIndicator={false}

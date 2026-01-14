@@ -1,19 +1,16 @@
 import { faExclamationTriangle } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { useFocusEffect, useLocalSearchParams } from 'expo-router';
 import React, { useCallback, useEffect } from 'react';
 import { View } from 'react-native';
 import { useAPIGame } from '../../api/games/useAPIGame';
-import { Content } from '../../components';
+import { Content, FAIcon } from '../../components';
 import { GamePlay } from '../../components/game/GamePlay';
 import { GamePrep } from '../../components/game/GamePrep';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
-import { useColours } from '../../hooks/useColours';
 import { useGame, useGameActions } from '../../states/useGameStore';
 
 export default function GamePage() {
-  const colours = useColours();
   const { id } = useLocalSearchParams();
   const game = useGame();
   const { setGame } = useGameActions();
@@ -41,7 +38,7 @@ export default function GamePage() {
   if (game === null) {
     return (
       <View className={'m-auto flex w-1/2 flex-1 items-center justify-center gap-4'}>
-        <FontAwesomeIcon icon={faExclamationTriangle} size={26} color={colours.warning} />
+        <FAIcon icon={faExclamationTriangle} size={26} colour="warning" />
 
         <Content size={'sm'} type={'title'} center>
           Game not found

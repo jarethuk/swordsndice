@@ -4,25 +4,23 @@ import {
   faPlus,
   faSword,
 } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { useAPILists } from '../../api/list/useAPILists';
 import { Content } from '../../components';
 import { Container } from '../../components/Container';
+import { FAIcon } from '../../components/FAIcon';
 import GamesDropdown from '../../components/GamesDropdown';
 import { Input } from '../../components/Input';
 import ListRow from '../../components/ListRow';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
 import { PageTitle } from '../../components/PageTitle';
-import { useColours } from '../../hooks/useColours';
 
 export default function Lists() {
   const [game, setGame] = useState<string>('');
   const [search, setSearch] = useState('');
-  const colours = useColours();
   const { data, isLoading, refetch } = useAPILists();
 
   const lists = useMemo(() => {
@@ -50,7 +48,7 @@ export default function Lists() {
         value={search}
         onChange={setSearch}
         type={'search'}
-        iconStart={<FontAwesomeIcon icon={faMagnifyingGlass} size={16} color={colours.primary} />}
+        iconStart={<FAIcon icon={faMagnifyingGlass} colour="primary" />}
       />
 
       <Page isLoading={isLoading} refetch={refetch}>
@@ -62,7 +60,7 @@ export default function Lists() {
             onPress={() => {
               router.navigate('/(tabs)/create-list');
             }}>
-            <FontAwesomeIcon icon={faPlus} size={16} color={colours.primary} />
+            <FAIcon icon={faPlus} colour="primary" />
             <Content size={'xs'} type={'title'}>
               Create List
             </Content>
@@ -71,7 +69,7 @@ export default function Lists() {
 
         {lists.length === 0 ? (
           <View className={'flex h-96 items-center justify-center gap-6'}>
-            <FontAwesomeIcon icon={faFaceThinking} color={colours.primary} size={32} />
+            <FAIcon icon={faFaceThinking} colour="primary" size={32} />
             <Content size={'lg'} type={'subtitle'}>
               {search ? 'No lists found' : 'Create your first list to get started'}
             </Content>

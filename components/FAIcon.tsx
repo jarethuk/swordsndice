@@ -1,11 +1,11 @@
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { useColours } from '../hooks/useColours';
+import { type Colours, useColours } from '../hooks/useColours';
 
 interface Props {
   icon: IconDefinition;
   size?: number;
-  colour?: 'text' | 'primary' | 'secondary' | 'white';
+  colour?: keyof Colours | 'white';
 }
 
 export const FAIcon = ({ icon, size = 16, colour = 'text' }: Props) => {

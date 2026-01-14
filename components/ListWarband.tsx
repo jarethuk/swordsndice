@@ -1,5 +1,4 @@
 import { faCrown, faTrashAlt } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { router } from 'expo-router';
 import { useCallback, useMemo } from 'react';
 import { Pressable, View } from 'react-native';
@@ -10,7 +9,6 @@ import {
   getMESBGStats,
   maxWarbandForLeader,
 } from '../helpers/MESBGStatsHelper';
-import { useColours } from '../hooks/useColours';
 import { useListActions } from '../states/useListStore';
 import { MESBGArmySlot } from '../types';
 import type { Army } from '../types/Army';
@@ -18,6 +16,7 @@ import type { ListBody, ListGroup } from '../types/api/ListBody';
 import { Button } from './Button';
 import { Content } from './Content';
 import EquipmentList from './EquipmentList';
+import { FAIcon } from './FAIcon';
 import HeroPoints from './HeroPoints';
 
 interface Props {
@@ -29,7 +28,6 @@ interface Props {
 }
 
 export default function ListWarband({ index, group, list, army, canEdit }: Props) {
-  const colours = useColours();
   const { updateList } = useListActions();
 
   const leader = useMemo(() => {
@@ -83,7 +81,7 @@ export default function ListWarband({ index, group, list, army, canEdit }: Props
 
           {canEdit && (
             <Pressable className={'ml-auto'} onPress={deleteWarband}>
-              <FontAwesomeIcon icon={faTrashAlt} color={colours.negative} size={16} />
+              <FAIcon icon={faTrashAlt} colour="negative" />
             </Pressable>
           )}
         </View>
@@ -105,7 +103,7 @@ export default function ListWarband({ index, group, list, army, canEdit }: Props
           })
         }>
         <View className={'flex flex-row items-center gap-1'}>
-          <FontAwesomeIcon icon={faCrown} size={16} color={colours.primary} />
+          <FAIcon icon={faCrown} colour="primary" />
 
           <Content size={'xs'} type={'title'}>
             {group?.leader.name} ({getMemberPointsTotal(group.leader)}pts)
