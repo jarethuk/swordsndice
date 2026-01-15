@@ -1,7 +1,7 @@
-import {useState} from 'react';
-import {Pressable, View} from 'react-native';
-import {ensureLength} from '../helpers/DisplayHelpers';
-import {Content} from './Content';
+import { useState } from 'react';
+import { Pressable, View } from 'react-native';
+import { ensureLength } from '../helpers/DisplayHelpers';
+import { Content } from './Content';
 
 interface Props {
 	text: string;

@@ -1,13 +1,16 @@
-import { faCrown, faTrashAlt } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import {
+	faCrown,
+	faTrashAlt,
+} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { router } from 'expo-router';
 import { useCallback, useMemo } from 'react';
 import { Pressable, View } from 'react-native';
 import { MESBGProfiles } from '../data/MESBGProfiles';
 import {
-  getGroupPointsTotal,
-  getMemberPointsTotal,
-  getMESBGStats,
-  maxWarbandForLeader,
+	getGroupPointsTotal,
+	getMESBGStats,
+	getMemberPointsTotal,
+	maxWarbandForLeader,
 } from '../helpers/MESBGStatsHelper';
 import { useListActions } from '../states/useListStore';
 import { MESBGArmySlot } from '../types';
@@ -20,155 +23,165 @@ import { FAIcon } from './FAIcon';
 import HeroPoints from './HeroPoints';
 
 interface Props {
-  index: number;
-  army: Army;
-  list: ListBody;
-  group: ListGroup;
-  canEdit?: boolean;
+	index: number;
+	army: Army;
+	list: ListBody;
+	group: ListGroup;
+	canEdit?: boolean;
 }
 
-export default function ListWarband({ index, group, list, army, canEdit }: Props) {
-  const { updateList } = useListActions();
+export default function ListWarband({
+	index,
+	group,
+	list,
+	army,
+	canEdit,
+}: Props) {
+	const { updateList } = useListActions();
 
-  const leader = useMemo(() => {
-    const armyProfile = army.profiles.find((x) => x.name === group.leader.name);
-    const profile = MESBGProfiles.find((x) => x.name === group.leader.name);
+	const leader = useMemo(() => {
+		const armyProfile = army.profiles.find((x) => x.name === group.leader.name);
+		const profile = MESBGProfiles.find((x) => x.name === group.leader.name);
 
-    if (!armyProfile || !profile) return;
+		if (!armyProfile || !profile) return;
 
-    return {
-      ...armyProfile,
-      fullStats: getMESBGStats(profile),
-    };
-  }, []);
+		return {
+			...armyProfile,
+			fullStats: getMESBGStats(profile),
+		};
+	}, [army.profiles, group.leader.name]);
 
-  const maxUnits = useMemo(() => {
-    return maxWarbandForLeader(leader?.slot ?? MESBGArmySlot.Independent);
-  }, [army, group]);
+	const maxUnits = useMemo(() => {
+		return maxWarbandForLeader(leader?.slot ?? MESBGArmySlot.Independent);
+	}, [leader?.slot]);
 
-  const currentUnits = useMemo(() => {
-    return group.members
-      .filter((x) => x.slot === MESBGArmySlot.Warrior)
-      .reduce((acc, x) => acc + x.amount, 0);
-  }, [army, group]);
+	const currentUnits = useMemo(() => {
+		return group.members
+			.filter((x) => x.slot === MESBGArmySlot.Warrior)
+			.reduce((acc, x) => acc + x.amount, 0);
+	}, [group]);
 
-  const deleteWarband = useCallback(async () => {
-    const index = list.groups.findIndex((x) => x.id === group.id);
-    list.groups.splice(index, 1);
+	const deleteWarband = useCallback(async () => {
+		const index = list.groups.findIndex((x) => x.id === group.id);
+		list.groups.splice(index, 1);
 
-    await updateList({
-      groups: list.groups,
-    });
-  }, [list.groups, updateList, group.id]);
+		await updateList({
+			groups: list.groups,
+		});
+	}, [list.groups, updateList, group.id]);
 
-  const groupPoints = useMemo(() => {
-    return getGroupPointsTotal(group);
-  }, [group]);
+	const groupPoints = useMemo(() => {
+		return getGroupPointsTotal(group);
+	}, [group]);
 
-  if (!leader) return;
+	if (!leader) return;
 
-  return (
-    <View className={'flex gap-4'}>
-      <View className={'flex flex-row items-center gap-2'}>
-        <Content size={'xs'} type={'title'}>
-          Warband {index + 1}
-        </Content>
+	return (
+		<View className={'flex gap-4'}>
+			<View className={'flex flex-row items-center gap-2'}>
+				<Content size={'xs'} type={'title'}>
+					Warband {index + 1}
+				</Content>
 
-        <View className={'ml-auto flex flex-row items-center gap-2'}>
-          <Content size={'xs'} type={'title'} muted>
-            {currentUnits}/{maxUnits} ({groupPoints}pts)
-          </Content>
+				<View className={'ml-auto flex flex-row items-center gap-2'}>
+					<Content size={'xs'} type={'title'} muted>
+						{currentUnits}/{maxUnits} ({groupPoints}pts)
+					</Content>
 
-          {canEdit && (
-            <Pressable className={'ml-auto'} onPress={deleteWarband}>
-              <FAIcon icon={faTrashAlt} colour="negative" />
-            </Pressable>
-          )}
-        </View>
-      </View>
+					{canEdit && (
+						<Pressable className={'ml-auto'} onPress={deleteWarband}>
+							<FAIcon icon={faTrashAlt} colour="negative" />
+						</Pressable>
+					)}
+				</View>
+			</View>
 
-      {/* Leader */}
-      <Pressable
-        className={
-          'border-border-light dark:border-border-dark flex gap-1 rounded-2xl border-2 p-4'
-        }
-        onPress={() =>
-          canEdit &&
-          router.navigate({
-            pathname: '/modals/list-edit-unit',
-            params: {
-              groupId: group.id,
-              memberId: group.leader.id,
-            },
-          })
-        }>
-        <View className={'flex flex-row items-center gap-1'}>
-          <FAIcon icon={faCrown} colour="primary" />
+			{/* Leader */}
+			<Pressable
+				className={
+					'border-border-light dark:border-border-dark flex gap-1 rounded-2xl border-2 p-4'
+				}
+				onPress={() =>
+					canEdit &&
+					router.navigate({
+						pathname: '/modals/list-edit-unit',
+						params: {
+							groupId: group.id,
+							memberId: group.leader.id,
+						},
+					})
+				}
+			>
+				<View className={'flex flex-row items-center gap-1'}>
+					<FAIcon icon={faCrown} colour="primary" />
 
-          <Content size={'xs'} type={'title'}>
-            {group?.leader.name} ({getMemberPointsTotal(group.leader)}pts)
-          </Content>
+					<Content size={'xs'} type={'title'}>
+						{group?.leader.name} ({getMemberPointsTotal(group.leader)}pts)
+					</Content>
 
-          <View className={'ml-auto'}>
-            <Content size={'xs'} type={'title'} muted>
-              {getMemberPointsTotal(group.leader)}pts
-            </Content>
-          </View>
-        </View>
+					<View className={'ml-auto'}>
+						<Content size={'xs'} type={'title'} muted>
+							{getMemberPointsTotal(group.leader)}pts
+						</Content>
+					</View>
+				</View>
 
-        <HeroPoints profile={leader} variant={'accent'} />
+				<HeroPoints profile={leader} variant={'accent'} />
 
-        <EquipmentList member={group.leader} />
-      </Pressable>
+				<EquipmentList member={group.leader} />
+			</Pressable>
 
-      {/* Members */}
-      {group.members.map((member) => (
-        <Pressable
-          key={member.id}
-          className={'border-border-light dark:border-border-dark rounded-2xl border-2 p-4'}
-          onPress={() =>
-            canEdit &&
-            router.navigate({
-              pathname: '/modals/list-edit-unit',
-              params: {
-                groupId: group.id,
-                memberId: member.id,
-                availableUnits: maxUnits - currentUnits,
-              },
-            })
-          }>
-          <View className={'flex flex-row items-center'}>
-            <Content size={'xs'} type={'title'}>
-              {member.name} x {member.amount}
-            </Content>
+			{/* Members */}
+			{group.members.map((member) => (
+				<Pressable
+					key={member.id}
+					className={
+						'border-border-light dark:border-border-dark rounded-2xl border-2 p-4'
+					}
+					onPress={() =>
+						canEdit &&
+						router.navigate({
+							pathname: '/modals/list-edit-unit',
+							params: {
+								groupId: group.id,
+								memberId: member.id,
+								availableUnits: maxUnits - currentUnits,
+							},
+						})
+					}
+				>
+					<View className={'flex flex-row items-center'}>
+						<Content size={'xs'} type={'title'}>
+							{member.name} x {member.amount}
+						</Content>
 
-            <View className={'ml-auto flex flex-row items-center gap-2'}>
-              <Content size={'xs'} type={'title'} muted>
-                {getMemberPointsTotal(member)}pts
-              </Content>
-            </View>
-          </View>
+						<View className={'ml-auto flex flex-row items-center gap-2'}>
+							<Content size={'xs'} type={'title'} muted>
+								{getMemberPointsTotal(member)}pts
+							</Content>
+						</View>
+					</View>
 
-          <EquipmentList member={member} />
-        </Pressable>
-      ))}
+					<EquipmentList member={member} />
+				</Pressable>
+			))}
 
-      {canEdit && (
-        <Button
-          content={'Add Unit'}
-          variant={'outline'}
-          onPress={() =>
-            router.navigate({
-              pathname: '/modals/list-add-unit',
-              params: {
-                groupId: group.id,
-                availableUnits: maxUnits - currentUnits,
-              },
-            })
-          }
-          disabled={currentUnits === maxUnits}
-        />
-      )}
-    </View>
-  );
+			{canEdit && (
+				<Button
+					content={'Add Unit'}
+					variant={'outline'}
+					onPress={() =>
+						router.navigate({
+							pathname: '/modals/list-add-unit',
+							params: {
+								groupId: group.id,
+								availableUnits: maxUnits - currentUnits,
+							},
+						})
+					}
+					disabled={currentUnits === maxUnits}
+				/>
+			)}
+		</View>
+	);
 }

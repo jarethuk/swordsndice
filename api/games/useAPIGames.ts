@@ -4,9 +4,12 @@ import type { GameListResponse } from '../../types/api/responses/GameListRespons
 import { API } from '../API';
 
 export function useAPIGames(state?: 'active' | 'complete') {
-  return usePersistedQuery<GameListResponse[]>({
-    queryKey: ['games', state],
-    queryFn: () => API.get<GameListResponse[]>(`/api/games?${state ? `state=${state}` : ''}`),
-    staleTime: ONE_DAY,
-  });
+	return usePersistedQuery<GameListResponse[]>({
+		queryKey: ['games', state],
+		queryFn: () =>
+			API.get<GameListResponse[]>(
+				`/api/games?${state ? `state=${state}` : ''}`,
+			),
+		staleTime: ONE_DAY,
+	});
 }

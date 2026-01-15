@@ -5,36 +5,35 @@
 @import "nativewind/theme";
 
 body {
-    background: #15082F;
+	background: #15082f;
 }
 
 @theme {
-    /* Light */
-    --color-background-light: #FFFFFF;
-    --color-primary-light: #a855f7;
-    --color-secondary-light: #06b6d4;
-    --color-positive-light: #58CC02;
-    --color-negative-light: #FF4B4B;
-    --color-warning-light: #FFC800;
-    --color-info-light: #1CB0F6;
-    --color-text-light: #4B4B4B;
-    --color-muted-light: #6b7280;
-    --color-border-light: #E3E3E3;
-    --color-bottom-bar-light: #FFFFFF;
-    --color-panel-light: #f6f6f6;
+	/* Light */
+	--color-background-light: #ffffff;
+	--color-primary-light: #a855f7;
+	--color-secondary-light: #06b6d4;
+	--color-positive-light: #58cc02;
+	--color-negative-light: #ff4b4b;
+	--color-warning-light: #ffc800;
+	--color-info-light: #1cb0f6;
+	--color-text-light: #4b4b4b;
+	--color-muted-light: #6b7280;
+	--color-border-light: #e3e3e3;
+	--color-bottom-bar-light: #ffffff;
+	--color-panel-light: #f6f6f6;
 
-    /* Dark */
-    --color-background-dark: #15082F;
-    --color-primary-dark: #a855f7;
-    --color-secondary-dark: #06b6d4;
-    --color-positive-dark: #58CC02;
-    --color-negative-dark: #FF4B4B;
-    --color-warning-dark: #FFC800;
-    --color-info-dark: #1CB0F6;
-    --color-text-dark: #FFFFFF;
-    --color-muted-dark: #15082f;
-    --color-border-dark: #8142ff;
-    --color-bottom-bar-dark: #4C347E;
-    --color-panel-dark: #4C347E;
+	/* Dark */
+	--color-background-dark: #15082f;
+	--color-primary-dark: #a855f7;
+	--color-secondary-dark: #06b6d4;
+	--color-positive-dark: #58cc02;
+	--color-negative-dark: #ff4b4b;
+	--color-warning-dark: #ffc800;
+	--color-info-dark: #1cb0f6;
+	--color-text-dark: #ffffff;
+	--color-muted-dark: #15082f;
+	--color-border-dark: #8142ff;
+	--color-bottom-bar-dark: #4c347e;
+	--color-panel-dark: #4c347e;
 }
-

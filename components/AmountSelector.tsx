@@ -1,9 +1,12 @@
-import {faMinus, faPlus,} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
-import {useCallback} from 'react';
-import {View} from 'react-native';
-import {Button} from './Button';
-import {Content} from './Content';
-import {FAIcon} from './FAIcon';
+import {
+	faMinus,
+	faPlus,
+} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { useCallback } from 'react';
+import { View } from 'react-native';
+import { Button } from './Button';
+import { Content } from './Content';
+import { FAIcon } from './FAIcon';
 
 interface Props {
 	value: number;

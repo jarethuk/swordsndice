@@ -4,9 +4,9 @@ import type { GameInviteResponse } from '../../types/api/responses/GameInviteRes
 import { API } from '../API';
 
 export function useAPIGameInvites() {
-  return usePersistedQuery<GameInviteResponse[]>({
-    queryKey: ['game-invites'],
-    queryFn: () => API.get<GameInviteResponse[]>(`/api/games/invites`),
-    staleTime: FIVE_MINUTES,
-  });
+	return usePersistedQuery<GameInviteResponse[]>({
+		queryKey: ['game-invites'],
+		queryFn: () => API.get<GameInviteResponse[]>(`/api/games/invites`),
+		staleTime: FIVE_MINUTES,
+	});
 }

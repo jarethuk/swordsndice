@@ -3,19 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { type Colours, useColours } from '../hooks/useColours';
 
 interface Props {
-  icon: IconDefinition;
-  size?: number;
-  colour?: keyof Colours | 'white';
+	icon: IconDefinition;
+	size?: number;
+	colour?: keyof Colours | 'white';
 }
 
 export const FAIcon = ({ icon, size = 16, colour = 'text' }: Props) => {
-  const colours = useColours();
+	const colours = useColours();
 
-  return (
-    <FontAwesomeIcon
-      icon={icon}
-      size={size}
-      color={colour === 'white' ? 'white' : colours[colour]}
-    />
-  );
+	return (
+		<FontAwesomeIcon
+			icon={icon}
+			size={size}
+			color={colour === 'white' ? 'white' : colours[colour]}
+		/>
+	);
 };

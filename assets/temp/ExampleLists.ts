@@ -1,5 +1,5 @@
-import {Games} from '../../types';
-import type {List} from '../../types/List';
+import { Games } from '../../types';
+import type { List } from '../../types/List';
 
 export const ExampleLists: List[] = [
 	{

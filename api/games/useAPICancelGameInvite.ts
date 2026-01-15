@@ -5,8 +5,9 @@ import type { BasicResponse } from '../../types/api/responses/BasicResponse';
 import { API } from '../API';
 
 export function useAPICancelGameInvite(id: string) {
-  return useMutation<BasicResponse, AxiosError, InviteUserToGameRequest>({
-    mutationKey: ['cancel-game-invite'],
-    mutationFn: (request) => API.patch<BasicResponse>(`/api/games/${id}/invite/cancel`, request),
-  });
+	return useMutation<BasicResponse, AxiosError, InviteUserToGameRequest>({
+		mutationKey: ['cancel-game-invite'],
+		mutationFn: (request) =>
+			API.patch<BasicResponse>(`/api/games/${id}/invite/cancel`, request),
+	});
 }

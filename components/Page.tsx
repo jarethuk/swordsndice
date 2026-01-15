@@ -4,14 +4,15 @@ import { Animated, RefreshControl, View } from 'react-native';
 import { Container } from './Container';
 
 import { PageTitle } from './PageTitle';
+
 import ScrollView = Animated.ScrollView;
 
 interface Props extends PropsWithChildren {
-  refetch?: () => void;
-  isLoading?: boolean;
-  isDark?: boolean;
-  title?: string;
-  subtitle?: string;
+	refetch?: () => void;
+	isLoading?: boolean;
+	isDark?: boolean;
+	title?: string;
+	subtitle?: string;
 }
 
 export const Page = ({
@@ -36,10 +37,7 @@ export const Page = ({
 					contentInsetAdjustmentBehavior={'automatic'}
 					refreshControl={
 						refetch ? (
-							<RefreshControl
-								refreshing={!!isLoading}
-								onRefresh={refetch}
-							/>
+							<RefreshControl refreshing={!!isLoading} onRefresh={refetch} />
 						) : undefined
 					}
 				>

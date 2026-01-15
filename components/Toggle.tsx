@@ -1,5 +1,5 @@
-import {clsx} from 'clsx';
-import {Pressable, View} from 'react-native';
+import { clsx } from 'clsx';
+import { Pressable, View } from 'react-native';
 
 interface Props {
 	className?: string;

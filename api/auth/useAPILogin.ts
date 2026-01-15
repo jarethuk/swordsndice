@@ -6,8 +6,9 @@ import type { UserResponse } from '../../types/api/responses/UserResponse';
 import { API } from '../API';
 
 export function useAPILogin() {
-  return useMutation<BasicResponse | UserResponse, AxiosError, LoginRequest>({
-    mutationKey: ['login'],
-    mutationFn: (data) => API.put<BasicResponse | UserResponse>('/api/auth/login', data),
-  });
+	return useMutation<BasicResponse | UserResponse, AxiosError, LoginRequest>({
+		mutationKey: ['login'],
+		mutationFn: (data) =>
+			API.put<BasicResponse | UserResponse>('/api/auth/login', data),
+	});
 }

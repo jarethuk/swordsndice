@@ -4,8 +4,8 @@ import type { BasicResponse } from '../../types/api/responses/BasicResponse';
 import { API } from '../API';
 
 export function useAPIDeleteGroup(id: string) {
-  return useMutation<BasicResponse, AxiosError>({
-    mutationKey: ['delete-group', id],
-    mutationFn: () => API.delete<BasicResponse>(`/api/groups/${id}`),
-  });
+	return useMutation<BasicResponse, AxiosError>({
+		mutationKey: ['delete-group', id],
+		mutationFn: () => API.delete<BasicResponse>(`/api/groups/${id}`),
+	});
 }

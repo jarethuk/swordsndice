@@ -4,12 +4,13 @@ import type { BasicResponse } from '../../types/api/responses/BasicResponse';
 import { API } from '../API';
 
 interface Props {
-  friendId: string;
+	friendId: string;
 }
 
 export function useAPIRemoveFriend() {
-  return useMutation<BasicResponse, AxiosError, Props>({
-    mutationKey: ['remove-friend', ({ friendId }: Props) => friendId],
-    mutationFn: ({ friendId }) => API.delete<BasicResponse>(`/api/friends/${friendId}`),
-  });
+	return useMutation<BasicResponse, AxiosError, Props>({
+		mutationKey: ['remove-friend', ({ friendId }: Props) => friendId],
+		mutationFn: ({ friendId }) =>
+			API.delete<BasicResponse>(`/api/friends/${friendId}`),
+	});
 }

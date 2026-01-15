@@ -1,6 +1,6 @@
-import {useMemo} from 'react';
-import {GamesList} from '../types';
-import {DropDown} from './DropDown';
+import { useMemo } from 'react';
+import { GamesList } from '../types';
+import { DropDown } from './DropDown';
 
 interface Props {
 	selected?: string;

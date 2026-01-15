@@ -5,8 +5,9 @@ import type { BasicResponse } from '../../types/api/responses/BasicResponse';
 import { API } from '../API';
 
 export function useAPIUpdateGroup(id: string) {
-  return useMutation<BasicResponse, AxiosError, UpdateGroupRequest>({
-    mutationKey: ['update-group', id],
-    mutationFn: (request) => API.patch<BasicResponse>(`/api/groups/${id}`, request),
-  });
+	return useMutation<BasicResponse, AxiosError, UpdateGroupRequest>({
+		mutationKey: ['update-group', id],
+		mutationFn: (request) =>
+			API.patch<BasicResponse>(`/api/groups/${id}`, request),
+	});
 }

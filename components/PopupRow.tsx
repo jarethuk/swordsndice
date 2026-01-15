@@ -1,5 +1,5 @@
-import type {ReactElement} from 'react';
-import {NextWindowButton} from './NextWindowButton';
+import type { ReactElement } from 'react';
+import { NextWindowButton } from './NextWindowButton';
 
 interface Props {
 	title: string | ReactElement;

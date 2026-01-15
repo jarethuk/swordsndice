@@ -8,36 +8,36 @@ import { useNewListActions } from '../../states/useNewListStore';
 import { type Games, GamesList, SelectGameDialogMode } from '../../types';
 
 export default function SelectGame() {
-  const { mode } = useLocalSearchParams();
-  const { setGame: setNewListGame } = useNewListActions();
-  const { setGame: setNewGameGame } = useNewGameActions();
+	const { mode } = useLocalSearchParams();
+	const { setGame: setNewListGame } = useNewListActions();
+	const { setGame: setNewGameGame } = useNewGameActions();
 
-  const onSelect = useCallback(
-    (game: Games) => {
-      switch (mode) {
-        case SelectGameDialogMode.CreateGame:
-          setNewGameGame(game);
-          break;
-        case SelectGameDialogMode.CreateList:
-          setNewListGame(game);
-          break;
-      }
+	const onSelect = useCallback(
+		(game: Games) => {
+			switch (mode) {
+				case SelectGameDialogMode.CreateGame:
+					setNewGameGame(game);
+					break;
+				case SelectGameDialogMode.CreateList:
+					setNewListGame(game);
+					break;
+			}
 
-      router.dismiss();
-    },
-    [mode, setNewGameGame, setNewListGame]
-  );
+			router.dismiss();
+		},
+		[mode, setNewGameGame, setNewListGame],
+	);
 
-  return (
-    <Dialog title={'Select Game'}>
-      {GamesList.map(({ title, value }) => (
-        <ListRow
-          key={value}
-          title={title}
-          onPress={() => onSelect(value)}
-          placeHolderIcon={faSword}
-        />
-      ))}
-    </Dialog>
-  );
+	return (
+		<Dialog title={'Select Game'}>
+			{GamesList.map(({ title, value }) => (
+				<ListRow
+					key={value}
+					title={title}
+					onPress={() => onSelect(value)}
+					placeHolderIcon={faSword}
+				/>
+			))}
+		</Dialog>
+	);
 }

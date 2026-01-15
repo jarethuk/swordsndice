@@ -4,8 +4,8 @@ import type { BasicResponse } from '../../types/api/responses/BasicResponse';
 import { API } from '../API';
 
 export function useAPILeaveGame(id: string) {
-  return useMutation<BasicResponse, AxiosError>({
-    mutationKey: ['leave-game'],
-    mutationFn: () => API.patch<BasicResponse>(`/api/games/${id}/leave`, {}),
-  });
+	return useMutation<BasicResponse, AxiosError>({
+		mutationKey: ['leave-game'],
+		mutationFn: () => API.patch<BasicResponse>(`/api/games/${id}/leave`, {}),
+	});
 }

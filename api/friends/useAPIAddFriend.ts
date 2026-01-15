@@ -4,12 +4,13 @@ import type { BasicResponse } from '../../types/api/responses/BasicResponse';
 import { API } from '../API';
 
 interface Props {
-  friendId: string;
+	friendId: string;
 }
 
 export function useAPIAddFriend() {
-  return useMutation<BasicResponse, AxiosError, Props>({
-    mutationKey: ['add-friend', ({ friendId }: Props) => friendId],
-    mutationFn: ({ friendId }) => API.put<BasicResponse>(`/api/friends/${friendId}`, {}),
-  });
+	return useMutation<BasicResponse, AxiosError, Props>({
+		mutationKey: ['add-friend', ({ friendId }: Props) => friendId],
+		mutationFn: ({ friendId }) =>
+			API.put<BasicResponse>(`/api/friends/${friendId}`, {}),
+	});
 }

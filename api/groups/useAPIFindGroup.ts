@@ -3,9 +3,12 @@ import type { GroupSearchResult } from '../../types/api/responses/GroupSearchRes
 import { API } from '../API';
 
 export function useAPIFindGroup(search: string, page = 1) {
-  return useQuery<GroupSearchResult[]>({
-    queryKey: ['find-group', search, page],
-    queryFn: () => API.get<GroupSearchResult[]>(`/api/groups/find?search=${search}&page=${page}`),
-    enabled: !!search,
-  });
+	return useQuery<GroupSearchResult[]>({
+		queryKey: ['find-group', search, page],
+		queryFn: () =>
+			API.get<GroupSearchResult[]>(
+				`/api/groups/find?search=${search}&page=${page}`,
+			),
+		enabled: !!search,
+	});
 }

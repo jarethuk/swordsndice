@@ -15,155 +15,175 @@ import type { ListMember, ListMemberEquipment } from '../../types/api/ListBody';
 import type { MESBGProfileStats } from '../../types/MESBGProfileStats';
 
 interface MemberWithStats extends ListMember {
-  fullStats: MESBGProfileStats;
+	fullStats: MESBGProfileStats;
 }
 
 export default function EditUnitPopup() {
-  const list = useList();
-  const { updateList } = useListActions();
-  const { groupId, memberId, availableUnits } = useLocalSearchParams();
+	const list = useList();
+	const { updateList } = useListActions();
+	const { groupId, memberId, availableUnits } = useLocalSearchParams();
 
-  const { member, isLeader, isUnique } = useMemo((): {
-    member?: MemberWithStats;
-    isLeader?: boolean;
-    isUnique?: boolean;
-  } => {
-    const group = list?.groups.find((x) => x.id === groupId);
+	const { member, isLeader, isUnique } = useMemo((): {
+		member?: MemberWithStats;
+		isLeader?: boolean;
+		isUnique?: boolean;
+	} => {
+		const group = list?.groups.find((x) => x.id === groupId);
 
-    if (!group) {
-      router.dismiss();
-      return {};
-    }
+		if (!group) {
+			router.dismiss();
+			return {};
+		}
 
-    if (group.leader.id === memberId) {
-      const profile = MESBGProfiles.find((x) => x.name === group.leader.name);
+		if (group.leader.id === memberId) {
+			const profile = MESBGProfiles.find((x) => x.name === group.leader.name);
 
-      if (!profile) return {};
+			if (!profile) return {};
 
-      return {
-        member: {
-          ...group.leader,
-          fullStats: getMESBGStats(profile),
-        },
-        isLeader: true,
-        isUnique: profile.unique,
-      };
-    }
+			return {
+				member: {
+					...group.leader,
+					fullStats: getMESBGStats(profile),
+				},
+				isLeader: true,
+				isUnique: profile.unique,
+			};
+		}
 
-    const member = group.members.find((x) => x.id === memberId);
+		const member = group.members.find((x) => x.id === memberId);
 
-    if (!member) {
-      router.dismiss();
-      return {};
-    }
+		if (!member) {
+			router.dismiss();
+			return {};
+		}
 
-    const profile = MESBGProfiles.find((x) => x.name === member.name);
+		const profile = MESBGProfiles.find((x) => x.name === member.name);
 
-    if (!profile) return {};
+		if (!profile) return {};
 
-    return {
-      member: {
-        ...member,
-        fullStats: getMESBGStats(profile),
-      },
-      isLeader: false,
-      isUnique: profile.unique,
-    };
-  }, [list, groupId, memberId]);
+		return {
+			member: {
+				...member,
+				fullStats: getMESBGStats(profile),
+			},
+			isLeader: false,
+			isUnique: profile.unique,
+		};
+	}, [list, groupId, memberId]);
 
-  const [notes, setNotes] = useState<string>(member?.notes ?? '');
-  const [amount, setAmount] = useState(member?.amount ?? 1);
-  const [equipment, setEquipment] = useState<ListMemberEquipment[]>(member?.equipment ?? []);
+	const [notes, setNotes] = useState<string>(member?.notes ?? '');
+	const [amount, setAmount] = useState(member?.amount ?? 1);
+	const [equipment, setEquipment] = useState<ListMemberEquipment[]>(
+		member?.equipment ?? [],
+	);
 
-  const maxUnits = Number(availableUnits ?? 1) + (member?.amount ?? 0);
+	const maxUnits = Number(availableUnits ?? 1) + (member?.amount ?? 0);
 
-  const onSave = useCallback(async () => {
-    if (!list || !member) return;
+	const onSave = useCallback(async () => {
+		if (!list || !member) return;
 
-    const group = list.groups.find((x) => x.id === groupId);
+		const group = list.groups.find((x) => x.id === groupId);
 
-    if (!group) return;
+		if (!group) return;
 
-    if (isLeader) {
-      group.leader.equipment = equipment;
-      group.leader.notes = notes;
-    } else {
-      const groupMember = group.members.find((x) => x.id === member.id);
+		if (isLeader) {
+			group.leader.equipment = equipment;
+			group.leader.notes = notes;
+		} else {
+			const groupMember = group.members.find((x) => x.id === member.id);
 
-      if (!groupMember) return;
+			if (!groupMember) return;
 
-      groupMember.equipment = equipment;
-      groupMember.amount = amount;
-      groupMember.notes = notes;
-    }
+			groupMember.equipment = equipment;
+			groupMember.amount = amount;
+			groupMember.notes = notes;
+		}
 
-    await updateList({
-      groups: list.groups,
-    });
+		await updateList({
+			groups: list.groups,
+		});
 
-    router.dismiss();
-  }, [list, member, isLeader, updateList, groupId, equipment, notes, amount]);
+		router.dismiss();
+	}, [list, member, isLeader, updateList, groupId, equipment, notes, amount]);
 
-  const removeMember = useCallback(async () => {
-    if (!list) return;
+	const removeMember = useCallback(async () => {
+		if (!list) return;
 
-    const listGroup = list.groups.find((x) => x.id === groupId);
+		const listGroup = list.groups.find((x) => x.id === groupId);
 
-    if (!listGroup) return;
+		if (!listGroup) return;
 
-    const index = listGroup.members.findIndex((x) => x.id === memberId);
-    listGroup.members.splice(index, 1);
+		const index = listGroup.members.findIndex((x) => x.id === memberId);
+		listGroup.members.splice(index, 1);
 
-    await updateList({
-      groups: list.groups,
-    });
+		await updateList({
+			groups: list.groups,
+		});
 
-    router.dismiss();
-  }, [groupId, list, memberId, updateList]);
+		router.dismiss();
+	}, [groupId, list, memberId, updateList]);
 
-  if (!member) return null;
+	if (!member) return null;
 
-  return (
-    <Dialog title={member.name}>
-      <View
-        className={
-          'border-border-light dark:border-border-dark flex gap-4 rounded-2xl border-2 p-4'
-        }>
-        <Content size={'xs'} type={'title'}>
-          Stats
-        </Content>
+	return (
+		<Dialog title={member.name}>
+			<View
+				className={
+					'border-border-light dark:border-border-dark flex gap-4 rounded-2xl border-2 p-4'
+				}
+			>
+				<Content size={'xs'} type={'title'}>
+					Stats
+				</Content>
 
-        <StatsRow stats={member.fullStats} />
-      </View>
+				<StatsRow stats={member.fullStats} />
+			</View>
 
-      <View className={'flex grow flex-col gap-6'}>
-        <EquipmentSelector member={member} equipment={equipment} setEquipment={setEquipment} />
+			<View className={'flex grow flex-col gap-6'}>
+				<EquipmentSelector
+					member={member}
+					equipment={equipment}
+					setEquipment={setEquipment}
+				/>
 
-        {!isUnique && (
-          <View
-            className={
-              'border-border-light dark:border-border-dark flex gap-4 rounded-2xl border-2 p-4'
-            }>
-            <Content size={'xs'} type={'title'}>
-              Unit Size
-            </Content>
+				{!isUnique && (
+					<View
+						className={
+							'border-border-light dark:border-border-dark flex gap-4 rounded-2xl border-2 p-4'
+						}
+					>
+						<Content size={'xs'} type={'title'}>
+							Unit Size
+						</Content>
 
-            <AmountSelector
-              value={amount}
-              onChange={(value) => {
-                setAmount(value);
-              }}
-              max={maxUnits}
-            />
-          </View>
-        )}
+						<AmountSelector
+							value={amount}
+							onChange={(value) => {
+								setAmount(value);
+							}}
+							max={maxUnits}
+						/>
+					</View>
+				)}
 
-        <Input value={notes} onChange={setNotes} type={'text'} label={'Notes'} multiline />
+				<Input
+					value={notes}
+					onChange={setNotes}
+					type={'text'}
+					label={'Notes'}
+					multiline
+				/>
 
-        {!isLeader && <Button content={'Remove Unit'} onPress={removeMember} variant={'outline'} />}
-      </View>
+				{!isLeader && (
+					<Button
+						content={'Remove Unit'}
+						onPress={removeMember}
+						variant={'outline'}
+					/>
+				)}
+			</View>
 
-      <Button content={'Save'} onPress={onSave} />
-    </Dialog>
-  );
+			<Button content={'Save'} onPress={onSave} />
+		</Dialog>
+	);
 }

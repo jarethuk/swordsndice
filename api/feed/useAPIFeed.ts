@@ -4,9 +4,9 @@ import type { FeedItem } from '../../types/api/responses/FeedItem';
 import { API } from '../API';
 
 export function useAPIFeed() {
-  return usePersistedQuery<FeedItem[]>({
-    queryKey: ['feed'],
-    queryFn: () => API.get<FeedItem[]>('/api/feed'),
-    staleTime: ONE_HOUR,
-  });
+	return usePersistedQuery<FeedItem[]>({
+		queryKey: ['feed'],
+		queryFn: () => API.get<FeedItem[]>('/api/feed'),
+		staleTime: ONE_HOUR,
+	});
 }

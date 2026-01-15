@@ -5,8 +5,8 @@ import type { IdResponse } from '../../types/api/responses/IdResponse';
 import { API } from '../API';
 
 export function useAPICreateGroup() {
-  return useMutation<IdResponse, AxiosError, CreateGroupRequest>({
-    mutationKey: ['create-group'],
-    mutationFn: (request) => API.put<IdResponse>('/api/groups', request),
-  });
+	return useMutation<IdResponse, AxiosError, CreateGroupRequest>({
+		mutationKey: ['create-group'],
+		mutationFn: (request) => API.put<IdResponse>('/api/groups', request),
+	});
 }

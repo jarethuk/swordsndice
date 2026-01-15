@@ -12,55 +12,61 @@ import { Page } from '../../components/Page';
 import { useGame, useGameActions } from '../../states/useGameStore';
 
 export default function GamePage() {
-  const { id } = useLocalSearchParams();
-  const game = useGame();
-  const { setGame } = useGameActions();
-  const { refetch, data, isLoading } = useAPIGame(id as string);
+	const { id } = useLocalSearchParams();
+	const game = useGame();
+	const { setGame } = useGameActions();
+	const { refetch, data, isLoading } = useAPIGame(id as string);
 
-  useEffect(() => {
-    if (data?.isStarted && !data.isComplete) {
-      const interval = setInterval(refetch, 30000);
-      return () => clearInterval(interval);
-    }
-  }, [data, refetch]);
+	useEffect(() => {
+		if (data?.isStarted && !data.isComplete) {
+			const interval = setInterval(refetch, 30000);
+			return () => clearInterval(interval);
+		}
+	}, [data, refetch]);
 
-  useEffect(() => {
-    if (data) {
-      setGame(data);
-    }
-  }, [data, setGame]);
+	useEffect(() => {
+		if (data) {
+			setGame(data);
+		}
+	}, [data, setGame]);
 
-  useFocusEffect(
-    useCallback(() => {
-      void refetch();
-    }, [refetch])
-  );
+	useFocusEffect(
+		useCallback(() => {
+			void refetch();
+		}, [refetch]),
+	);
 
-  if (game === null) {
-    return (
-      <View className={'m-auto flex w-1/2 flex-1 items-center justify-center gap-4'}>
-        <FAIcon icon={faExclamationTriangle} size={26} colour="warning" />
+	if (game === null) {
+		return (
+			<View
+				className={'m-auto flex w-1/2 flex-1 items-center justify-center gap-4'}
+			>
+				<FAIcon icon={faExclamationTriangle} size={26} colour="warning" />
 
-        <Content size={'sm'} type={'title'} center>
-          Game not found
-        </Content>
+				<Content size={'sm'} type={'title'} center>
+					Game not found
+				</Content>
 
-        <Content size={'sm'} type={'subtitle'} center>
-          We couldn&#39;t find this game. It may have been deleted.
-        </Content>
-      </View>
-    );
-  }
+				<Content size={'sm'} type={'subtitle'} center>
+					We couldn&#39;t find this game. It may have been deleted.
+				</Content>
+			</View>
+		);
+	}
 
-  if (!game) {
-    return <LoadingScreen message={'Loading game...'} />;
-  }
+	if (!game) {
+		return <LoadingScreen message={'Loading game...'} />;
+	}
 
-  return (
-    <Page isLoading={isLoading} refetch={refetch}>
-      {!game.isStarted && <GamePrep game={game} id={id as string} refresh={refetch} />}
+	return (
+		<Page isLoading={isLoading} refetch={refetch}>
+			{!game.isStarted && (
+				<GamePrep game={game} id={id as string} refresh={refetch} />
+			)}
 
-      {game.isStarted && <GamePlay game={game} id={id as string} refresh={refetch} />}
-    </Page>
-  );
+			{game.isStarted && (
+				<GamePlay game={game} id={id as string} refresh={refetch} />
+			)}
+		</Page>
+	);
 }

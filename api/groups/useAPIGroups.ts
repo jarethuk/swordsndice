@@ -4,9 +4,9 @@ import type { UserGroup } from '../../types/api/responses/UserGroup';
 import { API } from '../API';
 
 export function useAPIGroups() {
-  return usePersistedQuery<UserGroup[]>({
-    queryKey: ['groups'],
-    queryFn: () => API.get<UserGroup[]>('/api/groups'),
-    staleTime: ONE_DAY,
-  });
+	return usePersistedQuery<UserGroup[]>({
+		queryKey: ['groups'],
+		queryFn: () => API.get<UserGroup[]>('/api/groups'),
+		staleTime: ONE_DAY,
+	});
 }

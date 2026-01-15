@@ -193,9 +193,7 @@ const UnitRow = ({
 
 				{canUpdate && (
 					<View className={'ml-auto'}>
-						<FAIcon
-							icon={open ? faChevronUp : faChevronDown}
-						/>
+						<FAIcon icon={open ? faChevronUp : faChevronDown} />
 					</View>
 				)}
 			</View>

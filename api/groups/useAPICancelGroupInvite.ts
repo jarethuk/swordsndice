@@ -5,8 +5,9 @@ import type { BasicResponse } from '../../types/api/responses/BasicResponse';
 import { API } from '../API';
 
 export function useAPICancelGroupInvite(id: string) {
-  return useMutation<BasicResponse, AxiosError, CancelInviteToGroupRequest>({
-    mutationKey: ['cancel-group-invite', id],
-    mutationFn: (request) => API.patch<BasicResponse>(`/api/groups/${id}/invite/cancel`, request),
-  });
+	return useMutation<BasicResponse, AxiosError, CancelInviteToGroupRequest>({
+		mutationKey: ['cancel-group-invite', id],
+		mutationFn: (request) =>
+			API.patch<BasicResponse>(`/api/groups/${id}/invite/cancel`, request),
+	});
 }

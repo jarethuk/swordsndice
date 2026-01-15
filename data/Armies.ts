@@ -1,3 +1,3 @@
-import {MESBGArmies} from './MESBGArmies';
+import { MESBGArmies } from './MESBGArmies';
 
 export const Armies = [...MESBGArmies];

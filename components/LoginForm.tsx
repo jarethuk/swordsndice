@@ -1,4 +1,7 @@
-import { faApple, faGoogle } from '@awesome.me/kit-34e2017de2/icons/classic/brands';
+import {
+	faApple,
+	faGoogle,
+} from '@awesome.me/kit-34e2017de2/icons/classic/brands';
 import { Image } from 'expo-image';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
@@ -14,135 +17,140 @@ import { FAIcon } from './FAIcon';
 import { Input } from './Input';
 
 export const LoginForm = () => {
-  const [email, setEmail] = useState('');
-  const { mutateAsync, error } = useAPILogin();
-  const [isSendingCode, setIsSendingCode] = useState(false);
-  const [emailSent, setEmailSent] = useState(false);
-  const [isLoggingIn, setIsLoggingIn] = useState(false);
-  const { setUser } = useUserActions();
+	const [email, setEmail] = useState('');
+	const { mutateAsync, error } = useAPILogin();
+	const [isSendingCode, setIsSendingCode] = useState(false);
+	const [emailSent, setEmailSent] = useState(false);
+	const [isLoggingIn, setIsLoggingIn] = useState(false);
+	const { setUser } = useUserActions();
 
-  const sendOTP = useCallback(async () => {
-    if (isSendingCode) return;
+	const sendOTP = useCallback(async () => {
+		if (isSendingCode) return;
 
-    setIsSendingCode(true);
+		setIsSendingCode(true);
 
-    try {
-      await mutateAsync({ email });
-      setEmailSent(true);
-    } catch {
-      // Handled by hook
-    }
+		try {
+			await mutateAsync({ email });
+			setEmailSent(true);
+		} catch {
+			// Handled by hook
+		}
 
-    setIsSendingCode(false);
-  }, [mutateAsync, email, isSendingCode]);
+		setIsSendingCode(false);
+	}, [mutateAsync, email, isSendingCode]);
 
-  const login = useCallback(
-    async (code: string) => {
-      if (isLoggingIn) return;
+	const login = useCallback(
+		async (code: string) => {
+			if (isLoggingIn) return;
 
-      setIsLoggingIn(true);
+			setIsLoggingIn(true);
 
-      try {
-        const user = await mutateAsync({ email, code });
-        setUser(user as UserResponse);
-      } catch {
-        // Handled by hook
-      }
+			try {
+				const user = await mutateAsync({ email, code });
+				setUser(user as UserResponse);
+			} catch {
+				// Handled by hook
+			}
 
-      setIsLoggingIn(false);
-    },
-    [isLoggingIn, mutateAsync, email, setUser]
-  );
+			setIsLoggingIn(false);
+		},
+		[isLoggingIn, mutateAsync, email, setUser],
+	);
 
-  return (
-    <View className={'flex gap-6 p-6'}>
-      <View className={'mt-12 flex items-center gap-6'}>
-        <Image
-          source={require('../assets/logo.png')}
-          style={{ width: 100, height: 150, alignSelf: 'center' }}
-        />
+	return (
+		<View className={'flex gap-6 p-6'}>
+			<View className={'mt-12 flex items-center gap-6'}>
+				<Image
+					source={require('../assets/logo.png')}
+					style={{ width: 100, height: 150, alignSelf: 'center' }}
+				/>
 
-        <Content type={'display'} size={'sm'} center themeOverride={'dark'}>
-          Swords & Dice
-        </Content>
-      </View>
+				<Content type={'display'} size={'sm'} center themeOverride={'dark'}>
+					Swords & Dice
+				</Content>
+			</View>
 
-      {emailSent ? (
-        <View className={'flex flex-col gap-12'}>
-          <Content type={'subtitle'} size={'md'} center themeOverride={'dark'}>
-            Enter the code sent to {email}
-          </Content>
+			{emailSent ? (
+				<View className={'flex flex-col gap-12'}>
+					<Content type={'subtitle'} size={'md'} center themeOverride={'dark'}>
+						Enter the code sent to {email}
+					</Content>
 
-          <CodeEnterInput onComplete={(code) => login(code)} length={6} />
+					<CodeEnterInput onComplete={(code) => login(code)} length={6} />
 
-          <ErrorMessage error={error} />
+					<ErrorMessage error={error} />
 
-          <Button
-            content={'Back'}
-            onPress={() => setEmailSent(false)}
-            variant={'outline'}
-            themeOverride={'dark'}
-          />
-        </View>
-      ) : (
-        <View className={'flex gap-8'}>
-          <View className={'flex gap-6'}>
-            <Content type={'subtitle'} size={'md'} center themeOverride={'dark'}>
-              Enter your email address to get started
-            </Content>
+					<Button
+						content={'Back'}
+						onPress={() => setEmailSent(false)}
+						variant={'outline'}
+						themeOverride={'dark'}
+					/>
+				</View>
+			) : (
+				<View className={'flex gap-8'}>
+					<View className={'flex gap-6'}>
+						<Content
+							type={'subtitle'}
+							size={'md'}
+							center
+							themeOverride={'dark'}
+						>
+							Enter your email address to get started
+						</Content>
 
-            <Input
-              value={email}
-              onChange={setEmail}
-              type={'email'}
-              label={'Email'}
-              themeOverride={'dark'}
-              textContentType={'emailAddress'}
-            />
+						<Input
+							value={email}
+							onChange={setEmail}
+							type={'email'}
+							label={'Email'}
+							themeOverride={'dark'}
+							textContentType={'emailAddress'}
+						/>
 
-            <ErrorMessage error={error} />
+						<ErrorMessage error={error} />
 
-            <Button
-              content={'Continue'}
-              loading={isSendingCode}
-              onPress={sendOTP}
-              themeOverride={'dark'}
-            />
-          </View>
+						<Button
+							content={'Continue'}
+							loading={isSendingCode}
+							onPress={sendOTP}
+							themeOverride={'dark'}
+						/>
+					</View>
 
-          <Divider />
+					<Divider />
 
-          <View className={'flex items-center justify-center gap-4'}>
-            <Button
-              variant={'outline'}
-              themeOverride={'dark'}
-              content={
-                <View className={'flex flex-row items-center gap-4'}>
-                  <FAIcon icon={faApple} colour={'white'} size={24} />
+					<View className={'flex items-center justify-center gap-4'}>
+						<Button
+							variant={'outline'}
+							themeOverride={'dark'}
+							content={
+								<View className={'flex flex-row items-center gap-4'}>
+									<FAIcon icon={faApple} colour={'white'} size={24} />
 
-                  <Content type={'cta'} size={'lg'} themeOverride={'dark'}>
-                    Login with Apple
-                  </Content>
-                </View>
-              }
-            />
+									<Content type={'cta'} size={'lg'} themeOverride={'dark'}>
+										Login with Apple
+									</Content>
+								</View>
+							}
+						/>
 
-            <Button
-              variant={'outline'}
-              themeOverride={'dark'}
-              content={
-                <View className={'flex flex-row items-center gap-4'}>
-                  <FAIcon icon={faGoogle} colour={'white'} size={24} />
+						<Button
+							variant={'outline'}
+							themeOverride={'dark'}
+							content={
+								<View className={'flex flex-row items-center gap-4'}>
+									<FAIcon icon={faGoogle} colour={'white'} size={24} />
 
-                  <Content type={'cta'} size={'lg'} themeOverride={'dark'}>
-                    Login with Google
-                  </Content>
-                </View>
-              }
-            />
-          </View>
-        </View>
-      )}
-    </View>
-  );
+									<Content type={'cta'} size={'lg'} themeOverride={'dark'}>
+										Login with Google
+									</Content>
+								</View>
+							}
+						/>
+					</View>
+				</View>
+			)}
+		</View>
+	);
 };

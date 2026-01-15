@@ -11,59 +11,59 @@ import { Page } from '../../components/Page';
 import { PageTitleWithImage } from '../../components/PageTitleWithImage';
 
 export default function FriendPage() {
-  const { username } = useLocalSearchParams();
-  const { data, refetch, isLoading } = useAPIGetUser(username as string);
-  const client = useQueryClient();
+	const { username } = useLocalSearchParams();
+	const { data, refetch, isLoading } = useAPIGetUser(username as string);
+	const client = useQueryClient();
 
-  const { mutateAsync: addFriendAsync } = useAPIAddFriend();
-  const { mutateAsync: removeFriendAsync } = useAPIRemoveFriend();
+	const { mutateAsync: addFriendAsync } = useAPIAddFriend();
+	const { mutateAsync: removeFriendAsync } = useAPIRemoveFriend();
 
-  const addFriend = useCallback(async () => {
-    if (!data) return;
+	const addFriend = useCallback(async () => {
+		if (!data) return;
 
-    await addFriendAsync({
-      friendId: data.id,
-    });
+		await addFriendAsync({
+			friendId: data.id,
+		});
 
-    await refetch();
+		await refetch();
 
-    await client.invalidateQueries({
-      queryKey: ['friends'],
-    });
-  }, [addFriendAsync, client, data, refetch]);
+		await client.invalidateQueries({
+			queryKey: ['friends'],
+		});
+	}, [addFriendAsync, client, data, refetch]);
 
-  const removeFriend = useCallback(async () => {
-    if (!data) return;
+	const removeFriend = useCallback(async () => {
+		if (!data) return;
 
-    await removeFriendAsync({
-      friendId: data.id,
-    });
+		await removeFriendAsync({
+			friendId: data.id,
+		});
 
-    await refetch();
+		await refetch();
 
-    await client.invalidateQueries({
-      queryKey: ['friends'],
-    });
-  }, [data, removeFriendAsync, refetch, client]);
+		await client.invalidateQueries({
+			queryKey: ['friends'],
+		});
+	}, [data, removeFriendAsync, refetch, client]);
 
-  if (!data) {
-    return <LoadingScreen message={'Loading profile...'} />;
-  }
+	if (!data) {
+		return <LoadingScreen message={'Loading profile...'} />;
+	}
 
-  return (
-    <Page isLoading={isLoading} refetch={refetch}>
-      <PageTitleWithImage
-        title={`@${data.username}`}
-        placeholderIcon={faUser}
-        image={data.image}
-        description={data.description}
-      />
+	return (
+		<Page isLoading={isLoading} refetch={refetch}>
+			<PageTitleWithImage
+				title={`@${data.username}`}
+				placeholderIcon={faUser}
+				image={data.image}
+				description={data.description}
+			/>
 
-      {data.isFriend ? (
-        <Button content={'Remove Friend'} onPress={removeFriend} />
-      ) : (
-        <Button content={'Add Friend'} onPress={addFriend} />
-      )}
-    </Page>
-  );
+			{data.isFriend ? (
+				<Button content={'Remove Friend'} onPress={removeFriend} />
+			) : (
+				<Button content={'Add Friend'} onPress={addFriend} />
+			)}
+		</Page>
+	);
 }

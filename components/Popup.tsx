@@ -1,14 +1,14 @@
 import {
-    BottomSheetBackdrop,
-    type BottomSheetBackdropProps,
-    type BottomSheetBackgroundProps,
-    BottomSheetModal,
-    BottomSheetScrollView,
+	BottomSheetBackdrop,
+	type BottomSheetBackdropProps,
+	type BottomSheetBackgroundProps,
+	BottomSheetModal,
+	BottomSheetScrollView,
 } from '@gorhom/bottom-sheet';
-import {type PropsWithChildren, useEffect, useMemo, useRef} from 'react';
-import {Dimensions, View} from 'react-native';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {useColours} from '../hooks/useColours';
+import { type PropsWithChildren, useEffect, useMemo, useRef } from 'react';
+import { Dimensions, View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useColours } from '../hooks/useColours';
 
 interface Props extends PropsWithChildren {
 	onDismiss: () => void;
@@ -51,7 +51,7 @@ const CustomBackground = ({ style }: BottomSheetBackgroundProps) => {
 	return <View pointerEvents="none" style={containerStyle} />;
 };
 
-export const Popup = ({ onDismiss, children, onBack }: Props) => {
+export const Popup = ({ onDismiss, children }: Props) => {
 	const ref = useRef<BottomSheetModal>(null);
 	const { bottom } = useSafeAreaInsets();
 	const colours = useColours();
@@ -93,7 +93,7 @@ export const Popup = ({ onDismiss, children, onBack }: Props) => {
 						marginBottom: bottom,
 					}}
 				>
-					<View className={'px-6 pb-6 pt-2'}>{children}</View>
+					<View className={'px-6 pt-2 pb-6'}>{children}</View>
 				</View>
 			</BottomSheetScrollView>
 		</BottomSheetModal>

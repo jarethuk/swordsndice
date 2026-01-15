@@ -1,9 +1,9 @@
-import {useCallback, useMemo} from 'react';
-import {View} from 'react-native';
-import {MESBGProfiles} from '../data/MESBGProfiles';
-import type {ListMemberEquipment} from '../types/List';
-import type {Equipment} from '../types/Profile';
-import {Content} from './Content';
+import { useCallback, useMemo } from 'react';
+import { View } from 'react-native';
+import { MESBGProfiles } from '../data/MESBGProfiles';
+import type { ListMemberEquipment } from '../types/List';
+import type { Equipment } from '../types/Profile';
+import { Content } from './Content';
 import Toggle from './Toggle';
 
 interface Props {
@@ -33,7 +33,7 @@ export default function EquipmentSelector({
 				setEquipment([...equipment, changed]);
 			}
 		},
-		[equipment],
+		[equipment, setEquipment],
 	);
 
 	if (!profile) return;

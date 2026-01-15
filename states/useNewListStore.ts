@@ -1,5 +1,5 @@
-import {create} from 'zustand';
-import {Games} from '../types';
+import { create } from 'zustand';
+import { Games } from '../types';
 
 export interface NewListStore {
 	name?: string;

@@ -1,4 +1,4 @@
-import type {Games} from './Enums';
+import type { Games } from './Enums';
 
 export interface Equipment {
 	name: string;

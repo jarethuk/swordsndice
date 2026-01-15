@@ -1,6 +1,6 @@
-import {View} from 'react-native';
-import type {ListMember} from '../types/List';
-import {Content} from './Content';
+import { View } from 'react-native';
+import type { ListMember } from '../types/List';
+import { Content } from './Content';
 
 interface Props {
 	member: ListMember;

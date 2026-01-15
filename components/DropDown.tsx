@@ -1,6 +1,6 @@
 import { faChevronDown } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { clsx } from 'clsx';
-import React, { type ReactElement, useState } from 'react';
+import { type ReactElement, useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { Container } from './Container';
 import { Content } from './Content';
@@ -9,61 +9,69 @@ import { Popup } from './Popup';
 import { PopupRow } from './PopupRow';
 
 export interface DropDownOption {
-  title: string;
-  value: string;
-  icon?: ReactElement;
+	title: string;
+	value: string;
+	icon?: ReactElement;
 }
 
 interface Props {
-  title?: string;
-  selected?: string;
-  options: DropDownOption[];
-  onChange: (value: string) => void;
-  className?: string;
-  icon?: ReactElement;
+	title?: string;
+	selected?: string;
+	options: DropDownOption[];
+	onChange: (value: string) => void;
+	className?: string;
+	icon?: ReactElement;
 }
 
-export const DropDown = ({ onChange, selected, options, className, icon, title }: Props) => {
-  const [isSelecting, setIsSelecting] = useState(false);
+export const DropDown = ({
+	onChange,
+	selected,
+	options,
+	className,
+	icon,
+	title,
+}: Props) => {
+	const [isSelecting, setIsSelecting] = useState(false);
 
-  return (
-    <View className={clsx('relative', className)}>
-      <Pressable
-        className={'flex flex-row items-center gap-4'}
-        onPress={() => setIsSelecting(true)}>
-        <View className={'flex flex-row items-center gap-2'}>
-          {icon}
-          <Content size={'xs'} type={'title'}>
-            {options.find((x) => x.value === selected)?.title}
-          </Content>
-        </View>
+	return (
+		<View className={clsx('relative', className)}>
+			<Pressable
+				className={'flex flex-row items-center gap-4'}
+				onPress={() => setIsSelecting(true)}
+			>
+				<View className={'flex flex-row items-center gap-2'}>
+					{icon}
+					<Content size={'xs'} type={'title'}>
+						{options.find((x) => x.value === selected)?.title}
+					</Content>
+				</View>
 
-        <FAIcon icon={faChevronDown} />
-      </Pressable>
+				<FAIcon icon={faChevronDown} />
+			</Pressable>
 
-      {isSelecting && (
-        <Popup onDismiss={() => setIsSelecting(false)}>
-          <Container>
-            {!!title && (
-              <Content type={'subtitle'} size={'md'}>
-                {title}
-              </Content>
-            )}
+			{isSelecting && (
+				<Popup onDismiss={() => setIsSelecting(false)}>
+					<Container>
+						{!!title && (
+							<Content type={'subtitle'} size={'md'}>
+								{title}
+							</Content>
+						)}
 
-            {options.map(({ title, value, icon }) => (
-              <PopupRow
-                onPress={() => {
-                  onChange(value);
-                  setIsSelecting(false);
-                }}
-                key={value}
-                title={title}
-                icon={icon}
-              />
-            ))}
-          </Container>
-        </Popup>
-      )}
-    </View>
-  );
+						{options.map(({ title, value, icon }) => (
+							<PopupRow
+								onPress={() => {
+									onChange(value);
+									setIsSelecting(false);
+								}}
+								key={value}
+								title={title}
+								icon={icon}
+							/>
+						))}
+					</Container>
+				</Popup>
+			)}
+		</View>
+	);
 };

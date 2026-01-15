@@ -17,162 +17,191 @@ import { Page } from '../../components/Page';
 import { TabInput } from '../../components/TabInput';
 import { getRandomId } from '../../helpers/RandomHelper';
 import {
-  useNewGameActions,
-  useNewGameGame,
-  useNewGameList,
-  useNewGamePoints,
+	useNewGameActions,
+	useNewGameGame,
+	useNewGameList,
+	useNewGamePoints,
 } from '../../states/useNewGameStore';
 import { useUser } from '../../states/useUserStore';
 import { SelectGameDialogMode } from '../../types';
 import type { CreateGameRequest } from '../../types/api/requests/CreateGameRequest';
 
 const StartGameTab = () => {
-  const list = useNewGameList();
-  const game = useNewGameGame();
-  const points = useNewGamePoints();
-  const [isCreating, setIsCreating] = useState(false);
-  const user = useUser();
-  const { setPoints, reset } = useNewGameActions();
-  const client = useQueryClient();
+	const list = useNewGameList();
+	const game = useNewGameGame();
+	const points = useNewGamePoints();
+	const [isCreating, setIsCreating] = useState(false);
+	const user = useUser();
+	const { setPoints, reset } = useNewGameActions();
+	const client = useQueryClient();
 
-  const { mutateAsync: apiCreateGame } = useAPIAddGame();
-  const { mutateAsync: apiSetGameList } = useAPIUpdateGameList();
+	const { mutateAsync: apiCreateGame } = useAPIAddGame();
+	const { mutateAsync: apiSetGameList } = useAPIUpdateGameList();
 
-  const isValid = useMemo(() => {
-    return game && points && Number(points) > 0;
-  }, [game, points]);
+	const isValid = useMemo(() => {
+		return game && points && Number(points) > 0;
+	}, [game, points]);
 
-  const createGame = useCallback(async () => {
-    if (isCreating || !user) return;
+	const createGame = useCallback(async () => {
+		if (isCreating || !user) return;
 
-    setIsCreating(true);
+		setIsCreating(true);
 
-    let newGame: CreateGameRequest;
+		let newGame: CreateGameRequest;
 
-    const baseGame = {
-      inviteCode: getRandomId(),
-    };
+		const baseGame = {
+			inviteCode: getRandomId(),
+		};
 
-    if (list) {
-      newGame = {
-        ...baseGame,
-        game: list.game,
-        points: list.points,
-      };
-    } else {
-      if (!game || !points) return;
+		if (list) {
+			newGame = {
+				...baseGame,
+				game: list.game,
+				points: list.points,
+			};
+		} else {
+			if (!game || !points) return;
 
-      newGame = {
-        ...baseGame,
-        game,
-        points: Number(points),
-      };
-    }
+			newGame = {
+				...baseGame,
+				game,
+				points: Number(points),
+			};
+		}
 
-    const { id } = await apiCreateGame(newGame);
+		const { id } = await apiCreateGame(newGame);
 
-    if (list) {
-      await apiSetGameList({
-        id,
-        list,
-      });
-    }
+		if (list) {
+			await apiSetGameList({
+				id,
+				list,
+			});
+		}
 
-    reset();
-    setIsCreating(false);
+		reset();
+		setIsCreating(false);
 
-    await client.invalidateQueries({
-      queryKey: ['games'],
-    });
+		await client.invalidateQueries({
+			queryKey: ['games'],
+		});
 
-    router.push({
-      pathname: '/(tabs)/game',
-      params: {
-        id,
-      },
-    });
-  }, [isCreating, user, list, apiCreateGame, reset, client, game, points, apiSetGameList]);
+		router.push({
+			pathname: '/(tabs)/game',
+			params: {
+				id,
+			},
+		});
+	}, [
+		isCreating,
+		user,
+		list,
+		apiCreateGame,
+		reset,
+		client,
+		game,
+		points,
+		apiSetGameList,
+	]);
 
-  return (
-    <View className={'flex flex-col gap-6'}>
-      <Content size={'sm'} type={'title'} center>
-        Create From List
-      </Content>
+	return (
+		<View className={'flex flex-col gap-6'}>
+			<Content size={'sm'} type={'title'} center>
+				Create From List
+			</Content>
 
-      <NextWindowButton
-        onPress={() => router.navigate('/modals/select-list')}
-        label={list?.name ?? 'Select List'}
-        subtitle={list?.army}
-        iconStart={list ? <ListImage image={list.image} placeHolderIcon={faSword} /> : undefined}
-      />
+			<NextWindowButton
+				onPress={() => router.navigate('/modals/select-list')}
+				label={list?.name ?? 'Select List'}
+				subtitle={list?.army}
+				iconStart={
+					list ? (
+						<ListImage image={list.image} placeHolderIcon={faSword} />
+					) : undefined
+				}
+			/>
 
-      {list && <Button content={'Create Game'} loading={isCreating} onPress={createGame} />}
+			{list && (
+				<Button
+					content={'Create Game'}
+					loading={isCreating}
+					onPress={createGame}
+				/>
+			)}
 
-      <Divider />
+			<Divider />
 
-      <Content size={'sm'} type={'title'} center>
-        Manual Setup
-      </Content>
+			<Content size={'sm'} type={'title'} center>
+				Manual Setup
+			</Content>
 
-      <NextWindowButton
-        onPress={() =>
-          router.navigate({
-            pathname: '/modals/select-game',
-            params: { mode: SelectGameDialogMode.CreateGame },
-          })
-        }
-        label={game ?? 'Select Game'}
-      />
+			<NextWindowButton
+				onPress={() =>
+					router.navigate({
+						pathname: '/modals/select-game',
+						params: { mode: SelectGameDialogMode.CreateGame },
+					})
+				}
+				label={game ?? 'Select Game'}
+			/>
 
-      <Input placeholder={'Points'} value={points ?? ''} onChange={setPoints} type={'numeric'} />
+			<Input
+				placeholder={'Points'}
+				value={points ?? ''}
+				onChange={setPoints}
+				type={'numeric'}
+			/>
 
-      <Button
-        content={'Create Game'}
-        disabled={!isValid}
-        loading={isCreating}
-        onPress={createGame}
-      />
-    </View>
-  );
+			<Button
+				content={'Create Game'}
+				disabled={!isValid}
+				loading={isCreating}
+				onPress={createGame}
+			/>
+		</View>
+	);
 };
 
 export default function Index() {
-  const { data, refetch } = useAPIGames('active');
-  const [tab, setTab] = useState<string>('active');
+	const { data, refetch } = useAPIGames('active');
+	const [tab, setTab] = useState<string>('active');
 
-  const showTabs = !!data?.length;
+	const showTabs = !!data?.length;
 
-  useEffect(() => {
-    if (!data?.length && tab === 'active') {
-      setTab('new');
-    }
-  }, [data?.length, tab]);
+	useEffect(() => {
+		if (!data?.length && tab === 'active') {
+			setTab('new');
+		}
+	}, [data?.length, tab]);
 
-  return (
-    <Page
-      title={'Play'}
-      subtitle={'Select a list to automatically setup a game or manually create a new one.'}
-      refetch={refetch}>
-      {showTabs && (
-        <TabInput
-          selected={tab}
-          tabs={[
-            {
-              title: 'In Progress',
-              value: 'active',
-            },
-            {
-              title: 'New Game',
-              value: 'new',
-            },
-          ]}
-          onChange={setTab}
-        />
-      )}
+	return (
+		<Page
+			title={'Play'}
+			subtitle={
+				'Select a list to automatically setup a game or manually create a new one.'
+			}
+			refetch={refetch}
+		>
+			{showTabs && (
+				<TabInput
+					selected={tab}
+					tabs={[
+						{
+							title: 'In Progress',
+							value: 'active',
+						},
+						{
+							title: 'New Game',
+							value: 'new',
+						},
+					]}
+					onChange={setTab}
+				/>
+			)}
 
-      {tab === 'active' && data?.map((item) => <GameRow key={item.id} item={item} />)}
+			{tab === 'active' &&
+				data?.map((item) => <GameRow key={item.id} item={item} />)}
 
-      {tab === 'new' && <StartGameTab />}
-    </Page>
-  );
+			{tab === 'new' && <StartGameTab />}
+		</Page>
+	);
 }

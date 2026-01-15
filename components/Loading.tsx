@@ -1,5 +1,5 @@
-import {Image} from 'expo-image';
-import {Spin} from './Spin';
+import { Image } from 'expo-image';
+import { Spin } from './Spin';
 
 interface Props {
 	size?: number;

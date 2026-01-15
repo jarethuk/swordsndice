@@ -1,5 +1,5 @@
-import type {ArmyProfile} from './ArmyProfile';
-import type {Games} from './Enums';
+import type { ArmyProfile } from './ArmyProfile';
+import type { Games } from './Enums';
 
 export interface Army {
 	game: Games;

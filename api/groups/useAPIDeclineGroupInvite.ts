@@ -4,8 +4,9 @@ import type { BasicResponse } from '../../types/api/responses/BasicResponse';
 import { API } from '../API';
 
 export function useAPIDeclineGroupInvite(id: string) {
-  return useMutation<BasicResponse, AxiosError>({
-    mutationKey: ['decline-group-invite', id],
-    mutationFn: () => API.patch<BasicResponse>(`/api/groups/${id}/invite/decline`, {}),
-  });
+	return useMutation<BasicResponse, AxiosError>({
+		mutationKey: ['decline-group-invite', id],
+		mutationFn: () =>
+			API.patch<BasicResponse>(`/api/groups/${id}/invite/decline`, {}),
+	});
 }

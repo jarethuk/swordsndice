@@ -1,4 +1,8 @@
-import { faMagnifyingGlass, faUser, faUsers, } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import {
+	faMagnifyingGlass,
+	faUser,
+	faUsers,
+} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Animated, RefreshControl, View } from 'react-native';
@@ -16,11 +20,12 @@ import { Page } from '../../components/Page';
 import { PageTitle } from '../../components/PageTitle';
 import { TabInput } from '../../components/TabInput';
 import { useDebounce } from '../../hooks/useDebounce';
+
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-  Friends = 'friends',
-  Groups = 'groups',
+	Friends = 'friends',
+	Groups = 'groups',
 }
 
 export default function Social() {
@@ -66,12 +71,7 @@ export default function Social() {
 				value={search}
 				onChange={setSearch}
 				type={'search'}
-				iconStart={
-					<FAIcon
-						icon={faMagnifyingGlass}
-						colour="primary"
-					/>
-				}
+				iconStart={<FAIcon icon={faMagnifyingGlass} colour="primary" />}
 			/>
 
 			{!debouncedValue ? (
@@ -94,10 +94,7 @@ export default function Social() {
 					<ScrollView
 						className={'w-full shrink pt-2'}
 						refreshControl={
-							<RefreshControl
-								refreshing={isLoading}
-								onRefresh={refetch}
-							/>
+							<RefreshControl refreshing={isLoading} onRefresh={refetch} />
 						}
 						showsVerticalScrollIndicator={false}
 						contentContainerClassName={'pb-12 flex gap-6 h-full'}
