@@ -1,8 +1,7 @@
 import { type UseQueryOptions, useQuery } from '@tanstack/react-query';
-import type { AxiosError } from 'axios';
 
-export function usePersistedQuery<T>(options: UseQueryOptions<T, AxiosError>) {
-	return useQuery({
+export function usePersistedQuery<T>(options: UseQueryOptions<T>) {
+	return useQuery<T>({
 		...options,
 		meta: {
 			persist: true,

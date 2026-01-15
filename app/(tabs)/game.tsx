@@ -1,9 +1,10 @@
 import { faExclamationTriangle } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { useFocusEffect, useLocalSearchParams } from 'expo-router';
-import React, { useCallback, useEffect } from 'react';
+import { useCallback, useEffect } from 'react';
 import { View } from 'react-native';
 import { useAPIGame } from '../../api/games/useAPIGame';
-import { Content, FAIcon } from '../../components';
+import { Content } from '../../components';
+import { FAIcon } from '../../components/FAIcon';
 import { GamePlay } from '../../components/game/GamePlay';
 import { GamePrep } from '../../components/game/GamePrep';
 import { LoadingScreen } from '../../components/LoadingScreen';
@@ -59,9 +60,7 @@ export default function GamePage() {
     <Page isLoading={isLoading} refetch={refetch}>
       {!game.isStarted && <GamePrep game={game} id={id as string} refresh={refetch} />}
 
-      {game.isStarted && !game.isComplete && (
-        <GamePlay game={game} id={id as string} refresh={refetch} />
-      )}
+      {game.isStarted && <GamePlay game={game} id={id as string} refresh={refetch} />}
     </Page>
   );
 }

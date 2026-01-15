@@ -1,16 +1,20 @@
 import { faSword } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { useQueryClient } from '@tanstack/react-query';
 import { router } from 'expo-router';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { View } from 'react-native';
 import { useAPIAddGame } from '../../api/games/useAPIAddGame';
+import { useAPIGames } from '../../api/games/useAPIGames';
 import { useAPIUpdateGameList } from '../../api/games/useAPIUpdateGameList';
 import { Content } from '../../components';
 import { Button } from '../../components/Button';
 import Divider from '../../components/Divider';
+import GameRow from '../../components/GameRow';
 import { Input } from '../../components/Input';
 import { ListImage } from '../../components/ListImage';
 import { NextWindowButton } from '../../components/NextWindowButton';
 import { Page } from '../../components/Page';
+import { TabInput } from '../../components/TabInput';
 import { getRandomId } from '../../helpers/RandomHelper';
 import {
   useNewGameActions,
@@ -29,6 +33,8 @@ const StartGameTab = () => {
   const [isCreating, setIsCreating] = useState(false);
   const user = useUser();
   const { setPoints, reset } = useNewGameActions();
+  const client = useQueryClient();
+
   const { mutateAsync: apiCreateGame } = useAPIAddGame();
   const { mutateAsync: apiSetGameList } = useAPIUpdateGameList();
 
@@ -75,16 +81,24 @@ const StartGameTab = () => {
     reset();
     setIsCreating(false);
 
+    await client.invalidateQueries({
+      queryKey: ['games'],
+    });
+
     router.push({
       pathname: '/(tabs)/game',
       params: {
         id,
       },
     });
-  }, [isCreating, user, list, apiCreateGame, reset, game, points, apiSetGameList]);
+  }, [isCreating, user, list, apiCreateGame, reset, client, game, points, apiSetGameList]);
 
   return (
     <View className={'flex flex-col gap-6'}>
+      <Content size={'sm'} type={'title'} center>
+        Create From List
+      </Content>
+
       <NextWindowButton
         onPress={() => router.navigate('/modals/select-list')}
         label={list?.name ?? 'Select List'}
@@ -123,11 +137,42 @@ const StartGameTab = () => {
 };
 
 export default function Index() {
+  const { data, refetch } = useAPIGames('active');
+  const [tab, setTab] = useState<string>('active');
+
+  const showTabs = !!data?.length;
+
+  useEffect(() => {
+    if (!data?.length && tab === 'active') {
+      setTab('new');
+    }
+  }, [data?.length, tab]);
+
   return (
     <Page
-      title={'Start Game'}
-      subtitle={'Select a list to automatically setup a game or manually create a new one.'}>
-      <StartGameTab />
+      title={'Play'}
+      subtitle={'Select a list to automatically setup a game or manually create a new one.'}
+      refetch={refetch}>
+      {showTabs && (
+        <TabInput
+          selected={tab}
+          tabs={[
+            {
+              title: 'In Progress',
+              value: 'active',
+            },
+            {
+              title: 'New Game',
+              value: 'new',
+            },
+          ]}
+          onChange={setTab}
+        />
+      )}
+
+      {tab === 'active' && data?.map((item) => <GameRow key={item.id} item={item} />)}
+
+      {tab === 'new' && <StartGameTab />}
     </Page>
   );
 }

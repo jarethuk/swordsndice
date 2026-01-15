@@ -4,6 +4,7 @@ import { Image } from 'expo-image';
 import { router } from 'expo-router';
 import { Pressable, View } from 'react-native';
 import { Content } from './Content';
+import { FAIcon } from './FAIcon';
 
 interface Props {
   title: string;

@@ -2,6 +2,7 @@ import type { PublicUser } from './PublicUser.ts';
 
 export interface GameResponseMember extends PublicUser {
   army?: string;
+  isWinner?: boolean;
 }
 
 export interface GameListResponse {

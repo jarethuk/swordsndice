@@ -3,10 +3,10 @@ import { usePersistedQuery } from '../../hooks/usePersistedQuery';
 import type { GameListResponse } from '../../types/api/responses/GameListResponse';
 import { API } from '../API';
 
-export function useAPIGames() {
+export function useAPIGames(state?: 'active' | 'complete') {
   return usePersistedQuery<GameListResponse[]>({
-    queryKey: ['games'],
-    queryFn: () => API.get<GameListResponse[]>('/api/games'),
+    queryKey: ['games', state],
+    queryFn: () => API.get<GameListResponse[]>(`/api/games?${state ? `state=${state}` : ''}`),
     staleTime: ONE_DAY,
   });
 }

@@ -1,3 +1,4 @@
+import { useQueryClient } from '@tanstack/react-query';
 import { router } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
@@ -11,6 +12,7 @@ export default function EditGamePopup() {
   const game = useGame();
   const { updateGame } = useGameActions();
   const { mutateAsync: apiDeleteGame } = useAPIDeleteGame();
+  const client = useQueryClient();
 
   const [points, setPoints] = useState(game?.points.toString() ?? '');
   const [description, setDescription] = useState(game?.description ?? '');
@@ -29,16 +31,25 @@ export default function EditGamePopup() {
       points: Number(points),
     });
 
+    await client.invalidateQueries({
+      queryKey: ['games'],
+    });
+
     setIsSaving(false);
     router.dismiss();
-  }, [isSaving, game, updateGame, description, points]);
+  }, [isSaving, game, updateGame, description, points, client]);
 
   const deleteGame = useCallback(async () => {
     if (!game) return;
 
     await apiDeleteGame(game.id);
+
+    await client.invalidateQueries({
+      queryKey: ['games'],
+    });
+
     router.navigate('/(tabs)');
-  }, [apiDeleteGame, game]);
+  }, [apiDeleteGame, client, game]);
 
   return (
     <Dialog title={'Edit Game'}>

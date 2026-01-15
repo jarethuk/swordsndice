@@ -52,7 +52,7 @@ export default function ListRow({
         )}
       </View>
 
-      <FAIcon icon={rightIcon} />
+      {onPress && <FAIcon icon={rightIcon} />}
     </Pressable>
   );
 }

@@ -1,12 +1,14 @@
-import { faChevronLeft } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faChevronLeft, faRefresh, faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
 import { router } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { useUser } from '../../states/useUserStore';
 import type { GameResponse } from '../../types/api/responses/GameResponse';
+import { Button } from '../Button';
 import { Content } from '../Content';
 import { DropDown, type DropDownOption } from '../DropDown';
 import { FAIcon } from '../FAIcon';
+import ListRow from '../ListRow';
 import { LoadingScreen } from '../LoadingScreen';
 import { TabInput } from '../TabInput';
 import { GamePlayHeroes } from './GamePlayHeroes';
@@ -23,10 +25,16 @@ const Tabs = {
   OtherLists: 'other-lists',
 };
 
-export function GamePlay({ game, id }: Props) {
+export function GamePlay({ game, id, refresh }: Props) {
   const user = useUser();
   const [tab, setTab] = useState<string>('my-list');
   const [otherListMemberId, setOtherListMemberId] = useState<string | undefined>(undefined);
+
+  const isMember = useMemo(() => {
+    if (!user) return false;
+
+    return !!game.members.find((x) => x.user?.id === user?.id);
+  }, [game.members, user]);
 
   const otherMembersOptions: DropDownOption[] = useMemo(() => {
     return game.members
@@ -43,6 +51,14 @@ export function GamePlay({ game, id }: Props) {
     }
   }, [otherListMemberId, otherMembersOptions]);
 
+  const winners = useMemo(() => {
+    if (!game.members.length || !game.isComplete) return [];
+
+    const maxPoints = Math.max(...game.members.map((m) => m.points ?? 0));
+
+    return game.members.filter((member) => (member.points ?? 0) === maxPoints);
+  }, [game]);
+
   if (!user) {
     return <LoadingScreen message={'Loading game...'} />;
   }
@@ -51,8 +67,8 @@ export function GamePlay({ game, id }: Props) {
     <View className={'flex gap-12'}>
       <View className={'flex gap-2'}>
         <View className={'flex flex-row items-center gap-4'}>
-          <Pressable onPress={() => router.back()}>
-            <FAIcon icon={faChevronLeft} size={20} colour="muted" />
+          <Pressable onPress={() => router.back()} className={'w-4'}>
+            <FAIcon icon={faChevronLeft} />
           </Pressable>
 
           <View className={'grow'}>
@@ -61,7 +77,9 @@ export function GamePlay({ game, id }: Props) {
             </Content>
           </View>
 
-          <View className={'w-4'} />
+          <Pressable onPress={refresh} className={'w-4'}>
+            <FAIcon icon={faRefresh} />
+          </Pressable>
         </View>
 
         <Content size={'md'} type={'subtitle'} center muted>
@@ -72,6 +90,24 @@ export function GamePlay({ game, id }: Props) {
         </Content>
       </View>
 
+      {game.isComplete && (
+        <View className={'flex gap-6'}>
+          <Content size={'xs'} type={'title'}>
+            {winners.length > 1 ? 'Winners' : 'Winner'}
+          </Content>
+
+          {winners.map((winner) => (
+            <ListRow
+              key={winner.user?.id}
+              title={winner.user?.username ?? ''}
+              subtitle={`${winner.points} victory points`}
+              placeHolderIcon={faUser}
+              image={winner.user?.image}
+            />
+          ))}
+        </View>
+      )}
+
       <View className={'flex gap-6'}>
         <Content size={'xs'} type={'title'}>
           Victory Points
@@ -80,12 +116,33 @@ export function GamePlay({ game, id }: Props) {
         {game.members
           .sort((a, b) => (a.user?.username ?? '').localeCompare(b.user?.username ?? ''))
           .map((member) => (
-            <GamePlayPoints key={member.user?.id} member={member} user={user} gameId={id} />
+            <GamePlayPoints
+              key={member.user?.id}
+              member={member}
+              user={user}
+              gameId={id}
+              canEdit={isMember}
+            />
           ))}
+
+        {!game.isComplete && isMember && (
+          <Button
+            content={'Finish Game'}
+            variant={'outline'}
+            onPress={() =>
+              router.navigate({
+                pathname: '/modals/game-finish',
+                params: {
+                  id,
+                },
+              })
+            }
+          />
+        )}
       </View>
 
       <View className={'flex gap-6'}>
-        {otherMembersOptions.length > 0 && (
+        {isMember && otherMembersOptions.length > 0 && (
           <TabInput
             selected={tab}
             tabs={[
@@ -102,9 +159,11 @@ export function GamePlay({ game, id }: Props) {
           />
         )}
 
-        {tab === Tabs.MyList && <GamePlayHeroes game={game} memberId={user.id} canUpdate={true} />}
+        {tab === Tabs.MyList && (
+          <GamePlayHeroes game={game} memberId={user.id} canUpdate={!game.isComplete && isMember} />
+        )}
 
-        {tab === Tabs.OtherLists && (
+        {(tab === Tabs.OtherLists || !isMember) && (
           <View className={'flex gap-4'}>
             <View className={'ml-auto'}>
               <DropDown

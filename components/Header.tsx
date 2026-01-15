@@ -4,14 +4,12 @@ import { Image, Pressable, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useAPIGameInvites } from '../api/games/useAPIGameInvites';
 import { useAPIGroupInvites } from '../api/groups/useAPIGroupInvites';
-import { useColours } from '../hooks/useColours';
 import { useUser } from '../states/useUserStore';
 import { Content } from './Content';
 import { FAIcon } from './FAIcon';
 
 export default function Header() {
   const { top } = useSafeAreaInsets();
-  const colours = useColours();
   const user = useUser();
 
   const { data: gameInvites } = useAPIGameInvites();
@@ -22,7 +20,6 @@ export default function Header() {
     <View
       style={{
         paddingTop: Math.max(top, 24),
-        backgroundColor: colours.background,
       }}>
       <View className={'flex w-full flex-row items-center px-6 pb-6'}>
         <Pressable
@@ -53,11 +50,7 @@ export default function Header() {
             </Content>
           )}
 
-          <FAIcon
-            icon={faBell}
-            size={20}
-            colour={count > 0 ? 'negative' : 'muted'}
-          />
+          <FAIcon icon={faBell} size={20} colour={count > 0 ? 'negative' : 'muted'} />
         </Pressable>
       </View>
     </View>

@@ -13,9 +13,11 @@ interface Props {
   gameId: string;
   member: GameResponseMember;
   user: UserResponse;
+  refresh?: () => void;
+  canEdit?: boolean;
 }
 
-export const GamePlayPoints = ({ member, user, gameId }: Props) => {
+export const GamePlayPoints = ({ member, user, gameId, refresh, canEdit }: Props) => {
   const [points, setPoints] = useState(member.points);
   const { debouncedValue, setDebouncedValue } = useDebounce(points, 2000);
   const [pendingUpdate, setPendingUpdate] = useState(false);
@@ -38,7 +40,9 @@ export const GamePlayPoints = ({ member, user, gameId }: Props) => {
         points: debouncedValue,
       },
     });
-  }, [debouncedValue, member, mutateAsync, pendingUpdate]);
+
+    refresh?.();
+  }, [debouncedValue, member.user, mutateAsync, pendingUpdate, refresh]);
 
   // Only update the API when the user stops typing for 1 second
   useEffect(() => {
@@ -57,16 +61,18 @@ export const GamePlayPoints = ({ member, user, gameId }: Props) => {
 
       <View className={'flex shrink'}>
         <Content type={'title'} size={'xs'} wrap>
-          {member.user?.username}
+          {member.user?.username} {member.user?.id === user.id && '(You)'}
         </Content>
       </View>
 
       <View className={'ml-auto flex flex-row items-center gap-2'}>
-        <Pressable
-          className={'items-center justify-center p-4'}
-          onPress={() => onPointsChange(points - 1)}>
-          <FAIcon icon={faMinus} />
-        </Pressable>
+        {canEdit && (
+          <Pressable
+            className={'items-center justify-center p-4'}
+            onPress={() => onPointsChange(points - 1)}>
+            <FAIcon icon={faMinus} />
+          </Pressable>
+        )}
 
         <View className={'w-6'}>
           <Content type={'title'} size={'xs'} center>
@@ -74,11 +80,13 @@ export const GamePlayPoints = ({ member, user, gameId }: Props) => {
           </Content>
         </View>
 
-        <Pressable
-          className={'items-center justify-center p-4'}
-          onPress={() => onPointsChange(points + 1)}>
-          <FAIcon icon={faPlus} />
-        </Pressable>
+        {canEdit && (
+          <Pressable
+            className={'items-center justify-center p-4'}
+            onPress={() => onPointsChange(points + 1)}>
+            <FAIcon icon={faPlus} />
+          </Pressable>
+        )}
       </View>
     </View>
   );

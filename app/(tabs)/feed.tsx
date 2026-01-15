@@ -1,17 +1,20 @@
-import { faChevronRight, faSwords } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faSwords, faUserPlus, faUsers } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import dayjs from 'dayjs';
 import { router } from 'expo-router';
-import { useMemo, useState } from 'react';
-import { Pressable, View } from 'react-native';
+import { useCallback, useMemo, useState } from 'react';
+import { View } from 'react-native';
+import { useAPIFeed } from '../../api/feed/useAPIFeed';
 import { useAPIGames } from '../../api/games/useAPIGames';
 import { Content } from '../../components';
 import { Container } from '../../components/Container';
-import { FAIcon } from '../../components/FAIcon';
-import { ListImage } from '../../components/ListImage';
+import GameRow from '../../components/GameRow';
+import ListRow from '../../components/ListRow';
 import { LoadingScreen } from '../../components/LoadingScreen';
 import { Page } from '../../components/Page';
 import { PageTitle } from '../../components/PageTitle';
 import { TabInput } from '../../components/TabInput';
+import { type FeedItem, FeedItemTypes } from '../../types/api/responses/FeedItem';
 import type { GameListResponse } from '../../types/api/responses/GameListResponse';
 
 enum Tabs {
@@ -30,17 +33,11 @@ interface MyGamesTabProps {
   refetch: () => void;
 }
 
-const getGameTitle = (game: GameListResponse): string => {
-  if (game.members && game.members.length > 0) {
-    if (game.members.every((x) => x.army)) {
-      return game.members.map((x) => x.army).join(' vs ');
-    }
-
-    return game.members.map((x) => `@${x.username}`).join(' vs ');
-  }
-
-  return `${game.game} (${game.points} points)`;
-};
+interface FeedTabProps {
+  data: FeedItem[];
+  isLoading: boolean;
+  refetch: () => void;
+}
 
 const MyGamesTab = ({ data, isLoading, refetch }: MyGamesTabProps) => {
   const groups: DateGroup[] = useMemo(() => {
@@ -73,33 +70,7 @@ const MyGamesTab = ({ data, isLoading, refetch }: MyGamesTabProps) => {
           </Content>
 
           {items.map((item) => (
-            <Pressable
-              key={item.id}
-              className={
-                'border-border-light dark:border-border-dark flex w-full flex-row items-center gap-4 rounded-2xl border-2 p-4'
-              }
-              onPress={() =>
-                router.push({
-                  pathname: '/(tabs)/game',
-                  params: {
-                    id: item.id,
-                  },
-                })
-              }>
-              <ListImage image={item.image} placeHolderIcon={faSwords} />
-
-              <View className={'flex grow'}>
-                <Content type={'title'} size={'xs'}>
-                  {getGameTitle(item)}
-                </Content>
-
-                <Content type={'subtitle'} size={'md'} muted>
-                  {item.game} ({item.points}pts)
-                </Content>
-              </View>
-
-              <FAIcon icon={faChevronRight} />
-            </Pressable>
+            <GameRow key={item.id} item={item} />
           ))}
         </View>
       ))}
@@ -115,11 +86,95 @@ const MyGamesTab = ({ data, isLoading, refetch }: MyGamesTabProps) => {
   );
 };
 
+const getPlaceholderIcon = (item: FeedItem): IconDefinition => {
+  switch (item.type) {
+    case FeedItemTypes.FriendAdded:
+      return faUserPlus;
+    case FeedItemTypes.GroupCreated:
+    case FeedItemTypes.GroupJoined:
+      return faUsers;
+    default:
+      return faSwords;
+  }
+};
+
+const FeedTab = ({ data, isLoading, refetch }: FeedTabProps) => {
+  if (!data) {
+    return <LoadingScreen message={'Loading feed...'} />;
+  }
+
+  const onItemPress = (item: FeedItem) => {
+    switch (item.type) {
+      case FeedItemTypes.FriendAdded:
+        router.navigate({
+          pathname: '/(tabs)/friend',
+          params: {
+            id: item.id,
+          },
+        });
+        break;
+
+      case FeedItemTypes.GroupCreated:
+      case FeedItemTypes.GroupJoined:
+        router.navigate({
+          pathname: '/(tabs)/group',
+          params: {
+            id: item.id,
+          },
+        });
+        break;
+
+      case FeedItemTypes.GameStarted:
+      case FeedItemTypes.GameCompleted:
+        router.navigate({
+          pathname: '/(tabs)/game',
+          params: {
+            id: item.id,
+          },
+        });
+        break;
+    }
+  };
+
+  return (
+    <Page isLoading={isLoading} refetch={refetch}>
+      <View className={'flex gap-8'}>
+        {data.map((item) => (
+          <ListRow
+            key={item.id}
+            title={item.title}
+            subtitle={item.subTitle}
+            image={item.image}
+            placeHolderIcon={getPlaceholderIcon(item)}
+            onPress={() => onItemPress(item)}
+          />
+        ))}
+      </View>
+
+      {data.length === 0 && (
+        <View className={'flex h-full items-center justify-center'}>
+          <Content size={'md'} type={'body'} center>
+            Games, groups and friend activity will show here
+          </Content>
+        </View>
+      )}
+    </Page>
+  );
+};
+
 export default function Feed() {
   const [tab, setTab] = useState<string>(Tabs.MyGames);
-  const { data, refetch, isLoading } = useAPIGames();
 
-  if (!data) return <LoadingScreen message={'Loading activity...'} />;
+  const { data: games, refetch: gamesRefetch, isLoading: gamesLoading } = useAPIGames();
+  const { data: feedItems, isLoading: feedLoading, refetch: feedRefetch } = useAPIFeed();
+
+  const refetch = useCallback(async () => {
+    await Promise.all([gamesRefetch(), feedRefetch()]);
+  }, [feedRefetch, gamesRefetch]);
+
+  const isLoading = gamesLoading || feedLoading;
+
+  if (!games || !feedItems) return <LoadingScreen message={'Loading activity...'} />;
 
   return (
     <Container>
@@ -140,7 +195,9 @@ export default function Feed() {
         onChange={setTab}
       />
 
-      {tab === Tabs.MyGames && <MyGamesTab data={data} isLoading={isLoading} refetch={refetch} />}
+      {tab === Tabs.MyGames && <MyGamesTab data={games} isLoading={isLoading} refetch={refetch} />}
+
+      {tab === Tabs.Feed && <FeedTab data={feedItems} isLoading={isLoading} refetch={refetch} />}
     </Container>
   );
 }

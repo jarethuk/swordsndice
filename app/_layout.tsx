@@ -236,6 +236,13 @@ const Layout = () => {
           presentation,
         }}
       />
+
+      <Stack.Screen
+        name="modals/game-finish"
+        options={{
+          presentation,
+        }}
+      />
     </Stack>
   );
 };
