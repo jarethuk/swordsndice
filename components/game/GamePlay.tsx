@@ -17,6 +17,7 @@ import { LoadingScreen } from '../LoadingScreen';
 import { TabInput } from '../TabInput';
 import { GamePlayHeroes } from './GamePlayHeroes';
 import { GamePlayPoints } from './GamePlayPoints';
+import { GamePlayModels } from './GamePlayModels';
 
 interface Props {
 	id: string;
@@ -132,22 +133,42 @@ export function GamePlay({ game, id, refresh }: Props) {
 							canEdit={isMember}
 						/>
 					))}
+      </View>
 
-				{!game.isComplete && isMember && (
-					<Button
-						content={'Finish Game'}
-						variant={'outline'}
-						onPress={() =>
-							router.navigate({
-								pathname: '/modals/game-finish',
-								params: {
-									id,
-								},
-							})
-						}
-					/>
-				)}
+      <View className={'flex gap-6'}>
+        <Content size={'xs'} type={'title'}>
+          Models Remaining
+        </Content>
+
+        {game.members
+          .sort((a, b) =>
+            (a.user?.username ?? '').localeCompare(b.user?.username ?? ''),
+          )
+          .map((member) => (
+            <GamePlayModels
+              key={member.user?.id}
+              member={member}
+              user={user}
+              gameId={id}
+              canEdit={isMember}
+            />
+          ))}
 			</View>
+
+      {!game.isComplete && isMember && (
+        <Button
+          content={'Finish Game'}
+          variant={'outline'}
+          onPress={() =>
+            router.navigate({
+              pathname: '/modals/game-finish',
+              params: {
+                id,
+              },
+            })
+          }
+        />
+      )}
 
 			<View className={'flex gap-6'}>
 				{isMember && otherMembersOptions.length > 0 && (

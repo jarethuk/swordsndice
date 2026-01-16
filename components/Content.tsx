@@ -3,7 +3,7 @@ import { Text } from 'react-native';
 import { useColours } from '../hooks/useColours';
 
 interface Props extends PropsWithChildren {
-	variant?: 'accent' | 'positive' | 'negative' | 'white';
+	variant?: 'accent' | 'positive' | 'negative' | 'white' | 'warning';
 	type?: 'display' | 'title' | 'subtitle' | 'body' | 'cta' | 'note';
 	size?: 'xl' | 'lg' | 'md' | 'sm' | 'xs';
 	center?: boolean;
@@ -139,6 +139,9 @@ export const Content = ({
 			break;
 		case 'negative':
 			colour = colours.negative;
+      break;
+    case 'warning':
+      colour = colours.warning;
 			break;
 	}
 
@@ -154,6 +157,7 @@ export const Content = ({
 					...(center ? { textAlign: 'center' } : {}),
 					...(muted ? { opacity: 0.5 } : {}),
 					color: colour,
+          userSelect: 'none'
 				},
 			]}
 		>
