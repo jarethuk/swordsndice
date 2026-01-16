@@ -34,7 +34,7 @@ export default {
 		},
 		web: {
 			bundler: 'metro',
-			output: 'static',
+			output: 'server',
 			favicon: './assets/favicon.png',
 		},
 		plugins: [

@@ -8,4 +8,12 @@ module.exports = {
 	corePlugins: {
 		preflight: false,
 	},
+	safelist: [
+		'border-border-light',
+		'border-border-dark',
+		'bg-primary-light',
+		'bg-primary-dark',
+		'text-text-light',
+		'text-text-dark',
+	],
 };
