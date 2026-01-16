@@ -93,16 +93,13 @@ export class API {
 			url = `/${url}`;
 		}
 
-		if (Platform.OS === 'web') {
-			return `http://localhost:3000${url}`;
-		}
-
 		switch (process.env.NODE_ENV) {
 			case 'development':
-				// return `http://172.20.10.2:3000${url}`;
-				return `http://192.168.1.250:3000${url}`;
+				return Platform.OS === 'web'
+					? `http://localhost:3000${url}`
+					: `http://192.168.1.250:3000${url}`;
 			default:
-				return `https://forest-api-khaki.vercel.app/${url}`;
+				return `https://api.swordsndice.com${url}`;
 		}
 	}
 }
