@@ -13,7 +13,7 @@ import { Platform, Pressable, View } from 'react-native';
 import { FAIcon } from '../../components/FAIcon';
 import Header from '../../components/Header';
 
-const tabRoutes = ['lists', 'index', 'feed', 'social', 'settings'];
+const tabRoutes = ['index', 'lists', 'feed', 'social', 'settings'];
 
 function getIcon(route: string, colour: 'primary' | 'muted'): ReactElement {
 	switch (route) {
@@ -128,12 +128,55 @@ export default function TabLayout() {
 				}}
 				tabBar={(props) => <TabsBar {...props} />}
 				initialRouteName={'index'}
+        backBehavior="history"
 			>
 				<Tabs.Screen name="lists" />
 				<Tabs.Screen name="social" />
-				<Tabs.Screen name="index" />
+        <Tabs.Screen name="index" />
 				<Tabs.Screen name="feed" />
 				<Tabs.Screen name="settings" />
+				<Tabs.Screen
+					name="game"
+					options={{
+						href: null,
+					}}
+				/>
+				<Tabs.Screen
+					name="list"
+					options={{
+						href: null,
+					}}
+				/>
+				<Tabs.Screen
+					name="create-list"
+					options={{
+						href: null,
+					}}
+				/>
+				<Tabs.Screen
+					name="friend"
+					options={{
+						href: null,
+					}}
+				/>
+				<Tabs.Screen
+					name="group"
+					options={{
+						href: null,
+					}}
+				/>
+				<Tabs.Screen
+					name="notifications"
+					options={{
+						href: null,
+					}}
+				/>
+				<Tabs.Screen
+					name="profile"
+					options={{
+						href: null,
+					}}
+				/>
 			</Tabs>
 		</View>
 	);

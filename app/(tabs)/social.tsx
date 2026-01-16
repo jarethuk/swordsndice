@@ -10,7 +10,7 @@ import { useAPIFindFriend } from '../../api/friends/useAPIFindFriend';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIFindGroup } from '../../api/groups/useAPIFindGroup';
 import { useAPIGroups } from '../../api/groups/useAPIGroups';
-import { Content, FAIcon } from '../../components';
+import { Content } from '../../components';
 import { Button } from '../../components/Button';
 import { Container } from '../../components/Container';
 import { Input } from '../../components/Input';
@@ -22,13 +22,14 @@ import { TabInput } from '../../components/TabInput';
 import { useDebounce } from '../../hooks/useDebounce';
 
 import ScrollView = Animated.ScrollView;
+import { FAIcon } from '../../components/FAIcon';
 
 enum Tabs {
 	Friends = 'friends',
 	Groups = 'groups',
 }
 
-export default function Social() {
+export default function SocialPage() {
 	const [search, setSearch] = useState('');
 	const [tab, setTab] = useState<string>(Tabs.Friends);
 
