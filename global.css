@@ -4,6 +4,9 @@
 
 @import "nativewind/theme";
 
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+
 body {
 	background: #15082f;
 }
