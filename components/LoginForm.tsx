@@ -1,7 +1,4 @@
-import {
-	faApple,
-	faGoogle,
-} from '@awesome.me/kit-34e2017de2/icons/classic/brands';
+import { faApple, faGoogle } from '@awesome.me/kit-34e2017de2/icons/classic/brands';
 import { Image } from 'expo-image';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
@@ -15,6 +12,7 @@ import Divider from './Divider';
 import { ErrorMessage } from './ErrorMessage';
 import { FAIcon } from './FAIcon';
 import { Input } from './Input';
+import { LoadingScreen } from './LoadingScreen';
 
 export const LoginForm = () => {
 	const [email, setEmail] = useState('');
@@ -71,22 +69,31 @@ export const LoginForm = () => {
 			</View>
 
 			{emailSent ? (
-				<View className={'flex flex-col gap-12'}>
-					<Content type={'subtitle'} size={'md'} center themeOverride={'dark'}>
-						Enter the code sent to {email}
-					</Content>
+				isLoggingIn ? (
+					<LoadingScreen message={'Checking code...'} />
+				) : (
+					<View className={'flex flex-col gap-12'}>
+						<Content
+							type={'subtitle'}
+							size={'md'}
+							center
+							themeOverride={'dark'}
+						>
+							Enter the code sent to {email}
+						</Content>
 
-					<CodeEnterInput onComplete={(code) => login(code)} length={6} />
+						<CodeEnterInput onComplete={(code) => login(code)} length={6} />
 
-					<ErrorMessage error={error} />
+						<ErrorMessage error={error} />
 
-					<Button
-						content={'Back'}
-						onPress={() => setEmailSent(false)}
-						variant={'outline'}
-						themeOverride={'dark'}
-					/>
-				</View>
+						<Button
+							content={'Back'}
+							onPress={() => setEmailSent(false)}
+							variant={'outline'}
+							themeOverride={'dark'}
+						/>
+					</View>
+				)
 			) : (
 				<View className={'flex gap-8'}>
 					<View className={'flex gap-6'}>
