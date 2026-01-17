@@ -28,8 +28,13 @@ export const GamePlayModels = ({
 	refresh,
 	canEdit,
 }: Props) => {
-	const [modelsRemaining, setModelsRemaining] = useState(member.modelCountRemaining);
-	const { debouncedValue, setDebouncedValue } = useDebounce(modelsRemaining, 2000);
+	const [modelsRemaining, setModelsRemaining] = useState(
+		member.modelCountRemaining,
+	);
+	const { debouncedValue, setDebouncedValue } = useDebounce(
+		modelsRemaining,
+		2000,
+	);
 	const [pendingUpdate, setPendingUpdate] = useState(false);
 
 	const { mutateAsync } = useAPIUpdateGameMember(gameId);
@@ -47,7 +52,7 @@ export const GamePlayModels = ({
 		await mutateAsync({
 			memberId: member.user.id,
 			data: {
-        modelCountRemaining: debouncedValue,
+				modelCountRemaining: debouncedValue,
 			},
 		});
 
@@ -61,63 +66,63 @@ export const GamePlayModels = ({
 	}, [debouncedValue]);
 
 	const onPointsChange = (newPoints: number) => {
-    if(newPoints < 0) return;
+		if (newPoints < 0) return;
 
 		setModelsRemaining(newPoints);
 		setPendingUpdate(true);
 	};
 
-  const brokenAt = useMemo(() => {
-    return Math.ceil(member.modelCount / 2)
-  }, [member.modelCount])
+	const brokenAt = useMemo(() => {
+		return Math.ceil(member.modelCount / 2);
+	}, [member.modelCount]);
 
-  const quarteredAt = useMemo(() => {
-    return Math.floor(member.modelCount / 4)
-  }, [member.modelCount])
+	const quarteredAt = useMemo(() => {
+		return Math.floor(member.modelCount / 4);
+	}, [member.modelCount]);
 
-  const numberColour = useMemo(() => {
-    if(modelsRemaining <= quarteredAt){
-      return 'negative'
-    }
+	const numberColour = useMemo(() => {
+		if (modelsRemaining <= quarteredAt) {
+			return 'negative';
+		}
 
-    if(modelsRemaining <= brokenAt){
-      return 'warning'
-    }
-  }, [brokenAt, modelsRemaining, quarteredAt])
+		if (modelsRemaining <= brokenAt) {
+			return 'warning';
+		}
+	}, [brokenAt, modelsRemaining, quarteredAt]);
 
 	return (
 		<View className={'flex w-full flex-row items-center gap-4'}>
 			<ListImage image={member.user?.image} placeHolderIcon={faUser} />
 
 			<View className={'flex'}>
-        <View className={'flex shrink'}>
-          <Content type={'title'} size={'xs'} wrap>
-            {member.user?.username} {member.user?.id === user.id && '(You)'}
-          </Content>
-        </View>
+				<View className={'flex shrink'}>
+					<Content type={'title'} size={'xs'} wrap>
+						{member.user?.username} {member.user?.id === user.id && '(You)'}
+					</Content>
+				</View>
 
-        <View className={'flex flex-row items-center gap-4'}>
-          <View className={'flex flex-row gap-2'}>
-            <Content size={'md'} type={'subtitle'} variant={'warning'} muted>
-              Break
-            </Content>
+				<View className={'flex flex-row items-center gap-4'}>
+					<View className={'flex flex-row gap-2'}>
+						<Content size={'md'} type={'subtitle'} variant={'warning'} muted>
+							Break
+						</Content>
 
-            <Content size={'md'} type={'subtitle'} variant={'warning'} >
-              {brokenAt}
-            </Content>
-          </View>
+						<Content size={'md'} type={'subtitle'} variant={'warning'}>
+							{brokenAt}
+						</Content>
+					</View>
 
-          <View className={'flex flex-row gap-1'}>
-            <Content size={'md'} type={'subtitle'} variant={'negative'} muted>
-              Quartered
-            </Content>
+					<View className={'flex flex-row gap-1'}>
+						<Content size={'md'} type={'subtitle'} variant={'negative'} muted>
+							Quartered
+						</Content>
 
-            <Content size={'md'} type={'subtitle'} variant={'negative'} >
-              {quarteredAt}
-            </Content>
-          </View>
-        </View>
-      </View>
+						<Content size={'md'} type={'subtitle'} variant={'negative'}>
+							{quarteredAt}
+						</Content>
+					</View>
+				</View>
+			</View>
 
 			<View className={'ml-auto flex flex-row items-center gap-2'}>
 				{canEdit && (

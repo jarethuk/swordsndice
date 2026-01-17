@@ -281,33 +281,33 @@ export default function RootLayout() {
   }
 
   return (
-    <GestureHandlerRootView>
-      <PersistQueryClientProvider
-        client={queryClient}
-        persistOptions={{
-          persister,
-          dehydrateOptions: {
-            shouldDehydrateMutation: () => false,
-            shouldDehydrateQuery: (query: Query) =>
-              query.state.status === 'success' && !!(query as PersistableQuery).meta?.persist,
-          },
-        }}>
-        <BottomSheetModalProvider>
-          <StatusBar style="auto" />
+    <View
+      className={`bg-background-light dark:bg-background-dark h-full w-full ${theme === 'dark' ? 'dark' : 'light'}`}>
+      <GestureHandlerRootView>
+        <PersistQueryClientProvider
+          client={queryClient}
+          persistOptions={{
+            persister,
+            dehydrateOptions: {
+              shouldDehydrateMutation: () => false,
+              shouldDehydrateQuery: (query: Query) =>
+                query.state.status === 'success' && !!(query as PersistableQuery).meta?.persist,
+            },
+          }}>
+          <BottomSheetModalProvider>
+            <StatusBar style="auto" />
 
-          <View
-            className={`bg-background-light dark:bg-background-dark h-full w-full ${theme === 'dark' ? 'dark' : 'light'}`}>
             <Layout />
-          </View>
 
-          <Toast
-            config={{
-              success: (props) => <CustomToast {...props} />,
-              error: (props) => <CustomToast {...props} />,
-            }}
-          />
-        </BottomSheetModalProvider>
-      </PersistQueryClientProvider>
-    </GestureHandlerRootView>
+            <Toast
+              config={{
+                success: (props) => <CustomToast {...props} />,
+                error: (props) => <CustomToast {...props} />,
+              }}
+            />
+          </BottomSheetModalProvider>
+        </PersistQueryClientProvider>
+      </GestureHandlerRootView>
+    </View>
   );
 }

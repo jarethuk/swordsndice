@@ -139,9 +139,9 @@ export const Content = ({
 			break;
 		case 'negative':
 			colour = colours.negative;
-      break;
-    case 'warning':
-      colour = colours.warning;
+			break;
+		case 'warning':
+			colour = colours.warning;
 			break;
 	}
 
@@ -157,7 +157,7 @@ export const Content = ({
 					...(center ? { textAlign: 'center' } : {}),
 					...(muted ? { opacity: 0.5 } : {}),
 					color: colour,
-          userSelect: 'none'
+					userSelect: 'none',
 				},
 			]}
 		>

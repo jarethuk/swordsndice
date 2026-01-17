@@ -6,8 +6,8 @@ export interface GameResponseMember {
 	list?: ListBody | null;
 	points: number;
 	isWinner?: boolean;
-  modelCount: number;
-  modelCountRemaining: number;
+	modelCount: number;
+	modelCountRemaining: number;
 }
 
 export interface GameResponse {

@@ -2,8 +2,9 @@ import { faMagnifyingGlass } from '@awesome.me/kit-34e2017de2/icons/duotone/soli
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { View } from 'react-native';
-import { Content, FAIcon } from '../../components';
+import { Content } from '../../components';
 import { Dialog } from '../../components/Dialog';
+import { FAIcon } from '../../components/FAIcon';
 import { Input } from '../../components/Input';
 import { NextWindowButton } from '../../components/NextWindowButton';
 import { Armies } from '../../data/Armies';

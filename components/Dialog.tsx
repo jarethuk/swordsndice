@@ -2,12 +2,11 @@ import type { PropsWithChildren } from 'react';
 import { View } from 'react-native';
 import Animated from 'react-native-reanimated';
 import { Content } from './Content';
-
 import ScrollView = Animated.ScrollView;
 
 interface Props extends PropsWithChildren {
-	title: string;
-	subtitle?: string;
+  title: string;
+  subtitle?: string;
 }
 
 export const Dialog = ({ title, children, subtitle }: Props) => {

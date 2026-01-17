@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import type { UserResponse } from '../types/api/responses/UserResponse';
 
 export interface ThemeStore {
 	theme?: 'light' | 'dark';

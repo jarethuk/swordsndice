@@ -2,20 +2,22 @@ import { router } from 'expo-router';
 import type { PropsWithChildren } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, SlideInDown } from 'react-native-reanimated';
+import { useTheme } from '../states/useThemeStore';
 import { Content } from './Content';
-
 import ScrollView = Animated.ScrollView;
 
 interface Props extends PropsWithChildren {
-	title: string;
-	subtitle?: string;
+  title: string;
+  subtitle?: string;
 }
 
 export const Dialog = ({ title, children, subtitle }: Props) => {
+	const theme = useTheme();
+
 	return (
 		<Animated.View
 			entering={FadeIn}
-			className={'flex h-full w-full items-center justify-center bg-black/50'}
+			className={`${theme === 'dark' ? 'dark' : 'light'} flex h-full w-full items-center justify-center bg-black/50 fixed p-8`}
 		>
 			<Pressable
 				style={StyleSheet.absoluteFill}
@@ -25,7 +27,7 @@ export const Dialog = ({ title, children, subtitle }: Props) => {
 			<Animated.View
 				entering={SlideInDown}
 				className={
-					'max-w-lg w-full max-h-lg bg-background-light dark:bg-background-dark rounded-2xl shadow-lg'
+					'max-h-full bg-background-light dark:bg-background-dark w-full max-w-lg rounded-2xl shadow-lg8'
 				}
 			>
 				<ScrollView

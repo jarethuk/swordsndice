@@ -22,6 +22,7 @@ import { TabInput } from '../../components/TabInput';
 import { useDebounce } from '../../hooks/useDebounce';
 
 import ScrollView = Animated.ScrollView;
+
 import { FAIcon } from '../../components/FAIcon';
 
 enum Tabs {

@@ -128,11 +128,11 @@ export default function TabLayout() {
 				}}
 				tabBar={(props) => <TabsBar {...props} />}
 				initialRouteName={'index'}
-        backBehavior="history"
+				backBehavior="history"
 			>
 				<Tabs.Screen name="lists" />
 				<Tabs.Screen name="social" />
-        <Tabs.Screen name="index" />
+				<Tabs.Screen name="index" />
 				<Tabs.Screen name="feed" />
 				<Tabs.Screen name="settings" />
 				<Tabs.Screen

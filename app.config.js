@@ -16,14 +16,12 @@ export default {
 				usesNonExemptEncryption: false,
 			},
 			bundleIdentifier: IS_DEV ? 'com.swordsndice.dev' : 'com.swordsndice',
-			associatedDomains: IS_DEV ? [] : ['applinks:api.swordsndice.com'],
 		},
 		android: {
 			adaptiveIcon: {
 				foregroundImage: './assets/adaptive-icon.png',
 				backgroundColor: '#15082F',
 			},
-			permissions: ['android.permission.CAMERA'],
 			package: 'com.swordsndice',
 		},
 		splash: {
@@ -49,18 +47,12 @@ export default {
 				},
 			],
 			[
-				'expo-camera',
-				{
-					cameraPermission: 'Allow access your camera to scan QR codes',
-				},
-			],
-			[
 				'expo-image-picker',
 				{
 					photosPermission:
-						'The app accesses your photos to let you set a picture on a contact',
+						'The app accesses your photos to let you set a picture for your profile, list, game or group.',
 					cameraPermission:
-						'The app allows you to take a picture for a contact',
+						'The app allows you to take a picture for your profile, list, game or group.',
 				},
 			],
 			'expo-font',
