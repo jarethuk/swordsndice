@@ -20,8 +20,10 @@ export default function SelectArmy() {
 	const [search, setSearch] = useState('');
 
 	const armies = useMemo(() => {
+		const lowered = search?.toLowerCase();
+
 		return Armies.filter((x) => x.game === game).filter(
-			(x) => !search || x.name.includes(search),
+			(x) => !lowered || x.name.toLowerCase().includes(search),
 		);
 	}, [game, search]);
 

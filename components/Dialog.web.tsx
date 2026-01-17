@@ -4,11 +4,12 @@ import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, SlideInDown } from 'react-native-reanimated';
 import { useTheme } from '../states/useThemeStore';
 import { Content } from './Content';
+
 import ScrollView = Animated.ScrollView;
 
 interface Props extends PropsWithChildren {
-  title: string;
-  subtitle?: string;
+	title: string;
+	subtitle?: string;
 }
 
 export const Dialog = ({ title, children, subtitle }: Props) => {
