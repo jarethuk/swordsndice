@@ -23,7 +23,7 @@ export default function SelectArmy() {
 		const lowered = search?.toLowerCase();
 
 		return Armies.filter((x) => x.game === game).filter(
-			(x) => !lowered || x.name.toLowerCase().includes(search),
+			(x) => !lowered || x.name.toLowerCase().includes(lowered),
 		);
 	}, [game, search]);
 

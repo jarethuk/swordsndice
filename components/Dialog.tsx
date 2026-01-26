@@ -13,7 +13,7 @@ interface Props extends PropsWithChildren {
 export const Dialog = ({ title, children, subtitle }: Props) => {
 	return (
 		<ScrollView
-			contentContainerClassName={'flex h-full w-full gap-6 p-6 md:p-8'}
+			contentContainerClassName={'flex w-full gap-6 p-6 md:p-8'}
 			keyboardShouldPersistTaps={'handled'}
 			showsVerticalScrollIndicator={false}
 			contentInsetAdjustmentBehavior={'automatic'}

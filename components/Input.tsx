@@ -125,7 +125,7 @@ export const Input = ({
 						) : (
 							<TextInput
 								{...inputProps}
-								autoCapitalize={'sentences'}
+								autoCapitalize={type === 'email' ? 'none' : 'sentences'}
 								autoCorrect={false}
 								numberOfLines={multiline ? 5 : 1}
 							/>

@@ -56,7 +56,10 @@ export const CodeEnterInput: React.FC<Props> = ({ length, onComplete }) => {
 					ref={(ref) => {
 						if (ref) inputRefs.current[index] = ref;
 					}}
-					className="border-border-dark bg-background-dark h-12 w-12 rounded-2xl border-2 text-center text-[16px] text-white"
+					className="border-border-dark bg-background-dark h-16 w-16 rounded-2xl border-2 text-[16px] text-white"
+					style={{
+						textAlign: 'center',
+					}}
 					keyboardType="numeric"
 					value={digit}
 					onChangeText={(text) => handleChange(text, index)}
