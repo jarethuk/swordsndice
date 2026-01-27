@@ -23,13 +23,14 @@
 		"ship:dev": "pnpm build:dev"
 	},
 	"dependencies": {
-		"@awesome.me/kit-34e2017de2": "^1.0.4",
+		"@awesome.me/kit-6b5fd61d92": "^1.0.5",
 		"@expo-google-fonts/nunito": "^0.4.2",
 		"@expo/metro-runtime": "~6.1.2",
 		"@fortawesome/fontawesome-svg-core": "^7.1.0",
 		"@fortawesome/react-native-fontawesome": "^0.3.2",
 		"@gorhom/bottom-sheet": "^5.2.7",
 		"@react-native-async-storage/async-storage": "2.2.0",
+		"@react-native-google-signin/google-signin": "^16.1.1",
 		"@react-navigation/bottom-tabs": "^7.9.0",
 		"@tailwindcss/postcss": "^4.1.13",
 		"@tanstack/react-query": "^5.90.11",

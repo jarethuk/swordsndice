@@ -115,6 +115,7 @@ export const Input = ({
 								size={moveLabel ? 'sm' : 'md'}
 								muted
 								lineHeightOverride={1}
+								themeOverride={themeOverride}
 							>
 								{label}
 							</Content>
