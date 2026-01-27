@@ -8,15 +8,15 @@ import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Pressable, View } from 'react-native';
 import { useAPILists } from '../../api/list/useAPILists';
-import { Content } from '../../components';
-import { Container } from '../../components/Container';
-import { FAIcon } from '../../components/FAIcon';
-import GamesDropdown from '../../components/GamesDropdown';
-import { Input } from '../../components/Input';
-import ListRow from '../../components/ListRow';
-import { LoadingScreen } from '../../components/LoadingScreen';
-import { Page } from '../../components/Page';
-import { PageTitle } from '../../components/PageTitle';
+import { Container } from '../../components/common/Container';
+import { Content } from '../../components/common/Content';
+import { FAIcon } from '../../components/common/FAIcon';
+import { Input } from '../../components/common/Input';
+import ListRow from '../../components/common/ListRow';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
+import { Page } from '../../components/common/Page';
+import { PageTitle } from '../../components/common/PageTitle';
+import GamesDropdown from '../../components/game/GamesDropdown';
 
 export default function Lists() {
 	const [game, setGame] = useState<string>('');

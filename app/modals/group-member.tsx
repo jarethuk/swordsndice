@@ -5,9 +5,9 @@ import { View } from 'react-native';
 import { useAPIGroup } from '../../api/groups/useAPIGroup';
 import { useAPIRemoveMemberFromGroup } from '../../api/groups/useAPIRemoveMemberFromGroup';
 import { useAPIUpdateGroupMember } from '../../api/groups/useAPIUpdateGroupMember';
-import { Button } from '../../components/Button';
-import { Dialog } from '../../components/Dialog';
-import { LoadingScreen } from '../../components/LoadingScreen';
+import { Button } from '../../components/common/Button';
+import { Dialog } from '../../components/common/Dialog';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
 import type { UpdateGroupMemberRequest } from '../../types/api/requests/UpdateGroupMemberRequest';
 
 export default function GroupMemberDialog() {

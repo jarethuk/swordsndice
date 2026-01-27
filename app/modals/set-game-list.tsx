@@ -6,10 +6,10 @@ import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { useAPIUpdateGameList } from '../../api/games/useAPIUpdateGameList';
 import { useAPILists } from '../../api/list/useAPILists';
-import { Dialog } from '../../components/Dialog';
-import { FAIcon } from '../../components/FAIcon';
-import { Input } from '../../components/Input';
-import ListRow from '../../components/ListRow';
+import { Dialog } from '../../components/common/Dialog';
+import { FAIcon } from '../../components/common/FAIcon';
+import { Input } from '../../components/common/Input';
+import ListRow from '../../components/common/ListRow';
 import type { ListBody } from '../../types/api/ListBody';
 
 export default function SetGameList() {

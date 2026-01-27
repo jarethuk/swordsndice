@@ -4,9 +4,9 @@ import { useCallback, useMemo } from 'react';
 import { View } from 'react-native';
 import { useAPICancelGroupInvite } from '../../api/groups/useAPICancelGroupInvite';
 import { useAPIGroup } from '../../api/groups/useAPIGroup';
-import { Button } from '../../components/Button';
-import { Dialog } from '../../components/Dialog';
-import { LoadingScreen } from '../../components/LoadingScreen';
+import { Button } from '../../components/common/Button';
+import { Dialog } from '../../components/common/Dialog';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
 
 export default function GroupInvite() {
 	const { id, groupId } = useLocalSearchParams();

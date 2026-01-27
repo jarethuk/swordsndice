@@ -8,11 +8,11 @@ import { View } from 'react-native';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIGroup } from '../../api/groups/useAPIGroup';
 import { useAPIInviteToGroup } from '../../api/groups/useAPIInviteToGroup';
-import { Content } from '../../components';
-import { Dialog } from '../../components/Dialog';
-import { FAIcon } from '../../components/FAIcon';
-import { Input } from '../../components/Input';
-import ListRow from '../../components/ListRow';
+import { Content } from '../../components/common/Content';
+import { Dialog } from '../../components/common/Dialog';
+import { FAIcon } from '../../components/common/FAIcon';
+import { Input } from '../../components/common/Input';
+import ListRow from '../../components/common/ListRow';
 
 export default function InviteToGroup() {
 	const { id } = useLocalSearchParams();

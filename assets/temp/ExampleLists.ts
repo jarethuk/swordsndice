@@ -1,4 +1,4 @@
-import { Games } from '../../types';
+import { Games } from '../../types/Enums';
 
 export const ExampleLists = [
 	{

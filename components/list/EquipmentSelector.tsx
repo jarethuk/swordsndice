@@ -1,10 +1,10 @@
 import { useCallback, useMemo } from 'react';
 import { View } from 'react-native';
-import { MESBGProfiles } from '../data/MESBGProfiles';
-import type { ListMemberEquipment } from '../types/api/ListBody';
-import type { Equipment } from '../types/Profile';
-import { Content } from './Content';
-import Toggle from './Toggle';
+import { MESBGProfiles } from '../../data/MESBGProfiles';
+import type { ListMemberEquipment } from '../../types/api/ListBody';
+import type { Equipment } from '../../types/Profile';
+import { Content } from '../common/Content';
+import Toggle from '../common/Toggle';
 
 interface Props {
 	member: { name: string };

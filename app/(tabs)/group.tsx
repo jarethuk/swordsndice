@@ -5,12 +5,12 @@ import {
 import { router, useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo } from 'react';
 import { useAPIGroup } from '../../api/groups/useAPIGroup';
-import { Content } from '../../components';
-import { Button } from '../../components/Button';
-import ListRow from '../../components/ListRow';
-import { LoadingScreen } from '../../components/LoadingScreen';
-import { Page } from '../../components/Page';
-import { PageTitleWithImage } from '../../components/PageTitleWithImage';
+import { Button } from '../../components/common/Button';
+import { Content } from '../../components/common/Content';
+import ListRow from '../../components/common/ListRow';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
+import { Page } from '../../components/common/Page';
+import { PageTitleWithImage } from '../../components/common/PageTitleWithImage';
 import { useUser } from '../../states/useUserStore';
 
 export default function GroupPage() {

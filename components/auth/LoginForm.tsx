@@ -2,18 +2,18 @@ import { faApple } from '@awesome.me/kit-6b5fd61d92/icons/classic/brands';
 import { Image } from 'expo-image';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
-import { useAPILogin } from '../api/auth/useAPILogin';
-import { useUserActions } from '../states/useUserStore';
-import type { UserResponse } from '../types/api/responses/UserResponse';
-import { Button } from './Button';
+import { useAPILogin } from '../../api/auth/useAPILogin';
+import { useUserActions } from '../../states/useUserStore';
+import type { UserResponse } from '../../types/api/responses/UserResponse';
+import { Button } from '../common/Button';
+import { Content } from '../common/Content';
+import Divider from '../common/Divider';
+import { ErrorMessage } from '../common/ErrorMessage';
+import { FAIcon } from '../common/FAIcon';
+import { Input } from '../common/Input';
+import { LoadingScreen } from '../common/LoadingScreen';
 import { CodeEnterInput } from './CodeEnterInput';
-import { Content } from './Content';
-import Divider from './Divider';
-import { ErrorMessage } from './ErrorMessage';
-import { FAIcon } from './FAIcon';
 import GoogleLoginButton from './GoogleLoginButton';
-import { Input } from './Input';
-import { LoadingScreen } from './LoadingScreen';
 
 export const LoginForm = () => {
 	const [email, setEmail] = useState('');
@@ -60,7 +60,7 @@ export const LoginForm = () => {
 		<View className={'flex gap-6 p-6'}>
 			<View className={'mt-12 flex items-center gap-6'}>
 				<Image
-					source={require('../assets/logo.png')}
+					source={require('../../assets/logo.png')}
 					style={{ width: 100, height: 150, alignSelf: 'center' }}
 				/>
 

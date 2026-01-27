@@ -5,21 +5,21 @@ import {
 import { router } from 'expo-router';
 import { useCallback, useMemo } from 'react';
 import { Pressable, View } from 'react-native';
-import { MESBGProfiles } from '../data/MESBGProfiles';
+import { MESBGProfiles } from '../../data/MESBGProfiles';
 import {
 	getGroupPointsTotal,
 	getMESBGStats,
 	getMemberPointsTotal,
 	maxWarbandForLeader,
-} from '../helpers/MESBGStatsHelper';
-import { useListActions } from '../states/useListStore';
-import { MESBGArmySlot } from '../types';
-import type { Army } from '../types/Army';
-import type { ListBody, ListGroup } from '../types/api/ListBody';
-import { Button } from './Button';
-import { Content } from './Content';
+} from '../../helpers/MESBGStatsHelper';
+import { useListActions } from '../../states/useListStore';
+import type { Army } from '../../types/Army';
+import type { ListBody, ListGroup } from '../../types/api/ListBody';
+import { MESBGArmySlot } from '../../types/Enums';
+import { Button } from '../common/Button';
+import { Content } from '../common/Content';
+import { FAIcon } from '../common/FAIcon';
 import EquipmentList from './EquipmentList';
-import { FAIcon } from './FAIcon';
 import HeroPoints from './HeroPoints';
 
 interface Props {

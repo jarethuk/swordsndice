@@ -3,9 +3,9 @@ import { router } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
 import { useAPIDeleteGame } from '../../api/games/useAPIDeleteGame';
-import { Button } from '../../components/Button';
-import { Dialog } from '../../components/Dialog';
-import { Input } from '../../components/Input';
+import { Button } from '../../components/common/Button';
+import { Dialog } from '../../components/common/Dialog';
+import { Input } from '../../components/common/Input';
 import { useGame, useGameActions } from '../../states/useGameStore';
 
 export default function EditGamePopup() {

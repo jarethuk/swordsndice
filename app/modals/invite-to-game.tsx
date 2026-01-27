@@ -7,11 +7,11 @@ import { useCallback, useMemo, useState } from 'react';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIGame } from '../../api/games/useAPIGame';
 import { useAPIInviteToGame } from '../../api/games/useAPIInviteToGame';
-import { Content } from '../../components';
-import { Dialog } from '../../components/Dialog';
-import { FAIcon } from '../../components/FAIcon';
-import { Input } from '../../components/Input';
-import ListRow from '../../components/ListRow';
+import { Content } from '../../components/common/Content';
+import { Dialog } from '../../components/common/Dialog';
+import { FAIcon } from '../../components/common/FAIcon';
+import { Input } from '../../components/common/Input';
+import ListRow from '../../components/common/ListRow';
 
 export default function InviteToGame() {
 	const { id } = useLocalSearchParams();

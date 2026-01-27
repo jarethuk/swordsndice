@@ -2,7 +2,7 @@ import { router } from 'expo-router';
 import type { PropsWithChildren } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, SlideInDown } from 'react-native-reanimated';
-import { useTheme } from '../states/useThemeStore';
+import { useTheme } from '../../states/useThemeStore';
 import { Content } from './Content';
 
 import ScrollView = Animated.ScrollView;

@@ -3,16 +3,16 @@ import { useQueryClient } from '@tanstack/react-query';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { View } from 'react-native';
-import { Content } from '../../components';
-import AmountSelector from '../../components/AmountSelector';
-import { Button } from '../../components/Button';
-import { Dialog } from '../../components/Dialog';
-import EquipmentSelector from '../../components/EquipmentSelector';
-import { FAIcon } from '../../components/FAIcon';
-import HeroPoints from '../../components/HeroPoints';
-import { Input } from '../../components/Input';
-import { NextWindowButton } from '../../components/NextWindowButton';
-import StatsRow from '../../components/StatsRow';
+import AmountSelector from '../../components/common/AmountSelector';
+import { Button } from '../../components/common/Button';
+import { Content } from '../../components/common/Content';
+import { Dialog } from '../../components/common/Dialog';
+import { FAIcon } from '../../components/common/FAIcon';
+import { Input } from '../../components/common/Input';
+import { NextWindowButton } from '../../components/common/NextWindowButton';
+import EquipmentSelector from '../../components/list/EquipmentSelector';
+import HeroPoints from '../../components/list/HeroPoints';
+import StatsRow from '../../components/list/StatsRow';
 import { MESBGArmies } from '../../data/MESBGArmies';
 import { MESBGProfiles } from '../../data/MESBGProfiles';
 import {
@@ -21,8 +21,8 @@ import {
 } from '../../helpers/MESBGStatsHelper';
 import { getRandomId } from '../../helpers/RandomHelper';
 import { useList, useListActions } from '../../states/useListStore';
-import { MESBGArmySlot } from '../../types';
 import type { ListMemberEquipment } from '../../types/api/ListBody';
+import { MESBGArmySlot } from '../../types/Enums';
 import type { MESBGProfileStats } from '../../types/MESBGProfileStats';
 import type { Profile } from '../../types/Profile';
 

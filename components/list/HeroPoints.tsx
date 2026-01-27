@@ -1,6 +1,6 @@
 import { View } from 'react-native';
-import type { ArmyProfile } from '../types/ArmyProfile';
-import { Content } from './Content';
+import type { ArmyProfile } from '../../types/ArmyProfile';
+import { Content } from '../common/Content';
 
 interface Props {
 	profile: ArmyProfile;

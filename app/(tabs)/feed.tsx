@@ -10,14 +10,14 @@ import { useCallback, useMemo, useState } from 'react';
 import { View } from 'react-native';
 import { useAPIFeed } from '../../api/feed/useAPIFeed';
 import { useAPIGames } from '../../api/games/useAPIGames';
-import { Content } from '../../components';
-import { Container } from '../../components/Container';
-import GameRow from '../../components/GameRow';
-import ListRow from '../../components/ListRow';
-import { LoadingScreen } from '../../components/LoadingScreen';
-import { Page } from '../../components/Page';
-import { PageTitle } from '../../components/PageTitle';
-import { TabInput } from '../../components/TabInput';
+import { Container } from '../../components/common/Container';
+import { Content } from '../../components/common/Content';
+import ListRow from '../../components/common/ListRow';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
+import { Page } from '../../components/common/Page';
+import { PageTitle } from '../../components/common/PageTitle';
+import { TabInput } from '../../components/common/TabInput';
+import GameRow from '../../components/game/GameRow';
 import {
 	type FeedItem,
 	FeedItemTypes,

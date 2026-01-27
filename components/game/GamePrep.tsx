@@ -11,10 +11,10 @@ import { Pressable, View } from 'react-native';
 import { useAPIUpdateGame } from '../../api/games/useAPIUpdateGame';
 import { useUser } from '../../states/useUserStore';
 import type { GameResponse } from '../../types/api/responses/GameResponse';
-import { Button } from '../Button';
-import { Content } from '../Content';
-import { FAIcon } from '../FAIcon';
-import ListRow from '../ListRow';
+import { Button } from '../common/Button';
+import { Content } from '../common/Content';
+import { FAIcon } from '../common/FAIcon';
+import ListRow from '../common/ListRow';
 
 interface Props {
 	id: string;

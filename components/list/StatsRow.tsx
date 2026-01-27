@@ -1,6 +1,6 @@
 import { View } from 'react-native';
-import type { MESBGProfileStats } from '../types/MESBGProfileStats';
-import { Content } from './Content';
+import type { MESBGProfileStats } from '../../types/MESBGProfileStats';
+import { Content } from '../common/Content';
 
 interface Props {
 	stats: MESBGProfileStats;

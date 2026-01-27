@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import { View } from 'react-native';
-import { Content } from '../components';
-import { Button } from '../components/Button';
+import { Button } from '../components/common/Button';
+import { Content } from '../components/common/Content';
 
 export default function NotFoundScreen() {
 	return (

@@ -6,15 +6,15 @@ import { View } from 'react-native';
 import { useAPIAddGame } from '../../api/games/useAPIAddGame';
 import { useAPIGames } from '../../api/games/useAPIGames';
 import { useAPIUpdateGameList } from '../../api/games/useAPIUpdateGameList';
-import { Content } from '../../components';
-import { Button } from '../../components/Button';
-import Divider from '../../components/Divider';
-import GameRow from '../../components/GameRow';
-import { Input } from '../../components/Input';
-import { ListImage } from '../../components/ListImage';
-import { NextWindowButton } from '../../components/NextWindowButton';
-import { Page } from '../../components/Page';
-import { TabInput } from '../../components/TabInput';
+import { Button } from '../../components/common/Button';
+import { Content } from '../../components/common/Content';
+import Divider from '../../components/common/Divider';
+import { Input } from '../../components/common/Input';
+import { ListImage } from '../../components/common/ListImage';
+import { NextWindowButton } from '../../components/common/NextWindowButton';
+import { Page } from '../../components/common/Page';
+import { TabInput } from '../../components/common/TabInput';
+import GameRow from '../../components/game/GameRow';
 import { getRandomId } from '../../helpers/RandomHelper';
 import {
 	useNewGameActions,
@@ -23,8 +23,8 @@ import {
 	useNewGamePoints,
 } from '../../states/useNewGameStore';
 import { useUser } from '../../states/useUserStore';
-import { SelectGameDialogMode } from '../../types';
 import type { CreateGameRequest } from '../../types/api/requests/CreateGameRequest';
+import { SelectGameDialogMode } from '../../types/Enums';
 
 const StartGameTab = () => {
 	const list = useNewGameList();

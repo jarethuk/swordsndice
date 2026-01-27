@@ -5,9 +5,9 @@ import { View } from 'react-native';
 import { useAPIDeclineGroupInvite } from '../../api/groups/useAPIDeclineGroupInvite';
 import { useAPIGroupInvites } from '../../api/groups/useAPIGroupInvites';
 import { useAPIJoinGroup } from '../../api/groups/useAPIJoinGroup';
-import { Button } from '../../components/Button';
-import { Dialog } from '../../components/Dialog';
-import { LoadingScreen } from '../../components/LoadingScreen';
+import { Button } from '../../components/common/Button';
+import { Dialog } from '../../components/common/Dialog';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
 
 export default function NotificationGameInvite() {
 	const { id } = useLocalSearchParams();

@@ -1,6 +1,6 @@
 import type { PublicUser } from './PublicUser.ts';
 
-export interface GameResponseMember extends PublicUser {
+export interface GameListResponseMember extends PublicUser {
 	army?: string;
 	isWinner?: boolean;
 }
@@ -17,6 +17,6 @@ export interface GameListResponse {
 	description?: string | null;
 	isStarted: boolean;
 	isComplete: boolean;
-	members: GameResponseMember[];
+	members: GameListResponseMember[];
 	invites?: PublicUser[];
 }

@@ -14,16 +14,16 @@ import {
 	toRemainingMESBGStatsFlat,
 } from '../../helpers/MESBGStatsHelper';
 import { useDebounce } from '../../hooks/useDebounce';
-import { MESBGArmySlot } from '../../types';
 import type { ListBody, ListMember } from '../../types/api/ListBody';
 import type { GameResponse } from '../../types/api/responses/GameResponse';
+import { MESBGArmySlot } from '../../types/Enums';
 import type {
 	MESBGProfileStats,
 	RemainingMESBGProfileStats,
 } from '../../types/MESBGProfileStats';
-import { Content } from '../Content';
-import { FAIcon } from '../FAIcon';
-import HeroPoints from '../HeroPoints';
+import { Content } from '../common/Content';
+import { FAIcon } from '../common/FAIcon';
+import HeroPoints from '../list/HeroPoints';
 
 type Stats = 'will' | 'might' | 'fate' | 'wounds';
 

@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { Games } from '../types';
+import { Games } from '../types/Enums';
 
 export interface NewListStore {
 	name?: string;

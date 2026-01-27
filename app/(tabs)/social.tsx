@@ -10,20 +10,19 @@ import { useAPIFindFriend } from '../../api/friends/useAPIFindFriend';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIFindGroup } from '../../api/groups/useAPIFindGroup';
 import { useAPIGroups } from '../../api/groups/useAPIGroups';
-import { Content } from '../../components';
-import { Button } from '../../components/Button';
-import { Container } from '../../components/Container';
-import { Input } from '../../components/Input';
-import ListRow from '../../components/ListRow';
-import { LoadingScreen } from '../../components/LoadingScreen';
-import { Page } from '../../components/Page';
-import { PageTitle } from '../../components/PageTitle';
-import { TabInput } from '../../components/TabInput';
+import { Button } from '../../components/common/Button';
+import { Container } from '../../components/common/Container';
+import { Content } from '../../components/common/Content';
+import { FAIcon } from '../../components/common/FAIcon';
+import { Input } from '../../components/common/Input';
+import ListRow from '../../components/common/ListRow';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
+import { Page } from '../../components/common/Page';
+import { PageTitle } from '../../components/common/PageTitle';
+import { TabInput } from '../../components/common/TabInput';
 import { useDebounce } from '../../hooks/useDebounce';
 
 import ScrollView = Animated.ScrollView;
-
-import { FAIcon } from '../../components/FAIcon';
 
 enum Tabs {
 	Friends = 'friends',

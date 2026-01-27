@@ -2,11 +2,11 @@ import { router } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { View } from 'react-native';
 import { useAPICreateGroup } from '../../api/groups/useAPICreateGroup';
-import { Content } from '../../components';
-import { Button } from '../../components/Button';
-import { Dialog } from '../../components/Dialog';
-import { Input } from '../../components/Input';
-import Toggle from '../../components/Toggle';
+import { Button } from '../../components/common/Button';
+import { Content } from '../../components/common/Content';
+import { Dialog } from '../../components/common/Dialog';
+import { Input } from '../../components/common/Input';
+import Toggle from '../../components/common/Toggle';
 
 export default function CreateGroupPopup() {
 	const [name, setName] = useState('');

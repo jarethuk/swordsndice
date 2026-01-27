@@ -3,16 +3,16 @@ import { Image } from 'expo-image';
 import { useCallback, useEffect, useState } from 'react';
 import { View } from 'react-native';
 import { useAPIUpdateUser } from '../../api/user/useAPIUpdateUser';
-import { Content } from '../../components';
-import { Alert } from '../../components/Alert';
-import { Button } from '../../components/Button';
-import { ErrorMessage } from '../../components/ErrorMessage';
-import { FAIcon } from '../../components/FAIcon';
-import { Input } from '../../components/Input';
-import { Page } from '../../components/Page';
+import { Alert } from '../../components/common/Alert';
+import { Button } from '../../components/common/Button';
+import { Content } from '../../components/common/Content';
+import { ErrorMessage } from '../../components/common/ErrorMessage';
+import { FAIcon } from '../../components/common/FAIcon';
+import { Input } from '../../components/common/Input';
+import { Page } from '../../components/common/Page';
 import { useUser, useUserActions } from '../../states/useUserStore';
 
-export default function Profile() {
+export default function ProfilePage() {
 	const user = useUser();
 	const { setUser } = useUserActions();
 	const [username, setUsername] = useState(user?.username ?? '');

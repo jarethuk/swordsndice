@@ -2,10 +2,10 @@ import { faSword } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router } from 'expo-router';
 import { View } from 'react-native';
 import { useAPILists } from '../../api/list/useAPILists';
-import { Button } from '../../components/Button';
-import { Dialog } from '../../components/Dialog';
-import ListRow from '../../components/ListRow';
-import { LoadingScreen } from '../../components/LoadingScreen';
+import { Button } from '../../components/common/Button';
+import { Dialog } from '../../components/common/Dialog';
+import ListRow from '../../components/common/ListRow';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
 import { useNewGameActions } from '../../states/useNewGameStore';
 
 export default function SelectListModal() {

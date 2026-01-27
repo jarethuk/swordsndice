@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from 'react';
 import { Text } from 'react-native';
-import { useColours } from '../hooks/useColours';
+import { useColours } from '../../hooks/useColours';
 
 interface Props extends PropsWithChildren {
 	variant?: 'accent' | 'positive' | 'negative' | 'white' | 'warning';

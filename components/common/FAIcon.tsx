@@ -1,6 +1,6 @@
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { type Colours, useColours } from '../hooks/useColours';
+import { type Colours, useColours } from '../../hooks/useColours';
 
 interface Props {
 	icon: IconDefinition;

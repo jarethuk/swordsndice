@@ -4,9 +4,9 @@ import { useCallback, useMemo } from 'react';
 import { View } from 'react-native';
 import { useAPICancelGameInvite } from '../../api/games/useAPICancelGameInvite';
 import { useAPIGame } from '../../api/games/useAPIGame';
-import { Button } from '../../components/Button';
-import { Dialog } from '../../components/Dialog';
-import { LoadingScreen } from '../../components/LoadingScreen';
+import { Button } from '../../components/common/Button';
+import { Dialog } from '../../components/common/Dialog';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
 
 export default function GameInviteDialog() {
 	const { id, gameId } = useLocalSearchParams();

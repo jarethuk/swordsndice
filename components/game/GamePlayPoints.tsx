@@ -9,9 +9,9 @@ import { useAPIUpdateGameMember } from '../../api/games/useAPIUpdateGameMember';
 import { useDebounce } from '../../hooks/useDebounce';
 import type { GameResponseMember } from '../../types/api/responses/GameResponse';
 import type { UserResponse } from '../../types/api/responses/UserResponse';
-import { Content } from '../Content';
-import { FAIcon } from '../FAIcon';
-import { ListImage } from '../ListImage';
+import { Content } from '../common/Content';
+import { FAIcon } from '../common/FAIcon';
+import { ListImage } from '../common/ListImage';
 
 interface Props {
 	gameId: string;

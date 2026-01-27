@@ -8,7 +8,7 @@ import {
 import { type PropsWithChildren, useEffect, useMemo, useRef } from 'react';
 import { Dimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useColours } from '../hooks/useColours';
+import { useColours } from '../../hooks/useColours';
 
 interface Props extends PropsWithChildren {
 	onDismiss: () => void;

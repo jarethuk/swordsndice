@@ -2,13 +2,13 @@ import BadWords from 'bad-words';
 import { Image } from 'expo-image';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { View } from 'react-native';
-import { useAPIUpdateUser } from '../api/user/useAPIUpdateUser';
-import { useUser, useUserActions } from '../states/useUserStore';
-import { Alert } from './Alert';
-import { Button } from './Button';
-import { Content } from './Content';
-import { ErrorMessage } from './ErrorMessage';
-import { Input } from './Input';
+import { useAPIUpdateUser } from '../../api/user/useAPIUpdateUser';
+import { useUser, useUserActions } from '../../states/useUserStore';
+import { Alert } from '../common/Alert';
+import { Button } from '../common/Button';
+import { Content } from '../common/Content';
+import { ErrorMessage } from '../common/ErrorMessage';
+import { Input } from '../common/Input';
 
 const badWords = new BadWords();
 
@@ -52,7 +52,7 @@ export const UsernameForm = () => {
 		<View className={'bg-background-dark flex h-full gap-12 p-4'}>
 			<View className={'mt-12 flex items-center gap-6'}>
 				<Image
-					source={require('../assets/logo.png')}
+					source={require('../../assets/logo.png')}
 					style={{ width: 100, height: 150, alignSelf: 'center' }}
 				/>
 

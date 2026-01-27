@@ -7,13 +7,13 @@ import {
 } from '@react-native-google-signin/google-signin';
 import { useState } from 'react';
 import { View } from 'react-native';
-import { useAPIGoogleLogin } from '../api/auth/useAPIGoogleLogin';
-import { useUserActions } from '../states/useUserStore';
-import type { UserResponse } from '../types/api/responses/UserResponse';
-import { Button } from './Button';
-import { Content } from './Content';
-import { ErrorMessage } from './ErrorMessage';
-import { FAIcon } from './FAIcon';
+import { useAPIGoogleLogin } from '../../api/auth/useAPIGoogleLogin';
+import { useUserActions } from '../../states/useUserStore';
+import type { UserResponse } from '../../types/api/responses/UserResponse';
+import { Button } from '../common/Button';
+import { Content } from '../common/Content';
+import { ErrorMessage } from '../common/ErrorMessage';
+import { FAIcon } from '../common/FAIcon';
 
 GoogleSignin.configure({
 	iosClientId:

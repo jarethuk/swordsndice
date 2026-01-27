@@ -4,10 +4,10 @@ import {
 } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router } from 'expo-router';
 import { Pressable, View } from 'react-native';
-import type { GameListResponse } from '../types/api/responses/GameListResponse';
-import { Content } from './Content';
-import { FAIcon } from './FAIcon';
-import { ListImage } from './ListImage';
+import type { GameListResponse } from '../../types/api/responses/GameListResponse';
+import { Content } from '../common/Content';
+import { FAIcon } from '../common/FAIcon';
+import { ListImage } from '../common/ListImage';
 
 interface Props {
 	item: GameListResponse;

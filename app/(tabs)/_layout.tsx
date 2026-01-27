@@ -10,8 +10,8 @@ import { clsx } from 'clsx';
 import { router, Tabs } from 'expo-router';
 import type { ReactElement } from 'react';
 import { Platform, Pressable, View } from 'react-native';
-import { FAIcon } from '../../components/FAIcon';
-import Header from '../../components/Header';
+import { FAIcon } from '../../components/common/FAIcon';
+import Header from '../../components/common/Header';
 
 const tabRoutes = ['index', 'lists', 'feed', 'social', 'settings'];
 

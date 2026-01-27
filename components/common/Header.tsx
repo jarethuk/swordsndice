@@ -2,9 +2,9 @@ import { faBell, faUser } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router } from 'expo-router';
 import { Image, Pressable, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { useAPIGameInvites } from '../api/games/useAPIGameInvites';
-import { useAPIGroupInvites } from '../api/groups/useAPIGroupInvites';
-import { useUser } from '../states/useUserStore';
+import { useAPIGameInvites } from '../../api/games/useAPIGameInvites';
+import { useAPIGroupInvites } from '../../api/groups/useAPIGroupInvites';
+import { useUser } from '../../states/useUserStore';
 import { Content } from './Content';
 import { FAIcon } from './FAIcon';
 
