@@ -1,14 +1,14 @@
-import { Stack } from 'expo-router';
+import { Stack, usePathname } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import '../global.css';
 import {
-	Nunito_500Medium,
-	Nunito_600SemiBold,
-	Nunito_700Bold,
-	Nunito_800ExtraBold,
-	Nunito_900Black,
-	useFonts,
+  Nunito_500Medium,
+  Nunito_600SemiBold,
+  Nunito_700Bold,
+  Nunito_800ExtraBold,
+  Nunito_900Black,
+  useFonts,
 } from '@expo-google-fonts/nunito';
 import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import { type Query, QueryClient } from '@tanstack/react-query';
@@ -17,10 +17,7 @@ import { clsx } from 'clsx';
 import { StatusBar } from 'expo-status-bar';
 import { Appearance, Platform, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import {
-	SafeAreaView,
-	useSafeAreaInsets,
-} from 'react-native-safe-area-context';
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import Toast, { type ToastShowParams } from 'react-native-toast-message';
 import { useAPIMe } from '../api/auth/useAPIMe';
 import { Content } from '../components';
@@ -73,12 +70,25 @@ const Layout = () => {
 	const user = useUser();
 	const { setUser } = useUserActions();
 	const { top, bottom } = useSafeAreaInsets();
+	const pathname = usePathname();
 
 	useEffect(() => {
 		if (!userLoading && apiUser && user !== apiUser) {
 			setUser(apiUser);
 		}
 	}, [apiUser, userLoading, setUser, user]);
+
+	if (pathname.includes('auth')) {
+		return (
+			<Stack
+				screenOptions={{
+					headerShown: false,
+				}}
+			>
+				<Stack.Screen name="auth/google" />
+			</Stack>
+		);
+	}
 
 	if (userLoading) {
 		return (

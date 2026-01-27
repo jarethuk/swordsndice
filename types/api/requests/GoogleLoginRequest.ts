@@ -1,3 +1,4 @@
 export interface GoogleLoginRequest {
-	token: string;
+	token?: string;
+	code?: string;
 }
