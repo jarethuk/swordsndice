@@ -1,4 +1,4 @@
-import { faSword } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faSword } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { useQueryClient } from '@tanstack/react-query';
 import { router } from 'expo-router';
 import { useCallback, useEffect, useMemo, useState } from 'react';

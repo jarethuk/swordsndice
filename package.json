@@ -15,7 +15,7 @@
 		"build:web": "pnpm check && expo export -p web",
 		"build:ios": "eas build --platform ios --non-interactive",
 		"build:android": "eas build --platform android ",
-		"build:dev": "eas build:ios --platform ios --profile development --non-interactive",
+		"build:dev": "eas build --platform ios --profile development --non-interactive",
 		"submit": "eas submit --platform ios",
 		"submit:android": "eas submit --platform android",
 		"ship": "pnpm build:ios && pnpm submit",

@@ -2,7 +2,7 @@ import {
 	faMagnifyingGlass,
 	faUser,
 	faUsers,
-} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+} from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Animated, RefreshControl, View } from 'react-native';

@@ -2,7 +2,7 @@ import {
 	faSwords,
 	faUserPlus,
 	faUsers,
-} from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+} from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import dayjs from 'dayjs';
 import { router } from 'expo-router';

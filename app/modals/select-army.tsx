@@ -1,4 +1,4 @@
-import { faMagnifyingGlass } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faMagnifyingGlass } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { View } from 'react-native';

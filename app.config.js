@@ -56,6 +56,13 @@ export default {
 				},
 			],
 			'expo-font',
+			[
+				'@react-native-google-signin/google-signin',
+				{
+					iosUrlScheme:
+						'com.googleusercontent.apps.680803508827-fvfh2d9i04s4phicu7dchkm2jjpanitn',
+				},
+			],
 		],
 		experiments: {
 			typedRoutes: true,

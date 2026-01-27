@@ -1,4 +1,4 @@
-import { faUser } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faUser } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { useQueryClient } from '@tanstack/react-query';
 import { useLocalSearchParams } from 'expo-router';
 import { useCallback } from 'react';

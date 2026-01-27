@@ -1,4 +1,4 @@
-import { faChevronRight } from '@awesome.me/kit-34e2017de2/icons/duotone/solid';
+import { faChevronRight } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { clsx } from 'clsx';
 import type { ReactElement } from 'react';
 import { Pressable, View } from 'react-native';

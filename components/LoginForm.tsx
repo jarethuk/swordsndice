@@ -1,7 +1,4 @@
-import {
-	faApple,
-	faGoogle,
-} from '@awesome.me/kit-34e2017de2/icons/classic/brands';
+import { faApple } from '@awesome.me/kit-6b5fd61d92/icons/classic/brands';
 import { Image } from 'expo-image';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
@@ -14,6 +11,7 @@ import { Content } from './Content';
 import Divider from './Divider';
 import { ErrorMessage } from './ErrorMessage';
 import { FAIcon } from './FAIcon';
+import GoogleLoginButton from './GoogleLoginButton';
 import { Input } from './Input';
 import { LoadingScreen } from './LoadingScreen';
 
@@ -145,19 +143,7 @@ export const LoginForm = () => {
 							}
 						/>
 
-						<Button
-							variant={'outline'}
-							themeOverride={'dark'}
-							content={
-								<View className={'flex flex-row items-center gap-4'}>
-									<FAIcon icon={faGoogle} colour={'white'} size={24} />
-
-									<Content type={'cta'} size={'lg'} themeOverride={'dark'}>
-										Login with Google
-									</Content>
-								</View>
-							}
-						/>
+						<GoogleLoginButton />
 					</View>
 				</View>
 			)}
