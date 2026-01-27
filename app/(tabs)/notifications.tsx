@@ -10,9 +10,9 @@ import { View } from 'react-native';
 import { useAPIGameInvites } from '../../api/games/useAPIGameInvites';
 import { useAPIGroupInvites } from '../../api/groups/useAPIGroupInvites';
 import { Content } from '../../components';
-import { FAIcon } from '../../components/FAIcon';
-import ListRow from '../../components/ListRow';
-import { Page } from '../../components/Page';
+import { FAIcon } from '../../components/common/FAIcon';
+import ListRow from '../../components/common/ListRow';
+import { Page } from '../../components/common/Page';
 import type { GameInviteResponse } from '../../types/api/responses/GameInviteResponse';
 import type { UserGroupInvite } from '../../types/api/responses/UserGroupInvite';
 

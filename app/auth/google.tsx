@@ -3,8 +3,8 @@ import { useCallback, useEffect } from 'react';
 import { View } from 'react-native';
 import { useAPIGoogleLogin } from '../../api/auth/useAPIGoogleLogin';
 import { Content } from '../../components';
-import { Button } from '../../components/Button';
-import { LoadingScreen } from '../../components/LoadingScreen';
+import { Button } from '../../components/common/Button';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
 import { useUserActions } from '../../states/useUserStore';
 import type { UserResponse } from '../../types/api/responses/UserResponse';
 

@@ -4,11 +4,11 @@ import { router } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { useAPICreateList } from '../../api/list/useAPICreateList';
 import { Content } from '../../components';
-import { Button } from '../../components/Button';
-import { ErrorMessage } from '../../components/ErrorMessage';
-import { Input } from '../../components/Input';
-import { NextWindowButton } from '../../components/NextWindowButton';
-import { Page } from '../../components/Page';
+import { Button } from '../../components/common/Button';
+import { ErrorMessage } from '../../components/common/ErrorMessage';
+import { Input } from '../../components/common/Input';
+import { NextWindowButton } from '../../components/common/NextWindowButton';
+import { Page } from '../../components/common/Page';
 import {
 	useNewListActions,
 	useNewListArmy,

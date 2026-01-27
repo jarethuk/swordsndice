@@ -5,10 +5,10 @@ import { useCallback } from 'react';
 import { useAPIAddFriend } from '../../api/friends/useAPIAddFriend';
 import { useAPIRemoveFriend } from '../../api/friends/useAPIRemoveFriend';
 import { useAPIGetUser } from '../../api/user/useAPIGetUser';
-import { Button } from '../../components/Button';
-import { LoadingScreen } from '../../components/LoadingScreen';
-import { Page } from '../../components/Page';
-import { PageTitleWithImage } from '../../components/PageTitleWithImage';
+import { Button } from '../../components/common/Button';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
+import { Page } from '../../components/common/Page';
+import { PageTitleWithImage } from '../../components/common/PageTitleWithImage';
 
 export default function FriendPage() {
 	const { username } = useLocalSearchParams();

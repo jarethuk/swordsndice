@@ -5,11 +5,11 @@ import { View } from 'react-native';
 import { useAPIAcceptGameInvite } from '../../api/games/useAPIAcceptGameInvite';
 import { useAPIDeclineGame } from '../../api/games/useAPIDeclineGame';
 import { useAPIGameInvites } from '../../api/games/useAPIGameInvites';
-import { Button } from '../../components/Button';
-import { Dialog } from '../../components/Dialog';
-import { LoadingScreen } from '../../components/LoadingScreen';
+import { Button } from '../../components/common/Button';
+import { Dialog } from '../../components/common/Dialog';
+import { LoadingScreen } from '../../components/common/LoadingScreen';
 
-export default function NotificationGameInvite() {
+export default function NotificationGameInviteModal() {
 	const { id } = useLocalSearchParams();
 	const { data, isLoading } = useAPIGameInvites();
 

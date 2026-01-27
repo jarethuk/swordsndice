@@ -1,0 +1,23 @@
+{
+  "options": [
+    {
+      "mode": "create",
+      "project": "tsconfig.json",
+      "backup": false,
+      "overwrite": true,
+      "exportFilename": "index.ts",
+      "include": [
+        "api/**/*.ts",
+        "components/**/*.tsx",
+        "data/**/*.ts",
+        "helpers/**/*.ts",
+        "hooks/**/*.ts",
+        "states/**/*.ts",
+        "types/**/*.ts"
+      ],
+      "exclude": [
+        "node_modules"
+      ]
+    }
+  ]
+}

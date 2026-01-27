@@ -3,10 +3,10 @@ import { router } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { View } from 'react-native';
 import { Content } from '../../components';
-import { Dialog } from '../../components/Dialog';
-import { FAIcon } from '../../components/FAIcon';
-import { Input } from '../../components/Input';
-import { NextWindowButton } from '../../components/NextWindowButton';
+import { Dialog } from '../../components/common/Dialog';
+import { FAIcon } from '../../components/common/FAIcon';
+import { Input } from '../../components/common/Input';
+import { NextWindowButton } from '../../components/common/NextWindowButton';
 import { Armies } from '../../data/Armies';
 import {
 	useNewListActions,

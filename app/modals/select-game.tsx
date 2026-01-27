@@ -1,8 +1,8 @@
 import { faSword } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback } from 'react';
-import { Dialog } from '../../components/Dialog';
-import ListRow from '../../components/ListRow';
+import { Dialog } from '../../components/common/Dialog';
+import ListRow from '../../components/common/ListRow';
 import { useNewGameActions } from '../../states/useNewGameStore';
 import { useNewListActions } from '../../states/useNewListStore';
 import { type Games, GamesList, SelectGameDialogMode } from '../../types';
