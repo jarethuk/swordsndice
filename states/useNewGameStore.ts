@@ -1,6 +1,6 @@
 import { create } from 'zustand';
-import type { Games } from '../types';
 import type { ListBody } from '../types/api/ListBody';
+import type { Games } from '../types/Enums';
 
 export interface NewGameStore {
 	list?: ListBody;

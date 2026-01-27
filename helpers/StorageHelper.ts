@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import type { StorageKey } from '../types';
+import type { StorageKey } from '../types/Enums';
 
 export class StorageHelper {
 	public static async get<T>(key: StorageKey | string): Promise<T | undefined> {

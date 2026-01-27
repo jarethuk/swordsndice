@@ -1,9 +1,9 @@
 import { useQueryClient } from '@tanstack/react-query';
 import type { AxiosError } from 'axios';
+import { Content } from 'components/common/Content';
 import { router } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { useAPICreateList } from '../../api/list/useAPICreateList';
-import { Content } from '../../components';
 import { Button } from '../../components/common/Button';
 import { ErrorMessage } from '../../components/common/ErrorMessage';
 import { Input } from '../../components/common/Input';
@@ -16,8 +16,8 @@ import {
 	useNewListName,
 	useNewListPoints,
 } from '../../states/useNewListStore';
-import { SelectGameDialogMode } from '../../types';
 import type { ListBody } from '../../types/api/ListBody';
+import { SelectGameDialogMode } from '../../types/Enums';
 
 export default function CreateList() {
 	const queryClient = useQueryClient();

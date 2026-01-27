@@ -5,12 +5,12 @@ import { useCallback, useMemo } from 'react';
 import { View } from 'react-native';
 import { useAPIGame } from '../../api/games/useAPIGame';
 import { useAPIUpdateGame } from '../../api/games/useAPIUpdateGame';
-import { Content } from '../../components';
 import { Button } from '../../components/common/Button';
+import { Content } from '../../components/common/Content';
 import { Dialog } from '../../components/common/Dialog';
-import { GamePlayPoints } from '../../components/game/GamePlayPoints';
 import ListRow from '../../components/common/ListRow';
 import { LoadingScreen } from '../../components/common/LoadingScreen';
+import { GamePlayPoints } from '../../components/game/GamePlayPoints';
 import { useUser } from '../../states/useUserStore';
 
 export default function GameFinishModal() {

@@ -1,4 +1,8 @@
-import { faMagnifyingGlass, faUser, faUsers, } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
+import {
+	faMagnifyingGlass,
+	faUser,
+	faUsers,
+} from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router, useFocusEffect } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { Animated, RefreshControl, View } from 'react-native';
@@ -6,9 +10,10 @@ import { useAPIFindFriend } from '../../api/friends/useAPIFindFriend';
 import { useAPIFriends } from '../../api/friends/useAPIFriends';
 import { useAPIFindGroup } from '../../api/groups/useAPIFindGroup';
 import { useAPIGroups } from '../../api/groups/useAPIGroups';
-import { Content } from '../../components';
 import { Button } from '../../components/common/Button';
 import { Container } from '../../components/common/Container';
+import { Content } from '../../components/common/Content';
+import { FAIcon } from '../../components/common/FAIcon';
 import { Input } from '../../components/common/Input';
 import ListRow from '../../components/common/ListRow';
 import { LoadingScreen } from '../../components/common/LoadingScreen';
@@ -17,12 +22,11 @@ import { PageTitle } from '../../components/common/PageTitle';
 import { TabInput } from '../../components/common/TabInput';
 import { useDebounce } from '../../hooks/useDebounce';
 
-import { FAIcon } from '../../components/common/FAIcon';
 import ScrollView = Animated.ScrollView;
 
 enum Tabs {
-  Friends = 'friends',
-  Groups = 'groups',
+	Friends = 'friends',
+	Groups = 'groups',
 }
 
 export default function SocialPage() {

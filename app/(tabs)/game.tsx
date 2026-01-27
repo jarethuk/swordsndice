@@ -3,12 +3,12 @@ import { useFocusEffect, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect } from 'react';
 import { View } from 'react-native';
 import { useAPIGame } from '../../api/games/useAPIGame';
-import { Content } from '../../components';
+import { Content } from '../../components/common/Content';
 import { FAIcon } from '../../components/common/FAIcon';
-import { GamePlay } from '../../components/game/GamePlay';
-import { GamePrep } from '../../components/game/GamePrep';
 import { LoadingScreen } from '../../components/common/LoadingScreen';
 import { Page } from '../../components/common/Page';
+import { GamePlay } from '../../components/game/GamePlay';
+import { GamePrep } from '../../components/game/GamePrep';
 import { useGame, useGameActions } from '../../states/useGameStore';
 
 export default function GamePage() {

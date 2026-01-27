@@ -1,6 +1,6 @@
 import { MESBGProfiles } from '../data/MESBGProfiles';
-import { MESBGArmySlot } from '../types';
 import type { ListBody, ListGroup, ListMember } from '../types/api/ListBody';
+import { MESBGArmySlot } from '../types/Enums';
 import type {
 	MESBGProfileStats,
 	RemainingMESBGProfileStats,

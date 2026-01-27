@@ -1,12 +1,12 @@
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useMemo, useState } from 'react';
 import { View } from 'react-native';
-import { Content } from '../../components';
 import AmountSelector from '../../components/common/AmountSelector';
 import { Button } from '../../components/common/Button';
+import { Content } from '../../components/common/Content';
 import { Dialog } from '../../components/common/Dialog';
-import EquipmentSelector from '../../components/list/EquipmentSelector';
 import { Input } from '../../components/common/Input';
+import EquipmentSelector from '../../components/list/EquipmentSelector';
 import StatsRow from '../../components/list/StatsRow';
 import { MESBGProfiles } from '../../data/MESBGProfiles';
 import { getMESBGStats } from '../../helpers/MESBGStatsHelper';

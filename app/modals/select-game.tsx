@@ -5,7 +5,7 @@ import { Dialog } from '../../components/common/Dialog';
 import ListRow from '../../components/common/ListRow';
 import { useNewGameActions } from '../../states/useNewGameStore';
 import { useNewListActions } from '../../states/useNewListStore';
-import { type Games, GamesList, SelectGameDialogMode } from '../../types';
+import { type Games, GamesList, SelectGameDialogMode } from '../../types/Enums';
 
 export default function SelectGame() {
 	const { mode } = useLocalSearchParams();

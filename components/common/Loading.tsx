@@ -11,7 +11,7 @@ export const Loading = ({ size = 30, white }: Props) => {
 		<Spin style={{ height: size, width: size }}>
 			{white ? (
 				<Image
-					source={require('../assets/icons/spinner-white.svg')}
+					source={require('../../assets/icons/spinner-white.svg')}
 					style={{
 						height: size,
 						width: size,
@@ -19,7 +19,7 @@ export const Loading = ({ size = 30, white }: Props) => {
 				/>
 			) : (
 				<Image
-					source={require('../assets/icons/spinner.svg')}
+					source={require('../../assets/icons/spinner.svg')}
 					style={{
 						height: size,
 						width: size,

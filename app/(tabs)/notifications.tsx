@@ -9,7 +9,7 @@ import { useCallback, useMemo } from 'react';
 import { View } from 'react-native';
 import { useAPIGameInvites } from '../../api/games/useAPIGameInvites';
 import { useAPIGroupInvites } from '../../api/groups/useAPIGroupInvites';
-import { Content } from '../../components';
+import { Content } from '../../components/common/Content';
 import { FAIcon } from '../../components/common/FAIcon';
 import ListRow from '../../components/common/ListRow';
 import { Page } from '../../components/common/Page';

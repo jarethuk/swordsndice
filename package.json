@@ -20,8 +20,7 @@
 		"submit:android": "eas submit --platform android",
 		"ship": "pnpm build:ios && pnpm submit",
 		"ship:android": "pnpm build:android && pnpm submit",
-		"ship:dev": "pnpm build:dev",
-		"index": "npx ctix build && rm index.ts"
+		"ship:dev": "pnpm build:dev"
 	},
 	"dependencies": {
 		"@awesome.me/kit-6b5fd61d92": "^1.0.5",
