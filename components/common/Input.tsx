@@ -71,6 +71,7 @@ export const Input = ({
 		style: { fontFamily: 'DINRoundPro' },
 		secureTextEntry: secret,
 		multiline,
+		accessibilityLabel: label,
 	};
 
 	const colourClasses = useMemo(() => {
