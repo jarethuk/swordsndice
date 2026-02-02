@@ -117,7 +117,7 @@ export default function ListPage() {
 						group={group}
 						list={list}
 						army={army}
-						key={index.toString()}
+						key={list.hash + group.id}
 						canEdit={canEdit}
 						index={index}
 					/>

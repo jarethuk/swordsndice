@@ -126,7 +126,7 @@ export default function Notifications() {
 		}));
 
 		return [...gameInviteItems, ...groupInviteItems].sort((a, b) =>
-			dayjs(b.createdAt).isBefore(a.createdAt) ? 1 : -1,
+			dayjs(b.createdAt).isBefore(a.createdAt) ? -1 : 1,
 		);
 	}, [gameInvites, groupInvites]);
 

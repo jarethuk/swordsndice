@@ -31,4 +31,5 @@ export interface ListBody {
 	description?: string | null;
 	isDeleted?: boolean | null;
 	groups: ListGroup[];
+	hash?: string;
 }

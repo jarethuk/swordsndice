@@ -1,38 +1,28 @@
-import { Stack, usePathname } from 'expo-router';
+import {Stack, usePathname} from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 import '../global.css';
-import {
-	Nunito_500Medium,
-	Nunito_600SemiBold,
-	Nunito_700Bold,
-	Nunito_800ExtraBold,
-	Nunito_900Black,
-	useFonts,
-} from '@expo-google-fonts/nunito';
-import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
-import { type Query, QueryClient } from '@tanstack/react-query';
-import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
-import { clsx } from 'clsx';
-import { StatusBar } from 'expo-status-bar';
-import { Appearance, Platform, View } from 'react-native';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import {
-	SafeAreaView,
-	useSafeAreaInsets,
-} from 'react-native-safe-area-context';
-import Toast, { type ToastShowParams } from 'react-native-toast-message';
-import { useAPIMe } from '../api/auth/useAPIMe';
-import { LoginForm } from '../components/auth/LoginForm';
-import { UsernameForm } from '../components/auth/UsernameForm';
-import { Content } from '../components/common/Content';
-import { LoadingScreen } from '../components/common/LoadingScreen';
-import { Page } from '../components/common/Page';
-import { createQueryPersister } from '../helpers/QueryPersister';
-import { StorageHelper } from '../helpers/StorageHelper';
-import { useTheme, useThemeActions } from '../states/useThemeStore';
-import { useUser, useUserActions } from '../states/useUserStore';
-import type { PersistableQuery } from '../types/QueryMetadata';
+import {Nunito_500Medium, Nunito_600SemiBold, Nunito_700Bold, Nunito_800ExtraBold, Nunito_900Black, useFonts, } from '@expo-google-fonts/nunito';
+import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
+import {type Query, QueryClient} from '@tanstack/react-query';
+import {PersistQueryClientProvider} from '@tanstack/react-query-persist-client';
+import {clsx} from 'clsx';
+import {StatusBar} from 'expo-status-bar';
+import {Appearance, Platform, View} from 'react-native';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {SafeAreaView, useSafeAreaInsets, } from 'react-native-safe-area-context';
+import Toast, {type ToastShowParams} from 'react-native-toast-message';
+import {useAPIMe} from '../api/auth/useAPIMe';
+import {LoginForm} from '../components/auth/LoginForm';
+import {UsernameForm} from '../components/auth/UsernameForm';
+import {Content} from '../components/common/Content';
+import {LoadingScreen} from '../components/common/LoadingScreen';
+import {Page} from '../components/common/Page';
+import {createQueryPersister} from '../helpers/QueryPersister';
+import {StorageHelper} from '../helpers/StorageHelper';
+import {useTheme, useThemeActions} from '../states/useThemeStore';
+import {useUser, useUserActions} from '../states/useUserStore';
+import type {PersistableQuery} from '../types/QueryMetadata';
 
 void SplashScreen.preventAutoHideAsync();
 
@@ -74,6 +64,8 @@ const Layout = () => {
 	const { setUser } = useUserActions();
 	const { top, bottom } = useSafeAreaInsets();
 	const pathname = usePathname();
+
+  console.log(user)
 
 	useEffect(() => {
 		if (!userLoading && apiUser && user !== apiUser) {
@@ -282,6 +274,14 @@ export default function RootLayout() {
 	const theme = useTheme();
 	const { setTheme } = useThemeActions();
 	const loaded = fontsLoaded;
+
+	const pathname = usePathname();
+
+	// Prevent users getting stuck in a modal when refreshing
+	useEffect(() => {
+		if (pathname.includes('modal')) window.location.href = '/';
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, []);
 
 	useEffect(() => {
 		if (!theme) {

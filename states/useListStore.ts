@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import { apiUpdateList } from '../api/list/useAPIUpdateList';
+import { hashObject } from '../helpers/Hasher';
 import type { ListBody } from '../types/api/ListBody';
 
 export interface ListStore {
@@ -21,7 +22,14 @@ const useListStore = create<ListStore>((set, get) => ({
 
 				await apiUpdateList(list.id as string, newList);
 
-				set({ list: newList });
+				const hash = await hashObject(newList);
+
+				set({
+					list: {
+						...newList,
+						hash,
+					},
+				});
 			}
 		},
 	},

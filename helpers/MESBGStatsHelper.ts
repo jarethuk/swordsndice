@@ -90,6 +90,7 @@ export const getGroupPointsTotal = (group: ListGroup): number => {
 	for (const member of members) {
 		total += getMemberPointsTotal(member);
 	}
+
 	return total;
 };
 
