@@ -3,19 +3,21 @@ import {
 	faCopy,
 	faEdit,
 	faExclamationTriangle,
+	faTrash,
 } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useMemo } from 'react';
 import { Animated, Pressable, View } from 'react-native';
 import { useAPICreateList } from '../../api/list/useAPICreateList';
+import { useAPIDeleteList } from '../../api/list/useAPIDeleteList';
 import { useAPIList } from '../../api/list/useAPIList';
 import { Button } from '../../components/common/Button';
 import { Container } from '../../components/common/Container';
 import { Content } from '../../components/common/Content';
 import Divider from '../../components/common/Divider';
 import { FAIcon } from '../../components/common/FAIcon';
-import { Loading } from '../../components/common/Loading';
 import { LoadingScreen } from '../../components/common/LoadingScreen';
+import { MenuButton } from '../../components/common/MenuButton';
 import ListWarband from '../../components/list/ListWarband';
 import { MESBGArmies } from '../../data/MESBGArmies';
 import { getPointsTotal } from '../../helpers/MESBGStatsHelper';
@@ -34,6 +36,8 @@ export default function ListPage() {
 	const { data: apiList, refetch: refreshList } = useAPIList(id as string);
 	const { mutateAsync: apiCreateList, isPending: copyListPending } =
 		useAPICreateList();
+	const { mutateAsync: apiDeleteList, isPending: deletePending } =
+		useAPIDeleteList();
 
 	useEffect(() => {
 		if (apiList) {
@@ -80,6 +84,21 @@ export default function ListPage() {
 		});
 	}, [apiCreateList, list]);
 
+	const deleteList = useCallback(async () => {
+		if (!list?.id) return;
+
+		await apiDeleteList(list.id);
+		router.navigate('/(tabs)/lists');
+	}, [apiDeleteList, list?.id]);
+
+	if (copyListPending || deletePending) {
+		return (
+			<LoadingScreen
+				message={`${copyListPending ? 'Copying' : 'Deleting'} list...`}
+			/>
+		);
+	}
+
 	if (list === null) {
 		return (
 			<View
@@ -104,7 +123,7 @@ export default function ListPage() {
 
 	return (
 		<Container>
-			<View className={'flex flex-row items-center gap-4'}>
+			<View className={'relative z-1 flex flex-row items-center gap-4'}>
 				<Pressable onPress={() => router.back()}>
 					<FAIcon icon={faChevronLeft} size={20} colour="muted" />
 				</Pressable>
@@ -119,19 +138,27 @@ export default function ListPage() {
 					</Content>
 				</View>
 
-				{canEdit ? (
-					<Pressable onPress={() => router.navigate('/modals/list-edit')}>
-						<FAIcon icon={faEdit} size={20} colour="muted" />
-					</Pressable>
-				) : (
-					<Pressable onPress={copyList}>
-						{copyListPending ? (
-							<Loading size={20} />
-						) : (
-							<FAIcon icon={faCopy} size={20} colour="muted" />
-						)}
-					</Pressable>
-				)}
+				{
+					<MenuButton
+						items={[
+							{
+								title: 'Edit',
+								icon: faEdit,
+								onPress: () => router.navigate('/modals/list-edit'),
+							},
+							{
+								title: 'Copy',
+								icon: faCopy,
+								onPress: copyList,
+							},
+							{
+								title: 'Delete',
+								icon: faTrash,
+								onPress: deleteList,
+							},
+						]}
+					/>
+				}
 			</View>
 
 			<ScrollView

@@ -17,6 +17,7 @@ import { clsx } from 'clsx';
 import { StatusBar } from 'expo-status-bar';
 import { Appearance, Platform, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { EventProvider } from 'react-native-outside-press';
 import {
 	SafeAreaView,
 	useSafeAreaInsets,
@@ -331,7 +332,9 @@ export default function RootLayout() {
 					<BottomSheetModalProvider>
 						<StatusBar style="auto" />
 
-						<Layout />
+						<EventProvider>
+							<Layout />
+						</EventProvider>
 
 						<Toast
 							config={{
