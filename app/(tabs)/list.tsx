@@ -5,6 +5,7 @@ import {
 	faExclamationTriangle,
 	faTrash,
 } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
+import { useQueryClient } from '@tanstack/react-query';
 import { router, useLocalSearchParams } from 'expo-router';
 import { useCallback, useEffect, useMemo } from 'react';
 import { Animated, Pressable, View } from 'react-native';
@@ -32,6 +33,7 @@ export default function ListPage() {
 	const { setList, updateList } = useListActions();
 	const user = useUser();
 	const canEdit = user?.id === list?.userId;
+	const client = useQueryClient();
 
 	const { data: apiList, refetch: refreshList } = useAPIList(id as string);
 	const { mutateAsync: apiCreateList, isPending: copyListPending } =
@@ -78,18 +80,29 @@ export default function ListPage() {
 			id: undefined,
 		});
 
+		await client.invalidateQueries({
+			queryKey: ['lists'],
+			refetchType: 'all',
+		});
+
 		router.push({
 			pathname: '/(tabs)/list',
 			params: { id },
 		});
-	}, [apiCreateList, list]);
+	}, [apiCreateList, client, list]);
 
 	const deleteList = useCallback(async () => {
 		if (!list?.id) return;
 
 		await apiDeleteList(list.id);
+
+		await client.invalidateQueries({
+			queryKey: ['lists'],
+			refetchType: 'all',
+		});
+
 		router.navigate('/(tabs)/lists');
-	}, [apiDeleteList, list?.id]);
+	}, [apiDeleteList, client, list]);
 
 	if (copyListPending || deletePending) {
 		return (
