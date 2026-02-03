@@ -5,19 +5,22 @@ import {
 	faExclamationTriangle,
 } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router, useLocalSearchParams } from 'expo-router';
-import { useEffect, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 import { Animated, Pressable, View } from 'react-native';
+import { useAPICreateList } from '../../api/list/useAPICreateList';
 import { useAPIList } from '../../api/list/useAPIList';
 import { Button } from '../../components/common/Button';
 import { Container } from '../../components/common/Container';
 import { Content } from '../../components/common/Content';
 import Divider from '../../components/common/Divider';
 import { FAIcon } from '../../components/common/FAIcon';
+import { Loading } from '../../components/common/Loading';
 import { LoadingScreen } from '../../components/common/LoadingScreen';
 import ListWarband from '../../components/list/ListWarband';
 import { MESBGArmies } from '../../data/MESBGArmies';
 import { getPointsTotal } from '../../helpers/MESBGStatsHelper';
 import { useList, useListActions } from '../../states/useListStore';
+import { useUser } from '../../states/useUserStore';
 
 import ScrollView = Animated.ScrollView;
 
@@ -25,8 +28,12 @@ export default function ListPage() {
 	const { id } = useLocalSearchParams();
 	const list = useList();
 	const { setList, updateList } = useListActions();
-	const canEdit = true;
+	const user = useUser();
+	const canEdit = user?.id === list?.userId;
+
 	const { data: apiList, refetch: refreshList } = useAPIList(id as string);
+	const { mutateAsync: apiCreateList, isPending: copyListPending } =
+		useAPICreateList();
 
 	useEffect(() => {
 		if (apiList) {
@@ -57,6 +64,21 @@ export default function ListPage() {
 			void updateList({ actualPoints: pointsTotal });
 		}
 	}, [list, pointsTotal, updateList]);
+
+	const copyList = useCallback(async () => {
+		if (!list) return;
+
+		const { id } = await apiCreateList({
+			...list,
+			name: `${list.name} (copy)`,
+			id: undefined,
+		});
+
+		router.push({
+			pathname: '/(tabs)/list',
+			params: { id },
+		});
+	}, [apiCreateList, list]);
 
 	if (list === null) {
 		return (
@@ -102,8 +124,12 @@ export default function ListPage() {
 						<FAIcon icon={faEdit} size={20} colour="muted" />
 					</Pressable>
 				) : (
-					<Pressable>
-						<FAIcon icon={faCopy} size={20} colour="muted" />
+					<Pressable onPress={copyList}>
+						{copyListPending ? (
+							<Loading size={20} />
+						) : (
+							<FAIcon icon={faCopy} size={20} colour="muted" />
+						)}
 					</Pressable>
 				)}
 			</View>
@@ -123,13 +149,15 @@ export default function ListPage() {
 					/>
 				))}
 
-				{list.groups.length > 0 && <Divider />}
-
 				{canEdit && (
-					<Button
-						content={'Add Warband'}
-						onPress={() => router.navigate('/modals/list-add-warband')}
-					/>
+					<>
+						{list.groups.length > 0 && <Divider />}
+
+						<Button
+							content={'Add Warband'}
+							onPress={() => router.navigate('/modals/list-add-warband')}
+						/>
+					</>
 				)}
 			</ScrollView>
 		</Container>

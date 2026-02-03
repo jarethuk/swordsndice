@@ -1,6 +1,7 @@
 import {
 	faChevronLeft,
 	faEdit,
+	faRefresh,
 } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { Image } from 'expo-image';
@@ -15,6 +16,7 @@ interface Props {
 	image?: string | null;
 	placeholderIcon: IconDefinition;
 	onEdit?: () => void;
+	refetch?: () => void;
 }
 
 export const PageTitleWithImage = ({
@@ -23,6 +25,7 @@ export const PageTitleWithImage = ({
 	image,
 	description,
 	onEdit,
+	refetch,
 }: Props) => {
 	return (
 		<View className={'mt-6 mb-3 flex w-full flex-col items-center gap-4'}>
@@ -50,16 +53,25 @@ export const PageTitleWithImage = ({
 					</View>
 				</View>
 
-				{onEdit ? (
-					<Pressable
-						onPress={onEdit}
-						className={'h-12 w-12 items-center justify-center'}
-					>
-						<FAIcon icon={faEdit} size={20} />
-					</Pressable>
-				) : (
-					<View className={'h-12 w-12'} />
-				)}
+				<View className={'flex min-h-12 min-w-12 items-center gap-2'}>
+					{onEdit && (
+						<Pressable
+							onPress={onEdit}
+							className={'h-12 w-12 items-center justify-center'}
+						>
+							<FAIcon icon={faEdit} size={20} />
+						</Pressable>
+					)}
+
+					{refetch && (
+						<Pressable
+							onPress={refetch}
+							className={'h-12 w-12 items-center justify-center'}
+						>
+							<FAIcon icon={faRefresh} size={20} />
+						</Pressable>
+					)}
+				</View>
 			</View>
 
 			<View className={'flex items-center gap-2'}>

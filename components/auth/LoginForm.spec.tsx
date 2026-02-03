@@ -1,4 +1,6 @@
+/** biome-ignore-all lint/style/noNonNullAssertion: Tests */
 import { fireEvent, render, waitFor } from '@testing-library/react-native';
+import { Text } from 'react-native';
 import { useAPILogin } from '../../api/auth/useAPILogin';
 import { useUserActions } from '../../states/useUserStore';
 import { LoginForm } from './LoginForm';
@@ -6,7 +8,6 @@ import { LoginForm } from './LoginForm';
 jest.mock('../../api/auth/useAPILogin');
 jest.mock('../../states/useUserStore');
 jest.mock('./GoogleLoginButton', () => {
-	const { Text } = require('react-native');
 	return {
 		__esModule: true,
 		default: () => <Text>GoogleLoginButton</Text>,
@@ -274,7 +275,7 @@ describe('LoginForm', () => {
 			error: { message: errorMessage },
 		} as any);
 
-		const { getByText, getByLabelText, getAllByRole } = render(<LoginForm />);
+		const { getByText, getByLabelText } = render(<LoginForm />);
 		const input = getByLabelText('Email');
 		const continueButton = getByText('Continue');
 

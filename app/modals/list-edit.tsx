@@ -1,6 +1,7 @@
 import { router } from 'expo-router';
 import { useCallback, useState } from 'react';
 import { View } from 'react-native';
+import { useAPICreateList } from '../../api/list/useAPICreateList';
 import { useAPIDeleteList } from '../../api/list/useAPIDeleteList';
 import { Button } from '../../components/common/Button';
 import { Content } from '../../components/common/Content';
@@ -15,7 +16,8 @@ export default function EditListPopup() {
 	const [name, setName] = useState(list?.name ?? '');
 	const [points, setPoints] = useState(list?.points.toString() ?? '');
 	const [isSaving, setIsSaving] = useState(false);
-
+	const { mutateAsync: apiCreateList, isPending: copyListPending } =
+		useAPICreateList();
 	const isValid = name && points && Number(points) > 0;
 
 	const saveList = useCallback(async () => {
@@ -38,6 +40,21 @@ export default function EditListPopup() {
 		await apiDeleteList(list.id);
 		router.navigate('/(tabs)/lists');
 	}, [apiDeleteList, list?.id]);
+
+	const copyList = useCallback(async () => {
+		if (!list) return;
+
+		const { id } = await apiCreateList({
+			...list,
+			name: `${list.name} (copy)`,
+			id: undefined,
+		});
+
+		router.push({
+			pathname: '/(tabs)/list',
+			params: { id },
+		});
+	}, [apiCreateList, list]);
 
 	return (
 		<Dialog title={'Edit List'}>
@@ -64,6 +81,8 @@ export default function EditListPopup() {
 
 				<Button content={'Delete'} variant={'negative'} onPress={deleteList} />
 			</View>
+
+			<Button content={'Copy'} loading={copyListPending} onPress={copyList} />
 
 			<Button
 				content={'Save'}
