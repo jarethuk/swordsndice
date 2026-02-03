@@ -15,7 +15,7 @@ Start playing at https://swordsndice.com/
 
 ## Built Using
 - Expo/React Native
-- Nativewind/Tailwind
+- Uniwind/Tailwind
 - TypeScript
 
 Connects to the NextJS backend at https://github.com/jarethuk/swordsndice-api
