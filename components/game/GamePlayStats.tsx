@@ -2,7 +2,10 @@ import { faUser } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { useMemo } from 'react';
 import { View } from 'react-native';
 import { MESBGProfiles } from '../../data/MESBGProfiles';
-import { getMESBGStats, getRemainingMESBGStats } from '../../helpers/MESBGStatsHelper';
+import {
+	getMESBGStats,
+	getRemainingMESBGStats,
+} from '../../helpers/MESBGStatsHelper';
 import type { ListMember } from '../../types/api/ListBody';
 import type { GameResponse } from '../../types/api/responses/GameResponse';
 import type { PublicUser } from '../../types/api/responses/PublicUser';
