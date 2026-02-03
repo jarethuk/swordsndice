@@ -22,7 +22,7 @@ export interface ListGroup {
 
 export interface ListBody {
 	id?: string;
-	userId: string;
+	userId?: string;
 	name: string;
 	game: string;
 	army: string;
