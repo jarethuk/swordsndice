@@ -31,7 +31,7 @@ const Row = ({
 				{label}
 			</Content>
 
-			<Content size={'md'} type={'subtitle'} variant={variant} muted>
+			<Content size={'md'} type={'subtitle'}>
 				{value}
 			</Content>
 		</View>
@@ -42,7 +42,7 @@ export default function HeroPoints({ profile, variant }: Props) {
 	if (!profile.fullStats) return;
 
 	return (
-		<View className={'flex flex-row gap-4'}>
+		<View className={'flex flex-row gap-4 justify-evenly'}>
 			<Row stat={'might'} label={'M'} profile={profile} variant={variant} />
 			<Row stat={'will'} label={'W'} profile={profile} variant={variant} />
 			<Row stat={'fate'} label={'F'} profile={profile} variant={variant} />

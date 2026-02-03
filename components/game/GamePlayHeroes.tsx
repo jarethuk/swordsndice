@@ -24,6 +24,7 @@ import type {
 import { Content } from '../common/Content';
 import { FAIcon } from '../common/FAIcon';
 import HeroPoints from '../list/HeroPoints';
+import StatsRow from '../list/StatsRow';
 
 type Stats = 'will' | 'might' | 'fate' | 'wounds';
 
@@ -38,9 +39,10 @@ interface MemberWithStats extends ListMember {
 	fullRemainingStats: RemainingMESBGProfileStats;
 }
 
-interface HeroGroup {
+interface ListGroup {
 	id: string;
 	leader: MemberWithStats;
+	heroes: MemberWithStats[];
 	members: MemberWithStats[];
 }
 
@@ -48,6 +50,10 @@ interface HeroRowProps extends Props {
 	groupId: string;
 	member: MemberWithStats;
 	setList: (list: ListBody) => void;
+}
+
+interface UnitRowProps {
+	member: MemberWithStats;
 }
 
 interface StatsControlProps {
@@ -87,7 +93,7 @@ const StatsControl = ({ title, value, onChange, stat }: StatsControlProps) => {
 	);
 };
 
-const UnitRow = ({
+const HeroRow = ({
 	member,
 	canUpdate,
 	game,
@@ -191,45 +197,53 @@ const UnitRow = ({
 					{member.name}
 				</Content>
 
-				{canUpdate && (
-					<View className={'ml-auto'}>
-						<FAIcon icon={open ? faChevronUp : faChevronDown} />
-					</View>
-				)}
+				<View className={'ml-auto'}>
+					<FAIcon icon={open ? faChevronUp : faChevronDown} />
+				</View>
 			</View>
 
 			{open ? (
-				<>
-					<View className={'flex flex-row items-center justify-evenly gap-2'}>
-						<StatsControl
-							title={'M'}
-							value={stats.might}
-							onChange={onChange}
-							stat={'might'}
-						/>
-						<StatsControl
-							title={'W'}
-							value={stats.will}
-							onChange={onChange}
-							stat={'will'}
-						/>
-					</View>
+				<View className={'flex gap-4'}>
+					{canUpdate && (
+						<View>
+							<View
+								className={'flex flex-row items-center justify-evenly gap-2'}
+							>
+								<StatsControl
+									title={'M'}
+									value={stats.might}
+									onChange={onChange}
+									stat={'might'}
+								/>
+								<StatsControl
+									title={'W'}
+									value={stats.will}
+									onChange={onChange}
+									stat={'will'}
+								/>
+							</View>
 
-					<View className={'flex flex-row items-center justify-evenly gap-2'}>
-						<StatsControl
-							title={'F'}
-							value={stats.fate}
-							onChange={onChange}
-							stat={'fate'}
-						/>
-						<StatsControl
-							title={'Wo'}
-							value={stats.wounds}
-							onChange={onChange}
-							stat={'wounds'}
-						/>
-					</View>
-				</>
+							<View
+								className={'flex flex-row items-center justify-evenly gap-2'}
+							>
+								<StatsControl
+									title={'F'}
+									value={stats.fate}
+									onChange={onChange}
+									stat={'fate'}
+								/>
+								<StatsControl
+									title={'Wo'}
+									value={stats.wounds}
+									onChange={onChange}
+									stat={'wounds'}
+								/>
+							</View>
+						</View>
+					)}
+
+					<StatsRow stats={member.fullStats} hideHeroStats={canUpdate} />
+				</View>
 			) : (
 				<HeroPoints
 					profile={{
@@ -245,6 +259,32 @@ const UnitRow = ({
 	);
 };
 
+const WarriorRow = ({ member }: UnitRowProps) => {
+	const [open, setOpen] = useState(false);
+
+	return (
+		<Pressable
+			onPress={() => setOpen(!open)}
+			key={member.id}
+			className={
+				'border-border-light dark:border-border-dark flex gap-4 rounded-2xl border-2 p-4'
+			}
+		>
+			<View className={'flex shrink flex-row items-center'}>
+				<Content type={'title'} size={'xs'} wrap>
+					{member.name} x {member.amount}
+				</Content>
+
+				<View className={'ml-auto'}>
+					<FAIcon icon={open ? faChevronUp : faChevronDown} />
+				</View>
+			</View>
+
+			{open && <StatsRow stats={member.fullStats} />}
+		</Pressable>
+	);
+};
+
 export const GamePlayHeroes = (props: Props) => {
 	const { game, memberId } = props;
 	const [list, setList] = useState<ListBody | undefined | null>();
@@ -253,10 +293,10 @@ export const GamePlayHeroes = (props: Props) => {
 		setList(game.members.find((member) => member.user?.id === memberId)?.list);
 	}, [game, memberId]);
 
-	const groups: HeroGroup[] = useMemo(() => {
+	const groups: ListGroup[] = useMemo(() => {
 		if (!list) return [];
 
-		const groups: HeroGroup[] = [];
+		const groups: ListGroup[] = [];
 
 		for (const group of list.groups) {
 			const leaderProfile = MESBGProfiles.find(
@@ -267,7 +307,7 @@ export const GamePlayHeroes = (props: Props) => {
 
 			const leaderStats = getMESBGStats(leaderProfile);
 
-			const heroGroup: HeroGroup = {
+			const heroGroup: ListGroup = {
 				id: group.id,
 				leader: {
 					...group.leader,
@@ -275,11 +315,10 @@ export const GamePlayHeroes = (props: Props) => {
 					fullRemainingStats: getRemainingMESBGStats(leaderStats, group.leader),
 				},
 				members: [],
+				heroes: [],
 			};
 
 			for (const unit of group.members) {
-				if (unit.slot === MESBGArmySlot.Warrior) continue;
-
 				const profile = MESBGProfiles.find((x) => x.name === unit.name);
 
 				if (!profile) {
@@ -287,16 +326,17 @@ export const GamePlayHeroes = (props: Props) => {
 				}
 
 				const stats = getMESBGStats(profile);
-
-				if (!stats.will && !stats.might && !stats.fate) {
-					continue;
-				}
-
-				heroGroup.members.push({
+				const row = {
 					...unit,
 					fullStats: stats,
 					fullRemainingStats: getRemainingMESBGStats(stats, unit),
-				});
+				};
+
+				if (!stats.will && !stats.might && !stats.fate) {
+					heroGroup.members.push(row);
+				} else {
+					heroGroup.heroes.push(row);
+				}
 			}
 
 			groups.push(heroGroup);
@@ -313,21 +353,25 @@ export const GamePlayHeroes = (props: Props) => {
 						Warband {index + 1}
 					</Content>
 
-					<UnitRow
+					<HeroRow
 						member={group.leader}
 						{...props}
 						groupId={group.id}
 						setList={setList}
 					/>
 
-					{group.members.map((member) => (
-						<UnitRow
+					{group.heroes.map((member) => (
+						<HeroRow
 							member={member}
 							key={member.id}
 							{...props}
 							groupId={group.id}
 							setList={setList}
 						/>
+					))}
+
+					{group.members.map((member) => (
+						<WarriorRow key={member.id} member={member} />
 					))}
 				</View>
 			))}
