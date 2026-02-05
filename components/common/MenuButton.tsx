@@ -20,7 +20,7 @@ export const MenuButton = ({ items }: Props) => {
 	return (
 		<View className={'relative z-20'}>
 			<Pressable onPress={() => setOpen(true)}>
-				<FAIcon icon={faBars} size={20} />
+				<FAIcon icon={faBars} size={20} solid />
 			</Pressable>
 
 			{open && (

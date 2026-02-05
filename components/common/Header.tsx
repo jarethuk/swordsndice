@@ -1,4 +1,9 @@
-import { faBell, faUser } from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
+import {
+	faBell,
+	faBug,
+	faStars,
+	faUser,
+} from '@awesome.me/kit-6b5fd61d92/icons/duotone/solid';
 import { router } from 'expo-router';
 import { Image, Pressable, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -51,26 +56,41 @@ export default function Header() {
 					</View>
 				</Pressable>
 
-				<Pressable
-					className={'ml-auto flex flex-row items-center gap-1'}
-					onPress={() =>
-						router.navigate({
-							pathname: '/(tabs)/notifications',
-						})
-					}
-				>
-					{count > 0 && (
-						<Content size={'md'} type={'subtitle'} variant={'negative'}>
-							{count}
-						</Content>
-					)}
+				<View className={'ml-auto flex flex-row items-center gap-4'}>
+					<Pressable
+						className={'flex flex-row items-center gap-2'}
+						onPress={() =>
+							router.navigate({
+								pathname: '/(tabs)/feedback',
+							})
+						}
+					>
+						<FAIcon icon={faBug} size={20} colour={'primary'} />
 
-					<FAIcon
-						icon={faBell}
-						size={20}
-						colour={count > 0 ? 'negative' : 'muted'}
-					/>
-				</Pressable>
+						<FAIcon icon={faStars} size={20} colour={'primary'} />
+					</Pressable>
+
+					<Pressable
+						className={'flex flex-row items-center gap-1'}
+						onPress={() =>
+							router.navigate({
+								pathname: '/(tabs)/notifications',
+							})
+						}
+					>
+						{count > 0 && (
+							<Content size={'md'} type={'subtitle'} variant={'negative'}>
+								{count}
+							</Content>
+						)}
+
+						<FAIcon
+							icon={faBell}
+							size={20}
+							colour={count > 0 ? 'negative' : 'muted'}
+						/>
+					</Pressable>
+				</View>
 			</View>
 		</View>
 	);
