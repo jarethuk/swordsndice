@@ -16,6 +16,7 @@ export const Loading = ({ size = 30, white }: Props) => {
 						height: size,
 						width: size,
 					}}
+					testID={'loading-spinner'}
 				/>
 			) : (
 				<Image
@@ -24,6 +25,7 @@ export const Loading = ({ size = 30, white }: Props) => {
 						height: size,
 						width: size,
 					}}
+					testID={'loading-spinner'}
 				/>
 			)}
 		</Spin>

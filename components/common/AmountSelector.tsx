@@ -30,6 +30,7 @@ export default function AmountSelector({ value, onChange, max }: Props) {
 						onPress={minus}
 						disabled={!canMinus}
 						variant={'light'}
+						testID={'amount-selector-minus'}
 					/>
 				</View>
 
@@ -45,6 +46,7 @@ export default function AmountSelector({ value, onChange, max }: Props) {
 						onPress={add}
 						disabled={!canAdd}
 						variant={'light'}
+						testID={'amount-selector-plus'}
 					/>
 				</View>
 			</View>

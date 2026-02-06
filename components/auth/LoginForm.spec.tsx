@@ -8,6 +8,7 @@ import { LoginForm } from './LoginForm';
 jest.mock('../../api/auth/useAPILogin');
 jest.mock('../../states/useUserStore');
 jest.mock('./GoogleLoginButton', () => {
+	const { Text } = jest.requireActual('react-native');
 	return {
 		__esModule: true,
 		default: () => <Text>GoogleLoginButton</Text>,

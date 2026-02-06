@@ -15,6 +15,7 @@ export default function Toggle({ className, value, onChange }: Props) {
 				'bg-gray-300 dark:bg-panel-dark': !value,
 				'bg-purple-500': value,
 			})}
+			testID={'toggle'}
 		>
 			<View
 				className={`w-7 h-7 rounded-full bg-white ${value ? 'translate-x-7' : ''}`}

@@ -33,6 +33,7 @@ export const PageTitleWithImage = ({
 				<Pressable
 					onPress={() => router.back()}
 					className={'flex h-12 w-12 items-center justify-center'}
+					testID={'page-title-back'}
 				>
 					<FAIcon icon={faChevronLeft} size={20} />
 				</Pressable>
@@ -58,6 +59,7 @@ export const PageTitleWithImage = ({
 						<Pressable
 							onPress={onEdit}
 							className={'h-12 w-12 items-center justify-center'}
+							testID={'page-title-edit'}
 						>
 							<FAIcon icon={faEdit} size={20} />
 						</Pressable>
@@ -67,6 +69,7 @@ export const PageTitleWithImage = ({
 						<Pressable
 							onPress={refetch}
 							className={'h-12 w-12 items-center justify-center'}
+							testID={'page-title-refresh'}
 						>
 							<FAIcon icon={faRefresh} size={20} />
 						</Pressable>

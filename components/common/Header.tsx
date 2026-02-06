@@ -31,6 +31,7 @@ export default function Header() {
 				<Pressable
 					className={'flex flex-row items-center gap-4'}
 					onPress={() => router.navigate('/(tabs)/profile')}
+					testID={'header-profile'}
 				>
 					<View className={'flex flex-row items-center gap-2'}>
 						<View
@@ -64,6 +65,7 @@ export default function Header() {
 								pathname: '/(tabs)/feedback',
 							})
 						}
+						testID={'header-feedback'}
 					>
 						<FAIcon icon={faBug} size={20} colour={'primary'} />
 
@@ -77,6 +79,7 @@ export default function Header() {
 								pathname: '/(tabs)/notifications',
 							})
 						}
+						testID={'header-notifications'}
 					>
 						{count > 0 && (
 							<Content size={'md'} type={'subtitle'} variant={'negative'}>

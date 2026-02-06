@@ -19,7 +19,7 @@ export const MenuButton = ({ items }: Props) => {
 
 	return (
 		<View className={'relative z-20'}>
-			<Pressable onPress={() => setOpen(true)}>
+			<Pressable onPress={() => setOpen(true)} testID={'menu-button-trigger'}>
 				<FAIcon icon={faBars} size={20} solid />
 			</Pressable>
 

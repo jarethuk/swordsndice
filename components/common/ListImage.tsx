@@ -22,6 +22,7 @@ export const ListImage = ({ image, placeHolderIcon }: Props) => {
 						height: 44,
 						width: 44,
 					}}
+					testID={'list-image'}
 				/>
 			) : (
 				<FAIcon icon={placeHolderIcon ?? faSword} size={44 - 24} />

@@ -35,6 +35,7 @@ export const Page = ({
 					keyboardShouldPersistTaps={'handled'}
 					showsVerticalScrollIndicator={false}
 					contentInsetAdjustmentBehavior={'automatic'}
+					testID={'page-scroll'}
 					refreshControl={
 						refetch ? (
 							<RefreshControl refreshing={!!isLoading} onRefresh={refetch} />

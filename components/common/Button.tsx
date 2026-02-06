@@ -18,6 +18,7 @@ interface Props {
 	disabled?: boolean;
 	isSmall?: boolean;
 	themeOverride?: 'light' | 'dark';
+	testID?: string;
 }
 
 export const Button = ({
@@ -27,6 +28,7 @@ export const Button = ({
 	loading,
 	disabled,
 	themeOverride,
+	testID,
 }: Props) => {
 	const containerClasses = useMemo(() => {
 		if (themeOverride) {
@@ -104,6 +106,7 @@ export const Button = ({
 			className={clsx('w-full overflow-hidden rounded-2xl', containerClasses, {
 				'pb-1 active:mt-1 active:pb-0': variant !== 'outline',
 			})}
+			testID={testID}
 			onPress={() => {
 				if (!disabled) {
 					onPress?.();

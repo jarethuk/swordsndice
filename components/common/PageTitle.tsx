@@ -25,7 +25,7 @@ export const PageTitle = ({ refetch, title, subtitle }: Props) => {
 
 				<View className={'w-4'}>
 					{refetch && (
-						<Pressable onPress={refetch}>
+						<Pressable onPress={refetch} testID={'page-title-refresh'}>
 							<FAIcon icon={faRefresh} />
 						</Pressable>
 					)}

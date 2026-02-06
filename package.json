@@ -95,7 +95,8 @@
 		"prettier-plugin-tailwindcss": "^0.6.14",
 		"react-test-renderer": "19.1.0",
 		"tailwindcss": "^4.1.13",
-		"typescript": "~5.9.2"
+		"typescript": "~5.9.2",
+		"@types/react-test-renderer": "19.1.0"
 	},
 	"main": "expo-router/entry",
 	"pnpm": {

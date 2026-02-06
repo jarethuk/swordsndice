@@ -23,6 +23,7 @@ export const Dialog = ({ title, children, subtitle }: Props) => {
 			<Pressable
 				style={StyleSheet.absoluteFill}
 				onPress={() => router.dismiss()}
+				testID={'dialog-backdrop'}
 			/>
 
 			<Animated.View
