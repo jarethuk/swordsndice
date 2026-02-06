@@ -88,5 +88,9 @@ jest.mock('../../states/useUserStore', () => ({
 	useUser: () => ({ username: 'tester', image: null }),
 }));
 
-jest.mock('../../assets/icons/spinner.svg', () => 'spinner');
-jest.mock('../../assets/icons/spinner-white.svg', () => 'spinner-white');
+jest.mock('../../../assets/icons/spinner.svg', () => 'spinner', {
+	virtual: true,
+});
+jest.mock('../../../assets/icons/spinner-white.svg', () => 'spinner-white', {
+	virtual: true,
+});
