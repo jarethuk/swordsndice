@@ -18,7 +18,7 @@ export const Dialog = ({ title, children, subtitle }: Props) => {
 	return (
 		<Animated.View
 			entering={FadeIn}
-			className={`${theme === 'dark' ? 'dark' : 'light'} flex h-full w-full items-center justify-center bg-black/50 fixed p-8`}
+			className={`${theme === 'dark' ? 'dark' : 'light'} flex h-full w-full items-center justify-center bg-black/50 fixed p-4`}
 		>
 			<Pressable
 				style={StyleSheet.absoluteFill}
@@ -32,7 +32,7 @@ export const Dialog = ({ title, children, subtitle }: Props) => {
 				}
 			>
 				<ScrollView
-					contentContainerClassName={'flex h-full w-full gap-6 p-6 md:p-8'}
+					contentContainerClassName={'flex h-full w-full gap-6 p-4 md:p-8'}
 					keyboardShouldPersistTaps={'handled'}
 					showsVerticalScrollIndicator={false}
 					contentInsetAdjustmentBehavior={'automatic'}

@@ -78,12 +78,18 @@ export default function StatsRow({ stats, hideHeroStats }: Props) {
 					</View>
 				</View>
 			)}
-			<View className={'flex flex-row justify-evenly gap-6'}>
+
+			<View
+				className={
+					'flex flex-row flex-wrap justify-evenly gap-x-6 gap-y-2 md:flex-nowrap'
+				}
+			>
 				<Stat name={'Mv'} value={stats.movement} isInches />
 				<Stat name={'Fv'} value={stats.fightValue} />
 				<Stat name={'Sv'} value={stats.shootValue} isPlus />
 				<Stat name={'S'} value={stats.strength} />
 				<Stat name={'D'} value={stats.defense} />
+				<View className={'w-full md:hidden'} />
 				<Stat name={'A'} value={stats.attacks} />
 				<Stat name={'W'} value={stats.wounds} />
 				<Stat name={'C'} value={stats.courage} isPlus />
